@@ -1,3 +1,5 @@
+# live demo at: https://manuelpereira2016.github.io/phaser-adventure-engine/
+
 # Phaser + ES6 + Webpack.
 This project is using Phaser + ES6 + Webpack.
 
