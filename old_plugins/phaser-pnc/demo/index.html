@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<script src="../src/phaser.min.js"></script>
+		<script src="../src/constellation.js"></script>
+		<script src="src/boot.js"></script>
+		<script src="src/game.js"></script>
+		<script src="src/preload.js"></script>
+		<script src="../src/Graph.js"></script>
+		<script src="../src/PNCAdventure.js"></script>
+		<script src="../src/Scene.js"></script>
+		<script src="../src/Actor.js"></script>
+		<script src="../src/PlayerActor.js"></script>
+		<script src="../src/Navmesh.js"></script>
+		<script>
+		var game = new Phaser.Game(800, 600, Phaser.AUTO, '');
+
+		game.state.add('Boot', boot);
+		game.state.add('Preload', preload);
+		game.state.add('Game', pncgame);
+
+		game.state.start('Boot');
+		</script>
+		<style>
+			canvas {
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+	</body>
+</html>

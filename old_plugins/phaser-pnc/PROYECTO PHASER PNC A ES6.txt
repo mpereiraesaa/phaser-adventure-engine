@@ -1,0 +1,21 @@
+PROYECTO PHASER PNC A ES6.txt
+
+- Convertir codigo del plugin en clases.
+
+- Actualizar funciones viejas por las nuevas.
+
+Actor.js
+
+DebugNavmesh.js
+
+Graph.js
+
+Navmesh.js
+
+PNCAdventure.js
+
+PlayerActor.js
+
+Scene.js
+
+Requiere: constellation.js y phaser obviamente.
