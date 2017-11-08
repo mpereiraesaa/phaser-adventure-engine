@@ -1,9 +1,7 @@
 node_modules/
 www/
 platforms/
-plugins/
-dist/
+old_plugins/
 .vscode/
 *.log
 package-lock.json
-/index.html
