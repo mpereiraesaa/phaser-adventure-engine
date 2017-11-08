@@ -25,6 +25,9 @@ export default class Navmesh {
   initGraphics() {
     this.graphics = this.game.add.graphics(0, 0);
     this.graphics.alpha = 0.5;
+
+    // By default we disable debug navmesh points and make it invisible
+    this.graphics.visible = false;
   }
 
   removeSignals() {
