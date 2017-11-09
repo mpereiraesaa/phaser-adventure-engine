@@ -58,6 +58,7 @@ export default class extends Phaser.Sprite {
       this.walkingTween = null;
     }
     this.walkingTween = this.game.add.tween(this);
+
     for (var i = 0; i < path.length; i++) {
       var point = polys[path[i]].centroid;
       var distance = Phaser.Math.distance(this.x, this.y, point.x, point.y);
