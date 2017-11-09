@@ -1,4 +1,4 @@
-import Const from './lib/constellation'
+import Const from "./lib/constellation";
 
 export default class Navmesh {
   constructor(game) {
@@ -68,6 +68,21 @@ export default class Navmesh {
       this.debugEnabled = true;
       this.graphics.visible = true;
       this.graphics.alpha = 0.5;
+    }
+  }
+
+  isPointerOutOfBounds(pointer) {
+    let hit = false;
+
+    hit = this.grid.hitTestPointInPolygons({
+      x: pointer.x,
+      y: pointer.y
+    });
+
+    if (hit) {
+      return false;
+    } else {
+      return true;
     }
   }
 
@@ -204,6 +219,18 @@ export default class Navmesh {
       for (var i = 1; i < polygon.nodes.length; i++) {
         this.grid.joinNodes(polygon.nodes[i - 1], polygon.nodes[i]);
       }
+
+      let nodes_arr = Object.keys(this.grid.nodes)
+
+      for(let z = 1; z < nodes_arr.length; z++){
+        let to = Object.keys(this.grid.nodes[`${nodes_arr[z]}`].to).length
+
+        if(to < 2){
+          let near_node = this.grid.getNearestNodeToNodeNotSameXY(nodes_arr[z])
+          this.grid.joinNodes(nodes_arr[z], near_node.id)
+        }
+      }
+
       this.currentNodes = [];
       this.currentPolygons.push(polygon.id);
       console.debug(this.currentPolygons);

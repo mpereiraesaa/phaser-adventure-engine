@@ -832,7 +832,21 @@
 			}
 			return null;
 		},
-		
+		getNearestNodeToNodeNotSameXY: function(id) {
+			var nodes = [];
+			var target = this.getNodeById(id);
+			
+			if (target) {
+				_c.each(this.nodes, function(node) {
+					if (node.id !== target.id && (node.x !== target.x && node.y !== target.y)) {
+						nodes.push(node);
+					}
+				}, this);
+
+				return Const.getNearestPointToPoint(target, nodes);
+			}
+			return null;
+		},
 		// Finds the nearest node to a specified point within the grid.
 		// @param pt: Point to test.
 		// @return: Nearest Node to target Point.

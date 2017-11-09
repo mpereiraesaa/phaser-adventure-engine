@@ -114,6 +114,7 @@ export default class Scene extends Phaser.State {
     this.layers.background.add(this.background);
     this.background.inputEnabled = true;
     this.background.events.onInputUp.add(function(sprite, pointer, g) {
+      console.log(`x: ${pointer.x}, y: ${pointer.y}`)
       this.game.pncPlugin.signals.sceneTappedSignal.dispatch(
         pointer,
         this.navmesh
