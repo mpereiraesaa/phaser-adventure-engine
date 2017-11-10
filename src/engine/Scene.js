@@ -43,6 +43,9 @@ export default class Scene extends Phaser.State {
         this.navmeshPoints = this.sceneDefinition.navmeshPoints;
         this.navmesh.loadPolygonFromNodes(this.navmeshPoints);
       }
+      if (this.sceneDefinition.shape){
+        this.navmesh.loadSolidPolygonFromNodes(this.sceneDefinition.shape);
+      }
     }
   }
 

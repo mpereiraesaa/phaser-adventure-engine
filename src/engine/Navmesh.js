@@ -79,6 +79,8 @@ export default class Navmesh {
       y: pointer.y
     });
 
+    console.log(hit)
+
     if (hit) {
       return false;
     } else {
@@ -196,6 +198,13 @@ export default class Navmesh {
     this.addPolygon();
   }
 
+  loadSolidPolygonFromNodes(nodes) {
+    for (var i = 0; i < nodes.length; i++) {
+      this.addPoint(nodes[i]);
+    }
+    this.addPolygon(null, null, true);
+  }
+
   outputNodesAsJson(nodes) {
     if (nodes === undefined) {
       nodes = this.currentNodes;
@@ -209,26 +218,27 @@ export default class Navmesh {
     console.log(JSON.stringify(points));
   }
 
-  addPolygon(e, nodes) {
-    if (nodes === undefined) {
+  addPolygon(e, nodes, solid) {
+    let data = {}
+    if(solid){
+      data = { solid: true }
+    } else {
+      data = null
+    }
+
+    if (nodes == undefined) {
       nodes = this.currentNodes;
     }
     this.outputNodesAsJson();
-    var polygon = this.grid.addPolygon(nodes);
+    var polygon = this.grid.addPolygon(nodes, data);
+    let nodes_keys = Object.keys(this.grid.nodes)
     if (polygon !== null) {
       for (var i = 1; i < polygon.nodes.length; i++) {
         this.grid.joinNodes(polygon.nodes[i - 1], polygon.nodes[i]);
       }
 
-      let nodes_arr = Object.keys(this.grid.nodes)
-
-      for(let z = 1; z < nodes_arr.length; z++){
-        let to = Object.keys(this.grid.nodes[`${nodes_arr[z]}`].to).length
-
-        if(to < 2){
-          let near_node = this.grid.getNearestNodeToNodeNotSameXY(nodes_arr[z])
-          this.grid.joinNodes(nodes_arr[z], near_node.id)
-        }
+      if(solid){
+        this.grid.joinNodes(polygon.nodes[polygon.nodes.length -1], polygon.nodes[0])
       }
 
       this.currentNodes = [];

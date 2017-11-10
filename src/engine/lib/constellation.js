@@ -858,7 +858,7 @@
 		// @param pt: Point to test.
 		// @return: True if the point intersects any polygon.
 		hitTestPointInPolygons: function(pt) {
-			return !!this.getPolygonsOverPoint(pt).length;
+			return !!this.getPolygonsOverPoint2(pt).length;
 		},
 		
 		// Tests a Point for intersections with all Polygons in the grid, and returns their ids.
@@ -869,6 +869,33 @@
 			for (var id in this.polys) {
 				if (this.polys.hasOwnProperty(id) && Const.hitTestPointRing(pt, this.getNodesForPolygon(id))) {
 					hits.push(id);
+				}
+			}
+			return hits;
+		},
+		checkIsWalkable: function(poly_to_ignore, point){
+			for (var id in this.polys){
+				if(poly_to_ignore != id){
+					if(this.polys[id].data){
+						if (Const.hitTestPointRing(point, this.getNodesForPolygon(id))){
+							return false
+						}
+					}
+				}
+			}
+			return true
+		},
+		// Tests a Point for intersections with all Polygons with attr SOLID, 
+		getPolygonsOverPoint2: function(pt) {
+			var hits = [];
+			for (var id in this.polys) {
+				if (this.polys.hasOwnProperty(id) && Const.hitTestPointRing(pt, this.getNodesForPolygon(id))) {
+					if(this.checkIsWalkable(id, pt)){
+						hits.push(id);
+					} else {
+						// Not a walkable area just try another the next point
+						break
+					}
 				}
 			}
 			return hits;
