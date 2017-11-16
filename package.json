@@ -40,7 +40,9 @@
     "cordova-plugin-whitelist": "^1.3.2",
     "pathfinding": "^0.4.18",
     "phaser-ce": "^2.8.3",
+    "phaser-list-view": "^1.3.1",
     "phaser-navmesh": "^1.1.1",
+    "phaser-scrollable": "git+https://github.com/trueicecold/phaser-scrollable.git",
     "webfontloader": "^1.6.28"
   },
   "cordova": {
