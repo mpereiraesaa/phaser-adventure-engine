@@ -39,6 +39,9 @@ export default class Scene extends Phaser.State {
 
     if (Navmesh) {
       this.navmesh = new Navmesh(game);
+
+      this.navmesh.backgroundScale = { x: this.scaleX, y: this.scaleY }
+
       if (this.sceneDefinition.navmeshPoints) {
         this.navmeshPoints = this.sceneDefinition.navmeshPoints;
         this.navmesh.loadPolygonFromNodes(this.navmeshPoints);
@@ -46,7 +49,14 @@ export default class Scene extends Phaser.State {
       if (this.sceneDefinition.shape){
         this.navmesh.loadSolidPolygonFromNodes(this.sceneDefinition.shape);
       }
+      if (this.sceneDefinition.points){
+        let nodes = this.sceneDefinition.points
+        for (var i = 0; i < nodes.length; i++) {
+          this.navmesh.addPoint(nodes[i]);
+        }
+      }
     }
+
   }
 
   update() {
@@ -114,6 +124,10 @@ export default class Scene extends Phaser.State {
    */
   initBackground() {
     this.background = this.game.add.sprite(0, 0, this.key + "bg");
+    this.scaleX = this.game.width / this.background.width
+    this.scaleY = this.game.height / this.background.height
+
+    this.background.scale.setTo( this.scaleX, this.scaleY )
     this.layers.background.add(this.background);
     this.background.inputEnabled = true;
     this.background.events.onInputUp.add(function(sprite, pointer, g) {

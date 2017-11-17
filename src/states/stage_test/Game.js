@@ -4,6 +4,7 @@ import PlayerActor from '../../engine/PlayerActor'
 
 export default class extends Phaser.State {
   init () {}
+
   preload () {}
 
   create () {
@@ -17,6 +18,7 @@ export default class extends Phaser.State {
     banner.anchor.setTo(0.5)
 
     let shape = game.cache.getJSON('map')
+    let points = game.cache.getJSON('salt_lake_points')
     let navmeshPoints = []
 
     shape.layers[1].objects.map(point => {
@@ -28,7 +30,8 @@ export default class extends Phaser.State {
     let sceneDefinition = {
       bg: './assets/images/salt_lake.png',
       navmeshPoints: navmeshPoints,
-      shape: this.game.cache.getJSON('salt_lake_shape_1')
+      shape: this.game.cache.getJSON('salt_lake_shape_1'), 
+      points: points
     }
 
     // creates a scene and immediately switches to it

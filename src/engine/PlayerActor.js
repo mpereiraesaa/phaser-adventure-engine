@@ -74,8 +74,8 @@ export default class extends Actor {
           path[i - 1] != undefined ? path[i - 1].y : this.y,
           pointer.x,
           pointer.y
-        );
-        this.walkTween.to({ x: pointer.x, y: pointer.y }, distance * 4);
+        );        
+        this.walkTween.to({ x: pointer.x, y: pointer.y }, distance * 7);
       }
 
       this.walkTween.start();

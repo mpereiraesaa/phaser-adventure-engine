@@ -2,7 +2,9 @@ import Const from "./lib/constellation";
 
 export default class Navmesh {
   constructor(game) {
+    this.backgroundScale = {}
     console.debug("Navmesh initialised");
+    this.directPath = false;
     this.game = game;
     this.initData();
     this.initGraphics();
@@ -79,7 +81,7 @@ export default class Navmesh {
       y: pointer.y
     });
 
-    console.log(hit)
+    console.log(hit);
 
     if (hit) {
       return false;
@@ -137,9 +139,36 @@ export default class Navmesh {
     var path = [];
 
     if (direct) {
+      this.directPath = direct;
       console.log("direct path");
+      let _nodes = this.getCurrentNodes();
+
+      let waypoint = this.grid.getNearestFromArrayNodeToPoint(
+        this.characterLocation,
+        _nodes
+      );
+
+      let distanceWaypoint = Phaser.Math.distance(
+        waypoint.x,
+        waypoint.y,
+        this.pointerLocation.x,
+        this.pointerLocation.y
+      );
+
+      let distanceDirect = Phaser.Math.distance(
+        this.characterLocation.x,
+        this.characterLocation.y,
+        this.pointerLocation.x,
+        this.pointerLocation.y
+      );
+
+      if (distanceWaypoint < distanceDirect + 20) {
+        path.push(waypoint);
+      }
+
       path.push(this.pointerLocation);
     } else {
+      this.directPath = direct
       console.log("intersects obstacle");
       var snap;
       for (var i = 0; i < crossingPoints.length; i++) {
@@ -184,8 +213,12 @@ export default class Navmesh {
   undo() {}
 
   addPoint(pointer) {
+    let data = null;
+    if (pointer.data) {
+      data = pointer.data;
+    }
     this.game.pncPlugin.signals.sceneTappedSignal.halt();
-    var node = this.grid.addNode(pointer.x, pointer.y);
+    var node = this.grid.addNode(pointer.x * this.backgroundScale.x, pointer.y * this.backgroundScale.y, data);
     this.currentNodes.push(node.id);
     this.drawAll();
     return node;
@@ -219,11 +252,11 @@ export default class Navmesh {
   }
 
   addPolygon(e, nodes, solid) {
-    let data = {}
-    if(solid){
-      data = { solid: true }
+    let data = {};
+    if (solid) {
+      data = { solid: true };
     } else {
-      data = null
+      data = null;
     }
 
     if (nodes == undefined) {
@@ -231,14 +264,17 @@ export default class Navmesh {
     }
     this.outputNodesAsJson();
     var polygon = this.grid.addPolygon(nodes, data);
-    let nodes_keys = Object.keys(this.grid.nodes)
+    let nodes_keys = Object.keys(this.grid.nodes);
     if (polygon !== null) {
       for (var i = 1; i < polygon.nodes.length; i++) {
         this.grid.joinNodes(polygon.nodes[i - 1], polygon.nodes[i]);
       }
 
-      if(solid){
-        this.grid.joinNodes(polygon.nodes[polygon.nodes.length -1], polygon.nodes[0])
+      if (solid) {
+        this.grid.joinNodes(
+          polygon.nodes[polygon.nodes.length - 1],
+          polygon.nodes[0]
+        );
       }
 
       this.currentNodes = [];

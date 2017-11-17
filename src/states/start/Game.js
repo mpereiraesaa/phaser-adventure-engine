@@ -14,12 +14,9 @@ export default class extends Phaser.State {
 
   preload() {}
 
-  Go() {
-    StartStageTest();
-  }
-
   func(el) {
-    this.Go(el.data.id);
+    this.scroller.stop()
+    el.data.exec()
   }
 
   create() {
@@ -30,15 +27,6 @@ export default class extends Phaser.State {
     var maskH = 200;
     var boxW = maskW;
     var boxH = 40;
-
-    // let parent = this.world;
-    // let bounds = new Phaser.Rectangle(60, 50, maskW, maskH);
-
-    // Draw a custom Scroll bar.
-    // var graphics = game.add.graphics(0, 0);
-    // graphics.lineStyle(20, Phaser.Color.hexToRGB("#b2aeae"));
-    // graphics.moveTo(bounds.x + maskW + 10, bounds.y);
-    // graphics.lineTo(bounds.x + maskW + 10, bounds.y + maskH + 10);
 
     let c = this.game.add.graphics(0, 0);
     c
@@ -67,9 +55,10 @@ export default class extends Phaser.State {
 
     txt.anchor.set(0.5);
     var img = this.game.add.image(0, 0, group.generateTexture());
-    img.data = { id: 1 };
+    img.data = { id: 1, exec: StartStageTest };
 
     img.inputEnabled = true;
+    img.input.useHandCursor = true;
     img.events.onInputDown.add(this.func, this);
 
     this.scroller.addChildren(img);
@@ -78,8 +67,6 @@ export default class extends Phaser.State {
 
     this.scrollGroup.add(c);
     this.scrollGroup.add(this.scroller);
-
-    window.scroller = this.scroller;
 
     const bannerText = "Prototype";
     let banner = this.add.text(

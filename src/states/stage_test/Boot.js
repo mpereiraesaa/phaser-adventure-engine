@@ -26,6 +26,7 @@ export default class extends Phaser.State {
     this.load.image('player', './assets/images/p1_front.png')
     this.load.json('map', './assets/tilemaps/maps/salt_lake_v1.json')
     this.load.json('salt_lake_shape_1', './assets/tilemaps/maps/salt_lake/shape1.json')
+    this.load.json('salt_lake_points', './assets/tilemaps/maps/salt_lake/points.json')
   }
 
   create(){}

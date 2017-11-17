@@ -853,7 +853,9 @@
 		getNearestNodeToPoint: function(pt) {
 			return Const.getNearestPointToPoint(pt, _c.toArray(this.nodes));
 		},
-		
+		getNearestFromArrayNodeToPoint: function(pt, _nodes) {
+			return Const.getNearestPointToPoint(pt, _nodes);
+		},		
 		// Tests if a Point intersects any Polygon in the grid.
 		// @param pt: Point to test.
 		// @return: True if the point intersects any polygon.
