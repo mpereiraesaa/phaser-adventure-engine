@@ -13,6 +13,6 @@ export default class extends Phaser.State {
   }
 
   create () {
-    this.state.start('StartGame')
+    this.state.start('SelectorGame')
   }
 }

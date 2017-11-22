@@ -4,7 +4,7 @@ import WebFont from 'webfontloader'
 
 export default class extends Phaser.State {
   init () {
-    this.stage.backgroundColor = '#22C55C'
+    this.stage.backgroundColor = '#000000'
     this.fontsReady = false
     this.fontsLoaded = this.fontsLoaded.bind(this)
   }
@@ -24,10 +24,17 @@ export default class extends Phaser.State {
     this.load.image('loaderBg', './assets/images/loader-bg.png')
     this.load.image('loaderBar', './assets/images/loader-bar.png')
 
+    // Hud stuff
+    this.load.image("chat-rooms-icon", "./assets/images/lobby/chat_rooms.png")
+    this.load.image("friends-icon", "./assets/images/lobby/friends-logo.png")
+    this.load.image("grass-tex", "./assets/images/lobby/grass.jpg")
+    this.load.image("my-house-btn", "./assets/images/lobby/house_btn.png")
+    this.load.image("view-houses-icon", "./assets/images/lobby/houses_rooms.png")
+    this.load.image("settings-icon", "./assets/images/lobby/settings-logo.png")
+    this.load.image("store-icon", "./assets/images/lobby/store.png")
+    this.load.image("video-room-icon", "./assets/images/lobby/video_rooms.png")
     
-    this.load.image("menu-button", "./assets/ui/menu.png")
-
-    this.load.spritesheet('button', './assets/buttons/button_sprite_sheet.png', 193, 71);
+    this.load.image("lobby-bg", "./assets/images/lobby/lobby_bg.png")
   }
 
   create(){
@@ -37,7 +44,7 @@ export default class extends Phaser.State {
 
   render () {
     if (this.fontsReady) {
-      this.state.start('StartSplash')
+      this.state.start('LobbySplash')
     }
   }
 

@@ -3,7 +3,7 @@ import 'pixi'
 import 'p2'
 import Phaser from 'phaser'
 
-import Start from './states/start/Index' 
+import Start from './index' 
 import config from './config'
 
 class Game extends Phaser.Game {

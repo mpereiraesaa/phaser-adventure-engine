@@ -6,9 +6,6 @@ import "../../plugins/slick-ui/src/Core";
 
 import ScrollableArea from "../../plugins/phaser-scrollable";
 
-// Import levels
-import StartStageTest from "../stage_test/Index";
-
 export default class extends Phaser.State {
   init() {}
 
@@ -16,7 +13,7 @@ export default class extends Phaser.State {
 
   func(el) {
     this.scroller.stop()
-    el.data.exec()
+    game.state.start(el.data.state)
   }
 
   create() {
@@ -55,7 +52,7 @@ export default class extends Phaser.State {
 
     txt.anchor.set(0.5);
     var img = this.game.add.image(0, 0, group.generateTexture());
-    img.data = { id: 1, exec: StartStageTest };
+    img.data = { id: 1, state: "TestStageBoot" };
 
     img.inputEnabled = true;
     img.input.useHandCursor = true;
