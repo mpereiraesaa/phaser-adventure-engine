@@ -32,6 +32,8 @@ export default class extends Phaser.State {
       this.camera_height / 2
     );
 
+    console.log(`Camera width: ${this.game.camera.width}`)
+
     // define the HUD regions (begin and end points)
     this.regions = {
       top_left: {
@@ -129,6 +131,10 @@ export default class extends Phaser.State {
       }
     };
 
+    this.background = this.game.add.sprite(0, 0, "lobby-bg");
+    this.scaleX = this.game.width / this.background.width;
+    this.scaleY = this.game.height / this.background.height;
+
     // Group HUD / Icons
     this.hud = this.game.add.group();
     this.hudElements = this.game.add.group();
@@ -143,8 +149,8 @@ export default class extends Phaser.State {
       this.regions.top_left.begin.y,
       "view-houses-icon"
     );
-    this.OtherHousesIcon.data = { state: "SelectorBoot" }
-    
+    this.OtherHousesIcon.data = { state: "SelectorBoot" };
+
     this.videoRoomsIcon = this.game.add.image(
       this.regions.center_top.begin.x + 50,
       this.regions.center_top.begin.y,
@@ -172,10 +178,6 @@ export default class extends Phaser.State {
       "friends-icon"
     );
 
-    this.background = this.game.add.sprite(0, 0, "lobby-bg");
-    this.scaleX = this.game.width / this.background.width;
-    this.scaleY = this.game.height / this.background.height;
-
     this.hudElements.add(this.chatRoomsIcon);
     this.hudElements.add(this.friendsIcon);
     this.hudElements.add(this.myHouseIcon);
@@ -185,11 +187,11 @@ export default class extends Phaser.State {
     this.hudElements.add(this.videoRoomsIcon);
 
     this.hud.add(this.background);
-    this.hud.add(this.hudElements)
+    this.hud.add(this.hudElements);
 
     // Add control input to they
-    this.hudElements.setAll('inputEnabled', true);
-    this.hudElements.setAll('input.useHandCursor', true);
+    this.hudElements.setAll("inputEnabled", true);
+    this.hudElements.setAll("input.useHandCursor", true);
 
     this.myHouseIcon.events.onInputOver.add(this.listener, this);
     this.OtherHousesIcon.events.onInputOver.add(this.listener, this);
@@ -207,7 +209,7 @@ export default class extends Phaser.State {
     this.settingsIcon.events.onInputOut.add(this.listenerOut, this);
     this.friendsIcon.events.onInputOut.add(this.listenerOut, this);
 
-    this.OtherHousesIcon.events.onInputDown.add(this.func, this)
+    this.OtherHousesIcon.events.onInputDown.add(this.func, this);
 
     this.resizeIcon(this.chatRoomsIcon);
     this.resizeIcon(this.friendsIcon, 100, 70);
@@ -217,6 +219,7 @@ export default class extends Phaser.State {
     this.resizeIcon(this.storeIcon);
     this.resizeIcon(this.videoRoomsIcon);
 
+    // Reescaling Hud Too
     this.hud.scale.setTo(this.scaleX, this.scaleY);
 
     const bannerText = "Prototype";
@@ -249,12 +252,12 @@ export default class extends Phaser.State {
     // this.bgGroup.scale.setTo(this.game.width / bg.width, this.game.height / bg.height)
   }
 
-  listenerOut(sprite){
-    sprite.scale.setTo(sprite.scale.x - 0.050, sprite.scale.y - 0.050)
+  listenerOut(sprite) {
+    sprite.scale.setTo(sprite.scale.x - 0.05, sprite.scale.y - 0.05);
   }
 
   listener(sprite) {
-    sprite.scale.setTo(sprite.scale.x + 0.050, sprite.scale.y + 0.050)
+    sprite.scale.setTo(sprite.scale.x + 0.05, sprite.scale.y + 0.05);
   }
 
   update() {}
