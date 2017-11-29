@@ -1,9 +1,6 @@
 /* globals __DEV__ */
 import Phaser from "phaser";
 
-/* Import Slick-UI GUI Plugin */
-import "../../plugins/slick-ui/src/Core";
-
 export default class extends Phaser.State {
   init() {}
 
@@ -144,40 +141,44 @@ export default class extends Phaser.State {
     this.hudElements = this.game.add.group();
 
     this.myHouseIcon = this.game.add.image(
-      this.regions.top_left.begin.x + 25,
+      this.regions.top_left.begin.x,
       this.regions.top_left.begin.y,
       "my-house-btn"
     );
+
     this.OtherHousesIcon = this.game.add.image(
-      this.regions.top_left.begin.x + 175,
+      (this.regions.top_left.begin.x) + (this.myHouseIcon.width) + 30,
       this.regions.top_left.begin.y,
       "view-houses-icon"
     );
     this.OtherHousesIcon.data = { state: "SelectorBoot" };
 
     this.videoRoomsIcon = this.game.add.image(
-      this.regions.center_top.begin.x + 50,
+      this.OtherHousesIcon.x + this.OtherHousesIcon.width + 30,
       this.regions.center_top.begin.y,
       "video-room-icon"
     );
+
     this.chatRoomsIcon = this.game.add.image(
-      this.regions.center_top.begin.x + 200,
+      this.videoRoomsIcon.x + this.videoRoomsIcon.width + 30,
       this.regions.center_top.begin.y,
       "chat-rooms-icon"
     );
+
     this.storeIcon = this.game.add.image(
-      this.regions.center_top.begin.x + 350,
+      this.chatRoomsIcon.x + this.chatRoomsIcon.width + 30,
       this.regions.center_top.begin.y,
       "store-icon"
     );
+
     this.settingsIcon = this.game.add.image(
-      this.regions.top_right.end.x - 100,
+      this.storeIcon.x + this.storeIcon.width + 30,
       this.regions.top_right.begin.y - 15,
       "settings-icon"
     );
 
     this.friendsIcon = this.game.add.image(
-      this.regions.top_right.end.x - 125,
+      0 + this.game.width * this.scaleX,
       this.regions.bottom_right.begin.y,
       "friends-icon"
     );
@@ -226,7 +227,7 @@ export default class extends Phaser.State {
     // Reescaling Hud Too
     this.hud.scale.setTo(this.scaleX, this.scaleY);
 
-    const bannerText = "Prototype";
+    const bannerText = "Alpha version";
     let banner = this.add.text(
       this.world.centerX,
       this.game.height - 80,

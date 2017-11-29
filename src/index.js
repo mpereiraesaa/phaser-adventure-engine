@@ -2,6 +2,8 @@ import {Lobby} from "./states/Lobby/Index"
 import {Selector} from "./states/Selector/Index"
 import {TestStage} from "./states/TestStage/Index"
 
+import 'script-loader!../assets/lib/spriter/spriter.min.js';
+
 const Start = (game) => {
   game.state.add("SelectorBoot", Selector.BootState, false);
   game.state.add("SelectorSplash", Selector.SplashState, false);

@@ -1,5 +1,4 @@
 import Phaser from 'phaser'
-import PNCAdventure from "../../engine/PNCAdventure"
 import WebFont from 'webfontloader'
 
 export default class extends Phaser.State {
