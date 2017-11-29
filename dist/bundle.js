@@ -13026,6 +13026,11 @@ var _class = function (_Phaser$State) {
       game.state.start(el.data.state);
     }
   }, {
+    key: "shutdown",
+    value: function shutdown() {
+      document.getElementById("chat-container").style.display = "none";
+    }
+  }, {
     key: "resizeIcon",
     value: function resizeIcon(img, sizeW, sizeH) {
       var w = sizeW ? sizeW : 80;
@@ -13038,13 +13043,13 @@ var _class = function (_Phaser$State) {
   }, {
     key: "create",
     value: function create() {
+      document.getElementById("chat-container").style.display = "block";
+
       this.margins = { left: 20, right: 50, top: 20, bottom: 220 };
 
       this.camera_width = this.game.camera.width;
       this.camera_height = this.game.camera.height;
       this.camera_center = new _phaser2.default.Point(this.camera_width / 2, this.camera_height / 2);
-
-      console.log("Camera width: " + this.game.camera.width);
 
       // define the HUD regions (begin and end points)
       this.regions = {
@@ -15537,17 +15542,15 @@ var _class = function (_Phaser$State) {
       // load your assets
       this.load.image('loaderBg', './assets/images/loader-bg.png');
       this.load.image('loaderBar', './assets/images/loader-bar.png');
+      this.load.image('vertical-bar', './assets/images/scroll-box.png');
 
-      this.load.image("menu-button", "./assets/ui/menu.png");
+      this.load.image("selector-box", "./assets/images/select-box.png");
 
       this.load.spritesheet('button', './assets/buttons/button_sprite_sheet.png', 193, 71);
     }
   }, {
     key: 'create',
-    value: function create() {
-      // Register the plugin with Phaser
-      this.game.pncPlugin = this.game.plugins.add(_PNCAdventure2.default);
-    }
+    value: function create() {}
   }, {
     key: 'render',
     value: function render() {
@@ -15699,15 +15702,14 @@ var _class = function (_Phaser$State) {
       /* Scroll box group */
       this.scrollGroup = this.game.add.group();
 
-      var maskW = 200;
-      var maskH = 200;
-      var boxW = maskW;
+      this.menuX = 55;
+      this.menuY = 45;
+
+      this.box = this.add.sprite(this.menuX, this.menuY, 'selector-box');
+      var boxW = this.box.width - 80;
       var boxH = 40;
 
-      var c = this.game.add.graphics(0, 0);
-      c.beginFill(_phaser2.default.Color.hexToRGB("#eee")).drawRect(60 - 5, 50 - 5, maskW + 10, maskH + 10);
-
-      this.scroller = game.add.existing(new _phaserScrollable2.default(60, 50, maskW, maskH, {
+      this.scroller = game.add.existing(new _phaserScrollable2.default(this.menuX + 25, this.menuY + 25, this.box.width, this.box.height, {
         horizontalScroll: false,
         horizontalWheel: false,
         verticalWheel: true
@@ -15717,7 +15719,7 @@ var _class = function (_Phaser$State) {
       var g = this.game.add.graphics(0, 0, group);
       g.beginFill(_phaser2.default.Color.hexToRGB("#8c1be2")).drawRect(0, 0, boxW, boxH / 2);
 
-      var txt = this.game.add.text(boxW / 4, boxH / 3 - 1, "Stage Test", { font: "14px Arial", fill: "#fff" }, group);
+      var txt = this.game.add.text(boxW / 4, boxH / 3, "Stage Test", { font: "14px Arial", fill: "#fff" }, group);
 
       txt.anchor.set(0.5);
       var img = this.game.add.image(0, 0, group.generateTexture());
@@ -15731,17 +15733,8 @@ var _class = function (_Phaser$State) {
 
       this.scroller.start();
 
-      this.scrollGroup.add(c);
+      this.scrollGroup.add(this.box);
       this.scrollGroup.add(this.scroller);
-
-      var bannerText = "Prototype";
-      var banner = this.add.text(this.world.centerX, this.game.height - 80, bannerText);
-      banner.font = "Bangers";
-      banner.padding.set(10, 16);
-      banner.fontSize = 40;
-      banner.fill = "#77BFA3";
-      banner.smoothed = false;
-      banner.anchor.setTo(0.5);
 
       // let bg = this.game.add.tileSprite(0,0, this.cache.getImage("background").width, this.cache.getImage("background").height, 'background')    // Stretch to fill all space as background
 
@@ -15825,10 +15818,7 @@ var ScrollableArea = function (_Phaser$Group) {
     _this.mask = _this.maskGraphics;
 
     // Draw a bar
-    _this.bar = game.add.graphics(0, 0);
-    _this.bar.lineStyle(10, Phaser.Color.hexToRGB("#68645f"));
-    _this.bar.moveTo(x + w + 15, y);
-    _this.bar.lineTo(x + w + 15, y + 15);
+    _this.bar = game.add.sprite(x + w - 70, y, 'vertical-bar');
     _this.bar.inputEnabled = true;
 
     _this.dragging = false;
@@ -15876,7 +15866,7 @@ var ScrollableArea = function (_Phaser$Group) {
   }
 
   _createClass(ScrollableArea, [{
-    key: "addChildren",
+    key: 'addChildren',
     value: function addChildren(child) {
       this.maskGraphics.x = this.parent.x + this._x;
       this.maskGraphics.y = this.parent.y + this._y;
@@ -15898,7 +15888,7 @@ var ScrollableArea = function (_Phaser$Group) {
      */
 
   }, {
-    key: "configure",
+    key: 'configure',
     value: function configure(options) {
       if (options) {
         for (var property in options) {
@@ -15916,7 +15906,7 @@ var ScrollableArea = function (_Phaser$Group) {
      */
 
   }, {
-    key: "start",
+    key: 'start',
     value: function start() {
       this.game.input.onDown.add(this.beginMove, this);
       this.callbackID = this.game.input.addMoveCallback(this.moveCanvas, this);
@@ -15929,7 +15919,7 @@ var ScrollableArea = function (_Phaser$Group) {
      */
 
   }, {
-    key: "beginMove",
+    key: 'beginMove',
     value: function beginMove() {
       if (this.allowScrollStopOnTouch && this.scrollTween) {
         this.scrollTween.pause();
@@ -15954,7 +15944,7 @@ var ScrollableArea = function (_Phaser$Group) {
      */
 
   }, {
-    key: "moveCanvas",
+    key: 'moveCanvas',
     value: function moveCanvas(pointer, x, y) {
       if (!this.pressedDown) return;
 
@@ -15986,7 +15976,7 @@ var ScrollableArea = function (_Phaser$Group) {
      */
 
   }, {
-    key: "endMove",
+    key: 'endMove',
     value: function endMove() {
       if (this.startedInside) {
         this.pressedDown = false;
@@ -16023,7 +16013,7 @@ var ScrollableArea = function (_Phaser$Group) {
       }
     }
   }, {
-    key: "scrollTo",
+    key: 'scrollTo',
     value: function scrollTo(x, y, time, easing, allowScrollStopOnTouch) {
       if (this.scrollTween) {
         this.scrollTween.pause();
@@ -16040,7 +16030,7 @@ var ScrollableArea = function (_Phaser$Group) {
       this.scrollTween.to({ x: x, y: y }, time, easing).start();
     }
   }, {
-    key: "moveBar",
+    key: 'moveBar',
     value: function moveBar() {
       var y = Math.round(this.percentMovement / 100 * this.barHeightMax);
 
@@ -16053,7 +16043,7 @@ var ScrollableArea = function (_Phaser$Group) {
      */
 
   }, {
-    key: "update",
+    key: 'update',
     value: function update() {
       if (this.height > this.h) {
         this.elapsed = Date.now() - this.timestamp;
@@ -16112,7 +16102,7 @@ var ScrollableArea = function (_Phaser$Group) {
      */
 
   }, {
-    key: "mouseWheel",
+    key: 'mouseWheel',
     value: function mouseWheel(event) {
       if (!this.settings.horizontalWheel && !this.settings.verticalWheel) return;
 
@@ -16146,7 +16136,7 @@ var ScrollableArea = function (_Phaser$Group) {
      */
 
   }, {
-    key: "stop",
+    key: 'stop',
     value: function stop() {
       this.game.input.onDown.remove(this.beginMove, this);
 
@@ -16166,7 +16156,7 @@ var ScrollableArea = function (_Phaser$Group) {
      */
 
   }, {
-    key: "setPosition",
+    key: 'setPosition',
     value: function setPosition(position) {
       if (position.x) {
         this.x += position.x - this._x;
@@ -16183,7 +16173,7 @@ var ScrollableArea = function (_Phaser$Group) {
      */
 
   }, {
-    key: "limitMovement",
+    key: 'limitMovement',
     value: function limitMovement() {
       if (this.settings.horizontalScroll) {
         if (this.x > this._x) this.x = this._x;

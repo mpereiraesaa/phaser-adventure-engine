@@ -13,6 +13,10 @@ export default class extends Phaser.State {
     game.state.start(el.data.state);
   }
 
+  shutdown(){
+    document.getElementById("chat-container").style.display = "none"
+  }
+
   resizeIcon(img, sizeW, sizeH) {
     let w = sizeW ? sizeW : 80;
     let h = sizeH ? sizeH : 80;
@@ -23,6 +27,8 @@ export default class extends Phaser.State {
   }
 
   create() {
+    document.getElementById("chat-container").style.display = "block"
+
     this.margins = { left: 20, right: 50, top: 20, bottom: 220 };
 
     this.camera_width = this.game.camera.width;
@@ -31,8 +37,6 @@ export default class extends Phaser.State {
       this.camera_width / 2,
       this.camera_height / 2
     );
-
-    console.log(`Camera width: ${this.game.camera.width}`)
 
     // define the HUD regions (begin and end points)
     this.regions = {

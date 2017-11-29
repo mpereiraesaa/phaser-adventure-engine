@@ -20,18 +20,15 @@ export default class extends Phaser.State {
     /* Scroll box group */
     this.scrollGroup = this.game.add.group();
 
-    var maskW = 200;
-    var maskH = 200;
-    var boxW = maskW;
+    this.menuX = 55
+    this.menuY = 45
+
+    this.box = this.add.sprite(this.menuX, this.menuY, 'selector-box')
+    var boxW = this.box.width - 80;
     var boxH = 40;
 
-    let c = this.game.add.graphics(0, 0);
-    c
-      .beginFill(Phaser.Color.hexToRGB("#eee"))
-      .drawRect(60 - 5, 50 - 5, maskW + 10, maskH + 10);
-
     this.scroller = game.add.existing(
-      new ScrollableArea(60, 50, maskW, maskH, {
+      new ScrollableArea(this.menuX + 25, this.menuY + 25, this.box.width, this.box.height, {
         horizontalScroll: false,
         horizontalWheel: false,
         verticalWheel: true
@@ -44,7 +41,7 @@ export default class extends Phaser.State {
 
     var txt = this.game.add.text(
       boxW / 4,
-      (boxH / 3) - 1,
+      (boxH / 3),
       "Stage Test",
       { font: "14px Arial", fill: "#fff" },
       group
@@ -62,21 +59,8 @@ export default class extends Phaser.State {
 
     this.scroller.start();
 
-    this.scrollGroup.add(c);
+    this.scrollGroup.add(this.box);
     this.scrollGroup.add(this.scroller);
-
-    const bannerText = "Prototype";
-    let banner = this.add.text(
-      this.world.centerX,
-      this.game.height - 80,
-      bannerText
-    );
-    banner.font = "Bangers";
-    banner.padding.set(10, 16);
-    banner.fontSize = 40;
-    banner.fill = "#77BFA3";
-    banner.smoothed = false;
-    banner.anchor.setTo(0.5);
 
     // let bg = this.game.add.tileSprite(0,0, this.cache.getImage("background").width, this.cache.getImage("background").height, 'background')    // Stretch to fill all space as background
 

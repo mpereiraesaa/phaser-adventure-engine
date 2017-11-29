@@ -17,10 +17,7 @@ export default class ScrollableArea extends Phaser.Group {
     this.mask = this.maskGraphics;
 
     // Draw a bar
-    this.bar = game.add.graphics(0, 0);
-    this.bar.lineStyle(10, Phaser.Color.hexToRGB("#68645f"));
-    this.bar.moveTo(x + w + 15, y);
-    this.bar.lineTo(x + w + 15, y + 15);
+    this.bar = game.add.sprite(x + w - 70, y, 'vertical-bar')
     this.bar.inputEnabled = true;
 
     this.dragging = false;

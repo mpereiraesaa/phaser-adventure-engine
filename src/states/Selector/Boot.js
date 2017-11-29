@@ -23,17 +23,14 @@ export default class extends Phaser.State {
     // load your assets
     this.load.image('loaderBg', './assets/images/loader-bg.png')
     this.load.image('loaderBar', './assets/images/loader-bar.png')
-
+    this.load.image('vertical-bar', './assets/images/scroll-box.png')
     
-    this.load.image("menu-button", "./assets/ui/menu.png")
+    this.load.image("selector-box", "./assets/images/select-box.png")
 
     this.load.spritesheet('button', './assets/buttons/button_sprite_sheet.png', 193, 71);
   }
 
-  create(){
-    // Register the plugin with Phaser
-    this.game.pncPlugin = this.game.plugins.add(PNCAdventure)
-  }
+  create(){}
 
   render () {
     if (this.fontsReady) {
