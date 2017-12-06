@@ -35,6 +35,13 @@ export default class extends Phaser.State {
     this.load.image("video-room-icon", "./assets/images/lobby/video_rooms.png")
     
     this.load.image("lobby-bg", "./assets/images/lobby/lobby_bg.png")
+
+    // Player Sprites
+    this.load.atlas("playerAtlas", "./assets/images/player/player.png", "./assets/images/player/player.json");
+    this.load.json("playerJson", "./assets/images/player/player.scon");
+
+    // item (book) image
+    this.load.image("playerItem", "./assets/images/player/Item.png");
   }
 
   create(){

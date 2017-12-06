@@ -1,4 +1,4 @@
-import Scene from './Scene'
+import Scene from "./Scene";
 
 export default class extends Phaser.Plugin {
   constructor(game, parent) {
@@ -21,6 +21,12 @@ export default class extends Phaser.Plugin {
     }, this);
   }
 
+  destroyScene() {
+    this.signals.sceneTappedSignal.removeAll()
+    this.signals.playerMovementSignal.removeAll()
+    this.signals.navGraphUpdated.removeAll()
+  }
+
   /**
    * addScene - adds a new scene to the game
    * @param {String} key - the name to refer to this scene
@@ -28,17 +34,18 @@ export default class extends Phaser.Plugin {
    * @param {boolean} switchTo - whether to switch to this scene immediately or not
    * @return {Phaser.Plugin.PNCAdventure.Scene} the resulting scene state object
    */
-  addScene(key, sceneDefinition, switchTo) {    
-    if (this.scenes[key] !== undefined) {
-      console.error("Scene " + key + " already exists");
-      return false;
-    }
-    this.scenes[key] = new Scene(
-      key,
-      sceneDefinition
-    );
+  addScene(key, sceneDefinition, switchTo) {
+    // if (this.scenes[key] !== undefined) {
+    //   console.error("Scene " + key + " already exists");
+    //   return false;
+    // }
+    this.scenes[key] = new Scene(key, sceneDefinition);
     this.game.state.add("PNC." + key, this.scenes[key], switchTo);
     return this.scenes[key];
+  }
+
+  addObject(scene, gameObject) {
+    return scene.initObjects(gameObject);
   }
 
   /**

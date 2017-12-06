@@ -1,25 +1,22 @@
 /* globals __DEV__ */
 import Phaser from 'phaser'
 import PlayerActor from '../../engine/PlayerActor'
+import Hud from '../../sprites/Hud'
 
 export default class extends Phaser.State {
   init () {}
 
   preload () {}
 
-  create () {
-    const bannerText = 'Prototype'
-    let banner = this.add.text(this.world.centerX, this.game.height - 80, bannerText)
-    banner.font = 'Bangers'
-    banner.padding.set(10, 16)
-    banner.fontSize = 40
-    banner.fill = '#77BFA3'
-    banner.smoothed = false
-    banner.anchor.setTo(0.5)
+  shutdown(){
+    this.game.pncPlugin.destroyScene()
+  }
 
+  create () {
     let shape = game.cache.getJSON('map')
     let points = game.cache.getJSON('salt_lake_points')
     let navmeshPoints = []
+    this.key = 'test-bg'
 
     shape.layers[1].objects.map(point => {
       for(let i = 0;i< point.polyline.length; i++){
@@ -27,6 +24,9 @@ export default class extends Phaser.State {
       }
     })
 
+    /* navmeshPoints => Draws the full walk zone, shape => means every blocked zone,
+    // points => Are some points that are drawn onto the navmesh to make more natural the paths.
+    */
     let sceneDefinition = {
       bg: './assets/images/salt_lake.png',
       navmeshPoints: navmeshPoints,
@@ -35,7 +35,7 @@ export default class extends Phaser.State {
     }
 
     // creates a scene and immediately switches to it
-    let room = this.game.pncPlugin.addScene('lobby', sceneDefinition, true)
+    let room = this.game.pncPlugin.addScene(this.key, sceneDefinition, true)
 
     // adds actor using PlayerActor prototype which adds listeners for movement input
     var actor = this.game.pncPlugin.addActor(room, {
@@ -44,6 +44,21 @@ export default class extends Phaser.State {
         image: 'player',
         type: PlayerActor
     })
+
+    const bannerText = 'Press W to enter debug background mode.'
+    let banner = new Phaser.Text(game, this.world.centerX, this.game.height - 30, bannerText);
+    banner.padding.set(10, 16)
+    banner.fontSize = 20
+    banner.fill = '#000'
+    banner.smoothed = false
+    banner.anchor.setTo(0.5)
+
+    let hud = new Hud(game)
+
+    this.game.pncPlugin.addObject(room, banner)
+    this.game.pncPlugin.addObject(room, hud)
+
+    // this.game.add.existing(hud)
 
     // let bg = this.game.add.tileSprite(0,0, this.cache.getImage("background").width, this.cache.getImage("background").height, 'background')    // Stretch to fill all space as background
 

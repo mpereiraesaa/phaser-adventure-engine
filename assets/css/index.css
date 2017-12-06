@@ -1,5 +1,5 @@
 #chat-container {
-	position: fixed;
+	position: absolute;
 	width: 250px;
 	height: 225px;
 	background-image: url("/assets/images/lobby/grass.jpg");

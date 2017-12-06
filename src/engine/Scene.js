@@ -1,5 +1,6 @@
 import Navmesh from './Navmesh'
 import Actor from './Actor'
+import Hud from '../sprites/Hud'
 
 export default class Scene extends Phaser.State {
   constructor(key, sceneDefinition) {
@@ -8,6 +9,7 @@ export default class Scene extends Phaser.State {
     this.sceneDefinition = sceneDefinition;
     this.preloadItems = [];
     this.actors = [];
+    this.objects = []
   }
 
   preload() {
@@ -54,6 +56,12 @@ export default class Scene extends Phaser.State {
         for (var i = 0; i < nodes.length; i++) {
           this.navmesh.addPoint(nodes[i]);
         }
+      }
+    }
+
+    if ( this.objects.length ) {
+      for (var i = 0; i < this.objects.length; i++) {
+        this.layers.background.add(this.objects[i]);
       }
     }
 
@@ -151,6 +159,15 @@ export default class Scene extends Phaser.State {
       this.actors.push(actorDefinition);
     } else {
       this.addActorToScene(actorDefinition);
+    }
+  }
+
+  initObjects(gameObject) {
+    // if this state is not active defer object creation until it is
+    if (!this.state) {
+      this.objects.push(gameObject)
+    } else {
+      this.layers.background.add(gameObject);
     }
   }
 

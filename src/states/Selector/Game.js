@@ -61,22 +61,6 @@ export default class extends Phaser.State {
 
     this.scrollGroup.add(this.box);
     this.scrollGroup.add(this.scroller);
-
-    // let bg = this.game.add.tileSprite(0,0, this.cache.getImage("background").width, this.cache.getImage("background").height, 'background')    // Stretch to fill all space as background
-
-    // this.player = new Player({
-    //   game: this.game,
-    //   x: 250,
-    //   y: 150,
-    //   asset: 'player',
-    //   frame: 18
-    // })
-
-    // this.game.add.existing(this.player)
-    // this.game.physics.enable(this.player, Phaser.Physics.ARCADE)
-
-    // this.game.input.onDown.add(this.player.moveCharacter, this);
-    // this.bgGroup.scale.setTo(this.game.width / bg.width, this.game.height / bg.height)
   }
 
   update() {}
