@@ -13,6 +13,7 @@ export default class extends Phaser.Plugin {
     this.signals = {
       sceneTappedSignal: new Phaser.Signal(),
       playerMovementSignal: new Phaser.Signal(),
+      otherPlayerMovementSignal: new Phaser.Signal(),
       navGraphUpdated: new Phaser.Signal()
     };
 
@@ -24,6 +25,7 @@ export default class extends Phaser.Plugin {
   destroyScene() {
     this.signals.sceneTappedSignal.removeAll()
     this.signals.playerMovementSignal.removeAll()
+    this.signals.otherPlayerMovementSignal.removeAll()
     this.signals.navGraphUpdated.removeAll()
   }
 

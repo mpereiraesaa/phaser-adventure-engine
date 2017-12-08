@@ -90,17 +90,30 @@ export default class Navmesh {
     }
   }
 
-  findPath() {
-    this.characterNodeId = this.grid.addNode(
-      this.characterLocation.x,
-      this.characterLocation.y,
-      { id: "character" }
-    );
-    this.pointerNodeId = this.grid.addNode(
-      this.pointerLocation.x,
-      this.pointerLocation.y,
-      { id: "pointer" }
-    );
+  findPath(playerMovement) {
+    if (!playerMovement) {
+      this.characterNodeId = this.grid.addNode(
+        this.characterLocation.x,
+        this.characterLocation.y,
+        { id: "character" }
+      );
+      this.pointerNodeId = this.grid.addNode(
+        this.pointerLocation.x,
+        this.pointerLocation.y,
+        { id: "pointer" }
+      );
+    } else {
+      this.characterNodeId = this.grid.addNode(
+        playerMovement.player.x,
+        playerMovement.player.y,
+        { id: "character" }
+      );
+      this.pointerNodeId = this.grid.addNode(
+        playerMovement.goTo.x,
+        playerMovement.goTo.y,
+        { id: "pointer" }
+      );
+    }
 
     var lineOfSightPoints = this.intersectorLine.coordinatesOnLine();
 
@@ -144,29 +157,29 @@ export default class Navmesh {
       let _nodes = this.getCurrentNodes();
 
       let waypoint = this.grid.getNearestFromArrayNodeToPoint(
-        this.characterLocation,
+        this.characterNodeId,
         _nodes
       );
 
       let distanceWaypoint = Phaser.Math.distance(
         waypoint.x,
         waypoint.y,
-        this.pointerLocation.x,
-        this.pointerLocation.y
+        this.pointerNodeId.x,
+        this.pointerNodeId.y
       );
 
       let distanceDirect = Phaser.Math.distance(
-        this.characterLocation.x,
-        this.characterLocation.y,
-        this.pointerLocation.x,
-        this.pointerLocation.y
+        this.characterNodeId.x,
+        this.characterNodeId.y,
+        this.pointerNodeId.x,
+        this.pointerNodeId.y
       );
 
-      if (distanceWaypoint < distanceDirect + 20) {
+      if (distanceWaypoint < distanceDirect) {
         path.push(waypoint);
       }
 
-      path.push(this.pointerLocation);
+      path.push(this.pointerNodeId);
     } else {
       this.directPath = direct
       console.log("intersects obstacle");

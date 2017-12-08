@@ -1,31 +1,83 @@
-export default class extends Phaser.Sprite {
-  /**
-   * Actor object extends the Phaser.Sprite object and represents a character
-   */
-  constructor(game, actorDefinition) {
-    if (actorDefinition === undefined) {
-      actorDefinition = {
-        x: 0,
-        y: 0,
-        image: "",
-        frame: 0
-      };
-    }
+import "script-loader!../../assets/lib/spriter/spriter.js";
+import ActorConfig from "./ActorConfig";
 
+export default class Actor extends Spriter.SpriterGroup {
+  constructor(game, actorDefinition) {
     super(
       game,
-      actorDefinition.x,
-      actorDefinition.y,
-      actorDefinition.image,
-      actorDefinition.frame
+      actorDefinition.spriterData,
+      actorDefinition.textureKey,
+      ActorConfig.ENTITY,
+      ActorConfig.START_ANIMATION_INDEX
     );
 
-    this.anchor.setTo(0.5, 1);
+    if (actorDefinition.isSmall) {
+      this.scaleX = 90 / this.width;
+      this.scaleY = 120 / this.height;
 
-    this.walkSpeed = 50;
-    this.averageWalkSpeed = 100;
+      this.scale.setTo(this.scaleX, this.scaleY);
+    }
 
     console.debug("Actor initialised");
+
+    window.player = this;
+    this._animationSpeed = 0.6;
+    this.id = 1;
+
+    // player bounds - circle
+    this.drawBounds();
+  }
+
+  drawBounds() {
+    this.bounds = null;
+    this.boundsGrp = this.game.make.group(null);
+    let bmd = this.game.make.bitmapData(60, 60);
+    let maskBitmap = this.game.make.bitmapData(60, 60);
+
+    bmd.circle(30, 30, 30, "rgba(43, 41, 42, 0.3)");
+    bmd.circle(30, 30, 20, "rgba(43, 41, 42, 0.7)");
+
+    maskBitmap.circle(30, 30, 30, "rgba(224, 119, 44, 0.5)");
+
+    this.maskImg = this.game.make.image(0, 0, maskBitmap);
+    this.maskImg.width = this.maskImg.width + this.maskImg.width;
+    this.maskImg.anchor.set(0.5);
+    this.maskImg.visible = false;
+
+    this.bounds = this.game.make.sprite(0, 0, bmd);
+    this.bounds.width = this.bounds.width + this.bounds.width;
+    this.bounds.anchor.set(0.5);
+
+    this.boundsGrp.add(this.bounds);
+    this.boundsGrp.add(this.maskImg);
+
+    // Add input
+    this.bounds.inputEnabled = true;
+    this.bounds.input.useHandCursor = true;
+
+    this.bounds.events.onInputOver.add(sprite => {
+      this.maskImg.visible = true;
+    }, this);
+
+    this.bounds.events.onInputOut.add(sprite => {
+      this.maskImg.visible = false;
+    }, this);
+
+    window.boundsGrp = this.boundsGrp;
+
+    this.addAt(this.boundsGrp, 0);
+  }
+
+  update() {
+    this.updateAnimation();
+
+    if (this.walkTween && this.walkTween.isRunning) {
+      this.calcAngle(this.xyPoint);
+
+      if (this.angleTo != this.walkTween.angleToBegin) {
+        this.lookAt();
+      }
+    }
   }
 
   walkTo(point, walkSpeed) {
@@ -90,4 +142,134 @@ export default class extends Phaser.Sprite {
 
     this.walkingTween.start();
   }
+
+  calcAngle(pointer) {
+    if (pointer) {
+      this.angleTo =
+        Phaser.Math.angleBetween(this.x, this.y, pointer.x, pointer.y) *
+        180 /
+        Math.PI;
+    }
+
+    if (this.angleTo > -100 && this.angleTo < -80) {
+      this.angleTo = "UPPER";
+    } else if (this.angleTo < -10 && this.angleTo > -80) {
+      this.angleTo = "UPPER_RIGHT";
+    } else if (this.angleTo < -110 && this.angleTo > -170) {
+      this.angleTo = "UPPER_LEFT";
+    } else if (this.angleTo > -10 && this.angleTo < 10) {
+      this.angleTo = "RIGHT";
+    } else if (
+      (this.angleTo > -180 && this.angleTo < -170) ||
+      (this.angleTo > 170 && this.angleTo < 180) ||
+      this.angleTo === 180
+    ) {
+      this.angleTo = "LEFT";
+    } else if (this.angleTo > 80 && this.angleTo < 100) {
+      this.angleTo = "LOWER";
+    } else if (this.angleTo > 10 && this.angleTo < 80) {
+      this.angleTo = "LOWER_RIGHT";
+    } else if (this.angleTo > 100 && this.angleTo < 170) {
+      this.angleTo = "LOWER_LEFT";
+    }
+  }
+
+  lookAt() {
+    if (this.angleTo == "UPPER") {
+      this.playAnimationById(ActorConfig.BACK_IDLE_INDEX);
+      console.log("ANGULO SUPERIOR");
+    } else if (this.angleTo == "UPPER_RIGHT") {
+      this.playAnimationById(ActorConfig.BACKRIGHT_ANIMATION_INDEX);
+      console.log("ANGULO SUPERIOR DERECHO");
+    } else if (this.angleTo == "UPPER_LEFT") {
+      this.playAnimationById(ActorConfig.BACKLEFT_ANIMATION_INDEX);
+      console.log("ANGULO SUPERIOR IZQUIERDO");
+    } else if (this.angleTo == "RIGHT") {
+      this.playAnimationById(ActorConfig.RIGHT_ANIMATION_INDEX);
+      console.log("ANGULO DERECHO");
+    } else if (this.angleTo == "LEFT") {
+      this.playAnimationById(ActorConfig.LEFT_ANIMATION_INDEX);
+      console.log("ANGULO IZQUIERDO");
+    } else if (this.angleTo == "LOWER") {
+      this.playAnimationById(ActorConfig.FRONT_IDLE_INDEX);
+      console.log("ANGULO INFERIOR");
+    } else if (this.angleTo == "LOWER_RIGHT") {
+      this.playAnimationById(ActorConfig.FRONTLEFT_ANIMATION_INDEX);
+      console.log("ANGULO INFERIOR DERECHO");
+    } else if (this.angleTo == "LOWER_LEFT") {
+      this.playAnimationById(ActorConfig.FRONTLEFT_ANIMATION_INDEX);
+      console.log("ANGULO INFERIOR IZQUIERDO");
+    }
+  }
+
+  stopAndLookAt(tween) {
+    if (tween.angleToBegin == "UPPER") {
+      this.playAnimationById(ActorConfig.BACK_IDLE_INDEX);
+      console.log("ANGULO SUPERIOR");
+    } else if (tween.angleToBegin == "UPPER_RIGHT") {
+      this.playAnimationById(ActorConfig.BACK_IDLE_INDEX);
+      console.log("ANGULO SUPERIOR DERECHO");
+    } else if (tween.angleToBegin == "UPPER_LEFT") {
+      this.playAnimationById(ActorConfig.BACK_IDLE_INDEX);
+      console.log("ANGULO SUPERIOR IZQUIERDO");
+    } else if (tween.angleToBegin == "RIGHT") {
+      this.playAnimationById(ActorConfig.FRONT_IDLE_INDEX);
+      console.log("ANGULO DERECHO");
+    } else if (tween.angleToBegin == "LEFT") {
+      this.playAnimationById(ActorConfig.FRONT_IDLE_INDEX);
+      console.log("ANGULO IZQUIERDO");
+    } else if (tween.angleToBegin == "LOWER") {
+      this.playAnimationById(ActorConfig.FRONT_IDLE_INDEX);
+      console.log("ANGULO INFERIOR");
+    } else if (tween.angleToBegin == "LOWER_RIGHT") {
+      this.playAnimationById(ActorConfig.FRONT_IDLE_INDEX);
+      console.log("ANGULO INFERIOR DERECHO");
+    } else if (tween.angleToBegin == "LOWER_LEFT") {
+      this.playAnimationById(ActorConfig.FRONT_IDLE_INDEX);
+      console.log("ANGULO INFERIOR IZQUIERDO");
+    }
+  }
+
+  movementComplete(player, tween) {
+    this.stopAndLookAt(tween);
+  }
+
+  moveTo(goTo, navmesh) {
+    this.xyPoint = goTo;
+
+    console.debug("Other Player movement signal received");
+    if (!navmesh) {
+      return;
+    }
+
+    if (this.walkTween && this.walkTween.isRunning) {
+      this.walkTween.stop();
+    }
+
+    this.walkTween = this.game.add.tween(this);
+    this.walkTween.onComplete.add(this.movementComplete, this);
+
+    this.calcAngle(goTo);
+    this.walkTween.angleToBegin = this.angleTo;
+
+    this.lookAt();
+
+    var path = navmesh.findPath({ player: this, goTo: goTo });
+    console.log(path);
+
+    var pointer;
+    for (var i = 0; i < path.length; i++) {
+      pointer = path[i];
+      var distance = Phaser.Math.distance(
+        path[i - 1] != undefined ? path[i - 1].x : this.x,
+        path[i - 1] != undefined ? path[i - 1].y : this.y,
+        pointer.x,
+        pointer.y
+      );
+      this.walkTween.to({ x: pointer.x, y: pointer.y }, distance * 7);
+    }
+
+    this.walkTween.start();
+  }
+
 }

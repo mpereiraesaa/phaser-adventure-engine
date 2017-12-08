@@ -39,9 +39,6 @@ export default class extends Phaser.State {
     // Player Sprites
     this.load.atlas("playerAtlas", "./assets/images/player/player.png", "./assets/images/player/player.json");
     this.load.json("playerJson", "./assets/images/player/player.scon");
-
-    // item (book) image
-    this.load.image("playerItem", "./assets/images/player/Item.png");
   }
 
   create(){

@@ -29,21 +29,16 @@ export default class extends Phaser.State {
     this.load.image("loaderBar", "./assets/images/loader-bar.png");
 
     // Player Sprites
-    this.load.atlas("playerAtlas", "./assets/images/player/Atlas.png", "./assets/images/player/Atlas.json");
-    this.load.xml("playerXml", "./assets/images/player/TEST.xml");
-    this.load.json("playerJson", "./assets/images/player/TEST.json");
+    this.load.atlas("playerAtlas", "./assets/images/player/player.png", "./assets/images/player/player.json");
+    this.load.json("playerJson", "./assets/images/player/player.scon");
 
-    // item (book) image
-    this.load.image("playerItem", "./assets/images/player/Item.png");
-
-    this.load.image("player", "./assets/images/p1_front.png");
     this.load.json("map", "./assets/tilemaps/maps/salt_lake_v1.json");
     this.load.json(
       "salt_lake_shape_1",
       "./assets/tilemaps/maps/salt_lake/shape1.json"
     );
     this.load.json(
-      "salt_lake_points",
+      "map_points",
       "./assets/tilemaps/maps/salt_lake/points.json"
     );
   }

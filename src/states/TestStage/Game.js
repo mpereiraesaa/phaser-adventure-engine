@@ -1,85 +1,102 @@
 /* globals __DEV__ */
-import Phaser from 'phaser'
-import PlayerActor from '../../engine/PlayerActor'
-import Hud from '../../sprites/Hud'
+import Phaser from "phaser";
+import PlayerActor from "../../engine/PlayerActor";
+import Actor from "../../engine/Actor";
+import Hud from "../../sprites/Hud";
 
 export default class extends Phaser.State {
-  init () {}
-
-  preload () {}
-
-  shutdown(){
-    this.game.pncPlugin.destroyScene()
+  init() {
+    this.game.renderer.renderSession.roundPixels = true; // Make the phaser sprites look smoother
   }
 
-  create () {
-    let shape = game.cache.getJSON('map')
-    let points = game.cache.getJSON('salt_lake_points')
-    let navmeshPoints = []
-    this.key = 'test-bg'
+  preload() {}
+
+  shutdown() {
+    this.game.pncPlugin.destroyScene();
+  }
+
+  create() {
+    let spriterLoader = new Spriter.Loader();
+    let spriterData = 0;
+    let room = 0;
+    let sceneDefinition = {};
+    let shape = game.cache.getJSON("map");
+    let map_points = game.cache.getJSON("map_points");
+    let navmeshPoints = [];
+    let hud = null;
+    let spriterFile = null;
+    this.actor = null;
+    this.key = "test-bg";
+    const bannerText = "Press W to enter debug background mode.";
 
     shape.layers[1].objects.map(point => {
-      for(let i = 0;i< point.polyline.length; i++){
-        navmeshPoints.push({ "x":point.x + point.polyline[i].x, "y": point.y + point.polyline[i].y })
+      for (let i = 0; i < point.polyline.length; i++) {
+        navmeshPoints.push({
+          x: point.x + point.polyline[i].x,
+          y: point.y + point.polyline[i].y
+        });
       }
-    })
+    });
 
-    /* navmeshPoints => Draws the full walk zone, shape => means every blocked zone,
-    // points => Are some points that are drawn onto the navmesh to make more natural the paths.
-    */
-    let sceneDefinition = {
-      bg: './assets/images/salt_lake.png',
+    sceneDefinition = {
+      bg: "./assets/images/salt_lake.png",
       navmeshPoints: navmeshPoints,
-      shape: this.game.cache.getJSON('salt_lake_shape_1'), 
-      points: points
-    }
+      shape: this.game.cache.getJSON("salt_lake_shape_1"),
+      points: map_points
+    };
 
     // creates a scene and immediately switches to it
-    let room = this.game.pncPlugin.addScene(this.key, sceneDefinition, true)
+    room = this.game.pncPlugin.addScene(this.key, sceneDefinition, true);
+
+    let banner = new Phaser.Text(
+      game,
+      this.world.centerX,
+      this.game.height - 30,
+      bannerText
+    );
+    banner.padding.set(10, 16);
+    banner.fontSize = 20;
+    banner.fill = "#000";
+    banner.smoothed = false;
+    banner.anchor.setTo(0.5);
+
+    hud = new Hud(game);
+
+    this.game.pncPlugin.addObject(room, banner);
+    this.game.pncPlugin.addObject(room, hud);
+
+    spriterFile = new Spriter.SpriterJSON(
+      this.cache.getJSON("playerJson"),
+      /* optional parameters */ {
+        imageNameType: Spriter.eImageNameType.NAME_ONLY
+      }
+    );
+
+    // Now create Player and add it onto the game
+    spriterData = spriterLoader.load(spriterFile);
 
     // adds actor using PlayerActor prototype which adds listeners for movement input
-    var actor = this.game.pncPlugin.addActor(room, {
-        x: 200,
-        y: 600,
-        image: 'player',
-        type: PlayerActor
-    })
+    this.game.pncPlugin.addActor(room, {
+      spriterData: spriterData,
+      textureKey: "playerAtlas",
+      isSmall: true,
+      spawnX: 200,
+      spawnY: 600
+    });
 
-    const bannerText = 'Press W to enter debug background mode.'
-    let banner = new Phaser.Text(game, this.world.centerX, this.game.height - 30, bannerText);
-    banner.padding.set(10, 16)
-    banner.fontSize = 20
-    banner.fill = '#000'
-    banner.smoothed = false
-    banner.anchor.setTo(0.5)
-
-    let hud = new Hud(game)
-
-    this.game.pncPlugin.addObject(room, banner)
-    this.game.pncPlugin.addObject(room, hud)
-
-    // this.game.add.existing(hud)
-
-    // let bg = this.game.add.tileSprite(0,0, this.cache.getImage("background").width, this.cache.getImage("background").height, 'background')    // Stretch to fill all space as background
-
-    // this.player = new Player({
-    //   game: this.game,
-    //   x: 250,
-    //   y: 150,
-    //   asset: 'player',
-    //   frame: 18
-    // })
-
-    // this.game.add.existing(this.player)
-    // this.game.physics.enable(this.player, Phaser.Physics.ARCADE)
-
-    // this.game.input.onDown.add(this.player.moveCharacter, this);
-    // this.bgGroup.scale.setTo(this.game.width / bg.width, this.game.height / bg.height)
+    this.game.pncPlugin.addActor(room, {
+      spriterData: spriterData,
+      textureKey: "playerAtlas",
+      isSmall: true,
+      spawnX: 200,
+      spawnY: 600,
+      type: Actor
+    });
   }
 
-  update(){}
+  update() {}
 
-  render(){
+  render() {
     if (__DEV__) {
       // this.game.debug.inputInfo(32, 32);
       // this.game.debug.spriteInfo(this.player, 32, 32)

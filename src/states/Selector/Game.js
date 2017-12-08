@@ -19,7 +19,6 @@ export default class extends Phaser.State {
   create() {
     /* Scroll box group */
     this.scrollGroup = this.game.add.group();
-
     this.menuX = 55
     this.menuY = 45
 

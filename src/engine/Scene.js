@@ -1,15 +1,15 @@
-import Navmesh from './Navmesh'
-import Actor from './Actor'
-import Hud from '../sprites/Hud'
+import Navmesh from "./Navmesh";
+import PlayerActor from "./PlayerActor";
+import Hud from "../sprites/Hud";
 
 export default class Scene extends Phaser.State {
   constructor(key, sceneDefinition) {
-    super()
+    super();
     this.key = key;
     this.sceneDefinition = sceneDefinition;
     this.preloadItems = [];
     this.actors = [];
-    this.objects = []
+    this.objects = [];
   }
 
   preload() {
@@ -29,7 +29,13 @@ export default class Scene extends Phaser.State {
 
   create() {
     console.debug("Scene initialised");
+    this.camera.flash("#000000");
     this.createSceneHierarchy();
+
+    // Just a Simple POC of moving the bot in game.
+    this.pocKey = this.game.input.keyboard.addKey(Phaser.Keyboard.C);
+    this.pocKey.onDown.add(this.movePoc, this);
+
     if (this.sceneDefinition.bg) {
       this.initBackground();
     }
@@ -42,29 +48,35 @@ export default class Scene extends Phaser.State {
     if (Navmesh) {
       this.navmesh = new Navmesh(game);
 
-      this.navmesh.backgroundScale = { x: this.scaleX, y: this.scaleY }
+      this.navmesh.backgroundScale = { x: this.scaleX, y: this.scaleY };
 
       if (this.sceneDefinition.navmeshPoints) {
         this.navmeshPoints = this.sceneDefinition.navmeshPoints;
         this.navmesh.loadPolygonFromNodes(this.navmeshPoints);
       }
-      if (this.sceneDefinition.shape){
+      if (this.sceneDefinition.shape) {
         this.navmesh.loadSolidPolygonFromNodes(this.sceneDefinition.shape);
       }
-      if (this.sceneDefinition.points){
-        let nodes = this.sceneDefinition.points
+      if (this.sceneDefinition.points) {
+        let nodes = this.sceneDefinition.points;
         for (var i = 0; i < nodes.length; i++) {
           this.navmesh.addPoint(nodes[i]);
         }
       }
     }
 
-    if ( this.objects.length ) {
+    if (this.objects.length) {
       for (var i = 0; i < this.objects.length; i++) {
         this.layers.background.add(this.objects[i]);
       }
     }
+  }
 
+  animateActors() {
+    let i = 0;
+    for(; i < this.actors.length; i++) {
+      this.actors[i].updateAnimation();
+    }
   }
 
   update() {
@@ -75,6 +87,18 @@ export default class Scene extends Phaser.State {
       );
     }
     this.navmesh.updateCharacterLocation(this.actors[0].x, this.actors[0].y);
+
+    // Animate actors on screen
+    this.animateActors()
+
+    // We check for depth of players
+    this.layers.actors.sort('y', Phaser.Group.SORT_ASCENDING)
+  }
+
+  findActor(id) {
+    return this.actors.find(actor => {
+      return actor.id == id;
+    });
   }
 
   setNavGraph(graph) {
@@ -127,19 +151,29 @@ export default class Scene extends Phaser.State {
     this.addLayer("actors");
   }
 
+  moveOtherPlayer(id, x, y) {
+    let actor = this.findActor(id);
+
+    actor.moveTo({x: x, y: y}, this.navmesh);
+  }
+
+  movePoc() {
+    this.moveOtherPlayer(1, 319, 516)
+  }
+
   /**
    * initBackground - create the background sprite
    */
   initBackground() {
     this.background = this.game.add.sprite(0, 0, this.key + "bg");
-    this.scaleX = this.game.width / this.background.width
-    this.scaleY = this.game.height / this.background.height
+    this.scaleX = this.game.width / this.background.width;
+    this.scaleY = this.game.height / this.background.height;
 
-    this.background.scale.setTo( this.scaleX, this.scaleY )
+    this.background.scale.setTo(this.scaleX, this.scaleY);
     this.layers.background.add(this.background);
     this.background.inputEnabled = true;
     this.background.events.onInputUp.add(function(sprite, pointer, g) {
-      console.log(`x: ${pointer.x}, y: ${pointer.y}`)
+      console.log(`x: ${pointer.x}, y: ${pointer.y}`);
       this.game.pncPlugin.signals.sceneTappedSignal.dispatch(
         pointer,
         this.navmesh
@@ -165,7 +199,7 @@ export default class Scene extends Phaser.State {
   initObjects(gameObject) {
     // if this state is not active defer object creation until it is
     if (!this.state) {
-      this.objects.push(gameObject)
+      this.objects.push(gameObject);
     } else {
       this.layers.background.add(gameObject);
     }
@@ -179,12 +213,20 @@ export default class Scene extends Phaser.State {
     var actor;
 
     if (actorDefinition.type === undefined) {
-      actor = new Actor(game, actorDefinition);
-      this.layers.actors.add(actor);
+      actor = new PlayerActor(game, actorDefinition);
     } else {
+      actorDefinition.id = 1;
       actor = new actorDefinition.type(game, actorDefinition);
-      this.layers.actors.add(actor);
     }
+
+    // Set spawn position for actor
+    actor.position.setTo(actorDefinition.spawnX, actorDefinition.spawnY);
+
+    actor.onVariableSet.add((spriter, variable) => {
+      this._text = variable.string;
+    }, this);
+
+    this.layers.actors.add(actor);
 
     return actor;
   }

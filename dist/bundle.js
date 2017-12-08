@@ -164,7 +164,7 @@ module.exports = !__webpack_require__(/*! ./_fails */ 3)(function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
-var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 94);
+var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 95);
 var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 23);
 var dP = Object.defineProperty;
 
@@ -366,7 +366,7 @@ var createDesc = __webpack_require__(/*! ./_property-desc */ 32);
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
 var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 23);
 var has = __webpack_require__(/*! ./_has */ 11);
-var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 94);
+var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 95);
 var gOPD = Object.getOwnPropertyDescriptor;
 
 exports.f = __webpack_require__(/*! ./_descriptors */ 6) ? gOPD : function getOwnPropertyDescriptor(O, P) {
@@ -642,7 +642,7 @@ if (__webpack_require__(/*! ./_descriptors */ 6)) {
   var redefineAll = __webpack_require__(/*! ./_redefine-all */ 42);
   var toInteger = __webpack_require__(/*! ./_to-integer */ 25);
   var toLength = __webpack_require__(/*! ./_to-length */ 8);
-  var toIndex = __webpack_require__(/*! ./_to-index */ 120);
+  var toIndex = __webpack_require__(/*! ./_to-index */ 121);
   var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 36);
   var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 23);
   var has = __webpack_require__(/*! ./_has */ 11);
@@ -664,7 +664,7 @@ if (__webpack_require__(/*! ./_descriptors */ 6)) {
   var $iterDetect = __webpack_require__(/*! ./_iter-detect */ 56);
   var setSpecies = __webpack_require__(/*! ./_set-species */ 39);
   var arrayFill = __webpack_require__(/*! ./_array-fill */ 86);
-  var arrayCopyWithin = __webpack_require__(/*! ./_array-copy-within */ 110);
+  var arrayCopyWithin = __webpack_require__(/*! ./_array-copy-within */ 111);
   var $DP = __webpack_require__(/*! ./_object-dp */ 7);
   var $GOPD = __webpack_require__(/*! ./_object-gopd */ 16);
   var dP = $DP.f;
@@ -1118,10 +1118,10 @@ if (__webpack_require__(/*! ./_descriptors */ 6)) {
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Map = __webpack_require__(/*! ./es6.map */ 115);
+var Map = __webpack_require__(/*! ./es6.map */ 116);
 var $export = __webpack_require__(/*! ./_export */ 0);
 var shared = __webpack_require__(/*! ./_shared */ 51)('metadata');
-var store = shared.store || (shared.store = new (__webpack_require__(/*! ./es6.weak-map */ 118))());
+var store = shared.store || (shared.store = new (__webpack_require__(/*! ./es6.weak-map */ 119))());
 
 var getOrCreateMetadataMap = function (target, targetKey, create) {
   var targetMetadata = store.get(target);
@@ -1310,7 +1310,7 @@ module.exports = false;
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys = __webpack_require__(/*! ./_object-keys-internal */ 96);
+var $keys = __webpack_require__(/*! ./_object-keys-internal */ 97);
 var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 69);
 
 module.exports = Object.keys || function keys(O) {
@@ -1347,7 +1347,7 @@ module.exports = function (index, length) {
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
-var dPs = __webpack_require__(/*! ./_object-dps */ 97);
+var dPs = __webpack_require__(/*! ./_object-dps */ 98);
 var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 69);
 var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 68)('IE_PROTO');
 var Empty = function () { /* empty */ };
@@ -1398,7 +1398,7 @@ module.exports = Object.create || function create(O, Properties) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-var $keys = __webpack_require__(/*! ./_object-keys-internal */ 96);
+var $keys = __webpack_require__(/*! ./_object-keys-internal */ 97);
 var hiddenKeys = __webpack_require__(/*! ./_enum-bug-keys */ 69).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
@@ -1457,7 +1457,7 @@ module.exports = function (it, Constructor, name, forbiddenField) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var ctx = __webpack_require__(/*! ./_ctx */ 19);
-var call = __webpack_require__(/*! ./_iter-call */ 108);
+var call = __webpack_require__(/*! ./_iter-call */ 109);
 var isArrayIter = __webpack_require__(/*! ./_is-array-iter */ 82);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
@@ -2118,7 +2118,7 @@ module.exports = function (it) {
 var global = __webpack_require__(/*! ./_global */ 2);
 var core = __webpack_require__(/*! ./_core */ 22);
 var LIBRARY = __webpack_require__(/*! ./_library */ 34);
-var wksExt = __webpack_require__(/*! ./_wks-ext */ 95);
+var wksExt = __webpack_require__(/*! ./_wks-ext */ 96);
 var defineProperty = __webpack_require__(/*! ./_object-dp */ 7).f;
 module.exports = function (name) {
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
@@ -2545,7 +2545,7 @@ module.exports = __webpack_require__(/*! ./_core */ 22).getIteratorMethod = func
 /***/ (function(module, exports, __webpack_require__) {
 
 // 9.4.2.3 ArraySpeciesCreate(originalArray, length)
-var speciesConstructor = __webpack_require__(/*! ./_array-species-constructor */ 223);
+var speciesConstructor = __webpack_require__(/*! ./_array-species-constructor */ 224);
 
 module.exports = function (original, length) {
   return new (speciesConstructor(original))(length);
@@ -2591,7 +2591,7 @@ module.exports = function fill(value /* , start = 0, end = @length */) {
 "use strict";
 
 var addToUnscopables = __webpack_require__(/*! ./_add-to-unscopables */ 31);
-var step = __webpack_require__(/*! ./_iter-step */ 111);
+var step = __webpack_require__(/*! ./_iter-step */ 112);
 var Iterators = __webpack_require__(/*! ./_iterators */ 45);
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
 
@@ -2635,7 +2635,7 @@ addToUnscopables('entries');
 /***/ (function(module, exports, __webpack_require__) {
 
 var ctx = __webpack_require__(/*! ./_ctx */ 19);
-var invoke = __webpack_require__(/*! ./_invoke */ 101);
+var invoke = __webpack_require__(/*! ./_invoke */ 102);
 var html = __webpack_require__(/*! ./_html */ 70);
 var cel = __webpack_require__(/*! ./_dom-create */ 66);
 var global = __webpack_require__(/*! ./_global */ 2);
@@ -2850,7 +2850,7 @@ var fails = __webpack_require__(/*! ./_fails */ 3);
 var anInstance = __webpack_require__(/*! ./_an-instance */ 40);
 var toInteger = __webpack_require__(/*! ./_to-integer */ 25);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
-var toIndex = __webpack_require__(/*! ./_to-index */ 120);
+var toIndex = __webpack_require__(/*! ./_to-index */ 121);
 var gOPN = __webpack_require__(/*! ./_object-gopn */ 38).f;
 var dP = __webpack_require__(/*! ./_object-dp */ 7).f;
 var arrayFill = __webpack_require__(/*! ./_array-fill */ 86);
@@ -3119,6 +3119,305 @@ exports[DATA_VIEW] = $DataView;
 
 /***/ }),
 /* 92 */
+/*!***********************************!*\
+  !*** ./src/engine/PlayerActor.js ***!
+  \***********************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(/*! script-loader!../../assets/lib/spriter/spriter.js */ 130);
+
+var _ActorConfig = __webpack_require__(/*! ./ActorConfig */ 381);
+
+var _ActorConfig2 = _interopRequireDefault(_ActorConfig);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PlayerActor = function (_Spriter$SpriterGroup) {
+  _inherits(PlayerActor, _Spriter$SpriterGroup);
+
+  function PlayerActor(game, actorDefinition) {
+    _classCallCheck(this, PlayerActor);
+
+    var _this = _possibleConstructorReturn(this, (PlayerActor.__proto__ || Object.getPrototypeOf(PlayerActor)).call(this, game, actorDefinition.spriterData, actorDefinition.textureKey, _ActorConfig2.default.ENTITY, _ActorConfig2.default.START_ANIMATION_INDEX));
+
+    if (actorDefinition.isSmall) {
+      _this.scaleX = 90 / _this.width;
+      _this.scaleY = 120 / _this.height;
+
+      _this.scale.setTo(_this.scaleX, _this.scaleY);
+    }
+
+    console.debug("PlayerActor initialised");
+    _this.initSignalListeners();
+
+    window.player = _this;
+    _this._animationSpeed = 0.6;
+
+    // player bounds - circle
+    _this.drawBounds();
+    return _this;
+  }
+
+  _createClass(PlayerActor, [{
+    key: "drawBounds",
+    value: function drawBounds() {
+      var _this2 = this;
+
+      this.bounds = null;
+      this.boundsGrp = this.game.make.group(null);
+      var bmd = this.game.make.bitmapData(60, 60);
+      var maskBitmap = this.game.make.bitmapData(60, 60);
+
+      bmd.circle(30, 30, 30, "rgba(43, 41, 42, 0.3)");
+      bmd.circle(30, 30, 20, "rgba(43, 41, 42, 0.7)");
+
+      maskBitmap.circle(30, 30, 30, "rgba(224, 119, 44, 0.5)");
+
+      this.maskImg = this.game.make.image(0, 0, maskBitmap);
+      this.maskImg.width = this.maskImg.width + this.maskImg.width;
+      this.maskImg.anchor.set(0.5);
+      this.maskImg.visible = false;
+
+      this.bounds = this.game.make.sprite(0, 0, bmd);
+      this.bounds.width = this.bounds.width + this.bounds.width;
+      this.bounds.anchor.set(0.5);
+
+      this.boundsGrp.add(this.bounds);
+      this.boundsGrp.add(this.maskImg);
+
+      // Add input
+      this.bounds.inputEnabled = true;
+      this.bounds.input.useHandCursor = true;
+
+      this.bounds.events.onInputOver.add(function (sprite) {
+        _this2.maskImg.visible = true;
+      }, this);
+
+      this.bounds.events.onInputOut.add(function (sprite) {
+        _this2.maskImg.visible = false;
+      }, this);
+
+      window.boundsGrp = this.boundsGrp;
+
+      this.addAt(this.boundsGrp, 0);
+    }
+  }, {
+    key: "update",
+    value: function update() {
+      this.updateAnimation();
+
+      if (this.walkTween && this.walkTween.isRunning) {
+        this.calcAngle(this.xyPoint);
+
+        if (this.angleTo != this.walkTween.angleToBegin) {
+          this.lookAt();
+        }
+      }
+    }
+  }, {
+    key: "walkTo",
+    value: function walkTo(point, walkSpeed) {
+      if (!walkSpeed) {
+        walkSpeed = this.walkSpeed;
+      }
+      if (this.walkingTween) {
+        this.walkingTween.stop();
+        this.walkingTween = null;
+      }
+      var distance = Phaser.Math.distance(this.x, this.y, point.x, point.y);
+      this.walkingTween = this.game.add.tween(this).to({
+        x: point.x,
+        y: point.y
+      }, distance * this.averageWalkSpeed * (1 / walkSpeed)).start();
+    }
+  }, {
+    key: "walkPath",
+    value: function walkPath(path, polys, finalPoint, walkSpeed) {
+      if (!walkSpeed) {
+        walkSpeed = this.walkSpeed;
+      }
+      if (this.walkingTween) {
+        this.walkingTween.stop();
+        this.walkingTween = null;
+      }
+      this.walkingTween = this.game.add.tween(this);
+
+      for (var i = 0; i < path.length; i++) {
+        var point = polys[path[i]].centroid;
+        var distance = Phaser.Math.distance(this.x, this.y, point.x, point.y);
+        if (i == path.length - 1 && polys[path[i]].contains(finalPoint.x, finalPoint.y)) {
+          this.walkingTween.to({
+            x: finalPoint.x,
+            y: finalPoint.y
+          }, distance * walkSpeed / 10, Phaser.Easing.Linear.None);
+        } else {
+          if (distance != 0) {
+            this.walkingTween.to({
+              x: point.x,
+              y: point.y
+            }, distance * walkSpeed / 10, Phaser.Easing.Linear.None);
+          }
+        }
+      }
+
+      this.walkingTween.start();
+    }
+  }, {
+    key: "calcAngle",
+    value: function calcAngle(pointer) {
+      if (pointer) {
+        this.angleTo = Phaser.Math.angleBetween(this.x, this.y, pointer.x, pointer.y) * 180 / Math.PI;
+      }
+
+      if (this.angleTo > -100 && this.angleTo < -80) {
+        this.angleTo = "UPPER";
+      } else if (this.angleTo < -10 && this.angleTo > -80) {
+        this.angleTo = "UPPER_RIGHT";
+      } else if (this.angleTo < -110 && this.angleTo > -170) {
+        this.angleTo = "UPPER_LEFT";
+      } else if (this.angleTo > -10 && this.angleTo < 10) {
+        this.angleTo = "RIGHT";
+      } else if (this.angleTo > -180 && this.angleTo < -170 || this.angleTo > 170 && this.angleTo < 180 || this.angleTo === 180) {
+        this.angleTo = "LEFT";
+      } else if (this.angleTo > 80 && this.angleTo < 100) {
+        this.angleTo = "LOWER";
+      } else if (this.angleTo > 10 && this.angleTo < 80) {
+        this.angleTo = "LOWER_RIGHT";
+      } else if (this.angleTo > 100 && this.angleTo < 170) {
+        this.angleTo = "LOWER_LEFT";
+      }
+    }
+  }, {
+    key: "lookAt",
+    value: function lookAt() {
+      if (this.angleTo == "UPPER") {
+        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        console.log("ANGULO SUPERIOR");
+      } else if (this.angleTo == "UPPER_RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.BACKRIGHT_ANIMATION_INDEX);
+        console.log("ANGULO SUPERIOR DERECHO");
+      } else if (this.angleTo == "UPPER_LEFT") {
+        this.playAnimationById(_ActorConfig2.default.BACKLEFT_ANIMATION_INDEX);
+        console.log("ANGULO SUPERIOR IZQUIERDO");
+      } else if (this.angleTo == "RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.RIGHT_ANIMATION_INDEX);
+        console.log("ANGULO DERECHO");
+      } else if (this.angleTo == "LEFT") {
+        this.playAnimationById(_ActorConfig2.default.LEFT_ANIMATION_INDEX);
+        console.log("ANGULO IZQUIERDO");
+      } else if (this.angleTo == "LOWER") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO INFERIOR");
+      } else if (this.angleTo == "LOWER_RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.FRONTLEFT_ANIMATION_INDEX);
+        console.log("ANGULO INFERIOR DERECHO");
+      } else if (this.angleTo == "LOWER_LEFT") {
+        this.playAnimationById(_ActorConfig2.default.FRONTLEFT_ANIMATION_INDEX);
+        console.log("ANGULO INFERIOR IZQUIERDO");
+      }
+    }
+  }, {
+    key: "stopAndLookAt",
+    value: function stopAndLookAt(tween) {
+      if (tween.angleToBegin == "UPPER") {
+        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        console.log("ANGULO SUPERIOR");
+      } else if (tween.angleToBegin == "UPPER_RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        console.log("ANGULO SUPERIOR DERECHO");
+      } else if (tween.angleToBegin == "UPPER_LEFT") {
+        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        console.log("ANGULO SUPERIOR IZQUIERDO");
+      } else if (tween.angleToBegin == "RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO DERECHO");
+      } else if (tween.angleToBegin == "LEFT") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO IZQUIERDO");
+      } else if (tween.angleToBegin == "LOWER") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO INFERIOR");
+      } else if (tween.angleToBegin == "LOWER_RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO INFERIOR DERECHO");
+      } else if (tween.angleToBegin == "LOWER_LEFT") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO INFERIOR IZQUIERDO");
+      }
+    }
+  }, {
+    key: "movementComplete",
+    value: function movementComplete(player, tween) {
+      this.stopAndLookAt(tween);
+    }
+  }, {
+    key: "initSignalListeners",
+    value: function initSignalListeners() {
+      this.game.pncPlugin.signals.sceneTappedSignal.add(function (pointer, navmesh) {
+        var outOfBounds = navmesh.isPointerOutOfBounds(pointer);
+
+        if (outOfBounds) {
+          return false;
+        }
+
+        this.xyPoint = { x: pointer.x, y: pointer.y };
+
+        console.debug("Movement signal received");
+        if (!navmesh) {
+          return;
+        }
+
+        if (this.walkTween && this.walkTween.isRunning) {
+          this.walkTween.stop();
+        }
+
+        this.walkTween = this.game.add.tween(this);
+        this.walkTween.onComplete.add(this.movementComplete, this);
+
+        this.calcAngle(pointer);
+        this.walkTween.angleToBegin = this.angleTo;
+
+        this.lookAt();
+
+        var path = navmesh.findPath();
+        console.log(path);
+
+        var pointer;
+        for (var i = 0; i < path.length; i++) {
+          pointer = path[i];
+          var distance = Phaser.Math.distance(path[i - 1] != undefined ? path[i - 1].x : this.x, path[i - 1] != undefined ? path[i - 1].y : this.y, pointer.x, pointer.y);
+          this.walkTween.to({ x: pointer.x, y: pointer.y }, distance * 7);
+        }
+
+        this.walkTween.start();
+      }, this);
+    }
+  }]);
+
+  return PlayerActor;
+}(Spriter.SpriterGroup);
+
+exports.default = PlayerActor;
+
+/***/ }),
+/* 93 */
 /*!****************************!*\
   !*** ./src/sprites/Hud.js ***!
   \****************************/
@@ -3336,7 +3635,7 @@ var Hud = function (_Phaser$Group) {
 exports.default = Hud;
 
 /***/ }),
-/* 93 */
+/* 94 */
 /*!**********************!*\
   !*** ./src/utils.js ***!
   \**********************/
@@ -3357,7 +3656,7 @@ var centerGameObjects = exports.centerGameObjects = function centerGameObjects(o
 };
 
 /***/ }),
-/* 94 */
+/* 95 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/_ie8-dom-define.js ***!
   \*********************************************************/
@@ -3371,7 +3670,7 @@ module.exports = !__webpack_require__(/*! ./_descriptors */ 6) && !__webpack_req
 
 
 /***/ }),
-/* 95 */
+/* 96 */
 /*!**************************************************!*\
   !*** ./node_modules/core-js/modules/_wks-ext.js ***!
   \**************************************************/
@@ -3383,7 +3682,7 @@ exports.f = __webpack_require__(/*! ./_wks */ 5);
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/_object-keys-internal.js ***!
   \***************************************************************/
@@ -3411,7 +3710,7 @@ module.exports = function (object, names) {
 
 
 /***/ }),
-/* 97 */
+/* 98 */
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_object-dps.js ***!
   \*****************************************************/
@@ -3435,7 +3734,7 @@ module.exports = __webpack_require__(/*! ./_descriptors */ 6) ? Object.definePro
 
 
 /***/ }),
-/* 98 */
+/* 99 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/_object-gopn-ext.js ***!
   \**********************************************************/
@@ -3465,7 +3764,7 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 
 /***/ }),
-/* 99 */
+/* 100 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/_object-assign.js ***!
   \********************************************************/
@@ -3511,7 +3810,7 @@ module.exports = !$assign || __webpack_require__(/*! ./_fails */ 3)(function () 
 
 
 /***/ }),
-/* 100 */
+/* 101 */
 /*!***********************************************!*\
   !*** ./node_modules/core-js/modules/_bind.js ***!
   \***********************************************/
@@ -3523,7 +3822,7 @@ module.exports = !$assign || __webpack_require__(/*! ./_fails */ 3)(function () 
 
 var aFunction = __webpack_require__(/*! ./_a-function */ 10);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
-var invoke = __webpack_require__(/*! ./_invoke */ 101);
+var invoke = __webpack_require__(/*! ./_invoke */ 102);
 var arraySlice = [].slice;
 var factories = {};
 
@@ -3548,7 +3847,7 @@ module.exports = Function.bind || function bind(that /* , ...args */) {
 
 
 /***/ }),
-/* 101 */
+/* 102 */
 /*!*************************************************!*\
   !*** ./node_modules/core-js/modules/_invoke.js ***!
   \*************************************************/
@@ -3575,7 +3874,7 @@ module.exports = function (fn, args, that) {
 
 
 /***/ }),
-/* 102 */
+/* 103 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_parse-int.js ***!
   \****************************************************/
@@ -3595,7 +3894,7 @@ module.exports = $parseInt(ws + '08') !== 8 || $parseInt(ws + '0x16') !== 22 ? f
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/_parse-float.js ***!
   \******************************************************/
@@ -3614,7 +3913,7 @@ module.exports = 1 / $parseFloat(__webpack_require__(/*! ./_string-ws */ 72) + '
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/_a-number-value.js ***!
   \*********************************************************/
@@ -3630,7 +3929,7 @@ module.exports = function (it, msg) {
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_is-integer.js ***!
   \*****************************************************/
@@ -3647,7 +3946,7 @@ module.exports = function isInteger(it) {
 
 
 /***/ }),
-/* 106 */
+/* 107 */
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_math-log1p.js ***!
   \*****************************************************/
@@ -3662,7 +3961,7 @@ module.exports = Math.log1p || function log1p(x) {
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/_math-fround.js ***!
   \******************************************************/
@@ -3696,7 +3995,7 @@ module.exports = Math.fround || function fround(x) {
 
 
 /***/ }),
-/* 108 */
+/* 109 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_iter-call.js ***!
   \****************************************************/
@@ -3719,7 +4018,7 @@ module.exports = function (iterator, fn, value, entries) {
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/_array-reduce.js ***!
   \*******************************************************/
@@ -3758,7 +4057,7 @@ module.exports = function (that, callbackfn, aLen, memo, isRight) {
 
 
 /***/ }),
-/* 110 */
+/* 111 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/_array-copy-within.js ***!
   \************************************************************/
@@ -3796,7 +4095,7 @@ module.exports = [].copyWithin || function copyWithin(target /* = 0 */, start /*
 
 
 /***/ }),
-/* 111 */
+/* 112 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_iter-step.js ***!
   \****************************************************/
@@ -3810,7 +4109,7 @@ module.exports = function (done, value) {
 
 
 /***/ }),
-/* 112 */
+/* 113 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.flags.js ***!
   \**********************************************************/
@@ -3826,7 +4125,7 @@ if (__webpack_require__(/*! ./_descriptors */ 6) && /./g.flags != 'g') __webpack
 
 
 /***/ }),
-/* 113 */
+/* 114 */
 /*!**************************************************!*\
   !*** ./node_modules/core-js/modules/_perform.js ***!
   \**************************************************/
@@ -3844,7 +4143,7 @@ module.exports = function (exec) {
 
 
 /***/ }),
-/* 114 */
+/* 115 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/_promise-resolve.js ***!
   \**********************************************************/
@@ -3867,7 +4166,7 @@ module.exports = function (C, x) {
 
 
 /***/ }),
-/* 115 */
+/* 116 */
 /*!*************************************************!*\
   !*** ./node_modules/core-js/modules/es6.map.js ***!
   \*************************************************/
@@ -3877,7 +4176,7 @@ module.exports = function (C, x) {
 
 "use strict";
 
-var strong = __webpack_require__(/*! ./_collection-strong */ 116);
+var strong = __webpack_require__(/*! ./_collection-strong */ 117);
 var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var MAP = 'Map';
 
@@ -3898,7 +4197,7 @@ module.exports = __webpack_require__(/*! ./_collection */ 60)(MAP, function (get
 
 
 /***/ }),
-/* 116 */
+/* 117 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/_collection-strong.js ***!
   \************************************************************/
@@ -3915,7 +4214,7 @@ var ctx = __webpack_require__(/*! ./_ctx */ 19);
 var anInstance = __webpack_require__(/*! ./_an-instance */ 40);
 var forOf = __webpack_require__(/*! ./_for-of */ 41);
 var $iterDefine = __webpack_require__(/*! ./_iter-define */ 78);
-var step = __webpack_require__(/*! ./_iter-step */ 111);
+var step = __webpack_require__(/*! ./_iter-step */ 112);
 var setSpecies = __webpack_require__(/*! ./_set-species */ 39);
 var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ 6);
 var fastKey = __webpack_require__(/*! ./_meta */ 30).fastKey;
@@ -4054,7 +4353,7 @@ module.exports = {
 
 
 /***/ }),
-/* 117 */
+/* 118 */
 /*!*************************************************!*\
   !*** ./node_modules/core-js/modules/es6.set.js ***!
   \*************************************************/
@@ -4064,7 +4363,7 @@ module.exports = {
 
 "use strict";
 
-var strong = __webpack_require__(/*! ./_collection-strong */ 116);
+var strong = __webpack_require__(/*! ./_collection-strong */ 117);
 var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var SET = 'Set';
 
@@ -4080,7 +4379,7 @@ module.exports = __webpack_require__(/*! ./_collection */ 60)(SET, function (get
 
 
 /***/ }),
-/* 118 */
+/* 119 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.weak-map.js ***!
   \******************************************************/
@@ -4093,8 +4392,8 @@ module.exports = __webpack_require__(/*! ./_collection */ 60)(SET, function (get
 var each = __webpack_require__(/*! ./_array-methods */ 27)(0);
 var redefine = __webpack_require__(/*! ./_redefine */ 13);
 var meta = __webpack_require__(/*! ./_meta */ 30);
-var assign = __webpack_require__(/*! ./_object-assign */ 99);
-var weak = __webpack_require__(/*! ./_collection-weak */ 119);
+var assign = __webpack_require__(/*! ./_object-assign */ 100);
+var weak = __webpack_require__(/*! ./_collection-weak */ 120);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
 var fails = __webpack_require__(/*! ./_fails */ 3);
 var validate = __webpack_require__(/*! ./_validate-collection */ 46);
@@ -4151,7 +4450,7 @@ if (fails(function () { return new $WeakMap().set((Object.freeze || Object)(tmp)
 
 
 /***/ }),
-/* 119 */
+/* 120 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/_collection-weak.js ***!
   \**********************************************************/
@@ -4248,7 +4547,7 @@ module.exports = {
 
 
 /***/ }),
-/* 120 */
+/* 121 */
 /*!***************************************************!*\
   !*** ./node_modules/core-js/modules/_to-index.js ***!
   \***************************************************/
@@ -4269,7 +4568,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 121 */
+/* 122 */
 /*!***************************************************!*\
   !*** ./node_modules/core-js/modules/_own-keys.js ***!
   \***************************************************/
@@ -4290,7 +4589,7 @@ module.exports = Reflect && Reflect.ownKeys || function ownKeys(it) {
 
 
 /***/ }),
-/* 122 */
+/* 123 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/_flatten-into-array.js ***!
   \*************************************************************/
@@ -4341,7 +4640,7 @@ module.exports = flattenIntoArray;
 
 
 /***/ }),
-/* 123 */
+/* 124 */
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_string-pad.js ***!
   \*****************************************************/
@@ -4368,7 +4667,7 @@ module.exports = function (that, maxLength, fillString, left) {
 
 
 /***/ }),
-/* 124 */
+/* 125 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/_object-to-array.js ***!
   \**********************************************************/
@@ -4395,7 +4694,7 @@ module.exports = function (isEntries) {
 
 
 /***/ }),
-/* 125 */
+/* 126 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/_collection-to-json.js ***!
   \*************************************************************/
@@ -4405,7 +4704,7 @@ module.exports = function (isEntries) {
 
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
 var classof = __webpack_require__(/*! ./_classof */ 50);
-var from = __webpack_require__(/*! ./_array-from-iterable */ 126);
+var from = __webpack_require__(/*! ./_array-from-iterable */ 127);
 module.exports = function (NAME) {
   return function toJSON() {
     if (classof(this) != NAME) throw TypeError(NAME + "#toJSON isn't generic");
@@ -4415,7 +4714,7 @@ module.exports = function (NAME) {
 
 
 /***/ }),
-/* 126 */
+/* 127 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/_array-from-iterable.js ***!
   \**************************************************************/
@@ -4433,7 +4732,7 @@ module.exports = function (iter, ITERATOR) {
 
 
 /***/ }),
-/* 127 */
+/* 128 */
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_math-scale.js ***!
   \*****************************************************/
@@ -4462,116 +4761,19 @@ module.exports = Math.scale || function scale(x, inLow, inHigh, outLow, outHigh)
 
 
 /***/ }),
-/* 128 */,
-/* 129 */
-/*!*****************************!*\
-  !*** ./src/engine/Actor.js ***!
-  \*****************************/
+/* 129 */,
+/* 130 */
+/*!********************************************************************!*\
+  !*** ./node_modules/script-loader!./assets/lib/spriter/spriter.js ***!
+  \********************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var _class = function (_Phaser$Sprite) {
-  _inherits(_class, _Phaser$Sprite);
-
-  /**
-   * Actor object extends the Phaser.Sprite object and represents a character
-   */
-  function _class(game, actorDefinition) {
-    _classCallCheck(this, _class);
-
-    if (actorDefinition === undefined) {
-      actorDefinition = {
-        x: 0,
-        y: 0,
-        image: "",
-        frame: 0
-      };
-    }
-
-    var _this = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this, game, actorDefinition.x, actorDefinition.y, actorDefinition.image, actorDefinition.frame));
-
-    _this.anchor.setTo(0.5, 1);
-
-    _this.walkSpeed = 50;
-    _this.averageWalkSpeed = 100;
-
-    console.debug("Actor initialised");
-    return _this;
-  }
-
-  _createClass(_class, [{
-    key: "walkTo",
-    value: function walkTo(point, walkSpeed) {
-      if (!walkSpeed) {
-        walkSpeed = this.walkSpeed;
-      }
-      if (this.walkingTween) {
-        this.walkingTween.stop();
-        this.walkingTween = null;
-      }
-      var distance = Phaser.Math.distance(this.x, this.y, point.x, point.y);
-      this.walkingTween = this.game.add.tween(this).to({
-        x: point.x,
-        y: point.y
-      }, distance * this.averageWalkSpeed * (1 / walkSpeed)).start();
-    }
-  }, {
-    key: "walkPath",
-    value: function walkPath(path, polys, finalPoint, walkSpeed) {
-      if (!walkSpeed) {
-        walkSpeed = this.walkSpeed;
-      }
-      if (this.walkingTween) {
-        this.walkingTween.stop();
-        this.walkingTween = null;
-      }
-      this.walkingTween = this.game.add.tween(this);
-
-      for (var i = 0; i < path.length; i++) {
-        var point = polys[path[i]].centroid;
-        var distance = Phaser.Math.distance(this.x, this.y, point.x, point.y);
-        if (i == path.length - 1 && polys[path[i]].contains(finalPoint.x, finalPoint.y)) {
-          this.walkingTween.to({
-            x: finalPoint.x,
-            y: finalPoint.y
-          }, distance * walkSpeed / 10, Phaser.Easing.Linear.None);
-        } else {
-          if (distance != 0) {
-            this.walkingTween.to({
-              x: point.x,
-              y: point.y
-            }, distance * walkSpeed / 10, Phaser.Easing.Linear.None);
-          }
-        }
-      }
-
-      this.walkingTween.start();
-    }
-  }]);
-
-  return _class;
-}(Phaser.Sprite);
-
-exports.default = _class;
+__webpack_require__(/*! !./node_modules/script-loader/addScript.js */ 345)(__webpack_require__(/*! !./node_modules/raw-loader!./assets/lib/spriter/spriter.js */ 346))
 
 /***/ }),
-/* 130 */
+/* 131 */
 /*!******************************************!*\
   !*** multi babel-polyfill ./src/main.js ***!
   \******************************************/
@@ -4579,12 +4781,12 @@ exports.default = _class;
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! babel-polyfill */131);
-module.exports = __webpack_require__(/*! /var/www/project-phaser/src/main.js */333);
+__webpack_require__(/*! babel-polyfill */132);
+module.exports = __webpack_require__(/*! /var/www/project-phaser/src/main.js */334);
 
 
 /***/ }),
-/* 131 */
+/* 132 */
 /*!**************************************************!*\
   !*** ./node_modules/babel-polyfill/lib/index.js ***!
   \**************************************************/
@@ -4595,11 +4797,11 @@ module.exports = __webpack_require__(/*! /var/www/project-phaser/src/main.js */3
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
 
-__webpack_require__(/*! core-js/shim */ 132);
+__webpack_require__(/*! core-js/shim */ 133);
 
-__webpack_require__(/*! regenerator-runtime/runtime */ 329);
+__webpack_require__(/*! regenerator-runtime/runtime */ 330);
 
-__webpack_require__(/*! core-js/fn/regexp/escape */ 330);
+__webpack_require__(/*! core-js/fn/regexp/escape */ 331);
 
 if (global._babelPolyfill) {
   throw new Error("only one instance of babel-polyfill is allowed");
@@ -4624,7 +4826,7 @@ define(String.prototype, "padRight", "".padEnd);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../webpack/buildin/global.js */ 47)))
 
 /***/ }),
-/* 132 */
+/* 133 */
 /*!**************************************!*\
   !*** ./node_modules/core-js/shim.js ***!
   \**************************************/
@@ -4632,207 +4834,207 @@ define(String.prototype, "padRight", "".padEnd);
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./modules/es6.symbol */ 133);
-__webpack_require__(/*! ./modules/es6.object.create */ 135);
-__webpack_require__(/*! ./modules/es6.object.define-property */ 136);
-__webpack_require__(/*! ./modules/es6.object.define-properties */ 137);
-__webpack_require__(/*! ./modules/es6.object.get-own-property-descriptor */ 138);
-__webpack_require__(/*! ./modules/es6.object.get-prototype-of */ 139);
-__webpack_require__(/*! ./modules/es6.object.keys */ 140);
-__webpack_require__(/*! ./modules/es6.object.get-own-property-names */ 141);
-__webpack_require__(/*! ./modules/es6.object.freeze */ 142);
-__webpack_require__(/*! ./modules/es6.object.seal */ 143);
-__webpack_require__(/*! ./modules/es6.object.prevent-extensions */ 144);
-__webpack_require__(/*! ./modules/es6.object.is-frozen */ 145);
-__webpack_require__(/*! ./modules/es6.object.is-sealed */ 146);
-__webpack_require__(/*! ./modules/es6.object.is-extensible */ 147);
-__webpack_require__(/*! ./modules/es6.object.assign */ 148);
-__webpack_require__(/*! ./modules/es6.object.is */ 149);
-__webpack_require__(/*! ./modules/es6.object.set-prototype-of */ 151);
-__webpack_require__(/*! ./modules/es6.object.to-string */ 152);
-__webpack_require__(/*! ./modules/es6.function.bind */ 153);
-__webpack_require__(/*! ./modules/es6.function.name */ 154);
-__webpack_require__(/*! ./modules/es6.function.has-instance */ 155);
-__webpack_require__(/*! ./modules/es6.parse-int */ 156);
-__webpack_require__(/*! ./modules/es6.parse-float */ 157);
-__webpack_require__(/*! ./modules/es6.number.constructor */ 158);
-__webpack_require__(/*! ./modules/es6.number.to-fixed */ 159);
-__webpack_require__(/*! ./modules/es6.number.to-precision */ 160);
-__webpack_require__(/*! ./modules/es6.number.epsilon */ 161);
-__webpack_require__(/*! ./modules/es6.number.is-finite */ 162);
-__webpack_require__(/*! ./modules/es6.number.is-integer */ 163);
-__webpack_require__(/*! ./modules/es6.number.is-nan */ 164);
-__webpack_require__(/*! ./modules/es6.number.is-safe-integer */ 165);
-__webpack_require__(/*! ./modules/es6.number.max-safe-integer */ 166);
-__webpack_require__(/*! ./modules/es6.number.min-safe-integer */ 167);
-__webpack_require__(/*! ./modules/es6.number.parse-float */ 168);
-__webpack_require__(/*! ./modules/es6.number.parse-int */ 169);
-__webpack_require__(/*! ./modules/es6.math.acosh */ 170);
-__webpack_require__(/*! ./modules/es6.math.asinh */ 171);
-__webpack_require__(/*! ./modules/es6.math.atanh */ 172);
-__webpack_require__(/*! ./modules/es6.math.cbrt */ 173);
-__webpack_require__(/*! ./modules/es6.math.clz32 */ 174);
-__webpack_require__(/*! ./modules/es6.math.cosh */ 175);
-__webpack_require__(/*! ./modules/es6.math.expm1 */ 176);
-__webpack_require__(/*! ./modules/es6.math.fround */ 177);
-__webpack_require__(/*! ./modules/es6.math.hypot */ 178);
-__webpack_require__(/*! ./modules/es6.math.imul */ 179);
-__webpack_require__(/*! ./modules/es6.math.log10 */ 180);
-__webpack_require__(/*! ./modules/es6.math.log1p */ 181);
-__webpack_require__(/*! ./modules/es6.math.log2 */ 182);
-__webpack_require__(/*! ./modules/es6.math.sign */ 183);
-__webpack_require__(/*! ./modules/es6.math.sinh */ 184);
-__webpack_require__(/*! ./modules/es6.math.tanh */ 185);
-__webpack_require__(/*! ./modules/es6.math.trunc */ 186);
-__webpack_require__(/*! ./modules/es6.string.from-code-point */ 187);
-__webpack_require__(/*! ./modules/es6.string.raw */ 188);
-__webpack_require__(/*! ./modules/es6.string.trim */ 189);
-__webpack_require__(/*! ./modules/es6.string.iterator */ 190);
-__webpack_require__(/*! ./modules/es6.string.code-point-at */ 191);
-__webpack_require__(/*! ./modules/es6.string.ends-with */ 192);
-__webpack_require__(/*! ./modules/es6.string.includes */ 193);
-__webpack_require__(/*! ./modules/es6.string.repeat */ 194);
-__webpack_require__(/*! ./modules/es6.string.starts-with */ 195);
-__webpack_require__(/*! ./modules/es6.string.anchor */ 196);
-__webpack_require__(/*! ./modules/es6.string.big */ 197);
-__webpack_require__(/*! ./modules/es6.string.blink */ 198);
-__webpack_require__(/*! ./modules/es6.string.bold */ 199);
-__webpack_require__(/*! ./modules/es6.string.fixed */ 200);
-__webpack_require__(/*! ./modules/es6.string.fontcolor */ 201);
-__webpack_require__(/*! ./modules/es6.string.fontsize */ 202);
-__webpack_require__(/*! ./modules/es6.string.italics */ 203);
-__webpack_require__(/*! ./modules/es6.string.link */ 204);
-__webpack_require__(/*! ./modules/es6.string.small */ 205);
-__webpack_require__(/*! ./modules/es6.string.strike */ 206);
-__webpack_require__(/*! ./modules/es6.string.sub */ 207);
-__webpack_require__(/*! ./modules/es6.string.sup */ 208);
-__webpack_require__(/*! ./modules/es6.date.now */ 209);
-__webpack_require__(/*! ./modules/es6.date.to-json */ 210);
-__webpack_require__(/*! ./modules/es6.date.to-iso-string */ 211);
-__webpack_require__(/*! ./modules/es6.date.to-string */ 213);
-__webpack_require__(/*! ./modules/es6.date.to-primitive */ 214);
-__webpack_require__(/*! ./modules/es6.array.is-array */ 216);
-__webpack_require__(/*! ./modules/es6.array.from */ 217);
-__webpack_require__(/*! ./modules/es6.array.of */ 218);
-__webpack_require__(/*! ./modules/es6.array.join */ 219);
-__webpack_require__(/*! ./modules/es6.array.slice */ 220);
-__webpack_require__(/*! ./modules/es6.array.sort */ 221);
-__webpack_require__(/*! ./modules/es6.array.for-each */ 222);
-__webpack_require__(/*! ./modules/es6.array.map */ 224);
-__webpack_require__(/*! ./modules/es6.array.filter */ 225);
-__webpack_require__(/*! ./modules/es6.array.some */ 226);
-__webpack_require__(/*! ./modules/es6.array.every */ 227);
-__webpack_require__(/*! ./modules/es6.array.reduce */ 228);
-__webpack_require__(/*! ./modules/es6.array.reduce-right */ 229);
-__webpack_require__(/*! ./modules/es6.array.index-of */ 230);
-__webpack_require__(/*! ./modules/es6.array.last-index-of */ 231);
-__webpack_require__(/*! ./modules/es6.array.copy-within */ 232);
-__webpack_require__(/*! ./modules/es6.array.fill */ 233);
-__webpack_require__(/*! ./modules/es6.array.find */ 234);
-__webpack_require__(/*! ./modules/es6.array.find-index */ 235);
-__webpack_require__(/*! ./modules/es6.array.species */ 236);
+__webpack_require__(/*! ./modules/es6.symbol */ 134);
+__webpack_require__(/*! ./modules/es6.object.create */ 136);
+__webpack_require__(/*! ./modules/es6.object.define-property */ 137);
+__webpack_require__(/*! ./modules/es6.object.define-properties */ 138);
+__webpack_require__(/*! ./modules/es6.object.get-own-property-descriptor */ 139);
+__webpack_require__(/*! ./modules/es6.object.get-prototype-of */ 140);
+__webpack_require__(/*! ./modules/es6.object.keys */ 141);
+__webpack_require__(/*! ./modules/es6.object.get-own-property-names */ 142);
+__webpack_require__(/*! ./modules/es6.object.freeze */ 143);
+__webpack_require__(/*! ./modules/es6.object.seal */ 144);
+__webpack_require__(/*! ./modules/es6.object.prevent-extensions */ 145);
+__webpack_require__(/*! ./modules/es6.object.is-frozen */ 146);
+__webpack_require__(/*! ./modules/es6.object.is-sealed */ 147);
+__webpack_require__(/*! ./modules/es6.object.is-extensible */ 148);
+__webpack_require__(/*! ./modules/es6.object.assign */ 149);
+__webpack_require__(/*! ./modules/es6.object.is */ 150);
+__webpack_require__(/*! ./modules/es6.object.set-prototype-of */ 152);
+__webpack_require__(/*! ./modules/es6.object.to-string */ 153);
+__webpack_require__(/*! ./modules/es6.function.bind */ 154);
+__webpack_require__(/*! ./modules/es6.function.name */ 155);
+__webpack_require__(/*! ./modules/es6.function.has-instance */ 156);
+__webpack_require__(/*! ./modules/es6.parse-int */ 157);
+__webpack_require__(/*! ./modules/es6.parse-float */ 158);
+__webpack_require__(/*! ./modules/es6.number.constructor */ 159);
+__webpack_require__(/*! ./modules/es6.number.to-fixed */ 160);
+__webpack_require__(/*! ./modules/es6.number.to-precision */ 161);
+__webpack_require__(/*! ./modules/es6.number.epsilon */ 162);
+__webpack_require__(/*! ./modules/es6.number.is-finite */ 163);
+__webpack_require__(/*! ./modules/es6.number.is-integer */ 164);
+__webpack_require__(/*! ./modules/es6.number.is-nan */ 165);
+__webpack_require__(/*! ./modules/es6.number.is-safe-integer */ 166);
+__webpack_require__(/*! ./modules/es6.number.max-safe-integer */ 167);
+__webpack_require__(/*! ./modules/es6.number.min-safe-integer */ 168);
+__webpack_require__(/*! ./modules/es6.number.parse-float */ 169);
+__webpack_require__(/*! ./modules/es6.number.parse-int */ 170);
+__webpack_require__(/*! ./modules/es6.math.acosh */ 171);
+__webpack_require__(/*! ./modules/es6.math.asinh */ 172);
+__webpack_require__(/*! ./modules/es6.math.atanh */ 173);
+__webpack_require__(/*! ./modules/es6.math.cbrt */ 174);
+__webpack_require__(/*! ./modules/es6.math.clz32 */ 175);
+__webpack_require__(/*! ./modules/es6.math.cosh */ 176);
+__webpack_require__(/*! ./modules/es6.math.expm1 */ 177);
+__webpack_require__(/*! ./modules/es6.math.fround */ 178);
+__webpack_require__(/*! ./modules/es6.math.hypot */ 179);
+__webpack_require__(/*! ./modules/es6.math.imul */ 180);
+__webpack_require__(/*! ./modules/es6.math.log10 */ 181);
+__webpack_require__(/*! ./modules/es6.math.log1p */ 182);
+__webpack_require__(/*! ./modules/es6.math.log2 */ 183);
+__webpack_require__(/*! ./modules/es6.math.sign */ 184);
+__webpack_require__(/*! ./modules/es6.math.sinh */ 185);
+__webpack_require__(/*! ./modules/es6.math.tanh */ 186);
+__webpack_require__(/*! ./modules/es6.math.trunc */ 187);
+__webpack_require__(/*! ./modules/es6.string.from-code-point */ 188);
+__webpack_require__(/*! ./modules/es6.string.raw */ 189);
+__webpack_require__(/*! ./modules/es6.string.trim */ 190);
+__webpack_require__(/*! ./modules/es6.string.iterator */ 191);
+__webpack_require__(/*! ./modules/es6.string.code-point-at */ 192);
+__webpack_require__(/*! ./modules/es6.string.ends-with */ 193);
+__webpack_require__(/*! ./modules/es6.string.includes */ 194);
+__webpack_require__(/*! ./modules/es6.string.repeat */ 195);
+__webpack_require__(/*! ./modules/es6.string.starts-with */ 196);
+__webpack_require__(/*! ./modules/es6.string.anchor */ 197);
+__webpack_require__(/*! ./modules/es6.string.big */ 198);
+__webpack_require__(/*! ./modules/es6.string.blink */ 199);
+__webpack_require__(/*! ./modules/es6.string.bold */ 200);
+__webpack_require__(/*! ./modules/es6.string.fixed */ 201);
+__webpack_require__(/*! ./modules/es6.string.fontcolor */ 202);
+__webpack_require__(/*! ./modules/es6.string.fontsize */ 203);
+__webpack_require__(/*! ./modules/es6.string.italics */ 204);
+__webpack_require__(/*! ./modules/es6.string.link */ 205);
+__webpack_require__(/*! ./modules/es6.string.small */ 206);
+__webpack_require__(/*! ./modules/es6.string.strike */ 207);
+__webpack_require__(/*! ./modules/es6.string.sub */ 208);
+__webpack_require__(/*! ./modules/es6.string.sup */ 209);
+__webpack_require__(/*! ./modules/es6.date.now */ 210);
+__webpack_require__(/*! ./modules/es6.date.to-json */ 211);
+__webpack_require__(/*! ./modules/es6.date.to-iso-string */ 212);
+__webpack_require__(/*! ./modules/es6.date.to-string */ 214);
+__webpack_require__(/*! ./modules/es6.date.to-primitive */ 215);
+__webpack_require__(/*! ./modules/es6.array.is-array */ 217);
+__webpack_require__(/*! ./modules/es6.array.from */ 218);
+__webpack_require__(/*! ./modules/es6.array.of */ 219);
+__webpack_require__(/*! ./modules/es6.array.join */ 220);
+__webpack_require__(/*! ./modules/es6.array.slice */ 221);
+__webpack_require__(/*! ./modules/es6.array.sort */ 222);
+__webpack_require__(/*! ./modules/es6.array.for-each */ 223);
+__webpack_require__(/*! ./modules/es6.array.map */ 225);
+__webpack_require__(/*! ./modules/es6.array.filter */ 226);
+__webpack_require__(/*! ./modules/es6.array.some */ 227);
+__webpack_require__(/*! ./modules/es6.array.every */ 228);
+__webpack_require__(/*! ./modules/es6.array.reduce */ 229);
+__webpack_require__(/*! ./modules/es6.array.reduce-right */ 230);
+__webpack_require__(/*! ./modules/es6.array.index-of */ 231);
+__webpack_require__(/*! ./modules/es6.array.last-index-of */ 232);
+__webpack_require__(/*! ./modules/es6.array.copy-within */ 233);
+__webpack_require__(/*! ./modules/es6.array.fill */ 234);
+__webpack_require__(/*! ./modules/es6.array.find */ 235);
+__webpack_require__(/*! ./modules/es6.array.find-index */ 236);
+__webpack_require__(/*! ./modules/es6.array.species */ 237);
 __webpack_require__(/*! ./modules/es6.array.iterator */ 87);
-__webpack_require__(/*! ./modules/es6.regexp.constructor */ 237);
-__webpack_require__(/*! ./modules/es6.regexp.to-string */ 238);
-__webpack_require__(/*! ./modules/es6.regexp.flags */ 112);
-__webpack_require__(/*! ./modules/es6.regexp.match */ 239);
-__webpack_require__(/*! ./modules/es6.regexp.replace */ 240);
-__webpack_require__(/*! ./modules/es6.regexp.search */ 241);
-__webpack_require__(/*! ./modules/es6.regexp.split */ 242);
-__webpack_require__(/*! ./modules/es6.promise */ 243);
-__webpack_require__(/*! ./modules/es6.map */ 115);
-__webpack_require__(/*! ./modules/es6.set */ 117);
-__webpack_require__(/*! ./modules/es6.weak-map */ 118);
-__webpack_require__(/*! ./modules/es6.weak-set */ 244);
-__webpack_require__(/*! ./modules/es6.typed.array-buffer */ 245);
-__webpack_require__(/*! ./modules/es6.typed.data-view */ 246);
-__webpack_require__(/*! ./modules/es6.typed.int8-array */ 247);
-__webpack_require__(/*! ./modules/es6.typed.uint8-array */ 248);
-__webpack_require__(/*! ./modules/es6.typed.uint8-clamped-array */ 249);
-__webpack_require__(/*! ./modules/es6.typed.int16-array */ 250);
-__webpack_require__(/*! ./modules/es6.typed.uint16-array */ 251);
-__webpack_require__(/*! ./modules/es6.typed.int32-array */ 252);
-__webpack_require__(/*! ./modules/es6.typed.uint32-array */ 253);
-__webpack_require__(/*! ./modules/es6.typed.float32-array */ 254);
-__webpack_require__(/*! ./modules/es6.typed.float64-array */ 255);
-__webpack_require__(/*! ./modules/es6.reflect.apply */ 256);
-__webpack_require__(/*! ./modules/es6.reflect.construct */ 257);
-__webpack_require__(/*! ./modules/es6.reflect.define-property */ 258);
-__webpack_require__(/*! ./modules/es6.reflect.delete-property */ 259);
-__webpack_require__(/*! ./modules/es6.reflect.enumerate */ 260);
-__webpack_require__(/*! ./modules/es6.reflect.get */ 261);
-__webpack_require__(/*! ./modules/es6.reflect.get-own-property-descriptor */ 262);
-__webpack_require__(/*! ./modules/es6.reflect.get-prototype-of */ 263);
-__webpack_require__(/*! ./modules/es6.reflect.has */ 264);
-__webpack_require__(/*! ./modules/es6.reflect.is-extensible */ 265);
-__webpack_require__(/*! ./modules/es6.reflect.own-keys */ 266);
-__webpack_require__(/*! ./modules/es6.reflect.prevent-extensions */ 267);
-__webpack_require__(/*! ./modules/es6.reflect.set */ 268);
-__webpack_require__(/*! ./modules/es6.reflect.set-prototype-of */ 269);
-__webpack_require__(/*! ./modules/es7.array.includes */ 270);
-__webpack_require__(/*! ./modules/es7.array.flat-map */ 271);
-__webpack_require__(/*! ./modules/es7.array.flatten */ 272);
-__webpack_require__(/*! ./modules/es7.string.at */ 273);
-__webpack_require__(/*! ./modules/es7.string.pad-start */ 274);
-__webpack_require__(/*! ./modules/es7.string.pad-end */ 275);
-__webpack_require__(/*! ./modules/es7.string.trim-left */ 276);
-__webpack_require__(/*! ./modules/es7.string.trim-right */ 277);
-__webpack_require__(/*! ./modules/es7.string.match-all */ 278);
-__webpack_require__(/*! ./modules/es7.symbol.async-iterator */ 279);
-__webpack_require__(/*! ./modules/es7.symbol.observable */ 280);
-__webpack_require__(/*! ./modules/es7.object.get-own-property-descriptors */ 281);
-__webpack_require__(/*! ./modules/es7.object.values */ 282);
-__webpack_require__(/*! ./modules/es7.object.entries */ 283);
-__webpack_require__(/*! ./modules/es7.object.define-getter */ 284);
-__webpack_require__(/*! ./modules/es7.object.define-setter */ 285);
-__webpack_require__(/*! ./modules/es7.object.lookup-getter */ 286);
-__webpack_require__(/*! ./modules/es7.object.lookup-setter */ 287);
-__webpack_require__(/*! ./modules/es7.map.to-json */ 288);
-__webpack_require__(/*! ./modules/es7.set.to-json */ 289);
-__webpack_require__(/*! ./modules/es7.map.of */ 290);
-__webpack_require__(/*! ./modules/es7.set.of */ 291);
-__webpack_require__(/*! ./modules/es7.weak-map.of */ 292);
-__webpack_require__(/*! ./modules/es7.weak-set.of */ 293);
-__webpack_require__(/*! ./modules/es7.map.from */ 294);
-__webpack_require__(/*! ./modules/es7.set.from */ 295);
-__webpack_require__(/*! ./modules/es7.weak-map.from */ 296);
-__webpack_require__(/*! ./modules/es7.weak-set.from */ 297);
-__webpack_require__(/*! ./modules/es7.global */ 298);
-__webpack_require__(/*! ./modules/es7.system.global */ 299);
-__webpack_require__(/*! ./modules/es7.error.is-error */ 300);
-__webpack_require__(/*! ./modules/es7.math.clamp */ 301);
-__webpack_require__(/*! ./modules/es7.math.deg-per-rad */ 302);
-__webpack_require__(/*! ./modules/es7.math.degrees */ 303);
-__webpack_require__(/*! ./modules/es7.math.fscale */ 304);
-__webpack_require__(/*! ./modules/es7.math.iaddh */ 305);
-__webpack_require__(/*! ./modules/es7.math.isubh */ 306);
-__webpack_require__(/*! ./modules/es7.math.imulh */ 307);
-__webpack_require__(/*! ./modules/es7.math.rad-per-deg */ 308);
-__webpack_require__(/*! ./modules/es7.math.radians */ 309);
-__webpack_require__(/*! ./modules/es7.math.scale */ 310);
-__webpack_require__(/*! ./modules/es7.math.umulh */ 311);
-__webpack_require__(/*! ./modules/es7.math.signbit */ 312);
-__webpack_require__(/*! ./modules/es7.promise.finally */ 313);
-__webpack_require__(/*! ./modules/es7.promise.try */ 314);
-__webpack_require__(/*! ./modules/es7.reflect.define-metadata */ 315);
-__webpack_require__(/*! ./modules/es7.reflect.delete-metadata */ 316);
-__webpack_require__(/*! ./modules/es7.reflect.get-metadata */ 317);
-__webpack_require__(/*! ./modules/es7.reflect.get-metadata-keys */ 318);
-__webpack_require__(/*! ./modules/es7.reflect.get-own-metadata */ 319);
-__webpack_require__(/*! ./modules/es7.reflect.get-own-metadata-keys */ 320);
-__webpack_require__(/*! ./modules/es7.reflect.has-metadata */ 321);
-__webpack_require__(/*! ./modules/es7.reflect.has-own-metadata */ 322);
-__webpack_require__(/*! ./modules/es7.reflect.metadata */ 323);
-__webpack_require__(/*! ./modules/es7.asap */ 324);
-__webpack_require__(/*! ./modules/es7.observable */ 325);
-__webpack_require__(/*! ./modules/web.timers */ 326);
-__webpack_require__(/*! ./modules/web.immediate */ 327);
-__webpack_require__(/*! ./modules/web.dom.iterable */ 328);
+__webpack_require__(/*! ./modules/es6.regexp.constructor */ 238);
+__webpack_require__(/*! ./modules/es6.regexp.to-string */ 239);
+__webpack_require__(/*! ./modules/es6.regexp.flags */ 113);
+__webpack_require__(/*! ./modules/es6.regexp.match */ 240);
+__webpack_require__(/*! ./modules/es6.regexp.replace */ 241);
+__webpack_require__(/*! ./modules/es6.regexp.search */ 242);
+__webpack_require__(/*! ./modules/es6.regexp.split */ 243);
+__webpack_require__(/*! ./modules/es6.promise */ 244);
+__webpack_require__(/*! ./modules/es6.map */ 116);
+__webpack_require__(/*! ./modules/es6.set */ 118);
+__webpack_require__(/*! ./modules/es6.weak-map */ 119);
+__webpack_require__(/*! ./modules/es6.weak-set */ 245);
+__webpack_require__(/*! ./modules/es6.typed.array-buffer */ 246);
+__webpack_require__(/*! ./modules/es6.typed.data-view */ 247);
+__webpack_require__(/*! ./modules/es6.typed.int8-array */ 248);
+__webpack_require__(/*! ./modules/es6.typed.uint8-array */ 249);
+__webpack_require__(/*! ./modules/es6.typed.uint8-clamped-array */ 250);
+__webpack_require__(/*! ./modules/es6.typed.int16-array */ 251);
+__webpack_require__(/*! ./modules/es6.typed.uint16-array */ 252);
+__webpack_require__(/*! ./modules/es6.typed.int32-array */ 253);
+__webpack_require__(/*! ./modules/es6.typed.uint32-array */ 254);
+__webpack_require__(/*! ./modules/es6.typed.float32-array */ 255);
+__webpack_require__(/*! ./modules/es6.typed.float64-array */ 256);
+__webpack_require__(/*! ./modules/es6.reflect.apply */ 257);
+__webpack_require__(/*! ./modules/es6.reflect.construct */ 258);
+__webpack_require__(/*! ./modules/es6.reflect.define-property */ 259);
+__webpack_require__(/*! ./modules/es6.reflect.delete-property */ 260);
+__webpack_require__(/*! ./modules/es6.reflect.enumerate */ 261);
+__webpack_require__(/*! ./modules/es6.reflect.get */ 262);
+__webpack_require__(/*! ./modules/es6.reflect.get-own-property-descriptor */ 263);
+__webpack_require__(/*! ./modules/es6.reflect.get-prototype-of */ 264);
+__webpack_require__(/*! ./modules/es6.reflect.has */ 265);
+__webpack_require__(/*! ./modules/es6.reflect.is-extensible */ 266);
+__webpack_require__(/*! ./modules/es6.reflect.own-keys */ 267);
+__webpack_require__(/*! ./modules/es6.reflect.prevent-extensions */ 268);
+__webpack_require__(/*! ./modules/es6.reflect.set */ 269);
+__webpack_require__(/*! ./modules/es6.reflect.set-prototype-of */ 270);
+__webpack_require__(/*! ./modules/es7.array.includes */ 271);
+__webpack_require__(/*! ./modules/es7.array.flat-map */ 272);
+__webpack_require__(/*! ./modules/es7.array.flatten */ 273);
+__webpack_require__(/*! ./modules/es7.string.at */ 274);
+__webpack_require__(/*! ./modules/es7.string.pad-start */ 275);
+__webpack_require__(/*! ./modules/es7.string.pad-end */ 276);
+__webpack_require__(/*! ./modules/es7.string.trim-left */ 277);
+__webpack_require__(/*! ./modules/es7.string.trim-right */ 278);
+__webpack_require__(/*! ./modules/es7.string.match-all */ 279);
+__webpack_require__(/*! ./modules/es7.symbol.async-iterator */ 280);
+__webpack_require__(/*! ./modules/es7.symbol.observable */ 281);
+__webpack_require__(/*! ./modules/es7.object.get-own-property-descriptors */ 282);
+__webpack_require__(/*! ./modules/es7.object.values */ 283);
+__webpack_require__(/*! ./modules/es7.object.entries */ 284);
+__webpack_require__(/*! ./modules/es7.object.define-getter */ 285);
+__webpack_require__(/*! ./modules/es7.object.define-setter */ 286);
+__webpack_require__(/*! ./modules/es7.object.lookup-getter */ 287);
+__webpack_require__(/*! ./modules/es7.object.lookup-setter */ 288);
+__webpack_require__(/*! ./modules/es7.map.to-json */ 289);
+__webpack_require__(/*! ./modules/es7.set.to-json */ 290);
+__webpack_require__(/*! ./modules/es7.map.of */ 291);
+__webpack_require__(/*! ./modules/es7.set.of */ 292);
+__webpack_require__(/*! ./modules/es7.weak-map.of */ 293);
+__webpack_require__(/*! ./modules/es7.weak-set.of */ 294);
+__webpack_require__(/*! ./modules/es7.map.from */ 295);
+__webpack_require__(/*! ./modules/es7.set.from */ 296);
+__webpack_require__(/*! ./modules/es7.weak-map.from */ 297);
+__webpack_require__(/*! ./modules/es7.weak-set.from */ 298);
+__webpack_require__(/*! ./modules/es7.global */ 299);
+__webpack_require__(/*! ./modules/es7.system.global */ 300);
+__webpack_require__(/*! ./modules/es7.error.is-error */ 301);
+__webpack_require__(/*! ./modules/es7.math.clamp */ 302);
+__webpack_require__(/*! ./modules/es7.math.deg-per-rad */ 303);
+__webpack_require__(/*! ./modules/es7.math.degrees */ 304);
+__webpack_require__(/*! ./modules/es7.math.fscale */ 305);
+__webpack_require__(/*! ./modules/es7.math.iaddh */ 306);
+__webpack_require__(/*! ./modules/es7.math.isubh */ 307);
+__webpack_require__(/*! ./modules/es7.math.imulh */ 308);
+__webpack_require__(/*! ./modules/es7.math.rad-per-deg */ 309);
+__webpack_require__(/*! ./modules/es7.math.radians */ 310);
+__webpack_require__(/*! ./modules/es7.math.scale */ 311);
+__webpack_require__(/*! ./modules/es7.math.umulh */ 312);
+__webpack_require__(/*! ./modules/es7.math.signbit */ 313);
+__webpack_require__(/*! ./modules/es7.promise.finally */ 314);
+__webpack_require__(/*! ./modules/es7.promise.try */ 315);
+__webpack_require__(/*! ./modules/es7.reflect.define-metadata */ 316);
+__webpack_require__(/*! ./modules/es7.reflect.delete-metadata */ 317);
+__webpack_require__(/*! ./modules/es7.reflect.get-metadata */ 318);
+__webpack_require__(/*! ./modules/es7.reflect.get-metadata-keys */ 319);
+__webpack_require__(/*! ./modules/es7.reflect.get-own-metadata */ 320);
+__webpack_require__(/*! ./modules/es7.reflect.get-own-metadata-keys */ 321);
+__webpack_require__(/*! ./modules/es7.reflect.has-metadata */ 322);
+__webpack_require__(/*! ./modules/es7.reflect.has-own-metadata */ 323);
+__webpack_require__(/*! ./modules/es7.reflect.metadata */ 324);
+__webpack_require__(/*! ./modules/es7.asap */ 325);
+__webpack_require__(/*! ./modules/es7.observable */ 326);
+__webpack_require__(/*! ./modules/web.timers */ 327);
+__webpack_require__(/*! ./modules/web.immediate */ 328);
+__webpack_require__(/*! ./modules/web.dom.iterable */ 329);
 module.exports = __webpack_require__(/*! ./modules/_core */ 22);
 
 
 /***/ }),
-/* 133 */
+/* 134 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/es6.symbol.js ***!
   \****************************************************/
@@ -4854,16 +5056,16 @@ var shared = __webpack_require__(/*! ./_shared */ 51);
 var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 43);
 var uid = __webpack_require__(/*! ./_uid */ 33);
 var wks = __webpack_require__(/*! ./_wks */ 5);
-var wksExt = __webpack_require__(/*! ./_wks-ext */ 95);
+var wksExt = __webpack_require__(/*! ./_wks-ext */ 96);
 var wksDefine = __webpack_require__(/*! ./_wks-define */ 67);
-var enumKeys = __webpack_require__(/*! ./_enum-keys */ 134);
+var enumKeys = __webpack_require__(/*! ./_enum-keys */ 135);
 var isArray = __webpack_require__(/*! ./_is-array */ 54);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
 var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 23);
 var createDesc = __webpack_require__(/*! ./_property-desc */ 32);
 var _create = __webpack_require__(/*! ./_object-create */ 37);
-var gOPNExt = __webpack_require__(/*! ./_object-gopn-ext */ 98);
+var gOPNExt = __webpack_require__(/*! ./_object-gopn-ext */ 99);
 var $GOPD = __webpack_require__(/*! ./_object-gopd */ 16);
 var $DP = __webpack_require__(/*! ./_object-dp */ 7);
 var $keys = __webpack_require__(/*! ./_object-keys */ 35);
@@ -5078,7 +5280,7 @@ setToStringTag(global.JSON, 'JSON', true);
 
 
 /***/ }),
-/* 134 */
+/* 135 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_enum-keys.js ***!
   \****************************************************/
@@ -5104,7 +5306,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 135 */
+/* 136 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.create.js ***!
   \***********************************************************/
@@ -5118,7 +5320,7 @@ $export($export.S, 'Object', { create: __webpack_require__(/*! ./_object-create 
 
 
 /***/ }),
-/* 136 */
+/* 137 */
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.define-property.js ***!
   \********************************************************************/
@@ -5132,7 +5334,7 @@ $export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ 6), '
 
 
 /***/ }),
-/* 137 */
+/* 138 */
 /*!**********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.define-properties.js ***!
   \**********************************************************************/
@@ -5142,11 +5344,11 @@ $export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ 6), '
 
 var $export = __webpack_require__(/*! ./_export */ 0);
 // 19.1.2.3 / 15.2.3.7 Object.defineProperties(O, Properties)
-$export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ 6), 'Object', { defineProperties: __webpack_require__(/*! ./_object-dps */ 97) });
+$export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ 6), 'Object', { defineProperties: __webpack_require__(/*! ./_object-dps */ 98) });
 
 
 /***/ }),
-/* 138 */
+/* 139 */
 /*!********************************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.get-own-property-descriptor.js ***!
   \********************************************************************************/
@@ -5166,7 +5368,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('getOwnPropertyDescriptor', functio
 
 
 /***/ }),
-/* 139 */
+/* 140 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.get-prototype-of.js ***!
   \*********************************************************************/
@@ -5186,7 +5388,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('getPrototypeOf', function () {
 
 
 /***/ }),
-/* 140 */
+/* 141 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.keys.js ***!
   \*********************************************************/
@@ -5206,7 +5408,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('keys', function () {
 
 
 /***/ }),
-/* 141 */
+/* 142 */
 /*!***************************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.get-own-property-names.js ***!
   \***************************************************************************/
@@ -5216,12 +5418,12 @@ __webpack_require__(/*! ./_object-sap */ 26)('keys', function () {
 
 // 19.1.2.7 Object.getOwnPropertyNames(O)
 __webpack_require__(/*! ./_object-sap */ 26)('getOwnPropertyNames', function () {
-  return __webpack_require__(/*! ./_object-gopn-ext */ 98).f;
+  return __webpack_require__(/*! ./_object-gopn-ext */ 99).f;
 });
 
 
 /***/ }),
-/* 142 */
+/* 143 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.freeze.js ***!
   \***********************************************************/
@@ -5241,7 +5443,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('freeze', function ($freeze) {
 
 
 /***/ }),
-/* 143 */
+/* 144 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.seal.js ***!
   \*********************************************************/
@@ -5261,7 +5463,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('seal', function ($seal) {
 
 
 /***/ }),
-/* 144 */
+/* 145 */
 /*!***********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.prevent-extensions.js ***!
   \***********************************************************************/
@@ -5281,7 +5483,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('preventExtensions', function ($pre
 
 
 /***/ }),
-/* 145 */
+/* 146 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.is-frozen.js ***!
   \**************************************************************/
@@ -5300,7 +5502,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('isFrozen', function ($isFrozen) {
 
 
 /***/ }),
-/* 146 */
+/* 147 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.is-sealed.js ***!
   \**************************************************************/
@@ -5319,7 +5521,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('isSealed', function ($isSealed) {
 
 
 /***/ }),
-/* 147 */
+/* 148 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.is-extensible.js ***!
   \******************************************************************/
@@ -5338,7 +5540,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('isExtensible', function ($isExtens
 
 
 /***/ }),
-/* 148 */
+/* 149 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.assign.js ***!
   \***********************************************************/
@@ -5349,11 +5551,11 @@ __webpack_require__(/*! ./_object-sap */ 26)('isExtensible', function ($isExtens
 // 19.1.3.1 Object.assign(target, source)
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_object-assign */ 99) });
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_object-assign */ 100) });
 
 
 /***/ }),
-/* 149 */
+/* 150 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.is.js ***!
   \*******************************************************/
@@ -5363,11 +5565,11 @@ $export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_ob
 
 // 19.1.3.10 Object.is(value1, value2)
 var $export = __webpack_require__(/*! ./_export */ 0);
-$export($export.S, 'Object', { is: __webpack_require__(/*! ./_same-value */ 150) });
+$export($export.S, 'Object', { is: __webpack_require__(/*! ./_same-value */ 151) });
 
 
 /***/ }),
-/* 150 */
+/* 151 */
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_same-value.js ***!
   \*****************************************************/
@@ -5383,7 +5585,7 @@ module.exports = Object.is || function is(x, y) {
 
 
 /***/ }),
-/* 151 */
+/* 152 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.set-prototype-of.js ***!
   \*********************************************************************/
@@ -5397,7 +5599,7 @@ $export($export.S, 'Object', { setPrototypeOf: __webpack_require__(/*! ./_set-pr
 
 
 /***/ }),
-/* 152 */
+/* 153 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.to-string.js ***!
   \**************************************************************/
@@ -5419,7 +5621,7 @@ if (test + '' != '[object z]') {
 
 
 /***/ }),
-/* 153 */
+/* 154 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.function.bind.js ***!
   \***********************************************************/
@@ -5430,11 +5632,11 @@ if (test + '' != '[object z]') {
 // 19.2.3.2 / 15.3.4.5 Function.prototype.bind(thisArg, args...)
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.P, 'Function', { bind: __webpack_require__(/*! ./_bind */ 100) });
+$export($export.P, 'Function', { bind: __webpack_require__(/*! ./_bind */ 101) });
 
 
 /***/ }),
-/* 154 */
+/* 155 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.function.name.js ***!
   \***********************************************************/
@@ -5461,7 +5663,7 @@ NAME in FProto || __webpack_require__(/*! ./_descriptors */ 6) && dP(FProto, NAM
 
 
 /***/ }),
-/* 155 */
+/* 156 */
 /*!*******************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.function.has-instance.js ***!
   \*******************************************************************/
@@ -5486,7 +5688,7 @@ if (!(HAS_INSTANCE in FunctionProto)) __webpack_require__(/*! ./_object-dp */ 7)
 
 
 /***/ }),
-/* 156 */
+/* 157 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.parse-int.js ***!
   \*******************************************************/
@@ -5495,13 +5697,13 @@ if (!(HAS_INSTANCE in FunctionProto)) __webpack_require__(/*! ./_object-dp */ 7)
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $parseInt = __webpack_require__(/*! ./_parse-int */ 102);
+var $parseInt = __webpack_require__(/*! ./_parse-int */ 103);
 // 18.2.5 parseInt(string, radix)
 $export($export.G + $export.F * (parseInt != $parseInt), { parseInt: $parseInt });
 
 
 /***/ }),
-/* 157 */
+/* 158 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.parse-float.js ***!
   \*********************************************************/
@@ -5510,13 +5712,13 @@ $export($export.G + $export.F * (parseInt != $parseInt), { parseInt: $parseInt }
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $parseFloat = __webpack_require__(/*! ./_parse-float */ 103);
+var $parseFloat = __webpack_require__(/*! ./_parse-float */ 104);
 // 18.2.4 parseFloat(string)
 $export($export.G + $export.F * (parseFloat != $parseFloat), { parseFloat: $parseFloat });
 
 
 /***/ }),
-/* 158 */
+/* 159 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.constructor.js ***!
   \****************************************************************/
@@ -5597,7 +5799,7 @@ if (!$Number(' 0o1') || !$Number('0b1') || $Number('+0x1')) {
 
 
 /***/ }),
-/* 159 */
+/* 160 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.to-fixed.js ***!
   \*************************************************************/
@@ -5609,7 +5811,7 @@ if (!$Number(' 0o1') || !$Number('0b1') || $Number('+0x1')) {
 
 var $export = __webpack_require__(/*! ./_export */ 0);
 var toInteger = __webpack_require__(/*! ./_to-integer */ 25);
-var aNumberValue = __webpack_require__(/*! ./_a-number-value */ 104);
+var aNumberValue = __webpack_require__(/*! ./_a-number-value */ 105);
 var repeat = __webpack_require__(/*! ./_string-repeat */ 74);
 var $toFixed = 1.0.toFixed;
 var floor = Math.floor;
@@ -5723,7 +5925,7 @@ $export($export.P + $export.F * (!!$toFixed && (
 
 
 /***/ }),
-/* 160 */
+/* 161 */
 /*!*****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.to-precision.js ***!
   \*****************************************************************/
@@ -5735,7 +5937,7 @@ $export($export.P + $export.F * (!!$toFixed && (
 
 var $export = __webpack_require__(/*! ./_export */ 0);
 var $fails = __webpack_require__(/*! ./_fails */ 3);
-var aNumberValue = __webpack_require__(/*! ./_a-number-value */ 104);
+var aNumberValue = __webpack_require__(/*! ./_a-number-value */ 105);
 var $toPrecision = 1.0.toPrecision;
 
 $export($export.P + $export.F * ($fails(function () {
@@ -5753,7 +5955,7 @@ $export($export.P + $export.F * ($fails(function () {
 
 
 /***/ }),
-/* 161 */
+/* 162 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.epsilon.js ***!
   \************************************************************/
@@ -5768,7 +5970,7 @@ $export($export.S, 'Number', { EPSILON: Math.pow(2, -52) });
 
 
 /***/ }),
-/* 162 */
+/* 163 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.is-finite.js ***!
   \**************************************************************/
@@ -5788,7 +5990,7 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 163 */
+/* 164 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.is-integer.js ***!
   \***************************************************************/
@@ -5799,11 +6001,11 @@ $export($export.S, 'Number', {
 // 20.1.2.3 Number.isInteger(number)
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.S, 'Number', { isInteger: __webpack_require__(/*! ./_is-integer */ 105) });
+$export($export.S, 'Number', { isInteger: __webpack_require__(/*! ./_is-integer */ 106) });
 
 
 /***/ }),
-/* 164 */
+/* 165 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.is-nan.js ***!
   \***********************************************************/
@@ -5823,7 +6025,7 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 165 */
+/* 166 */
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.is-safe-integer.js ***!
   \********************************************************************/
@@ -5833,7 +6035,7 @@ $export($export.S, 'Number', {
 
 // 20.1.2.5 Number.isSafeInteger(number)
 var $export = __webpack_require__(/*! ./_export */ 0);
-var isInteger = __webpack_require__(/*! ./_is-integer */ 105);
+var isInteger = __webpack_require__(/*! ./_is-integer */ 106);
 var abs = Math.abs;
 
 $export($export.S, 'Number', {
@@ -5844,7 +6046,7 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 166 */
+/* 167 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.max-safe-integer.js ***!
   \*********************************************************************/
@@ -5859,7 +6061,7 @@ $export($export.S, 'Number', { MAX_SAFE_INTEGER: 0x1fffffffffffff });
 
 
 /***/ }),
-/* 167 */
+/* 168 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.min-safe-integer.js ***!
   \*********************************************************************/
@@ -5874,7 +6076,7 @@ $export($export.S, 'Number', { MIN_SAFE_INTEGER: -0x1fffffffffffff });
 
 
 /***/ }),
-/* 168 */
+/* 169 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.parse-float.js ***!
   \****************************************************************/
@@ -5883,13 +6085,13 @@ $export($export.S, 'Number', { MIN_SAFE_INTEGER: -0x1fffffffffffff });
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $parseFloat = __webpack_require__(/*! ./_parse-float */ 103);
+var $parseFloat = __webpack_require__(/*! ./_parse-float */ 104);
 // 20.1.2.12 Number.parseFloat(string)
 $export($export.S + $export.F * (Number.parseFloat != $parseFloat), 'Number', { parseFloat: $parseFloat });
 
 
 /***/ }),
-/* 169 */
+/* 170 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.parse-int.js ***!
   \**************************************************************/
@@ -5898,13 +6100,13 @@ $export($export.S + $export.F * (Number.parseFloat != $parseFloat), 'Number', { 
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $parseInt = __webpack_require__(/*! ./_parse-int */ 102);
+var $parseInt = __webpack_require__(/*! ./_parse-int */ 103);
 // 20.1.2.13 Number.parseInt(string, radix)
 $export($export.S + $export.F * (Number.parseInt != $parseInt), 'Number', { parseInt: $parseInt });
 
 
 /***/ }),
-/* 170 */
+/* 171 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.acosh.js ***!
   \********************************************************/
@@ -5914,7 +6116,7 @@ $export($export.S + $export.F * (Number.parseInt != $parseInt), 'Number', { pars
 
 // 20.2.2.3 Math.acosh(x)
 var $export = __webpack_require__(/*! ./_export */ 0);
-var log1p = __webpack_require__(/*! ./_math-log1p */ 106);
+var log1p = __webpack_require__(/*! ./_math-log1p */ 107);
 var sqrt = Math.sqrt;
 var $acosh = Math.acosh;
 
@@ -5933,7 +6135,7 @@ $export($export.S + $export.F * !($acosh
 
 
 /***/ }),
-/* 171 */
+/* 172 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.asinh.js ***!
   \********************************************************/
@@ -5954,7 +6156,7 @@ $export($export.S + $export.F * !($asinh && 1 / $asinh(0) > 0), 'Math', { asinh:
 
 
 /***/ }),
-/* 172 */
+/* 173 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.atanh.js ***!
   \********************************************************/
@@ -5975,7 +6177,7 @@ $export($export.S + $export.F * !($atanh && 1 / $atanh(-0) < 0), 'Math', {
 
 
 /***/ }),
-/* 173 */
+/* 174 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.cbrt.js ***!
   \*******************************************************/
@@ -5995,7 +6197,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 174 */
+/* 175 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.clz32.js ***!
   \********************************************************/
@@ -6014,7 +6216,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 175 */
+/* 176 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.cosh.js ***!
   \*******************************************************/
@@ -6034,7 +6236,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 176 */
+/* 177 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.expm1.js ***!
   \********************************************************/
@@ -6050,7 +6252,7 @@ $export($export.S + $export.F * ($expm1 != Math.expm1), 'Math', { expm1: $expm1 
 
 
 /***/ }),
-/* 177 */
+/* 178 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.fround.js ***!
   \*********************************************************/
@@ -6061,11 +6263,11 @@ $export($export.S + $export.F * ($expm1 != Math.expm1), 'Math', { expm1: $expm1 
 // 20.2.2.16 Math.fround(x)
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.S, 'Math', { fround: __webpack_require__(/*! ./_math-fround */ 107) });
+$export($export.S, 'Math', { fround: __webpack_require__(/*! ./_math-fround */ 108) });
 
 
 /***/ }),
-/* 178 */
+/* 179 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.hypot.js ***!
   \********************************************************/
@@ -6101,7 +6303,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 179 */
+/* 180 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.imul.js ***!
   \*******************************************************/
@@ -6129,7 +6331,7 @@ $export($export.S + $export.F * __webpack_require__(/*! ./_fails */ 3)(function 
 
 
 /***/ }),
-/* 180 */
+/* 181 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.log10.js ***!
   \********************************************************/
@@ -6148,7 +6350,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 181 */
+/* 182 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.log1p.js ***!
   \********************************************************/
@@ -6159,11 +6361,11 @@ $export($export.S, 'Math', {
 // 20.2.2.20 Math.log1p(x)
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.S, 'Math', { log1p: __webpack_require__(/*! ./_math-log1p */ 106) });
+$export($export.S, 'Math', { log1p: __webpack_require__(/*! ./_math-log1p */ 107) });
 
 
 /***/ }),
-/* 182 */
+/* 183 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.log2.js ***!
   \*******************************************************/
@@ -6182,7 +6384,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 183 */
+/* 184 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.sign.js ***!
   \*******************************************************/
@@ -6197,7 +6399,7 @@ $export($export.S, 'Math', { sign: __webpack_require__(/*! ./_math-sign */ 75) }
 
 
 /***/ }),
-/* 184 */
+/* 185 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.sinh.js ***!
   \*******************************************************/
@@ -6223,7 +6425,7 @@ $export($export.S + $export.F * __webpack_require__(/*! ./_fails */ 3)(function 
 
 
 /***/ }),
-/* 185 */
+/* 186 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.tanh.js ***!
   \*******************************************************/
@@ -6246,7 +6448,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 186 */
+/* 187 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.trunc.js ***!
   \********************************************************/
@@ -6265,7 +6467,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 187 */
+/* 188 */
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.from-code-point.js ***!
   \********************************************************************/
@@ -6299,7 +6501,7 @@ $export($export.S + $export.F * (!!$fromCodePoint && $fromCodePoint.length != 1)
 
 
 /***/ }),
-/* 188 */
+/* 189 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.raw.js ***!
   \********************************************************/
@@ -6328,7 +6530,7 @@ $export($export.S, 'String', {
 
 
 /***/ }),
-/* 189 */
+/* 190 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.trim.js ***!
   \*********************************************************/
@@ -6347,7 +6549,7 @@ __webpack_require__(/*! ./_string-trim */ 44)('trim', function ($trim) {
 
 
 /***/ }),
-/* 190 */
+/* 191 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.iterator.js ***!
   \*************************************************************/
@@ -6376,7 +6578,7 @@ __webpack_require__(/*! ./_iter-define */ 78)(String, 'String', function (iterat
 
 
 /***/ }),
-/* 191 */
+/* 192 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.code-point-at.js ***!
   \******************************************************************/
@@ -6397,7 +6599,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 192 */
+/* 193 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.ends-with.js ***!
   \**************************************************************/
@@ -6429,7 +6631,7 @@ $export($export.P + $export.F * __webpack_require__(/*! ./_fails-is-regexp */ 81
 
 
 /***/ }),
-/* 193 */
+/* 194 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.includes.js ***!
   \*************************************************************/
@@ -6453,7 +6655,7 @@ $export($export.P + $export.F * __webpack_require__(/*! ./_fails-is-regexp */ 81
 
 
 /***/ }),
-/* 194 */
+/* 195 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.repeat.js ***!
   \***********************************************************/
@@ -6470,7 +6672,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 195 */
+/* 196 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.starts-with.js ***!
   \****************************************************************/
@@ -6500,7 +6702,7 @@ $export($export.P + $export.F * __webpack_require__(/*! ./_fails-is-regexp */ 81
 
 
 /***/ }),
-/* 196 */
+/* 197 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.anchor.js ***!
   \***********************************************************/
@@ -6519,7 +6721,7 @@ __webpack_require__(/*! ./_string-html */ 14)('anchor', function (createHTML) {
 
 
 /***/ }),
-/* 197 */
+/* 198 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.big.js ***!
   \********************************************************/
@@ -6538,7 +6740,7 @@ __webpack_require__(/*! ./_string-html */ 14)('big', function (createHTML) {
 
 
 /***/ }),
-/* 198 */
+/* 199 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.blink.js ***!
   \**********************************************************/
@@ -6557,7 +6759,7 @@ __webpack_require__(/*! ./_string-html */ 14)('blink', function (createHTML) {
 
 
 /***/ }),
-/* 199 */
+/* 200 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.bold.js ***!
   \*********************************************************/
@@ -6576,7 +6778,7 @@ __webpack_require__(/*! ./_string-html */ 14)('bold', function (createHTML) {
 
 
 /***/ }),
-/* 200 */
+/* 201 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.fixed.js ***!
   \**********************************************************/
@@ -6595,7 +6797,7 @@ __webpack_require__(/*! ./_string-html */ 14)('fixed', function (createHTML) {
 
 
 /***/ }),
-/* 201 */
+/* 202 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.fontcolor.js ***!
   \**************************************************************/
@@ -6614,7 +6816,7 @@ __webpack_require__(/*! ./_string-html */ 14)('fontcolor', function (createHTML)
 
 
 /***/ }),
-/* 202 */
+/* 203 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.fontsize.js ***!
   \*************************************************************/
@@ -6633,7 +6835,7 @@ __webpack_require__(/*! ./_string-html */ 14)('fontsize', function (createHTML) 
 
 
 /***/ }),
-/* 203 */
+/* 204 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.italics.js ***!
   \************************************************************/
@@ -6652,7 +6854,7 @@ __webpack_require__(/*! ./_string-html */ 14)('italics', function (createHTML) {
 
 
 /***/ }),
-/* 204 */
+/* 205 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.link.js ***!
   \*********************************************************/
@@ -6671,7 +6873,7 @@ __webpack_require__(/*! ./_string-html */ 14)('link', function (createHTML) {
 
 
 /***/ }),
-/* 205 */
+/* 206 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.small.js ***!
   \**********************************************************/
@@ -6690,7 +6892,7 @@ __webpack_require__(/*! ./_string-html */ 14)('small', function (createHTML) {
 
 
 /***/ }),
-/* 206 */
+/* 207 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.strike.js ***!
   \***********************************************************/
@@ -6709,7 +6911,7 @@ __webpack_require__(/*! ./_string-html */ 14)('strike', function (createHTML) {
 
 
 /***/ }),
-/* 207 */
+/* 208 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.sub.js ***!
   \********************************************************/
@@ -6728,7 +6930,7 @@ __webpack_require__(/*! ./_string-html */ 14)('sub', function (createHTML) {
 
 
 /***/ }),
-/* 208 */
+/* 209 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.sup.js ***!
   \********************************************************/
@@ -6747,7 +6949,7 @@ __webpack_require__(/*! ./_string-html */ 14)('sup', function (createHTML) {
 
 
 /***/ }),
-/* 209 */
+/* 210 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.date.now.js ***!
   \******************************************************/
@@ -6762,7 +6964,7 @@ $export($export.S, 'Date', { now: function () { return new Date().getTime(); } }
 
 
 /***/ }),
-/* 210 */
+/* 211 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.date.to-json.js ***!
   \**********************************************************/
@@ -6790,7 +6992,7 @@ $export($export.P + $export.F * __webpack_require__(/*! ./_fails */ 3)(function 
 
 
 /***/ }),
-/* 211 */
+/* 212 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.date.to-iso-string.js ***!
   \****************************************************************/
@@ -6800,7 +7002,7 @@ $export($export.P + $export.F * __webpack_require__(/*! ./_fails */ 3)(function 
 
 // 20.3.4.36 / 15.9.5.43 Date.prototype.toISOString()
 var $export = __webpack_require__(/*! ./_export */ 0);
-var toISOString = __webpack_require__(/*! ./_date-to-iso-string */ 212);
+var toISOString = __webpack_require__(/*! ./_date-to-iso-string */ 213);
 
 // PhantomJS / old WebKit has a broken implementations
 $export($export.P + $export.F * (Date.prototype.toISOString !== toISOString), 'Date', {
@@ -6809,7 +7011,7 @@ $export($export.P + $export.F * (Date.prototype.toISOString !== toISOString), 'D
 
 
 /***/ }),
-/* 212 */
+/* 213 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/_date-to-iso-string.js ***!
   \*************************************************************/
@@ -6847,7 +7049,7 @@ module.exports = (fails(function () {
 
 
 /***/ }),
-/* 213 */
+/* 214 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.date.to-string.js ***!
   \************************************************************/
@@ -6870,7 +7072,7 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 
 
 /***/ }),
-/* 214 */
+/* 215 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.date.to-primitive.js ***!
   \***************************************************************/
@@ -6881,11 +7083,11 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 var TO_PRIMITIVE = __webpack_require__(/*! ./_wks */ 5)('toPrimitive');
 var proto = Date.prototype;
 
-if (!(TO_PRIMITIVE in proto)) __webpack_require__(/*! ./_hide */ 12)(proto, TO_PRIMITIVE, __webpack_require__(/*! ./_date-to-primitive */ 215));
+if (!(TO_PRIMITIVE in proto)) __webpack_require__(/*! ./_hide */ 12)(proto, TO_PRIMITIVE, __webpack_require__(/*! ./_date-to-primitive */ 216));
 
 
 /***/ }),
-/* 215 */
+/* 216 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/_date-to-primitive.js ***!
   \************************************************************/
@@ -6906,7 +7108,7 @@ module.exports = function (hint) {
 
 
 /***/ }),
-/* 216 */
+/* 217 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.is-array.js ***!
   \************************************************************/
@@ -6921,7 +7123,7 @@ $export($export.S, 'Array', { isArray: __webpack_require__(/*! ./_is-array */ 54
 
 
 /***/ }),
-/* 217 */
+/* 218 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.from.js ***!
   \********************************************************/
@@ -6934,7 +7136,7 @@ $export($export.S, 'Array', { isArray: __webpack_require__(/*! ./_is-array */ 54
 var ctx = __webpack_require__(/*! ./_ctx */ 19);
 var $export = __webpack_require__(/*! ./_export */ 0);
 var toObject = __webpack_require__(/*! ./_to-object */ 9);
-var call = __webpack_require__(/*! ./_iter-call */ 108);
+var call = __webpack_require__(/*! ./_iter-call */ 109);
 var isArrayIter = __webpack_require__(/*! ./_is-array-iter */ 82);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
 var createProperty = __webpack_require__(/*! ./_create-property */ 83);
@@ -6970,7 +7172,7 @@ $export($export.S + $export.F * !__webpack_require__(/*! ./_iter-detect */ 56)(f
 
 
 /***/ }),
-/* 218 */
+/* 219 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.of.js ***!
   \******************************************************/
@@ -7001,7 +7203,7 @@ $export($export.S + $export.F * __webpack_require__(/*! ./_fails */ 3)(function 
 
 
 /***/ }),
-/* 219 */
+/* 220 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.join.js ***!
   \********************************************************/
@@ -7025,7 +7227,7 @@ $export($export.P + $export.F * (__webpack_require__(/*! ./_iobject */ 48) != Ob
 
 
 /***/ }),
-/* 220 */
+/* 221 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.slice.js ***!
   \*********************************************************/
@@ -7065,7 +7267,7 @@ $export($export.P + $export.F * __webpack_require__(/*! ./_fails */ 3)(function 
 
 
 /***/ }),
-/* 221 */
+/* 222 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.sort.js ***!
   \********************************************************/
@@ -7100,7 +7302,7 @@ $export($export.P + $export.F * (fails(function () {
 
 
 /***/ }),
-/* 222 */
+/* 223 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.for-each.js ***!
   \************************************************************/
@@ -7123,7 +7325,7 @@ $export($export.P + $export.F * !STRICT, 'Array', {
 
 
 /***/ }),
-/* 223 */
+/* 224 */
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/modules/_array-species-constructor.js ***!
   \********************************************************************/
@@ -7150,7 +7352,7 @@ module.exports = function (original) {
 
 
 /***/ }),
-/* 224 */
+/* 225 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.map.js ***!
   \*******************************************************/
@@ -7172,7 +7374,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 
 
 /***/ }),
-/* 225 */
+/* 226 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.filter.js ***!
   \**********************************************************/
@@ -7194,7 +7396,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 
 
 /***/ }),
-/* 226 */
+/* 227 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.some.js ***!
   \********************************************************/
@@ -7216,7 +7418,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 
 
 /***/ }),
-/* 227 */
+/* 228 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.every.js ***!
   \*********************************************************/
@@ -7238,7 +7440,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 
 
 /***/ }),
-/* 228 */
+/* 229 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.reduce.js ***!
   \**********************************************************/
@@ -7249,7 +7451,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 "use strict";
 
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $reduce = __webpack_require__(/*! ./_array-reduce */ 109);
+var $reduce = __webpack_require__(/*! ./_array-reduce */ 110);
 
 $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)([].reduce, true), 'Array', {
   // 22.1.3.18 / 15.4.4.21 Array.prototype.reduce(callbackfn [, initialValue])
@@ -7260,7 +7462,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 
 
 /***/ }),
-/* 229 */
+/* 230 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.reduce-right.js ***!
   \****************************************************************/
@@ -7271,7 +7473,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 "use strict";
 
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $reduce = __webpack_require__(/*! ./_array-reduce */ 109);
+var $reduce = __webpack_require__(/*! ./_array-reduce */ 110);
 
 $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)([].reduceRight, true), 'Array', {
   // 22.1.3.19 / 15.4.4.22 Array.prototype.reduceRight(callbackfn [, initialValue])
@@ -7282,7 +7484,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 
 
 /***/ }),
-/* 230 */
+/* 231 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.index-of.js ***!
   \************************************************************/
@@ -7309,7 +7511,7 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(/*! ./_st
 
 
 /***/ }),
-/* 231 */
+/* 232 */
 /*!*****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.last-index-of.js ***!
   \*****************************************************************/
@@ -7343,7 +7545,7 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(/*! ./_st
 
 
 /***/ }),
-/* 232 */
+/* 233 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.copy-within.js ***!
   \***************************************************************/
@@ -7354,13 +7556,13 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(/*! ./_st
 // 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.P, 'Array', { copyWithin: __webpack_require__(/*! ./_array-copy-within */ 110) });
+$export($export.P, 'Array', { copyWithin: __webpack_require__(/*! ./_array-copy-within */ 111) });
 
 __webpack_require__(/*! ./_add-to-unscopables */ 31)('copyWithin');
 
 
 /***/ }),
-/* 233 */
+/* 234 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.fill.js ***!
   \********************************************************/
@@ -7377,7 +7579,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)('fill');
 
 
 /***/ }),
-/* 234 */
+/* 235 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.find.js ***!
   \********************************************************/
@@ -7403,7 +7605,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)(KEY);
 
 
 /***/ }),
-/* 235 */
+/* 236 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.find-index.js ***!
   \**************************************************************/
@@ -7429,7 +7631,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)(KEY);
 
 
 /***/ }),
-/* 236 */
+/* 237 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.species.js ***!
   \***********************************************************/
@@ -7441,7 +7643,7 @@ __webpack_require__(/*! ./_set-species */ 39)('Array');
 
 
 /***/ }),
-/* 237 */
+/* 238 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.constructor.js ***!
   \****************************************************************/
@@ -7495,7 +7697,7 @@ __webpack_require__(/*! ./_set-species */ 39)('RegExp');
 
 
 /***/ }),
-/* 238 */
+/* 239 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.to-string.js ***!
   \**************************************************************/
@@ -7505,7 +7707,7 @@ __webpack_require__(/*! ./_set-species */ 39)('RegExp');
 
 "use strict";
 
-__webpack_require__(/*! ./es6.regexp.flags */ 112);
+__webpack_require__(/*! ./es6.regexp.flags */ 113);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var $flags = __webpack_require__(/*! ./_flags */ 57);
 var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ 6);
@@ -7532,7 +7734,7 @@ if (__webpack_require__(/*! ./_fails */ 3)(function () { return $toString.call({
 
 
 /***/ }),
-/* 239 */
+/* 240 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.match.js ***!
   \**********************************************************/
@@ -7553,7 +7755,7 @@ __webpack_require__(/*! ./_fix-re-wks */ 58)('match', 1, function (defined, MATC
 
 
 /***/ }),
-/* 240 */
+/* 241 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.replace.js ***!
   \************************************************************/
@@ -7576,7 +7778,7 @@ __webpack_require__(/*! ./_fix-re-wks */ 58)('replace', 2, function (defined, RE
 
 
 /***/ }),
-/* 241 */
+/* 242 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.search.js ***!
   \***********************************************************/
@@ -7597,7 +7799,7 @@ __webpack_require__(/*! ./_fix-re-wks */ 58)('search', 1, function (defined, SEA
 
 
 /***/ }),
-/* 242 */
+/* 243 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.split.js ***!
   \**********************************************************/
@@ -7679,7 +7881,7 @@ __webpack_require__(/*! ./_fix-re-wks */ 58)('split', 2, function (defined, SPLI
 
 
 /***/ }),
-/* 243 */
+/* 244 */
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/es6.promise.js ***!
   \*****************************************************/
@@ -7702,8 +7904,8 @@ var speciesConstructor = __webpack_require__(/*! ./_species-constructor */ 59);
 var task = __webpack_require__(/*! ./_task */ 88).set;
 var microtask = __webpack_require__(/*! ./_microtask */ 89)();
 var newPromiseCapabilityModule = __webpack_require__(/*! ./_new-promise-capability */ 90);
-var perform = __webpack_require__(/*! ./_perform */ 113);
-var promiseResolve = __webpack_require__(/*! ./_promise-resolve */ 114);
+var perform = __webpack_require__(/*! ./_perform */ 114);
+var promiseResolve = __webpack_require__(/*! ./_promise-resolve */ 115);
 var PROMISE = 'Promise';
 var TypeError = global.TypeError;
 var process = global.process;
@@ -7971,7 +8173,7 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(/*! ./_iter-
 
 
 /***/ }),
-/* 244 */
+/* 245 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.weak-set.js ***!
   \******************************************************/
@@ -7981,7 +8183,7 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(/*! ./_iter-
 
 "use strict";
 
-var weak = __webpack_require__(/*! ./_collection-weak */ 119);
+var weak = __webpack_require__(/*! ./_collection-weak */ 120);
 var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var WEAK_SET = 'WeakSet';
 
@@ -7997,7 +8199,7 @@ __webpack_require__(/*! ./_collection */ 60)(WEAK_SET, function (get) {
 
 
 /***/ }),
-/* 245 */
+/* 246 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.array-buffer.js ***!
   \****************************************************************/
@@ -8055,7 +8257,7 @@ __webpack_require__(/*! ./_set-species */ 39)(ARRAY_BUFFER);
 
 
 /***/ }),
-/* 246 */
+/* 247 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.data-view.js ***!
   \*************************************************************/
@@ -8070,7 +8272,7 @@ $export($export.G + $export.W + $export.F * !__webpack_require__(/*! ./_typed */
 
 
 /***/ }),
-/* 247 */
+/* 248 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.int8-array.js ***!
   \**************************************************************/
@@ -8086,7 +8288,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Int8', 1, function (init) {
 
 
 /***/ }),
-/* 248 */
+/* 249 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.uint8-array.js ***!
   \***************************************************************/
@@ -8102,7 +8304,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Uint8', 1, function (init) {
 
 
 /***/ }),
-/* 249 */
+/* 250 */
 /*!***********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.uint8-clamped-array.js ***!
   \***********************************************************************/
@@ -8118,7 +8320,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Uint8', 1, function (init) {
 
 
 /***/ }),
-/* 250 */
+/* 251 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.int16-array.js ***!
   \***************************************************************/
@@ -8134,7 +8336,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Int16', 2, function (init) {
 
 
 /***/ }),
-/* 251 */
+/* 252 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.uint16-array.js ***!
   \****************************************************************/
@@ -8150,7 +8352,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Uint16', 2, function (init) {
 
 
 /***/ }),
-/* 252 */
+/* 253 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.int32-array.js ***!
   \***************************************************************/
@@ -8166,7 +8368,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Int32', 4, function (init) {
 
 
 /***/ }),
-/* 253 */
+/* 254 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.uint32-array.js ***!
   \****************************************************************/
@@ -8182,7 +8384,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Uint32', 4, function (init) {
 
 
 /***/ }),
-/* 254 */
+/* 255 */
 /*!*****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.float32-array.js ***!
   \*****************************************************************/
@@ -8198,7 +8400,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Float32', 4, function (init) {
 
 
 /***/ }),
-/* 255 */
+/* 256 */
 /*!*****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.float64-array.js ***!
   \*****************************************************************/
@@ -8214,7 +8416,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Float64', 8, function (init) {
 
 
 /***/ }),
-/* 256 */
+/* 257 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.apply.js ***!
   \***********************************************************/
@@ -8241,7 +8443,7 @@ $export($export.S + $export.F * !__webpack_require__(/*! ./_fails */ 3)(function
 
 
 /***/ }),
-/* 257 */
+/* 258 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.construct.js ***!
   \***************************************************************/
@@ -8256,7 +8458,7 @@ var aFunction = __webpack_require__(/*! ./_a-function */ 10);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
 var fails = __webpack_require__(/*! ./_fails */ 3);
-var bind = __webpack_require__(/*! ./_bind */ 100);
+var bind = __webpack_require__(/*! ./_bind */ 101);
 var rConstruct = (__webpack_require__(/*! ./_global */ 2).Reflect || {}).construct;
 
 // MS Edge supports only 2 arguments and argumentsList argument is optional
@@ -8299,7 +8501,7 @@ $export($export.S + $export.F * (NEW_TARGET_BUG || ARGS_BUG), 'Reflect', {
 
 
 /***/ }),
-/* 258 */
+/* 259 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.define-property.js ***!
   \*********************************************************************/
@@ -8333,7 +8535,7 @@ $export($export.S + $export.F * __webpack_require__(/*! ./_fails */ 3)(function 
 
 
 /***/ }),
-/* 259 */
+/* 260 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.delete-property.js ***!
   \*********************************************************************/
@@ -8355,7 +8557,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 260 */
+/* 261 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.enumerate.js ***!
   \***************************************************************/
@@ -8393,7 +8595,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 261 */
+/* 262 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.get.js ***!
   \*********************************************************/
@@ -8425,7 +8627,7 @@ $export($export.S, 'Reflect', { get: get });
 
 
 /***/ }),
-/* 262 */
+/* 263 */
 /*!*********************************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.get-own-property-descriptor.js ***!
   \*********************************************************************************/
@@ -8446,7 +8648,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 263 */
+/* 264 */
 /*!**********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.get-prototype-of.js ***!
   \**********************************************************************/
@@ -8467,7 +8669,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 264 */
+/* 265 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.has.js ***!
   \*********************************************************/
@@ -8486,7 +8688,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 265 */
+/* 266 */
 /*!*******************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.is-extensible.js ***!
   \*******************************************************************/
@@ -8508,7 +8710,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 266 */
+/* 267 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.own-keys.js ***!
   \**************************************************************/
@@ -8519,11 +8721,11 @@ $export($export.S, 'Reflect', {
 // 26.1.11 Reflect.ownKeys(target)
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.S, 'Reflect', { ownKeys: __webpack_require__(/*! ./_own-keys */ 121) });
+$export($export.S, 'Reflect', { ownKeys: __webpack_require__(/*! ./_own-keys */ 122) });
 
 
 /***/ }),
-/* 267 */
+/* 268 */
 /*!************************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.prevent-extensions.js ***!
   \************************************************************************/
@@ -8550,7 +8752,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 268 */
+/* 269 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.set.js ***!
   \*********************************************************/
@@ -8592,7 +8794,7 @@ $export($export.S, 'Reflect', { set: set });
 
 
 /***/ }),
-/* 269 */
+/* 270 */
 /*!**********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.set-prototype-of.js ***!
   \**********************************************************************/
@@ -8618,7 +8820,7 @@ if (setProto) $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 270 */
+/* 271 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.array.includes.js ***!
   \************************************************************/
@@ -8642,7 +8844,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)('includes');
 
 
 /***/ }),
-/* 271 */
+/* 272 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.array.flat-map.js ***!
   \************************************************************/
@@ -8654,7 +8856,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)('includes');
 
 // https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap
 var $export = __webpack_require__(/*! ./_export */ 0);
-var flattenIntoArray = __webpack_require__(/*! ./_flatten-into-array */ 122);
+var flattenIntoArray = __webpack_require__(/*! ./_flatten-into-array */ 123);
 var toObject = __webpack_require__(/*! ./_to-object */ 9);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
 var aFunction = __webpack_require__(/*! ./_a-function */ 10);
@@ -8676,7 +8878,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)('flatMap');
 
 
 /***/ }),
-/* 272 */
+/* 273 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.array.flatten.js ***!
   \***********************************************************/
@@ -8688,7 +8890,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)('flatMap');
 
 // https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatten
 var $export = __webpack_require__(/*! ./_export */ 0);
-var flattenIntoArray = __webpack_require__(/*! ./_flatten-into-array */ 122);
+var flattenIntoArray = __webpack_require__(/*! ./_flatten-into-array */ 123);
 var toObject = __webpack_require__(/*! ./_to-object */ 9);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
 var toInteger = __webpack_require__(/*! ./_to-integer */ 25);
@@ -8709,7 +8911,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)('flatten');
 
 
 /***/ }),
-/* 273 */
+/* 274 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es7.string.at.js ***!
   \*******************************************************/
@@ -8731,7 +8933,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 274 */
+/* 275 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.string.pad-start.js ***!
   \**************************************************************/
@@ -8743,7 +8945,7 @@ $export($export.P, 'String', {
 
 // https://github.com/tc39/proposal-string-pad-start-end
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $pad = __webpack_require__(/*! ./_string-pad */ 123);
+var $pad = __webpack_require__(/*! ./_string-pad */ 124);
 
 $export($export.P, 'String', {
   padStart: function padStart(maxLength /* , fillString = ' ' */) {
@@ -8753,7 +8955,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 275 */
+/* 276 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.string.pad-end.js ***!
   \************************************************************/
@@ -8765,7 +8967,7 @@ $export($export.P, 'String', {
 
 // https://github.com/tc39/proposal-string-pad-start-end
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $pad = __webpack_require__(/*! ./_string-pad */ 123);
+var $pad = __webpack_require__(/*! ./_string-pad */ 124);
 
 $export($export.P, 'String', {
   padEnd: function padEnd(maxLength /* , fillString = ' ' */) {
@@ -8775,7 +8977,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 276 */
+/* 277 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.string.trim-left.js ***!
   \**************************************************************/
@@ -8794,7 +8996,7 @@ __webpack_require__(/*! ./_string-trim */ 44)('trimLeft', function ($trim) {
 
 
 /***/ }),
-/* 277 */
+/* 278 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.string.trim-right.js ***!
   \***************************************************************/
@@ -8813,7 +9015,7 @@ __webpack_require__(/*! ./_string-trim */ 44)('trimRight', function ($trim) {
 
 
 /***/ }),
-/* 278 */
+/* 279 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.string.match-all.js ***!
   \**************************************************************/
@@ -8855,7 +9057,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 279 */
+/* 280 */
 /*!*******************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.symbol.async-iterator.js ***!
   \*******************************************************************/
@@ -8867,7 +9069,7 @@ __webpack_require__(/*! ./_wks-define */ 67)('asyncIterator');
 
 
 /***/ }),
-/* 280 */
+/* 281 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.symbol.observable.js ***!
   \***************************************************************/
@@ -8879,7 +9081,7 @@ __webpack_require__(/*! ./_wks-define */ 67)('observable');
 
 
 /***/ }),
-/* 281 */
+/* 282 */
 /*!*********************************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.object.get-own-property-descriptors.js ***!
   \*********************************************************************************/
@@ -8889,7 +9091,7 @@ __webpack_require__(/*! ./_wks-define */ 67)('observable');
 
 // https://github.com/tc39/proposal-object-getownpropertydescriptors
 var $export = __webpack_require__(/*! ./_export */ 0);
-var ownKeys = __webpack_require__(/*! ./_own-keys */ 121);
+var ownKeys = __webpack_require__(/*! ./_own-keys */ 122);
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
 var gOPD = __webpack_require__(/*! ./_object-gopd */ 16);
 var createProperty = __webpack_require__(/*! ./_create-property */ 83);
@@ -8912,7 +9114,7 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 282 */
+/* 283 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.object.values.js ***!
   \***********************************************************/
@@ -8922,7 +9124,7 @@ $export($export.S, 'Object', {
 
 // https://github.com/tc39/proposal-object-values-entries
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $values = __webpack_require__(/*! ./_object-to-array */ 124)(false);
+var $values = __webpack_require__(/*! ./_object-to-array */ 125)(false);
 
 $export($export.S, 'Object', {
   values: function values(it) {
@@ -8932,7 +9134,7 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 283 */
+/* 284 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.object.entries.js ***!
   \************************************************************/
@@ -8942,7 +9144,7 @@ $export($export.S, 'Object', {
 
 // https://github.com/tc39/proposal-object-values-entries
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $entries = __webpack_require__(/*! ./_object-to-array */ 124)(true);
+var $entries = __webpack_require__(/*! ./_object-to-array */ 125)(true);
 
 $export($export.S, 'Object', {
   entries: function entries(it) {
@@ -8952,7 +9154,7 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 284 */
+/* 285 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.object.define-getter.js ***!
   \******************************************************************/
@@ -8976,7 +9178,7 @@ __webpack_require__(/*! ./_descriptors */ 6) && $export($export.P + __webpack_re
 
 
 /***/ }),
-/* 285 */
+/* 286 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.object.define-setter.js ***!
   \******************************************************************/
@@ -9000,7 +9202,7 @@ __webpack_require__(/*! ./_descriptors */ 6) && $export($export.P + __webpack_re
 
 
 /***/ }),
-/* 286 */
+/* 287 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.object.lookup-getter.js ***!
   \******************************************************************/
@@ -9030,7 +9232,7 @@ __webpack_require__(/*! ./_descriptors */ 6) && $export($export.P + __webpack_re
 
 
 /***/ }),
-/* 287 */
+/* 288 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.object.lookup-setter.js ***!
   \******************************************************************/
@@ -9060,7 +9262,7 @@ __webpack_require__(/*! ./_descriptors */ 6) && $export($export.P + __webpack_re
 
 
 /***/ }),
-/* 288 */
+/* 289 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.map.to-json.js ***!
   \*********************************************************/
@@ -9071,11 +9273,11 @@ __webpack_require__(/*! ./_descriptors */ 6) && $export($export.P + __webpack_re
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(/*! ./_collection-to-json */ 125)('Map') });
+$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(/*! ./_collection-to-json */ 126)('Map') });
 
 
 /***/ }),
-/* 289 */
+/* 290 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.set.to-json.js ***!
   \*********************************************************/
@@ -9086,11 +9288,11 @@ $export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(/*! ./_colle
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.P + $export.R, 'Set', { toJSON: __webpack_require__(/*! ./_collection-to-json */ 125)('Set') });
+$export($export.P + $export.R, 'Set', { toJSON: __webpack_require__(/*! ./_collection-to-json */ 126)('Set') });
 
 
 /***/ }),
-/* 290 */
+/* 291 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/es7.map.of.js ***!
   \****************************************************/
@@ -9103,7 +9305,7 @@ __webpack_require__(/*! ./_set-collection-of */ 63)('Map');
 
 
 /***/ }),
-/* 291 */
+/* 292 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/es7.set.of.js ***!
   \****************************************************/
@@ -9116,7 +9318,7 @@ __webpack_require__(/*! ./_set-collection-of */ 63)('Set');
 
 
 /***/ }),
-/* 292 */
+/* 293 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.weak-map.of.js ***!
   \*********************************************************/
@@ -9129,7 +9331,7 @@ __webpack_require__(/*! ./_set-collection-of */ 63)('WeakMap');
 
 
 /***/ }),
-/* 293 */
+/* 294 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.weak-set.of.js ***!
   \*********************************************************/
@@ -9142,7 +9344,7 @@ __webpack_require__(/*! ./_set-collection-of */ 63)('WeakSet');
 
 
 /***/ }),
-/* 294 */
+/* 295 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/es7.map.from.js ***!
   \******************************************************/
@@ -9155,7 +9357,7 @@ __webpack_require__(/*! ./_set-collection-from */ 64)('Map');
 
 
 /***/ }),
-/* 295 */
+/* 296 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/es7.set.from.js ***!
   \******************************************************/
@@ -9168,7 +9370,7 @@ __webpack_require__(/*! ./_set-collection-from */ 64)('Set');
 
 
 /***/ }),
-/* 296 */
+/* 297 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.weak-map.from.js ***!
   \***********************************************************/
@@ -9181,7 +9383,7 @@ __webpack_require__(/*! ./_set-collection-from */ 64)('WeakMap');
 
 
 /***/ }),
-/* 297 */
+/* 298 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.weak-set.from.js ***!
   \***********************************************************/
@@ -9194,7 +9396,7 @@ __webpack_require__(/*! ./_set-collection-from */ 64)('WeakSet');
 
 
 /***/ }),
-/* 298 */
+/* 299 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/es7.global.js ***!
   \****************************************************/
@@ -9209,7 +9411,7 @@ $export($export.G, { global: __webpack_require__(/*! ./_global */ 2) });
 
 
 /***/ }),
-/* 299 */
+/* 300 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.system.global.js ***!
   \***********************************************************/
@@ -9224,7 +9426,7 @@ $export($export.S, 'System', { global: __webpack_require__(/*! ./_global */ 2) }
 
 
 /***/ }),
-/* 300 */
+/* 301 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.error.is-error.js ***!
   \************************************************************/
@@ -9244,7 +9446,7 @@ $export($export.S, 'Error', {
 
 
 /***/ }),
-/* 301 */
+/* 302 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.clamp.js ***!
   \********************************************************/
@@ -9263,7 +9465,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 302 */
+/* 303 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.deg-per-rad.js ***!
   \**************************************************************/
@@ -9278,7 +9480,7 @@ $export($export.S, 'Math', { DEG_PER_RAD: Math.PI / 180 });
 
 
 /***/ }),
-/* 303 */
+/* 304 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.degrees.js ***!
   \**********************************************************/
@@ -9298,7 +9500,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 304 */
+/* 305 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.fscale.js ***!
   \*********************************************************/
@@ -9308,8 +9510,8 @@ $export($export.S, 'Math', {
 
 // https://rwaldron.github.io/proposal-math-extensions/
 var $export = __webpack_require__(/*! ./_export */ 0);
-var scale = __webpack_require__(/*! ./_math-scale */ 127);
-var fround = __webpack_require__(/*! ./_math-fround */ 107);
+var scale = __webpack_require__(/*! ./_math-scale */ 128);
+var fround = __webpack_require__(/*! ./_math-fround */ 108);
 
 $export($export.S, 'Math', {
   fscale: function fscale(x, inLow, inHigh, outLow, outHigh) {
@@ -9319,7 +9521,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 305 */
+/* 306 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.iaddh.js ***!
   \********************************************************/
@@ -9341,7 +9543,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 306 */
+/* 307 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.isubh.js ***!
   \********************************************************/
@@ -9363,7 +9565,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 307 */
+/* 308 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.imulh.js ***!
   \********************************************************/
@@ -9390,7 +9592,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 308 */
+/* 309 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.rad-per-deg.js ***!
   \**************************************************************/
@@ -9405,7 +9607,7 @@ $export($export.S, 'Math', { RAD_PER_DEG: 180 / Math.PI });
 
 
 /***/ }),
-/* 309 */
+/* 310 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.radians.js ***!
   \**********************************************************/
@@ -9425,7 +9627,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 310 */
+/* 311 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.scale.js ***!
   \********************************************************/
@@ -9436,11 +9638,11 @@ $export($export.S, 'Math', {
 // https://rwaldron.github.io/proposal-math-extensions/
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.S, 'Math', { scale: __webpack_require__(/*! ./_math-scale */ 127) });
+$export($export.S, 'Math', { scale: __webpack_require__(/*! ./_math-scale */ 128) });
 
 
 /***/ }),
-/* 311 */
+/* 312 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.umulh.js ***!
   \********************************************************/
@@ -9467,7 +9669,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 312 */
+/* 313 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.signbit.js ***!
   \**********************************************************/
@@ -9485,7 +9687,7 @@ $export($export.S, 'Math', { signbit: function signbit(x) {
 
 
 /***/ }),
-/* 313 */
+/* 314 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.promise.finally.js ***!
   \*************************************************************/
@@ -9500,7 +9702,7 @@ var $export = __webpack_require__(/*! ./_export */ 0);
 var core = __webpack_require__(/*! ./_core */ 22);
 var global = __webpack_require__(/*! ./_global */ 2);
 var speciesConstructor = __webpack_require__(/*! ./_species-constructor */ 59);
-var promiseResolve = __webpack_require__(/*! ./_promise-resolve */ 114);
+var promiseResolve = __webpack_require__(/*! ./_promise-resolve */ 115);
 
 $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
   var C = speciesConstructor(this, core.Promise || global.Promise);
@@ -9517,7 +9719,7 @@ $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
 
 
 /***/ }),
-/* 314 */
+/* 315 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.promise.try.js ***!
   \*********************************************************/
@@ -9530,7 +9732,7 @@ $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
 // https://github.com/tc39/proposal-promise-try
 var $export = __webpack_require__(/*! ./_export */ 0);
 var newPromiseCapability = __webpack_require__(/*! ./_new-promise-capability */ 90);
-var perform = __webpack_require__(/*! ./_perform */ 113);
+var perform = __webpack_require__(/*! ./_perform */ 114);
 
 $export($export.S, 'Promise', { 'try': function (callbackfn) {
   var promiseCapability = newPromiseCapability.f(this);
@@ -9541,7 +9743,7 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
 
 
 /***/ }),
-/* 315 */
+/* 316 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.define-metadata.js ***!
   \*********************************************************************/
@@ -9560,7 +9762,7 @@ metadata.exp({ defineMetadata: function defineMetadata(metadataKey, metadataValu
 
 
 /***/ }),
-/* 316 */
+/* 317 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.delete-metadata.js ***!
   \*********************************************************************/
@@ -9586,7 +9788,7 @@ metadata.exp({ deleteMetadata: function deleteMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 317 */
+/* 318 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.get-metadata.js ***!
   \******************************************************************/
@@ -9614,7 +9816,7 @@ metadata.exp({ getMetadata: function getMetadata(metadataKey, target /* , target
 
 
 /***/ }),
-/* 318 */
+/* 319 */
 /*!***********************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.get-metadata-keys.js ***!
   \***********************************************************************/
@@ -9622,8 +9824,8 @@ metadata.exp({ getMetadata: function getMetadata(metadataKey, target /* , target
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Set = __webpack_require__(/*! ./es6.set */ 117);
-var from = __webpack_require__(/*! ./_array-from-iterable */ 126);
+var Set = __webpack_require__(/*! ./es6.set */ 118);
+var from = __webpack_require__(/*! ./_array-from-iterable */ 127);
 var metadata = __webpack_require__(/*! ./_metadata */ 29);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ 17);
@@ -9644,7 +9846,7 @@ metadata.exp({ getMetadataKeys: function getMetadataKeys(target /* , targetKey *
 
 
 /***/ }),
-/* 319 */
+/* 320 */
 /*!**********************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.get-own-metadata.js ***!
   \**********************************************************************/
@@ -9664,7 +9866,7 @@ metadata.exp({ getOwnMetadata: function getOwnMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 320 */
+/* 321 */
 /*!***************************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.get-own-metadata-keys.js ***!
   \***************************************************************************/
@@ -9683,7 +9885,7 @@ metadata.exp({ getOwnMetadataKeys: function getOwnMetadataKeys(target /* , targe
 
 
 /***/ }),
-/* 321 */
+/* 322 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.has-metadata.js ***!
   \******************************************************************/
@@ -9710,7 +9912,7 @@ metadata.exp({ hasMetadata: function hasMetadata(metadataKey, target /* , target
 
 
 /***/ }),
-/* 322 */
+/* 323 */
 /*!**********************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.has-own-metadata.js ***!
   \**********************************************************************/
@@ -9730,7 +9932,7 @@ metadata.exp({ hasOwnMetadata: function hasOwnMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 323 */
+/* 324 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.metadata.js ***!
   \**************************************************************/
@@ -9756,7 +9958,7 @@ $metadata.exp({ metadata: function metadata(metadataKey, metadataValue) {
 
 
 /***/ }),
-/* 324 */
+/* 325 */
 /*!**************************************************!*\
   !*** ./node_modules/core-js/modules/es7.asap.js ***!
   \**************************************************/
@@ -9779,7 +9981,7 @@ $export($export.G, {
 
 
 /***/ }),
-/* 325 */
+/* 326 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.observable.js ***!
   \********************************************************/
@@ -9990,7 +10192,7 @@ __webpack_require__(/*! ./_set-species */ 39)('Observable');
 
 
 /***/ }),
-/* 326 */
+/* 327 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/web.timers.js ***!
   \****************************************************/
@@ -10021,7 +10223,7 @@ $export($export.G + $export.B + $export.F * MSIE, {
 
 
 /***/ }),
-/* 327 */
+/* 328 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/web.immediate.js ***!
   \*******************************************************/
@@ -10038,7 +10240,7 @@ $export($export.G + $export.B, {
 
 
 /***/ }),
-/* 328 */
+/* 329 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/web.dom.iterable.js ***!
   \**********************************************************/
@@ -10107,7 +10309,7 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
 
 
 /***/ }),
-/* 329 */
+/* 330 */
 /*!*********************************************************************************!*\
   !*** ./node_modules/babel-polyfill/node_modules/regenerator-runtime/runtime.js ***!
   \*********************************************************************************/
@@ -10855,7 +11057,7 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 47)))
 
 /***/ }),
-/* 330 */
+/* 331 */
 /*!**************************************************!*\
   !*** ./node_modules/core-js/fn/regexp/escape.js ***!
   \**************************************************/
@@ -10863,12 +11065,12 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/core.regexp.escape */ 331);
+__webpack_require__(/*! ../../modules/core.regexp.escape */ 332);
 module.exports = __webpack_require__(/*! ../../modules/_core */ 22).RegExp.escape;
 
 
 /***/ }),
-/* 331 */
+/* 332 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/core.regexp.escape.js ***!
   \************************************************************/
@@ -10878,13 +11080,13 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ 22).RegExp.escap
 
 // https://github.com/benjamingr/RexExp.escape
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $re = __webpack_require__(/*! ./_replacer */ 332)(/[\\^$*+?.()|[\]{}]/g, '\\$&');
+var $re = __webpack_require__(/*! ./_replacer */ 333)(/[\\^$*+?.()|[\]{}]/g, '\\$&');
 
 $export($export.S, 'RegExp', { escape: function escape(it) { return $re(it); } });
 
 
 /***/ }),
-/* 332 */
+/* 333 */
 /*!***************************************************!*\
   !*** ./node_modules/core-js/modules/_replacer.js ***!
   \***************************************************/
@@ -10903,7 +11105,7 @@ module.exports = function (regExp, replace) {
 
 
 /***/ }),
-/* 333 */
+/* 334 */
 /*!*********************!*\
   !*** ./src/main.js ***!
   \*********************/
@@ -10914,17 +11116,17 @@ module.exports = function (regExp, replace) {
 "use strict";
 
 
-__webpack_require__(/*! pixi */ 128);
+__webpack_require__(/*! pixi */ 129);
 
 var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-var _index = __webpack_require__(/*! ./index */ 337);
+var _index = __webpack_require__(/*! ./index */ 338);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _config = __webpack_require__(/*! ./config */ 378);
+var _config = __webpack_require__(/*! ./config */ 377);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -10985,10 +11187,10 @@ if (window.cordova) {
 }
 
 /***/ }),
-/* 334 */,
 /* 335 */,
 /* 336 */,
-/* 337 */
+/* 337 */,
+/* 338 */
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
@@ -11003,13 +11205,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Index = __webpack_require__(/*! ./states/Lobby/Index */ 338);
+var _Index = __webpack_require__(/*! ./states/Lobby/Index */ 339);
 
-var _Index2 = __webpack_require__(/*! ./states/Selector/Index */ 346);
+var _Index2 = __webpack_require__(/*! ./states/Selector/Index */ 349);
 
-var _Index3 = __webpack_require__(/*! ./states/TestStage/Index */ 370);
+var _Index3 = __webpack_require__(/*! ./states/TestStage/Index */ 373);
 
-__webpack_require__(/*! script-loader!../assets/lib/spriter/spriter.js */ 375);
+__webpack_require__(/*! script-loader!../assets/lib/spriter/spriter.js */ 130);
 
 var Start = function Start(game) {
   game.state.add("SelectorBoot", _Index2.Selector.BootState, false);
@@ -11030,7 +11232,7 @@ var Start = function Start(game) {
 exports.default = Start;
 
 /***/ }),
-/* 338 */
+/* 339 */
 /*!***********************************!*\
   !*** ./src/states/Lobby/Index.js ***!
   \***********************************/
@@ -11046,15 +11248,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Lobby = undefined;
 
-var _Boot = __webpack_require__(/*! ./Boot */ 339);
+var _Boot = __webpack_require__(/*! ./Boot */ 340);
 
 var _Boot2 = _interopRequireDefault(_Boot);
 
-var _Splash = __webpack_require__(/*! ./Splash */ 344);
+var _Splash = __webpack_require__(/*! ./Splash */ 347);
 
 var _Splash2 = _interopRequireDefault(_Splash);
 
-var _Game = __webpack_require__(/*! ./Game */ 345);
+var _Game = __webpack_require__(/*! ./Game */ 348);
 
 var _Game2 = _interopRequireDefault(_Game);
 
@@ -11063,7 +11265,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Lobby = exports.Lobby = { BootState: _Boot2.default, SplashState: _Splash2.default, GameState: _Game2.default };
 
 /***/ }),
-/* 339 */
+/* 340 */
 /*!**********************************!*\
   !*** ./src/states/Lobby/Boot.js ***!
   \**********************************/
@@ -11084,7 +11286,7 @@ var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-var _PNCAdventure = __webpack_require__(/*! ../../engine/PNCAdventure */ 340);
+var _PNCAdventure = __webpack_require__(/*! ../../engine/PNCAdventure */ 341);
 
 var _PNCAdventure2 = _interopRequireDefault(_PNCAdventure);
 
@@ -11148,9 +11350,6 @@ var _class = function (_Phaser$State) {
       // Player Sprites
       this.load.atlas("playerAtlas", "./assets/images/player/player.png", "./assets/images/player/player.json");
       this.load.json("playerJson", "./assets/images/player/player.scon");
-
-      // item (book) image
-      this.load.image("playerItem", "./assets/images/player/Item.png");
     }
   }, {
     key: 'create',
@@ -11178,7 +11377,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 340 */
+/* 341 */
 /*!************************************!*\
   !*** ./src/engine/PNCAdventure.js ***!
   \************************************/
@@ -11195,7 +11394,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Scene = __webpack_require__(/*! ./Scene */ 341);
+var _Scene = __webpack_require__(/*! ./Scene */ 342);
 
 var _Scene2 = _interopRequireDefault(_Scene);
 
@@ -11228,6 +11427,7 @@ var _class = function (_Phaser$Plugin) {
       this.signals = {
         sceneTappedSignal: new Phaser.Signal(),
         playerMovementSignal: new Phaser.Signal(),
+        otherPlayerMovementSignal: new Phaser.Signal(),
         navGraphUpdated: new Phaser.Signal()
       };
 
@@ -11240,6 +11440,7 @@ var _class = function (_Phaser$Plugin) {
     value: function destroyScene() {
       this.signals.sceneTappedSignal.removeAll();
       this.signals.playerMovementSignal.removeAll();
+      this.signals.otherPlayerMovementSignal.removeAll();
       this.signals.navGraphUpdated.removeAll();
     }
 
@@ -11287,7 +11488,7 @@ var _class = function (_Phaser$Plugin) {
 exports.default = _class;
 
 /***/ }),
-/* 341 */
+/* 342 */
 /*!*****************************!*\
   !*** ./src/engine/Scene.js ***!
   \*****************************/
@@ -11304,15 +11505,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Navmesh = __webpack_require__(/*! ./Navmesh */ 342);
+var _Navmesh = __webpack_require__(/*! ./Navmesh */ 343);
 
 var _Navmesh2 = _interopRequireDefault(_Navmesh);
 
-var _Actor = __webpack_require__(/*! ./Actor */ 129);
+var _PlayerActor = __webpack_require__(/*! ./PlayerActor */ 92);
 
-var _Actor2 = _interopRequireDefault(_Actor);
+var _PlayerActor2 = _interopRequireDefault(_PlayerActor);
 
-var _Hud = __webpack_require__(/*! ../sprites/Hud */ 92);
+var _Hud = __webpack_require__(/*! ../sprites/Hud */ 93);
 
 var _Hud2 = _interopRequireDefault(_Hud);
 
@@ -11341,7 +11542,7 @@ var Scene = function (_Phaser$State) {
   }
 
   _createClass(Scene, [{
-    key: 'preload',
+    key: "preload",
     value: function preload() {
       /*
       Hacky implementation for now - need to standardise scenedef and process this separately
@@ -11354,10 +11555,16 @@ var Scene = function (_Phaser$State) {
       }
     }
   }, {
-    key: 'create',
+    key: "create",
     value: function create() {
       console.debug("Scene initialised");
+      this.camera.flash("#000000");
       this.createSceneHierarchy();
+
+      // Just a Simple POC of moving the bot in game.
+      this.pocKey = this.game.input.keyboard.addKey(Phaser.Keyboard.C);
+      this.pocKey.onDown.add(this.movePoc, this);
+
       if (this.sceneDefinition.bg) {
         this.initBackground();
       }
@@ -11394,30 +11601,51 @@ var Scene = function (_Phaser$State) {
       }
     }
   }, {
-    key: 'update',
+    key: "animateActors",
+    value: function animateActors() {
+      var i = 0;
+      for (; i < this.actors.length; i++) {
+        this.actors[i].updateAnimation();
+      }
+    }
+  }, {
+    key: "update",
     value: function update() {
       if (this.background.input.pointerOver()) {
         this.navmesh.updatePointerLocation(this.background.input.pointerX(), this.background.input.pointerY());
       }
       this.navmesh.updateCharacterLocation(this.actors[0].x, this.actors[0].y);
+
+      // Animate actors on screen
+      this.animateActors();
+
+      // We check for depth of players
+      this.layers.actors.sort('y', Phaser.Group.SORT_ASCENDING);
     }
   }, {
-    key: 'setNavGraph',
+    key: "findActor",
+    value: function findActor(id) {
+      return this.actors.find(function (actor) {
+        return actor.id == id;
+      });
+    }
+  }, {
+    key: "setNavGraph",
     value: function setNavGraph(graph) {
       this.graph = graph;
     }
   }, {
-    key: 'addNavmeshPoly',
+    key: "addNavmeshPoly",
     value: function addNavmeshPoly(poly) {
       this.navmesh.push(poly);
     }
   }, {
-    key: 'setNavmeshPolys',
+    key: "setNavmeshPolys",
     value: function setNavmeshPolys(navmeshPolys) {
       this.navmesh = navmeshPolys;
     }
   }, {
-    key: 'loadJSONPolyData',
+    key: "loadJSONPolyData",
     value: function loadJSONPolyData(data) {
       this.navmesh = [];
       for (var i = 0; i < data.length; i++) {
@@ -11436,7 +11664,7 @@ var Scene = function (_Phaser$State) {
       }
     }
   }, {
-    key: 'addLayer',
+    key: "addLayer",
     value: function addLayer(name) {
       if (this.layers === undefined) {
         this.layers = {};
@@ -11450,12 +11678,24 @@ var Scene = function (_Phaser$State) {
       return this.layers[name];
     }
   }, {
-    key: 'createSceneHierarchy',
+    key: "createSceneHierarchy",
     value: function createSceneHierarchy() {
       this.sceneGroup = this.game.add.group();
 
       this.addLayer("background");
       this.addLayer("actors");
+    }
+  }, {
+    key: "moveOtherPlayer",
+    value: function moveOtherPlayer(id, x, y) {
+      var actor = this.findActor(id);
+
+      actor.moveTo({ x: x, y: y }, this.navmesh);
+    }
+  }, {
+    key: "movePoc",
+    value: function movePoc() {
+      this.moveOtherPlayer(1, 319, 516);
     }
 
     /**
@@ -11463,7 +11703,7 @@ var Scene = function (_Phaser$State) {
      */
 
   }, {
-    key: 'initBackground',
+    key: "initBackground",
     value: function initBackground() {
       this.background = this.game.add.sprite(0, 0, this.key + "bg");
       this.scaleX = this.game.width / this.background.width;
@@ -11473,7 +11713,7 @@ var Scene = function (_Phaser$State) {
       this.layers.background.add(this.background);
       this.background.inputEnabled = true;
       this.background.events.onInputUp.add(function (sprite, pointer, g) {
-        console.log('x: ' + pointer.x + ', y: ' + pointer.y);
+        console.log("x: " + pointer.x + ", y: " + pointer.y);
         this.game.pncPlugin.signals.sceneTappedSignal.dispatch(pointer, this.navmesh);
       }, this);
     }
@@ -11486,7 +11726,7 @@ var Scene = function (_Phaser$State) {
      */
 
   }, {
-    key: 'initActor',
+    key: "initActor",
     value: function initActor(actorDefinition) {
       // if this state is not active defer actor creation until it is
       if (!this.state) {
@@ -11496,7 +11736,7 @@ var Scene = function (_Phaser$State) {
       }
     }
   }, {
-    key: 'initObjects',
+    key: "initObjects",
     value: function initObjects(gameObject) {
       // if this state is not active defer object creation until it is
       if (!this.state) {
@@ -11512,17 +11752,27 @@ var Scene = function (_Phaser$State) {
      */
 
   }, {
-    key: 'addActorToScene',
+    key: "addActorToScene",
     value: function addActorToScene(actorDefinition) {
+      var _this2 = this;
+
       var actor;
 
       if (actorDefinition.type === undefined) {
-        actor = new _Actor2.default(game, actorDefinition);
-        this.layers.actors.add(actor);
+        actor = new _PlayerActor2.default(game, actorDefinition);
       } else {
+        actorDefinition.id = 1;
         actor = new actorDefinition.type(game, actorDefinition);
-        this.layers.actors.add(actor);
       }
+
+      // Set spawn position for actor
+      actor.position.setTo(actorDefinition.spawnX, actorDefinition.spawnY);
+
+      actor.onVariableSet.add(function (spriter, variable) {
+        _this2._text = variable.string;
+      }, this);
+
+      this.layers.actors.add(actor);
 
       return actor;
     }
@@ -11534,7 +11784,7 @@ var Scene = function (_Phaser$State) {
 exports.default = Scene;
 
 /***/ }),
-/* 342 */
+/* 343 */
 /*!*******************************!*\
   !*** ./src/engine/Navmesh.js ***!
   \*******************************/
@@ -11551,7 +11801,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _constellation = __webpack_require__(/*! ./lib/constellation */ 343);
+var _constellation = __webpack_require__(/*! ./lib/constellation */ 344);
 
 var _constellation2 = _interopRequireDefault(_constellation);
 
@@ -11651,9 +11901,14 @@ var Navmesh = function () {
     }
   }, {
     key: "findPath",
-    value: function findPath() {
-      this.characterNodeId = this.grid.addNode(this.characterLocation.x, this.characterLocation.y, { id: "character" });
-      this.pointerNodeId = this.grid.addNode(this.pointerLocation.x, this.pointerLocation.y, { id: "pointer" });
+    value: function findPath(playerMovement) {
+      if (!playerMovement) {
+        this.characterNodeId = this.grid.addNode(this.characterLocation.x, this.characterLocation.y, { id: "character" });
+        this.pointerNodeId = this.grid.addNode(this.pointerLocation.x, this.pointerLocation.y, { id: "pointer" });
+      } else {
+        this.characterNodeId = this.grid.addNode(playerMovement.player.x, playerMovement.player.y, { id: "character" });
+        this.pointerNodeId = this.grid.addNode(playerMovement.goTo.x, playerMovement.goTo.y, { id: "pointer" });
+      }
 
       var lineOfSightPoints = this.intersectorLine.coordinatesOnLine();
 
@@ -11696,17 +11951,17 @@ var Navmesh = function () {
         console.log("direct path");
         var _nodes = this.getCurrentNodes();
 
-        var waypoint = this.grid.getNearestFromArrayNodeToPoint(this.characterLocation, _nodes);
+        var waypoint = this.grid.getNearestFromArrayNodeToPoint(this.characterNodeId, _nodes);
 
-        var distanceWaypoint = Phaser.Math.distance(waypoint.x, waypoint.y, this.pointerLocation.x, this.pointerLocation.y);
+        var distanceWaypoint = Phaser.Math.distance(waypoint.x, waypoint.y, this.pointerNodeId.x, this.pointerNodeId.y);
 
-        var distanceDirect = Phaser.Math.distance(this.characterLocation.x, this.characterLocation.y, this.pointerLocation.x, this.pointerLocation.y);
+        var distanceDirect = Phaser.Math.distance(this.characterNodeId.x, this.characterNodeId.y, this.pointerNodeId.x, this.pointerNodeId.y);
 
-        if (distanceWaypoint < distanceDirect + 20) {
+        if (distanceWaypoint < distanceDirect) {
           path.push(waypoint);
         }
 
-        path.push(this.pointerLocation);
+        path.push(this.pointerNodeId);
       } else {
         this.directPath = direct;
         console.log("intersects obstacle");
@@ -11939,7 +12194,7 @@ var Navmesh = function () {
 exports.default = Navmesh;
 
 /***/ }),
-/* 343 */
+/* 344 */
 /*!*****************************************!*\
   !*** ./src/engine/lib/constellation.js ***!
   \*****************************************/
@@ -13113,7 +13368,56 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 });
 
 /***/ }),
-/* 344 */
+/* 345 */
+/*!*************************************************!*\
+  !*** ./node_modules/script-loader/addScript.js ***!
+  \*************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+module.exports = function(src) {
+	function log(error) {
+		(typeof console !== "undefined")
+		&& (console.error || console.log)("[Script Loader]", error);
+	}
+
+	// Check for IE =< 8
+	function isIE() {
+		return typeof attachEvent !== "undefined" && typeof addEventListener === "undefined";
+	}
+
+	try {
+		if (typeof execScript !== "undefined" && isIE()) {
+			execScript(src);
+		} else if (typeof eval !== "undefined") {
+			eval.call(null, src);
+		} else {
+			log("EvalError: No eval function available");
+		}
+	} catch (error) {
+		log(error);
+	}
+}
+
+
+/***/ }),
+/* 346 */
+/*!*****************************************************************!*\
+  !*** ./node_modules/raw-loader!./assets/lib/spriter/spriter.js ***!
+  \*****************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports) {
+
+module.exports = "var __extends = (this && this.__extends) || function (d, b) {\n    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];\n    function __() { this.constructor = d; }\n    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n};\nvar Spriter;\n(function (Spriter) {\n    var IdNameMap = (function () {\n        function IdNameMap() {\n            this._items = [];\n            this._itemNames = []; // keys are names and returned value is index into _tems array\n        }\n        // -------------------------------------------------------------------------\n        IdNameMap.prototype.add = function (item, id, name) {\n            if (id === undefined) {\n                id = this._items.length;\n            }\n            if (name === undefined || name === null) {\n                name = \"item_\" + id;\n            }\n            this._items[id] = item;\n            this._itemNames[name] = id;\n        };\n        // -------------------------------------------------------------------------\n        IdNameMap.prototype.getById = function (id) {\n            return this._items[id];\n        };\n        // -------------------------------------------------------------------------\n        IdNameMap.prototype.getByName = function (name) {\n            var id = this._itemNames[name];\n            // TODO remove\n            if (typeof id !== \"number\") {\n                console.warn(\"item \" + name + \"  not found!\");\n            }\n            return (typeof id === \"number\") ? this._items[id] : null;\n        };\n        Object.defineProperty(IdNameMap.prototype, \"length\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._items.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return IdNameMap;\n    }());\n    Spriter.IdNameMap = IdNameMap;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var LineStepper = (function () {\n        // -------------------------------------------------------------------------\n        function LineStepper() {\n            this.reset();\n        }\n        Object.defineProperty(LineStepper.prototype, \"current\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._line.at(this._currentIndex);\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"currentIndex\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._currentIndex;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"next\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._line.at(this._nextIndex);\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"nextIndex\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._nextIndex;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"lastTime\", {\n            // -------------------------------------------------------------------------\n            set: function (time) {\n                this._lastTime = time;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"line\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._line;\n            },\n            // -------------------------------------------------------------------------\n            set: function (line) {\n                this._line = line;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        LineStepper.prototype.reset = function () {\n            this._lastTime = -1;\n            this._currentIndex = -1;\n            this._nextIndex = 0;\n        };\n        // -------------------------------------------------------------------------\n        LineStepper.prototype.step = function (time) {\n            var index = this._nextIndex;\n            // get key at current position\n            var key = this._line.keys[index];\n            var keyTime = key.time;\n            // if current key time is bigger than time for stepTo, then we must first go till end of timeline and then continue from beginning\n            var loop = time < this._lastTime;\n            if ((!loop && (keyTime > this._lastTime && keyTime <= time)) ||\n                (loop && (keyTime > this._lastTime || keyTime <= time))) {\n                this._lastTime = keyTime;\n                this._currentIndex = index;\n                if ((++index) >= this._line.keys.length) {\n                    index = 0;\n                }\n                this._nextIndex = index;\n                return key;\n            }\n            return null;\n        };\n        return LineStepper;\n    }());\n    Spriter.LineStepper = LineStepper;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var NodeListBin = (function () {\n        // -------------------------------------------------------------------------\n        function NodeListBin(spriterBinFile, nodeList) {\n            this._file = spriterBinFile;\n            this._nodeList = nodeList;\n        }\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.length = function () {\n            return this._nodeList.length;\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.processed = function () {\n            this._file.processed();\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getChildNodes = function (index, elementName) {\n            return this._file.getNodesForElement(this._nodeList[index], elementName);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getFolder = function (index) {\n            return this._file.getFolder(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getFile = function (index) {\n            return this._file.getFile(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTag = function (index) {\n            return this._file.getTag(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getEntity = function (index) {\n            return this._file.getEntity(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getObjectInfo = function (index) {\n            return this._file.getObjectInfo(this._nodeList[index], index);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getCharMap = function (index) {\n            return this._file.getCharMap(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getCharMapEntry = function (index, charMap, spriter) {\n            this._file.getCharMapEntry(this._nodeList[index], charMap, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getVariable = function (index) {\n            return this._file.getVariable(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getAnimation = function (index) {\n            return this._file.getAnimation(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getMainline = function (index) {\n            return this._file.getBaseline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getMainlineKey = function (index) {\n            return this._file.getMainlineKey(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getRef = function (index) {\n            return this._file.getRef(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTimeline = function (index) {\n            return this._file.getTimeline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getSoundline = function (index) {\n            return this._file.getBaseline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getEventline = function (index) {\n            return this._file.getBaseline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTagline = function (index) {\n            return this._file.getBaseline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getVarline = function (index) {\n            return this._file.getVarline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getKey = function (index) {\n            return this._file.getKey(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTagKey = function (index) {\n            return this._file.getTagKey(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getVariableKey = function (index, type) {\n            return this._file.getVariableKey(this._nodeList[index], type);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTimelineKey = function (index, spriter) {\n            return this._file.getTimelineKey(this._nodeList[index], index, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTagChanges = function (spriter) {\n            var tags = 0;\n            for (var i = 0; i < this.length(); i++) {\n                var tagIndex = this._file.getTagChange(this._nodeList[i]);\n                tags |= (1 << tagIndex);\n            }\n            return tags;\n        };\n        return NodeListBin;\n    }());\n    Spriter.NodeListBin = NodeListBin;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var NodeListJSON = (function () {\n        // -------------------------------------------------------------------------\n        function NodeListJSON(spriterJSONFile, nodeList) {\n            this._file = spriterJSONFile;\n            this._nodeList = nodeList;\n            if (!Array.isArray(nodeList)) {\n                nodeList.length = 1;\n            }\n        }\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.length = function () {\n            return this._nodeList.length;\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.processed = function () {\n            this._file.processed();\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getNode = function (index) {\n            if (Array.isArray(this._nodeList)) {\n                return this._nodeList[index];\n            }\n            else {\n                return this._nodeList;\n            }\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getChildNodes = function (index, elementName) {\n            return this._file.getNodesForElement(this.getNode(index), elementName);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getFolder = function (index) {\n            return this._file.getFolder(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getFile = function (index) {\n            return this._file.getFile(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTag = function (index) {\n            return this._file.getTag(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getEntity = function (index) {\n            return this._file.getEntity(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getObjectInfo = function (index) {\n            return this._file.getObjectInfo(this.getNode(index), index);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getCharMap = function (index) {\n            return this._file.getCharMap(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getCharMapEntry = function (index, charMap, spriter) {\n            this._file.getCharMapEntry(this.getNode(index), charMap, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getVariable = function (index) {\n            return this._file.getVariable(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getAnimation = function (index) {\n            return this._file.getAnimation(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getMainline = function (index) {\n            return this._file.getBaseline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getMainlineKey = function (index) {\n            return this._file.getMainlineKey(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getRef = function (index) {\n            return this._file.getRef(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTimeline = function (index) {\n            return this._file.getTimeline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getSoundline = function (index) {\n            return this._file.getBaseline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getEventline = function (index) {\n            return this._file.getBaseline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTagline = function (index) {\n            return this._file.getBaseline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getVarline = function (index) {\n            return this._file.getVarline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getKey = function (index) {\n            return this._file.getKey(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTagKey = function (index) {\n            return this._file.getTagKey(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getVariableKey = function (index, type) {\n            return this._file.getVariableKey(this.getNode(index), type);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTimelineKey = function (index, spriter) {\n            return this._file.getTimelineKey(this.getNode(index), index, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTagChanges = function (spriter) {\n            var tags = 0;\n            for (var i = 0; i < this.length(); i++) {\n                var tagIndex = this._file.getTagChange(this.getNode(i));\n                tags |= (1 << tagIndex);\n            }\n            return tags;\n        };\n        return NodeListJSON;\n    }());\n    Spriter.NodeListJSON = NodeListJSON;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var NodeListXml = (function () {\n        // -------------------------------------------------------------------------\n        function NodeListXml(spriterXmlFile, nodeList) {\n            this._file = spriterXmlFile;\n            this._nodeList = nodeList;\n        }\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.length = function () {\n            return this._nodeList.length;\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.processed = function () {\n            this._file.processed();\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getChildNodes = function (index, elementName) {\n            return this._file.getNodesForElement(this._nodeList.item(index), elementName);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getFolder = function (index) {\n            return this._file.getFolder(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getFile = function (index) {\n            return this._file.getFile(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTag = function (index) {\n            return this._file.getTag(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getEntity = function (index) {\n            return this._file.getEntity(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getObjectInfo = function (index) {\n            return this._file.getObjectInfo(this._nodeList.item(index), index);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getCharMap = function (index) {\n            return this._file.getCharMap(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getCharMapEntry = function (index, charMap, spriter) {\n            this._file.getCharMapEntry(this._nodeList.item(index), charMap, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getVariable = function (index) {\n            return this._file.getVariable(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getAnimation = function (index) {\n            return this._file.getAnimation(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getMainline = function (index) {\n            return this._file.getBaseline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getMainlineKey = function (index) {\n            return this._file.getMainlineKey(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getRef = function (index) {\n            return this._file.getRef(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTimeline = function (index) {\n            return this._file.getTimeline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getSoundline = function (index) {\n            return this._file.getBaseline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getEventline = function (index) {\n            return this._file.getBaseline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTagline = function (index) {\n            return this._file.getBaseline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getVarline = function (index) {\n            return this._file.getVarline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getKey = function (index) {\n            return this._file.getKey(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTagKey = function (index) {\n            return this._file.getTagKey(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getVariableKey = function (index, type) {\n            return this._file.getVariableKey(this._nodeList.item(index), type);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTimelineKey = function (index, spriter) {\n            return this._file.getTimelineKey(this._nodeList.item(index), index, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTagChanges = function (spriter) {\n            var tags = 0;\n            for (var i = 0; i < this.length(); i++) {\n                var tagIndex = this._file.getTagChange(this._nodeList.item(i));\n                tags |= (1 << tagIndex);\n            }\n            return tags;\n        };\n        return NodeListXml;\n    }());\n    Spriter.NodeListXml = NodeListXml;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    (function (eFileType) {\n        eFileType[eFileType[\"XML\"] = 0] = \"XML\";\n        eFileType[eFileType[\"JSON\"] = 1] = \"JSON\";\n        eFileType[eFileType[\"BIN\"] = 2] = \"BIN\";\n    })(Spriter.eFileType || (Spriter.eFileType = {}));\n    var eFileType = Spriter.eFileType;\n    (function (eImageNameType) {\n        eImageNameType[eImageNameType[\"ORIGINAL\"] = 0] = \"ORIGINAL\";\n        eImageNameType[eImageNameType[\"NAME_ONLY\"] = 1] = \"NAME_ONLY\";\n        eImageNameType[eImageNameType[\"NAME_AND_EXTENSION\"] = 2] = \"NAME_AND_EXTENSION\";\n        eImageNameType[eImageNameType[\"FULL_PATH_NO_EXTENSION\"] = 3] = \"FULL_PATH_NO_EXTENSION\";\n    })(Spriter.eImageNameType || (Spriter.eImageNameType = {}));\n    var eImageNameType = Spriter.eImageNameType;\n    var SpriterFile = (function () {\n        // -------------------------------------------------------------------------\n        function SpriterFile(options) {\n            var hasOptions = typeof options !== \"undefined\" && options !== null;\n            // type of image names (path / name / extension)\n            this._imageNameType = (hasOptions && typeof options.imageNameType !== \"undefined\") ? options.imageNameType : eImageNameType.NAME_ONLY;\n            // min defs are present?\n            this._minDefs = (hasOptions && typeof options.minDefs !== \"undefined\") ? options.minDefs : null;\n        }\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.processed = function () {\n            this.popMinDefsStack();\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.setMinimized = function (minimized) {\n            this._minimized = minimized;\n            if (minimized) {\n                this._minDefsStack = [];\n                if (this._minDefs === null) {\n                    console.error(\"Spriter file is minimized - you must provide object with name definitions\");\n                    return;\n                }\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.getFileName = function (path) {\n            var name;\n            switch (this._imageNameType) {\n                case eImageNameType.NAME_ONLY:\n                    name = (path.split('\\\\').pop().split('/').pop().split('.'))[0];\n                    break;\n                case eImageNameType.NAME_AND_EXTENSION:\n                    name = path.split('\\\\').pop().split('/').pop();\n                    break;\n                case eImageNameType.FULL_PATH_NO_EXTENSION:\n                    name = (path.split('.'))[0];\n                    break;\n                case eImageNameType.ORIGINAL:\n                    name = path;\n                    break;\n            }\n            return name;\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.translateElementName = function (elementName) {\n            if (this._minimized) {\n                if (this._minDefs[\"name\"] !== elementName) {\n                    console.warn(\"current definition is \" + this._minDefs[\"name\"]);\n                    return elementName;\n                }\n                if (this._minDefs[\"minName\"] !== null) {\n                    elementName = this._minDefs[\"minName\"];\n                }\n            }\n            return elementName;\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.translateChildElementName = function (elementName) {\n            if (this._minimized && this._minDefs !== null) {\n                var elements = this._minDefs[\"childElements\"];\n                if (elements !== null) {\n                    elementName = elements[elementName] === null ? elementName : elements[elementName][\"minName\"];\n                }\n            }\n            return elementName;\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.translateAttributeName = function (attributeName) {\n            if (this._minimized && this._minDefs !== null) {\n                var attributes = this._minDefs[\"attributes\"];\n                if (attributes !== null) {\n                    attributeName = attributes[attributeName] === null ? attributeName : attributes[attributeName];\n                }\n            }\n            return attributeName;\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.setMinDefsToElementName = function (tagName) {\n            if (this._minimized) {\n                // save current level of min defs\n                this._minDefsStack.push(this._minDefs);\n                // get child definition and set it as current\n                var minDef = this._minDefs[\"childElements\"][tagName];\n                this._minDefs = minDef;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.popMinDefsStack = function () {\n            if (this._minimized) {\n                this._minDefs = this._minDefsStack.pop();\n            }\n        };\n        return SpriterFile;\n    }());\n    Spriter.SpriterFile = SpriterFile;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"SpriterFile.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var SpriterBin = (function (_super) {\n        __extends(SpriterBin, _super);\n        // -------------------------------------------------------------------------\n        function SpriterBin(binData) {\n            _super.call(this, null);\n            this._elements = {\n                \"spriter_data\": 1,\n                \"folder\": 2,\n                \"file\": 3,\n                \"entity\": 4,\n                \"obj_info\": 5,\n                \"frames\": 6,\n                \"i\": 7,\n                \"animation\": 8,\n                \"mainline\": 9,\n                \"key\": 10,\n                \"bone_ref\": 11,\n                \"object_ref\": 12,\n                \"timeline\": 13,\n                \"bone\": 14,\n                \"object\": 15\n            };\n            this._smallOffset = false;\n            this._bin = new DataView(binData);\n            this._smallOffset = this._bin.getUint8(0) === 1;\n        }\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getType = function () {\n            return Spriter.eFileType.BIN;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readUint8 = function () {\n            return this._bin.getUint8(this._tmpPosition++);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readInt8 = function () {\n            return this._bin.getInt8(this._tmpPosition++);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readUint16 = function () {\n            var value = this._bin.getUint16(this._tmpPosition, true);\n            this._tmpPosition += 2;\n            return value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readInt16 = function () {\n            var value = this._bin.getInt16(this._tmpPosition, true);\n            this._tmpPosition += 2;\n            return value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readUint32 = function () {\n            var value = this._bin.getUint32(this._tmpPosition, true);\n            this._tmpPosition += 4;\n            return value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readInt32 = function () {\n            var value = this._bin.getInt32(this._tmpPosition, true);\n            this._tmpPosition += 4;\n            return value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readFixed16_16 = function () {\n            var value = this._bin.getInt32(this._tmpPosition, true);\n            this._tmpPosition += 4;\n            return value / 65536;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readFixed1_7 = function () {\n            var value = this._bin.getInt8(this._tmpPosition++) & 0xFF;\n            return value / 128;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readString = function () {\n            var chars = [];\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                chars.push(this._bin.getUint8(this._tmpPosition++));\n            }\n            return String.fromCharCode.apply(null, chars);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getNodes = function (nodeName) {\n            return new Spriter.NodeListBin(this, this.getSubNodesOfElementType(1, this._elements[nodeName]));\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getNodesForElement = function (elementPosition, nodeName) {\n            return new Spriter.NodeListBin(this, this.getSubNodesOfElementType(elementPosition, this._elements[nodeName]));\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getSubNodesOfElementType = function (positon, elementType) {\n            var result = [];\n            var subelementsCount = this._bin.getUint8(positon + 1);\n            positon += 2;\n            for (var i = 0; i < subelementsCount; i++) {\n                var subelementOffset = this._smallOffset ? this._bin.getUint16(positon + i * 2, true) : this._bin.getUint32(positon + i * 4, true);\n                var subelementType = this._bin.getUint8(positon + subelementOffset);\n                if (subelementType === elementType) {\n                    result.push(positon + subelementOffset);\n                }\n            }\n            return result;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getAttribsPosition = function (position) {\n            var subelementsCount = this._bin.getUint8(position + 1);\n            return position + 2 + subelementsCount * (this._smallOffset ? 2 : 4);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getFolder = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_FOLDER_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_FOLDER_NAME:\n                        name = this.readString();\n                        break;\n                }\n            }\n            return new Spriter.Folder(id, name);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getFile = function (position) {\n            console.log(\"skip sound loading\");\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            var pivotX = 0;\n            var pivotY = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_FILE_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_FILE_NAME:\n                        name = this.readString();\n                        break;\n                    case SpriterBin.ATTR_FILE_PIVOT_X:\n                        pivotX = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_FILE_PIVOT_Y:\n                        pivotY = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_FILE_WIDTH:\n                    case SpriterBin.ATTR_FILE_HEIGHT:\n                        // ignore - just skip\n                        this._tmpPosition += 2;\n                        break;\n                }\n            }\n            return new Spriter.File(id, this.getFileName(name), pivotX, 1 - pivotY);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTag = function (position) {\n            console.error(\"implement loading Tag\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getEntity = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_ENTITY_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_ENTITY_NAME:\n                        name = this.readString();\n                        break;\n                }\n            }\n            return new Spriter.Entity(id, name);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getObjectInfo = function (position, index) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var name = \"\";\n            var type = 0 /* SPRITE */;\n            var width = 0;\n            var height = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_OBJ_INFO_NAME:\n                        name = this.readString();\n                        break;\n                    case SpriterBin.ATTR_OBJ_INFO_TYPE:\n                        if (this.readUint8() === 1) {\n                            type = 1 /* BONE */;\n                        }\n                        break;\n                    case SpriterBin.ATTR_OBJ_INFO_WIDTH:\n                        width = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_OBJ_INFO_HEIGHT:\n                        height = this.readFixed16_16();\n                        break;\n                }\n            }\n            console.error(\"add loading of pivots\");\n            return new Spriter.ObjectInfo(index, name, type, width, height, 0, 0);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getCharMap = function (position) {\n            console.error(\"add loading of charmaps\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getCharMapEntry = function (position, charMap, spriter) {\n            console.error(\"add loading of charmap entries\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getVariable = function (position) {\n            console.error(\"add loading of variables\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getAnimation = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            var length = 0;\n            var interval = 0;\n            var looping = Spriter.eAnimationLooping.LOOPING;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_ANIMATION_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_ANIMATION_NAME:\n                        name = this.readString();\n                        break;\n                    case SpriterBin.ATTR_ANIMATION_LENGTH:\n                        length = this.readUint32();\n                        break;\n                    case SpriterBin.ATTR_ANIMATION_INTERVAL:\n                        // ignore - skip\n                        this._tmpPosition += 2;\n                        break;\n                    case SpriterBin.ATTR_ANIMATION_LOOPING:\n                        looping = (this.readUint8() === 1) ? Spriter.eAnimationLooping.LOOPING : Spriter.eAnimationLooping.NO_LOOPING;\n                        break;\n                }\n            }\n            return new Spriter.Animation(id, name, length, looping);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getMainlineKey = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var time = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_MAINLINE_KEY_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_MAINLINE_KEY_TIME:\n                        time = this.readUint32();\n                        break;\n                }\n            }\n            return new Spriter.KeyMainline(id, time);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getRef = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var parent = -1;\n            var timeline = 0;\n            var key = 0;\n            var z_index = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_BONE_REF_ID:\n                    case SpriterBin.ATTR_OBJ_REF_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_BONE_REF_PARENT:\n                    case SpriterBin.ATTR_OBJ_REF_PARENT:\n                        parent = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_BONE_REF_TIMELINE:\n                    case SpriterBin.ATTR_OBJ_REF_TIMELINE:\n                        timeline = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_BONE_REF_KEY:\n                    case SpriterBin.ATTR_OBJ_REF_KEY:\n                        key = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_Z:\n                        z_index = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_NAME:\n                        // waste\n                        this.readString();\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_FOLDER:\n                    case SpriterBin.ATTR_OBJ_REF_FILE:\n                        ++this._tmpPosition;\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_ABS_X:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_Y:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_PIVOT_X:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_PIVOT_Y:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_SCALE_X:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_SCALE_Y:\n                    case SpriterBin.ATTR_OBJ_REF_ANGLE:\n                        // skip\n                        this._tmpPosition += 4;\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_ALPHA:\n                        // skip\n                        ++this._tmpPosition;\n                        break;\n                }\n            }\n            return new Spriter.Ref(id, parent, timeline, key, z_index);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTimeline = function (position) {\n            console.error(\"add loading of all types of objects\");\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            var obj = 0;\n            var type = 0 /* SPRITE */;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_TIMELINE_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_NAME:\n                        name = this.readString();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_OBJ:\n                        obj = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_OBJ_TYPE:\n                        if (this.readUint8() === 1) {\n                            type = 1 /* BONE */;\n                        }\n                        break;\n                }\n            }\n            return new Spriter.Timeline(id, name, type, obj);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getBaseline = function (position) {\n            console.error(\"add loading of baselines\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getVarline = function (position) {\n            console.error(\"add loading of varlines\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getKey = function (position) {\n            console.error(\"add loading of keys\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTagKey = function (position) {\n            console.error(\"add loading of tag keys\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getVariableKey = function (position, type) {\n            console.error(\"add loading of variable keys\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTimelineKey = function (position, index, spriter) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var time = 0;\n            var spin = 1;\n            // curve and params\n            var curve = 0 /* LINEAR */;\n            var c1 = 0;\n            var c2 = 0;\n            var c3 = 0;\n            var c4 = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_TIMELINE_KEY_ID:\n                        // skip\n                        ++this._tmpPosition;\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_TIME:\n                        time = this.readUint32();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_SPIN:\n                        spin = this.readInt8();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_CURVE:\n                        curve = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_C1:\n                        c1 = this.readFixed1_7();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_C2:\n                        c2 = this.readFixed1_7();\n                        break;\n                }\n            }\n            // get child element\n            position += 2;\n            var offset = position + (this._smallOffset ? this._bin.getUint16(position, true) : this._bin.getUint32(position, true));\n            var elementType = this._bin.getUint8(offset);\n            var key = null;\n            var keyDataElm = null;\n            var sprite = false;\n            if (elementType === 14 /* bone */) {\n                key = new Spriter.KeyBone(index, time, spin);\n            }\n            else if (elementType === 15 /* object */) {\n                key = new Spriter.KeyObject(index, time, spin);\n                sprite = true;\n            }\n            // other curve than linear?\n            if (curve !== 0 /* LINEAR */) {\n                key.setCurve(curve, c1, c2, c3, c4);\n            }\n            this._tmpPosition = this.getAttribsPosition(offset);\n            // spatial info\n            var info = key.info;\n            info.x = 0; //this.parseFloat(keyDataElm, \"x\");\n            info.y = 0; //-this.parseFloat(keyDataElm, \"y\");\n            info.scaleX = 1; // this.parseFloat(keyDataElm, \"scale_x\", 1);\n            info.scaleY = 1; //this.parseFloat(keyDataElm, \"scale_y\", 1);\n            info.angle = 0; //360 - this.parseFloat(keyDataElm, \"angle\");\n            info.alpha = 1; //this.parseFloat(keyDataElm, \"a\", 1);\n            var pivotX = 0;\n            var hasPivotX = false;\n            var pivotY = 0;\n            var hasPivotY = false;\n            var folder = 0;\n            var file = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_BONE_X:\n                    case SpriterBin.ATTR_OBJ_X:\n                        info.x = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_BONE_Y:\n                    case SpriterBin.ATTR_OBJ_Y:\n                        info.y = -this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_BONE_ANGLE:\n                    case SpriterBin.ATTR_OBJ_ANGLE:\n                        info.angle = 360 - this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_BONE_SCALE_X:\n                    case SpriterBin.ATTR_OBJ_SCALE_X:\n                        info.scaleX = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_BONE_SCALE_Y:\n                    case SpriterBin.ATTR_OBJ_SCALE_Y:\n                        info.scaleY = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_OBJ_FOLDER:\n                        folder = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_OBJ_FILE:\n                        file = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_OBJ_PIVOT_X:\n                        pivotX = this.readFixed16_16();\n                        hasPivotX = true;\n                        break;\n                    case SpriterBin.ATTR_OBJ_PIVOT_Y:\n                        pivotY = this.readFixed16_16();\n                        hasPivotY = true;\n                        break;\n                    case SpriterBin.ATTR_OBJ_ALPHA:\n                        info.alpha = this.readFixed1_7();\n                        break;\n                }\n            }\n            if (sprite) {\n                key.setFolderAndFile(folder, file);\n                // set pivot in spatial info different from default (based on pivot in file)\n                var fileObj = spriter.getFolderById(folder).getFileById(file);\n                info.pivotX = hasPivotX ? pivotX : fileObj.pivotX;\n                // 1 - to flip Y, default anchor is already flipped, so it needs to be flipped back to avoid double flipping\n                info.pivotY = 1 - (hasPivotY ? pivotY : 1 - fileObj.pivotY);\n            }\n            return key;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTagChange = function (position) {\n            console.error(\"add loading of tag changes\");\n            return null;\n        };\n        // spriter data\n        SpriterBin.ATTR_VERSION = 0;\n        SpriterBin.ATTR_GENERATOR = 1;\n        SpriterBin.ATTR_GENERATOR_VERSION = 2;\n        // folder\n        SpriterBin.ATTR_FOLDER_ID = 0;\n        SpriterBin.ATTR_FOLDER_NAME = 1;\n        // file\n        SpriterBin.ATTR_FILE_ID = 0;\n        SpriterBin.ATTR_FILE_NAME = 1;\n        SpriterBin.ATTR_FILE_WIDTH = 2;\n        SpriterBin.ATTR_FILE_HEIGHT = 3;\n        SpriterBin.ATTR_FILE_PIVOT_X = 4;\n        SpriterBin.ATTR_FILE_PIVOT_Y = 5;\n        // entity\n        SpriterBin.ATTR_ENTITY_ID = 0;\n        SpriterBin.ATTR_ENTITY_NAME = 1;\n        // obj_info\n        SpriterBin.ATTR_OBJ_INFO_NAME = 0;\n        SpriterBin.ATTR_OBJ_INFO_TYPE = 1;\n        SpriterBin.ATTR_OBJ_INFO_WIDTH = 2;\n        SpriterBin.ATTR_OBJ_INFO_HEIGHT = 3;\n        // frames\n        SpriterBin.ATTR_FRAMES_I_FOLDER = 0;\n        SpriterBin.ATTR_FRAMES_I_FILE = 1;\n        // animation\n        SpriterBin.ATTR_ANIMATION_ID = 0;\n        SpriterBin.ATTR_ANIMATION_NAME = 1;\n        SpriterBin.ATTR_ANIMATION_LENGTH = 2;\n        SpriterBin.ATTR_ANIMATION_INTERVAL = 3;\n        SpriterBin.ATTR_ANIMATION_LOOPING = 4;\n        // key\n        SpriterBin.ATTR_MAINLINE_KEY_ID = 0;\n        SpriterBin.ATTR_MAINLINE_KEY_TIME = 1;\n        // bone_ref\n        SpriterBin.ATTR_BONE_REF_ID = 0;\n        SpriterBin.ATTR_BONE_REF_PARENT = 1;\n        SpriterBin.ATTR_BONE_REF_TIMELINE = 2;\n        SpriterBin.ATTR_BONE_REF_KEY = 3;\n        // object_ref\n        SpriterBin.ATTR_OBJ_REF_ID = 4;\n        SpriterBin.ATTR_OBJ_REF_PARENT = 5;\n        SpriterBin.ATTR_OBJ_REF_TIMELINE = 6;\n        SpriterBin.ATTR_OBJ_REF_KEY = 7;\n        SpriterBin.ATTR_OBJ_REF_NAME = 8;\n        SpriterBin.ATTR_OBJ_REF_Z = 9;\n        SpriterBin.ATTR_OBJ_REF_FOLDER = 10;\n        SpriterBin.ATTR_OBJ_REF_FILE = 11;\n        SpriterBin.ATTR_OBJ_REF_ABS_X = 12;\n        SpriterBin.ATTR_OBJ_REF_ABS_Y = 13;\n        SpriterBin.ATTR_OBJ_REF_ABS_PIVOT_X = 14;\n        SpriterBin.ATTR_OBJ_REF_ABS_PIVOT_Y = 15;\n        SpriterBin.ATTR_OBJ_REF_ABS_SCALE_X = 16;\n        SpriterBin.ATTR_OBJ_REF_ABS_SCALE_Y = 17;\n        SpriterBin.ATTR_OBJ_REF_ANGLE = 18;\n        SpriterBin.ATTR_OBJ_REF_ALPHA = 19;\n        // timeline\n        SpriterBin.ATTR_TIMELINE_ID = 0;\n        SpriterBin.ATTR_TIMELINE_NAME = 1;\n        SpriterBin.ATTR_TIMELINE_OBJ = 2;\n        SpriterBin.ATTR_TIMELINE_OBJ_TYPE = 3;\n        // key\n        SpriterBin.ATTR_TIMELINE_KEY_ID = 0;\n        SpriterBin.ATTR_TIMELINE_KEY_TIME = 1;\n        SpriterBin.ATTR_TIMELINE_KEY_SPIN = 2;\n        SpriterBin.ATTR_TIMELINE_KEY_CURVE = 3;\n        SpriterBin.ATTR_TIMELINE_KEY_C1 = 4;\n        SpriterBin.ATTR_TIMELINE_KEY_C2 = 5;\n        // bone\n        SpriterBin.ATTR_BONE_X = 0;\n        SpriterBin.ATTR_BONE_Y = 1;\n        SpriterBin.ATTR_BONE_ANGLE = 2;\n        SpriterBin.ATTR_BONE_SCALE_X = 3;\n        SpriterBin.ATTR_BONE_SCALE_Y = 4;\n        // object\n        SpriterBin.ATTR_OBJ_FOLDER = 5;\n        SpriterBin.ATTR_OBJ_FILE = 6;\n        SpriterBin.ATTR_OBJ_X = 7;\n        SpriterBin.ATTR_OBJ_Y = 8;\n        SpriterBin.ATTR_OBJ_SCALE_X = 9;\n        SpriterBin.ATTR_OBJ_SCALE_Y = 10;\n        SpriterBin.ATTR_OBJ_PIVOT_X = 11;\n        SpriterBin.ATTR_OBJ_PIVOT_Y = 12;\n        SpriterBin.ATTR_OBJ_ANGLE = 13;\n        SpriterBin.ATTR_OBJ_ALPHA = 14;\n        return SpriterBin;\n    }(Spriter.SpriterFile));\n    Spriter.SpriterBin = SpriterBin;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"SpriterFile.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var SpriterJSON = (function (_super) {\n        __extends(SpriterJSON, _super);\n        // -------------------------------------------------------------------------\n        function SpriterJSON(JSONData, options) {\n            _super.call(this, options);\n            this._json = JSONData;\n            var minimized = JSONData[\"min\"] !== undefined;\n            this.setMinimized(minimized);\n        }\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getType = function () {\n            return Spriter.eFileType.JSON;\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.parseInt = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = 0; }\n            var value = element[this.translateAttributeName(attributeName)];\n            if (value === undefined) {\n                return defaultValue;\n            }\n            return typeof (value) === \"number\" ? value : parseInt(value);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.parseFloat = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = 0; }\n            var value = element[this.translateAttributeName(attributeName)];\n            if (value === undefined) {\n                return defaultValue;\n            }\n            return typeof (value) === \"number\" ? value : parseFloat(value);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.parseBoolean = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = false; }\n            var value = element[this.translateAttributeName(attributeName)];\n            if (value === undefined) {\n                return defaultValue;\n            }\n            return typeof (value) === \"boolean\" ? value : (value === \"true\");\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.parseString = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = \"\"; }\n            var value = element[this.translateAttributeName(attributeName)];\n            return value === undefined ? defaultValue : value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getNodes = function (nodeName) {\n            this.setMinDefsToElementName(nodeName);\n            var translatedName = this.translateElementName(nodeName);\n            return new Spriter.NodeListJSON(this, (this._json[translatedName] !== undefined) ? this._json[translatedName] : []);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getNodesForElement = function (element, nodeName) {\n            this.setMinDefsToElementName(nodeName);\n            var translatedName = this.translateElementName(nodeName);\n            return new Spriter.NodeListJSON(this, (element[translatedName] !== undefined) ? element[translatedName] : []);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getFolder = function (element) {\n            return new Spriter.Folder(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getFile = function (element) {\n            if (element[\"type\"] !== undefined && element[\"type\"] === \"sound\") {\n                return null;\n            }\n            return new Spriter.File(this.parseInt(element, \"id\"), this.getFileName(this.parseString(element, \"name\")), this.parseFloat(element, \"pivot_x\"), 1 - this.parseFloat(element, \"pivot_y\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTag = function (element) {\n            return new Spriter.Item(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getEntity = function (element) {\n            return new Spriter.Entity(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getObjectInfo = function (element, index) {\n            return new Spriter.ObjectInfo(index, this.parseString(element, \"name\"), Spriter.Types.getObjectTypeForName(this.parseString(element, \"type\")), this.parseFloat(element, \"w\"), this.parseFloat(element, \"h\"), this.parseFloat(element, \"pivot_x\"), this.parseFloat(element, \"pivot_y\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getCharMap = function (element) {\n            return new Spriter.CharMap(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getCharMapEntry = function (element, charMap, spriter) {\n            var sourceName = spriter.getFolderById(this.parseInt(element, \"folder\")).\n                getFileById(this.parseInt(element, \"file\")).name;\n            var target = null;\n            if (element[\"target_folder\"] !== undefined && element[\"target_file\"] !== undefined) {\n                target = spriter.getFolderById(this.parseInt(element, \"target_folder\")).\n                    getFileById(this.parseInt(element, \"target_file\"));\n            }\n            charMap.put(sourceName, target);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getVariable = function (element) {\n            var type = Spriter.Types.getVariableTypeForName(this.parseString(element, \"type\"));\n            return new Spriter.Variable(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), type, (type === 2 /* STRING */) ? this.parseString(element, \"default\") : this.parseFloat(element, \"default\", 0));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getAnimation = function (element) {\n            return new Spriter.Animation(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), this.parseFloat(element, \"length\"), this.parseBoolean(element, \"looping\", true) === true ? Spriter.eAnimationLooping.LOOPING : Spriter.eAnimationLooping.NO_LOOPING);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getMainlineKey = function (element) {\n            return new Spriter.KeyMainline(this.parseInt(element, \"id\"), this.parseFloat(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getRef = function (element) {\n            return new Spriter.Ref(this.parseInt(element, \"id\"), this.parseInt(element, \"parent\", -1), this.parseInt(element, \"timeline\"), this.parseInt(element, \"key\"), this.parseInt(element, \"z_index\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTimeline = function (element) {\n            return new Spriter.Timeline(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), Spriter.Types.getObjectTypeForName(this.parseString(element, \"object_type\", \"sprite\")), this.parseInt(element, \"obj\", -1));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getBaseline = function (element) {\n            return new Spriter.Baseline(this.parseInt(element, \"id\"), this.parseString(element, \"name\", null));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getVarline = function (element) {\n            return new Spriter.Varline(this.parseInt(element, \"id\"), this.parseInt(element, \"def\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getKey = function (element) {\n            return new Spriter.Key(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTagKey = function (element) {\n            return new Spriter.KeyTag(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getVariableKey = function (element, type) {\n            return new Spriter.KeyVariable(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"), (type === 2 /* STRING */) ? this.parseString(element, \"val\") : this.parseFloat(element, \"val\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTimelineKey = function (element, index, spriter) {\n            var time = this.parseInt(element, \"time\");\n            var spin = this.parseInt(element, \"spin\", 1);\n            // curve and params\n            var curve = this.parseString(element, \"curve_type\", \"linear\");\n            var c1 = this.parseFloat(element, \"c1\", 0);\n            var c2 = this.parseFloat(element, \"c2\", 0);\n            var c3 = this.parseFloat(element, \"c3\", 0);\n            var c4 = this.parseFloat(element, \"c4\", 0);\n            // sprite or bone key?\n            var boneTag = this.translateChildElementName(\"bone\");\n            var objectTag = this.translateChildElementName(\"object\");\n            var key = null;\n            var keyDataElm = null;\n            var sprite = false;\n            if (element[boneTag] !== undefined) {\n                keyDataElm = element[boneTag];\n                key = new Spriter.KeyBone(index, time, spin);\n                this.setMinDefsToElementName(\"bone\");\n            }\n            else if (element[objectTag] !== undefined) {\n                keyDataElm = element[objectTag];\n                key = new Spriter.KeyObject(index, time, spin);\n                this.setMinDefsToElementName(\"object\");\n                sprite = true;\n            }\n            // other curve than linear?\n            if (curve !== \"linear\") {\n                key.setCurve(Spriter.Types.getCurveTypeForName(curve), c1, c2, c3, c4);\n            }\n            // spatial info\n            var info = key.info;\n            info.x = this.parseFloat(keyDataElm, \"x\");\n            info.y = -this.parseFloat(keyDataElm, \"y\");\n            info.scaleX = this.parseFloat(keyDataElm, \"scale_x\", 1);\n            info.scaleY = this.parseFloat(keyDataElm, \"scale_y\", 1);\n            info.angle = 360 - this.parseFloat(keyDataElm, \"angle\");\n            info.alpha = this.parseFloat(keyDataElm, \"a\", 1);\n            if (sprite) {\n                // sprite specific - set file and folder\n                var folderId = this.parseInt(keyDataElm, \"folder\");\n                var fileId = this.parseInt(keyDataElm, \"file\");\n                key.setFolderAndFile(folderId, fileId);\n                // set pivot in spatial info different from default (based on pivot in file)\n                var file = spriter.getFolderById(folderId).getFileById(fileId);\n                info.pivotX = this.parseFloat(keyDataElm, \"pivot_x\", file.pivotX);\n                // 1 - to flip Y, default anchor is already flipped, so it needs to be flipped back to avoid double flipping\n                info.pivotY = 1 - this.parseFloat(keyDataElm, \"pivot_y\", 1 - file.pivotY);\n            }\n            this.popMinDefsStack();\n            return key;\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTagChange = function (element) {\n            return this.parseInt(element, \"t\");\n        };\n        return SpriterJSON;\n    }(Spriter.SpriterFile));\n    Spriter.SpriterJSON = SpriterJSON;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"SpriterFile.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var SpriterXml = (function (_super) {\n        __extends(SpriterXml, _super);\n        // -------------------------------------------------------------------------\n        function SpriterXml(xmlData, options) {\n            _super.call(this, options);\n            this._xml = xmlData;\n            var minimized = xmlData.documentElement.hasAttribute(\"min\");\n            this.setMinimized(minimized);\n        }\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getType = function () {\n            return Spriter.eFileType.XML;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.parseInt = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = 0; }\n            var value = element.getAttribute(this.translateAttributeName(attributeName));\n            return value !== null ? parseInt(value) : defaultValue;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.parseFloat = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = 0; }\n            var value = element.getAttribute(this.translateAttributeName(attributeName));\n            return value !== null ? parseFloat(value) : defaultValue;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.parseString = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = \"\"; }\n            var value = element.getAttribute(this.translateAttributeName(attributeName));\n            return value !== null ? value : defaultValue;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getNodes = function (nodeName) {\n            this.setMinDefsToElementName(nodeName);\n            var translatedName = this.translateElementName(nodeName);\n            return new Spriter.NodeListXml(this, this._xml.documentElement.getElementsByTagName(translatedName));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getNodesForElement = function (element, nodeName) {\n            this.setMinDefsToElementName(nodeName);\n            var translatedName = this.translateElementName(nodeName);\n            return new Spriter.NodeListXml(this, element.getElementsByTagName(translatedName));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getFolder = function (element) {\n            return new Spriter.Folder(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getFile = function (element) {\n            if (element.hasAttribute(\"type\") && element.getAttribute(\"type\") === \"sound\") {\n                return null;\n            }\n            return new Spriter.File(this.parseInt(element, \"id\"), this.getFileName(this.parseString(element, \"name\")), this.parseFloat(element, \"pivot_x\"), 1 - this.parseFloat(element, \"pivot_y\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTag = function (element) {\n            return new Spriter.Item(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getEntity = function (element) {\n            return new Spriter.Entity(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getObjectInfo = function (element, index) {\n            return new Spriter.ObjectInfo(index, this.parseString(element, \"name\"), Spriter.Types.getObjectTypeForName(this.parseString(element, \"type\")), this.parseFloat(element, \"w\"), this.parseFloat(element, \"h\"), this.parseFloat(element, \"pivot_x\"), this.parseFloat(element, \"pivot_y\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getCharMap = function (element) {\n            return new Spriter.CharMap(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getCharMapEntry = function (element, charMap, spriter) {\n            var sourceName = spriter.getFolderById(this.parseInt(element, \"folder\")).\n                getFileById(this.parseInt(element, \"file\")).name;\n            var target = null;\n            if (element.hasAttribute(\"target_folder\") && element.hasAttribute(\"target_file\")) {\n                target = spriter.getFolderById(this.parseInt(element, \"target_folder\")).\n                    getFileById(this.parseInt(element, \"target_file\"));\n            }\n            charMap.put(sourceName, target);\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getVariable = function (element) {\n            var type = Spriter.Types.getVariableTypeForName(this.parseString(element, \"type\"));\n            return new Spriter.Variable(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), type, (type === 2 /* STRING */) ? this.parseString(element, \"default\") : this.parseFloat(element, \"default\", 0));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getAnimation = function (element) {\n            return new Spriter.Animation(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), this.parseFloat(element, \"length\"), this.parseString(element, \"looping\", \"true\") === \"true\" ? Spriter.eAnimationLooping.LOOPING : Spriter.eAnimationLooping.NO_LOOPING);\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getMainlineKey = function (element) {\n            return new Spriter.KeyMainline(this.parseInt(element, \"id\"), this.parseFloat(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getRef = function (element) {\n            return new Spriter.Ref(this.parseInt(element, \"id\"), this.parseInt(element, \"parent\", -1), this.parseInt(element, \"timeline\"), this.parseInt(element, \"key\"), this.parseInt(element, \"z_index\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTimeline = function (element) {\n            return new Spriter.Timeline(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), Spriter.Types.getObjectTypeForName(this.parseString(element, \"object_type\", \"sprite\")), this.parseInt(element, \"obj\", -1));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getBaseline = function (element) {\n            return new Spriter.Baseline(this.parseInt(element, \"id\"), this.parseString(element, \"name\", null));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getVarline = function (element) {\n            return new Spriter.Varline(this.parseInt(element, \"id\"), this.parseInt(element, \"def\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getKey = function (element) {\n            return new Spriter.Key(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTagKey = function (element) {\n            return new Spriter.KeyTag(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getVariableKey = function (element, type) {\n            return new Spriter.KeyVariable(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"), (type === 2 /* STRING */) ? this.parseString(element, \"val\") : this.parseFloat(element, \"val\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTimelineKey = function (element, index, spriter) {\n            var time = this.parseInt(element, \"time\");\n            var spin = this.parseInt(element, \"spin\", 1);\n            // curve and params\n            var curve = this.parseString(element, \"curve_type\", \"linear\");\n            var c1 = this.parseFloat(element, \"c1\", 0);\n            var c2 = this.parseFloat(element, \"c2\", 0);\n            var c3 = this.parseFloat(element, \"c3\", 0);\n            var c4 = this.parseFloat(element, \"c4\", 0);\n            // sprite or bone key?\n            var boneTag = this.translateChildElementName(\"bone\");\n            var objectTag = this.translateChildElementName(\"object\");\n            var key = null;\n            var keyDataElm = (element.firstElementChild);\n            var sprite = false;\n            if (keyDataElm.tagName === boneTag) {\n                key = new Spriter.KeyBone(index, time, spin);\n                this.setMinDefsToElementName(\"bone\");\n            }\n            else if (keyDataElm.tagName === objectTag) {\n                this.setMinDefsToElementName(\"object\");\n                key = new Spriter.KeyObject(index, time, spin);\n                sprite = true;\n            }\n            // other curve than linear?\n            if (curve !== \"linear\") {\n                key.setCurve(Spriter.Types.getCurveTypeForName(curve), c1, c2, c3, c4);\n            }\n            // spatial info\n            var info = key.info;\n            info.x = this.parseFloat(keyDataElm, \"x\");\n            info.y = -this.parseFloat(keyDataElm, \"y\");\n            info.scaleX = this.parseFloat(keyDataElm, \"scale_x\", 1);\n            info.scaleY = this.parseFloat(keyDataElm, \"scale_y\", 1);\n            info.angle = 360 - this.parseFloat(keyDataElm, \"angle\");\n            info.alpha = this.parseFloat(keyDataElm, \"a\", 1);\n            if (sprite) {\n                // sprite specific - set file and folder\n                var folderId = this.parseInt(keyDataElm, \"folder\");\n                var fileId = this.parseInt(keyDataElm, \"file\");\n                key.setFolderAndFile(folderId, fileId);\n                // set pivot in spatial info different from default (based on pivot in file)\n                var file = spriter.getFolderById(folderId).getFileById(fileId);\n                info.pivotX = this.parseFloat(keyDataElm, \"pivot_x\", file.pivotX);\n                // 1 - to flip Y, default anchor is already flipped, so it needs to be flipped back to avoid double flipping\n                info.pivotY = 1 - this.parseFloat(keyDataElm, \"pivot_y\", 1 - file.pivotY);\n            }\n            this.popMinDefsStack();\n            return key;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTagChange = function (element) {\n            return this.parseInt(element, \"t\");\n        };\n        return SpriterXml;\n    }(Spriter.SpriterFile));\n    Spriter.SpriterXml = SpriterXml;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Item = (function () {\n        // -------------------------------------------------------------------------\n        function Item(id, name) {\n            this._id = id;\n            this._name = name;\n        }\n        Object.defineProperty(Item.prototype, \"id\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._id;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Item.prototype, \"name\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._name;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Item;\n    }());\n    Spriter.Item = Item;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"../IdNameMap.ts\" />\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    (function (eAnimationLooping) {\n        eAnimationLooping[eAnimationLooping[\"NO_LOOPING\"] = 0] = \"NO_LOOPING\";\n        eAnimationLooping[eAnimationLooping[\"LOOPING\"] = 1] = \"LOOPING\";\n    })(Spriter.eAnimationLooping || (Spriter.eAnimationLooping = {}));\n    var eAnimationLooping = Spriter.eAnimationLooping;\n    ;\n    var Animation = (function (_super) {\n        __extends(Animation, _super);\n        // -------------------------------------------------------------------------\n        function Animation(id, name, length, loopType) {\n            _super.call(this, id, name);\n            this._length = length;\n            this._loopType = loopType;\n            this._timelines = new Spriter.IdNameMap();\n            this._lines = new Spriter.IdNameMap();\n        }\n        Object.defineProperty(Animation.prototype, \"mainline\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._mainline;\n            },\n            // -------------------------------------------------------------------------\n            set: function (mainline) {\n                this._mainline = mainline;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        Animation.prototype.addTimeline = function (timeline) {\n            this._timelines.add(timeline, timeline.id, timeline.name);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.getTimelineById = function (id) {\n            return this._timelines.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.getTimelineByName = function (name) {\n            return this._timelines.getByName(name);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.addLine = function (line) {\n            this._lines.add(line, this._lines.length, line.name);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.getLineById = function (id) {\n            return this._lines.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.getLineByName = function (name) {\n            return this._lines.getByName(name);\n        };\n        Object.defineProperty(Animation.prototype, \"linesLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._lines.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Animation.prototype, \"length\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Animation.prototype, \"loopType\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._loopType;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Animation;\n    }(Spriter.Item));\n    Spriter.Animation = Animation;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"../IdNameMap.ts\" />\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var Entity = (function (_super) {\n        __extends(Entity, _super);\n        // -------------------------------------------------------------------------\n        function Entity(id, name) {\n            _super.call(this, id, name);\n            this._objectInfos = new Spriter.IdNameMap();\n            this._charMaps = new Spriter.IdNameMap();\n            this._variables = new Spriter.IdNameMap();\n            this._animations = new Spriter.IdNameMap();\n        }\n        // -------------------------------------------------------------------------\n        Entity.prototype.addObjectInfo = function (objectInfo) {\n            this._objectInfos.add(objectInfo, objectInfo.id, objectInfo.name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getObjectInfoById = function (id) {\n            return this._objectInfos.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getObjectInfoByName = function (name) {\n            return this._objectInfos.getByName(name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.addCharMap = function (charMap) {\n            this._charMaps.add(charMap, charMap.id, charMap.name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getCharMapById = function (id) {\n            return this._charMaps.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getCharMapByName = function (name) {\n            return this._charMaps.getByName(name);\n        };\n        Object.defineProperty(Entity.prototype, \"charMapsLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._charMaps.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        Entity.prototype.addVariable = function (variable) {\n            this._variables.add(variable, variable.id, variable.name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getVariableById = function (id) {\n            return this._variables.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getVariableByName = function (name) {\n            return this._variables.getByName(name);\n        };\n        Object.defineProperty(Entity.prototype, \"variablesLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._variables.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        Entity.prototype.addAnimation = function (animation) {\n            this._animations.add(animation, animation.id, animation.name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getAnimationById = function (id) {\n            return this._animations.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getAnimationByName = function (name) {\n            return this._animations.getByName(name);\n        };\n        Object.defineProperty(Entity.prototype, \"animationsLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._animations.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Entity;\n    }(Spriter.Item));\n    Spriter.Entity = Entity;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var File = (function (_super) {\n        __extends(File, _super);\n        // -------------------------------------------------------------------------\n        function File(id, name, pivotX, pivotY) {\n            _super.call(this, id, name);\n            this._pivotX = pivotX;\n            this._pivotY = pivotY;\n        }\n        Object.defineProperty(File.prototype, \"pivotX\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._pivotX;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(File.prototype, \"pivotY\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._pivotY;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return File;\n    }(Spriter.Item));\n    Spriter.File = File;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"../IdNameMap.ts\" />\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var Folder = (function (_super) {\n        __extends(Folder, _super);\n        // -------------------------------------------------------------------------\n        function Folder(id, name) {\n            _super.call(this, id, name);\n            this._files = new Spriter.IdNameMap();\n        }\n        // -------------------------------------------------------------------------\n        Folder.prototype.addFile = function (file) {\n            this._files.add(file, file.id, file.name);\n        };\n        // -------------------------------------------------------------------------\n        Folder.prototype.getFileById = function (id) {\n            return this._files.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Folder.prototype.getFileByName = function (name) {\n            return this._files.getByName(name);\n        };\n        return Folder;\n    }(Spriter.Item));\n    Spriter.Folder = Folder;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var CharMap = (function (_super) {\n        __extends(CharMap, _super);\n        function CharMap() {\n            _super.apply(this, arguments);\n        }\n        // -------------------------------------------------------------------------\n        CharMap.prototype.put = function (key, value) {\n            if (this._map === undefined) {\n                this._map = {};\n            }\n            if (this._map[key] !== undefined) {\n                console.error(\"Key with name \" + key + \" already exists\");\n            }\n            this._map[key] = value;\n        };\n        // -------------------------------------------------------------------------\n        CharMap.prototype.value = function (key) {\n            return this._map[key];\n        };\n        return CharMap;\n    }(Spriter.Item));\n    Spriter.CharMap = CharMap;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var CharMapStack = (function () {\n        // -------------------------------------------------------------------------\n        function CharMapStack(entity) {\n            this._stack = [];\n            this._length = 0;\n            this._entity = entity;\n        }\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.reset = function () {\n            this._length = 0;\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.push = function (charMapName) {\n            var charMap = this.getCharMap(charMapName);\n            this._stack[this._length++] = charMap;\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.remove = function (charMapName) {\n            var charMap = this.getCharMap(charMapName);\n            var index = this.findCharMap(charMap);\n            // shift all items down\n            if (index !== -1) {\n                for (var i = index; i < this._length - 2; i++) {\n                    this._stack[i] = this._stack[i + 1];\n                }\n                this._stack[--this._length] = null;\n            }\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.getFile = function (file) {\n            for (var i = this._length - 1; i >= 0; i--) {\n                var value = this._stack[i].value(file.name);\n                if (value !== undefined) {\n                    return value;\n                }\n            }\n            return file;\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.getCharMap = function (charMapName) {\n            var charMap = this._entity.getCharMapByName(charMapName);\n            if (charMapName === null) {\n                console.error(\"charmap with name \" + charMapName + \" does not exist\");\n            }\n            return charMap;\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.findCharMap = function (charMap) {\n            for (var i = 0; i < this._length; i++) {\n                if (this._stack[i] === charMap) {\n                    return i;\n                }\n            }\n            return -1;\n        };\n        return CharMapStack;\n    }());\n    Spriter.CharMapStack = CharMapStack;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Key = (function () {\n        // -------------------------------------------------------------------------\n        function Key(id, time) {\n            this._id = id;\n            this._time = time;\n        }\n        Object.defineProperty(Key.prototype, \"id\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._id;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Key.prototype, \"time\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._time;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Key;\n    }());\n    Spriter.Key = Key;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var KeyMainline = (function (_super) {\n        __extends(KeyMainline, _super);\n        function KeyMainline() {\n            _super.apply(this, arguments);\n            this._boneRefs = [];\n            this._objectRefs = [];\n        }\n        Object.defineProperty(KeyMainline.prototype, \"boneRefs\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._boneRefs;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        KeyMainline.prototype.addBoneRef = function (boneRef) {\n            this._boneRefs.push(boneRef);\n        };\n        Object.defineProperty(KeyMainline.prototype, \"objectRefs\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._objectRefs;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        KeyMainline.prototype.addObjectRef = function (objectRef) {\n            this._objectRefs.push(objectRef);\n        };\n        return KeyMainline;\n    }(Spriter.Key));\n    Spriter.KeyMainline = KeyMainline;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var KeyTag = (function (_super) {\n        __extends(KeyTag, _super);\n        function KeyTag() {\n            _super.apply(this, arguments);\n        }\n        Object.defineProperty(KeyTag.prototype, \"tagsOn\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._tagsOn;\n            },\n            // -------------------------------------------------------------------------\n            set: function (tagsOn) {\n                this._tagsOn = tagsOn;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return KeyTag;\n    }(Spriter.Key));\n    Spriter.KeyTag = KeyTag;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var KeyVariable = (function (_super) {\n        __extends(KeyVariable, _super);\n        // -------------------------------------------------------------------------\n        function KeyVariable(id, time, value) {\n            _super.call(this, id, time);\n            this._value = value;\n        }\n        Object.defineProperty(KeyVariable.prototype, \"value\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return KeyVariable;\n    }(Spriter.Key));\n    Spriter.KeyVariable = KeyVariable;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    (function (eTimelineType) {\n        eTimelineType[eTimelineType[\"UNKNOWN\"] = 0] = \"UNKNOWN\";\n        eTimelineType[eTimelineType[\"MAIN_LINE\"] = 1] = \"MAIN_LINE\";\n        eTimelineType[eTimelineType[\"TIME_LINE\"] = 2] = \"TIME_LINE\";\n        eTimelineType[eTimelineType[\"SOUND_LINE\"] = 3] = \"SOUND_LINE\";\n        eTimelineType[eTimelineType[\"EVENT_LINE\"] = 4] = \"EVENT_LINE\";\n        eTimelineType[eTimelineType[\"TAG_LINE\"] = 5] = \"TAG_LINE\";\n        eTimelineType[eTimelineType[\"VAR_LINE\"] = 6] = \"VAR_LINE\";\n    })(Spriter.eTimelineType || (Spriter.eTimelineType = {}));\n    var eTimelineType = Spriter.eTimelineType;\n    var Baseline = (function (_super) {\n        __extends(Baseline, _super);\n        // -------------------------------------------------------------------------\n        function Baseline(id, name) {\n            if (name === void 0) { name = null; }\n            _super.call(this, id, name);\n            this._type = eTimelineType.UNKNOWN;\n        }\n        Object.defineProperty(Baseline.prototype, \"type\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._type;\n            },\n            // -------------------------------------------------------------------------\n            set: function (type) {\n                this._type = type;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Baseline.prototype, \"keys\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._keys;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        Baseline.prototype.add = function (key) {\n            if (this._keys === null || this._keys === undefined) {\n                this._keys = [];\n            }\n            this._keys.push(key);\n        };\n        // -------------------------------------------------------------------------\n        Baseline.prototype.at = function (index, loop) {\n            if (loop === void 0) { loop = true; }\n            if (index < 0) {\n                return null;\n            }\n            var length = this._keys.length;\n            if (index >= length) {\n                if (loop) {\n                    index = index % length;\n                }\n                else {\n                    index = length - 1;\n                }\n            }\n            return this._keys[index];\n        };\n        return Baseline;\n    }(Spriter.Item));\n    Spriter.Baseline = Baseline;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    // -------------------------------------------------------------------------\n    function linear(a, b, t) {\n        return ((b - a) * t) + a;\n    }\n    Spriter.linear = linear;\n    // -------------------------------------------------------------------------\n    function quadratic(a, b, c, t) {\n        return linear(linear(a, b, t), linear(b, c, t), t);\n    }\n    Spriter.quadratic = quadratic;\n    // -------------------------------------------------------------------------\n    function cubic(a, b, c, d, t) {\n        return linear(quadratic(a, b, c, t), quadratic(b, c, d, t), t);\n    }\n    Spriter.cubic = cubic;\n    // -------------------------------------------------------------------------\n    function quartic(a, b, c, d, e, t) {\n        return linear(cubic(a, b, c, d, t), cubic(b, c, d, e, t), t);\n    }\n    Spriter.quartic = quartic;\n    // -------------------------------------------------------------------------\n    function quintic(a, b, c, d, e, f, t) {\n        return linear(quartic(a, b, c, d, e, t), quartic(b, c, d, e, f, t), t);\n    }\n    Spriter.quintic = quintic;\n    // -------------------------------------------------------------------------\n    // B(t) = (1 − t)^3 * P0 + 3(1 − t)^2 * t * P1 + 3(1 − t) *  t^2 * P2 + t^3 * P3  , 0 ≤ t ≤ 1.\n    function bezierCoord(p1, p2, t) {\n        // p0 = 0, p3 = 1\n        var p0 = 0;\n        var p3 = 1;\n        var u = 1 - t;\n        var t2 = t * t;\n        var u2 = u * u;\n        var u3 = u2 * u;\n        var t3 = t2 * t;\n        return 0 + 3 * u2 * t * p1 + 3 * u * t2 * p2 + t3 * p3;\n    }\n    // -------------------------------------------------------------------------\n    function bezier(p1x, p1y, p2x, p2y, t) {\n        var epsilon = 0.001;\n        var maxIterations = 10;\n        // binary search\n        //establish bounds\n        var lower = 0;\n        var upper = 1;\n        var percent = (upper + lower) / 2;\n        //initial x\n        var x = bezierCoord(p1x, p2x, percent);\n        //loop until returned x - t is less than epsilon\n        var iterations = 0;\n        while (Math.abs(t - x) > epsilon && iterations < maxIterations) {\n            if (t > x) {\n                lower = percent;\n            }\n            else {\n                upper = percent;\n            }\n            percent = (upper + lower) / 2;\n            x = bezierCoord(p1x, p2x, percent);\n            ++iterations;\n        }\n        //we're within tolerance of the desired x value. Return the y value.\n        return bezierCoord(p1y, p2y, percent);\n    }\n    Spriter.bezier = bezier;\n    // -------------------------------------------------------------------------\n    function angleLinear(angleA, angleB, spin, t) {\n        // no spin\n        if (spin === 0) {\n            return angleA;\n        }\n        // spin left\n        if (spin > 0) {\n            if (angleB > angleA) {\n                angleB -= 360;\n            }\n        }\n        else {\n            if (angleB < angleA) {\n                angleB += 360;\n            }\n        }\n        return this.linear(angleA, angleB, t);\n    }\n    Spriter.angleLinear = angleLinear;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var Variable = (function (_super) {\n        __extends(Variable, _super);\n        // -------------------------------------------------------------------------\n        function Variable(id, name, type, defaultValue) {\n            _super.call(this, id, name);\n            this._type = type;\n            this._default = defaultValue;\n            this.reset();\n        }\n        // -------------------------------------------------------------------------\n        Variable.prototype.clone = function () {\n            return new Variable(this.id, this.name, this.type, this._default);\n        };\n        // -------------------------------------------------------------------------\n        Variable.prototype.reset = function () {\n            this.value = this._default;\n        };\n        Object.defineProperty(Variable.prototype, \"type\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._type;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Variable.prototype, \"value\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            // -------------------------------------------------------------------------\n            set: function (value) {\n                if (this._type === 0 /* INT */) {\n                    this._value = Math.floor(value);\n                }\n                else {\n                    this._value = value;\n                }\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Variable.prototype, \"int\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Variable.prototype, \"float\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Variable.prototype, \"string\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Variable;\n    }(Spriter.Item));\n    Spriter.Variable = Variable;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Varline = (function (_super) {\n        __extends(Varline, _super);\n        // -------------------------------------------------------------------------\n        function Varline(id, varDefId) {\n            _super.call(this, id, null);\n            this._varDefId = varDefId;\n            this.type = Spriter.eTimelineType.VAR_LINE;\n        }\n        Object.defineProperty(Varline.prototype, \"varDefId\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._varDefId;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Varline;\n    }(Spriter.Baseline));\n    Spriter.Varline = Varline;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var ObjectInfo = (function (_super) {\n        __extends(ObjectInfo, _super);\n        // -------------------------------------------------------------------------\n        function ObjectInfo(id, name, type, width, height, pivotX, pivotY) {\n            _super.call(this, id, name);\n            this._type = type;\n            this._width = width;\n            this._height = height;\n            this._pivotX = pivotX;\n            this._pivotY = pivotY;\n        }\n        Object.defineProperty(ObjectInfo.prototype, \"type\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._type;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(ObjectInfo.prototype, \"width\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._width;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(ObjectInfo.prototype, \"height\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._height;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(ObjectInfo.prototype, \"pivotX\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._pivotX;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(ObjectInfo.prototype, \"pivotY\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._pivotY;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return ObjectInfo;\n    }(Spriter.Item));\n    Spriter.ObjectInfo = ObjectInfo;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Types = (function () {\n        function Types() {\n        }\n        // -------------------------------------------------------------------------\n        Types.getObjectTypeForName = function (typeName) {\n            var type = Types.nameToObjectType[typeName];\n            if (type === undefined) {\n                console.error(\"Unknown type of object: \" + typeName);\n            }\n            return type;\n        };\n        // -------------------------------------------------------------------------\n        Types.getCurveTypeForName = function (typeName) {\n            var type = Types.nameToCurveType[typeName];\n            if (type === undefined) {\n                console.error(\"Unknown type of curve: \" + typeName);\n            }\n            return type;\n        };\n        // -------------------------------------------------------------------------\n        Types.getVariableTypeForName = function (typeName) {\n            var type = Types.nameToVariableType[typeName];\n            if (type === undefined) {\n                console.error(\"Unknown type of variable: \" + typeName);\n            }\n            return type;\n        };\n        Types.nameToObjectType = {\n            \"sprite\": 0 /* SPRITE */,\n            \"bone\": 1 /* BONE */,\n            \"box\": 2 /* BOX */,\n            \"point\": 3 /* POINT */,\n            \"sound\": 4 /* SOUND */\n        };\n        Types.nameToCurveType = {\n            \"instant\": 1 /* INSTANT */,\n            \"linear\": 0 /* LINEAR */,\n            \"quadratic\": 2 /* QUADRATIC */,\n            \"cubic\": 3 /* CUBIC */,\n            \"quartic\": 4 /* QUARTIC */,\n            \"quintic\": 5 /* QUINTIC */,\n            \"bezier\": 6 /* BEZIER */\n        };\n        Types.nameToVariableType = {\n            \"int\": 0 /* INT */,\n            \"float\": 1 /* FLOAT */,\n            \"string\": 2 /* STRING */\n        };\n        return Types;\n    }());\n    Spriter.Types = Types;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Ref = (function () {\n        // -------------------------------------------------------------------------\n        function Ref(id, parent, timeline, key, z) {\n            if (z === void 0) { z = 0; }\n            this.id = id;\n            this.parent = parent;\n            this.timeline = timeline;\n            this.key = key;\n            this.z = z;\n        }\n        return Ref;\n    }());\n    Spriter.Ref = Ref;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Timeline = (function (_super) {\n        __extends(Timeline, _super);\n        // -------------------------------------------------------------------------\n        function Timeline(id, name, type, objectRef) {\n            if (type === void 0) { type = 0 /* SPRITE */; }\n            if (objectRef === void 0) { objectRef = -1; }\n            _super.call(this, id, name);\n            this.type = Spriter.eTimelineType.TIME_LINE;\n            this._objectType = type;\n            this._objectRef = objectRef;\n        }\n        Object.defineProperty(Timeline.prototype, \"objectType\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._objectType;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Timeline.prototype, \"objectRef\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._objectRef;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Timeline;\n    }(Spriter.Baseline));\n    Spriter.Timeline = Timeline;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var KeyTimeline = (function (_super) {\n        __extends(KeyTimeline, _super);\n        // -------------------------------------------------------------------------\n        function KeyTimeline(id, time, spin) {\n            _super.call(this, id, time);\n            this._info = new Spriter.SpatialInfo();\n            this._spin = spin;\n            this.setCurve(0 /* LINEAR */);\n        }\n        // -------------------------------------------------------------------------\n        KeyTimeline.prototype.setCurve = function (curveType, c1, c2, c3, c4) {\n            if (c1 === void 0) { c1 = 0; }\n            if (c2 === void 0) { c2 = 0; }\n            if (c3 === void 0) { c3 = 0; }\n            if (c4 === void 0) { c4 = 0; }\n            this._curveType = curveType;\n            this._c1 = c1;\n            this._c2 = c2;\n            this._c3 = c3;\n            this._c4 = c4;\n        };\n        Object.defineProperty(KeyTimeline.prototype, \"spin\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._spin;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"curveType\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._curveType;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"c1\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._c1;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"c2\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._c2;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"c3\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._c3;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"c4\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._c4;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"info\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._info;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return KeyTimeline;\n    }(Spriter.Key));\n    Spriter.KeyTimeline = KeyTimeline;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var SpatialInfo = (function () {\n        function SpatialInfo() {\n            this.x = 0;\n            this.y = 0;\n            this.scaleX = 1;\n            this.scaleY = 1;\n            this.pivotX = 0;\n            this.pivotY = 0;\n            this.alpha = 1;\n            this.angle = 0;\n        }\n        return SpatialInfo;\n    }());\n    Spriter.SpatialInfo = SpatialInfo;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"KeyTimeline.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var KeyObject = (function (_super) {\n        __extends(KeyObject, _super);\n        function KeyObject() {\n            _super.apply(this, arguments);\n        }\n        // -------------------------------------------------------------------------\n        KeyObject.prototype.setFolderAndFile = function (folder, file) {\n            this._folder = folder;\n            this._file = file;\n        };\n        Object.defineProperty(KeyObject.prototype, \"folder\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._folder;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyObject.prototype, \"file\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._file;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return KeyObject;\n    }(Spriter.KeyTimeline));\n    Spriter.KeyObject = KeyObject;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"KeyTimeline.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var KeyBone = (function (_super) {\n        __extends(KeyBone, _super);\n        function KeyBone() {\n            _super.apply(this, arguments);\n        }\n        return KeyBone;\n    }(Spriter.KeyTimeline));\n    Spriter.KeyBone = KeyBone;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Loader = (function () {\n        function Loader() {\n        }\n        // -------------------------------------------------------------------------\n        Loader.prototype.load = function (file) {\n            this._spriter = new Spriter.Spriter();\n            this._fileType = file.getType();\n            // folders and files\n            var folders = file.getNodes(\"folder\");\n            this.loadFolders(this._spriter, folders);\n            folders.processed();\n            // tags\n            var tags = file.getNodes(\"tag_list\");\n            this.loadTags(this._spriter, tags);\n            tags.processed();\n            // entity\n            var entities = file.getNodes(\"entity\");\n            this.loadEntities(this._spriter, entities);\n            entities.processed();\n            return this._spriter;\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadFolders = function (spriter, folders) {\n            // through all folders\n            for (var i = 0; i < folders.length(); i++) {\n                var folder = folders.getFolder(i);\n                // images in folder - ignore sounds\n                var files = folders.getChildNodes(i, \"file\");\n                this.loadFiles(folder, files);\n                files.processed();\n                // add folder to spriter object\n                spriter.addFolder(folder);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadFiles = function (folder, files) {\n            for (var f = 0; f < files.length(); f++) {\n                var file = files.getFile(f);\n                // null is returned if file is not image but sound\n                if (file !== null) {\n                    folder.addFile(file);\n                }\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTags = function (spriter, tags) {\n            // no tags\n            if (tags.length() === 0) {\n                return;\n            }\n            // different structure for json than for xml\n            var tagDefs;\n            if (this._fileType !== Spriter.eFileType.JSON) {\n                tagDefs = tags.getChildNodes(0, \"i\");\n            }\n            else {\n                tagDefs = tags;\n            }\n            for (var i = 0; i < tagDefs.length(); i++) {\n                var tag = tagDefs.getTag(i);\n                spriter.addTag(tag);\n            }\n            // different structure for json than for xml\n            if (this._fileType !== Spriter.eFileType.JSON) {\n                tagDefs.processed();\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadEntities = function (spriter, entities) {\n            for (var i = 0; i < entities.length(); i++) {\n                var entity = entities.getEntity(i);\n                // bones, boxes, ...\n                var objInfos = entities.getChildNodes(i, \"obj_info\");\n                this.loadObjInfo(entity, objInfos);\n                objInfos.processed();\n                // character maps\n                var charMaps = entities.getChildNodes(i, \"character_map\");\n                this.loadCharMaps(entity, charMaps);\n                charMaps.processed();\n                // variable definitions\n                var variables = entities.getChildNodes(i, \"var_defs\");\n                this.loadVariables(entity, variables);\n                variables.processed();\n                // animations\n                var animations = entities.getChildNodes(i, \"animation\");\n                this.loadAnimations(entity, animations);\n                animations.processed();\n                spriter.addEntity(entity);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadObjInfo = function (entity, objInfos) {\n            for (var i = 0; i < objInfos.length(); i++) {\n                var objInfo = objInfos.getObjectInfo(i);\n                entity.addObjectInfo(objInfo);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadCharMaps = function (entity, charMaps) {\n            for (var i = 0; i < charMaps.length(); i++) {\n                var charMap = charMaps.getCharMap(i);\n                var charMapEntries = charMaps.getChildNodes(i, \"map\");\n                this.loadCharMapEntries(charMap, charMapEntries);\n                charMapEntries.processed();\n                entity.addCharMap(charMap);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadCharMapEntries = function (charMap, charMapEntries) {\n            for (var i = 0; i < charMapEntries.length(); i++) {\n                charMapEntries.getCharMapEntry(i, charMap, this._spriter);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadVariables = function (entity, variables) {\n            // no variables\n            if (variables.length() === 0) {\n                return;\n            }\n            // different structure for json than for xml\n            var varDefs;\n            if (this._fileType !== Spriter.eFileType.JSON) {\n                varDefs = variables.getChildNodes(0, \"i\");\n            }\n            else {\n                varDefs = variables;\n            }\n            for (var i = 0; i < varDefs.length(); i++) {\n                var varDef = varDefs.getVariable(i);\n                entity.addVariable(varDef);\n            }\n            // different structure for json than for xml\n            if (this._fileType !== Spriter.eFileType.JSON) {\n                varDefs.processed();\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadAnimations = function (entity, animations) {\n            for (var i = 0; i < animations.length(); i++) {\n                var animation = animations.getAnimation(i);\n                // main line keys\n                var mainlines = animations.getChildNodes(i, \"mainline\");\n                this.loadMainline(animation, mainlines);\n                mainlines.processed();\n                // timelines\n                var timelines = animations.getChildNodes(i, \"timeline\");\n                this.loadTimelines(animation, timelines);\n                timelines.processed();\n                // sound lines\n                var soundlines = animations.getChildNodes(i, \"soundline\");\n                this.loadSoundlines(animation, soundlines);\n                soundlines.processed();\n                // event lines\n                var eventlines = animations.getChildNodes(i, \"eventline\");\n                this.loadEventlines(animation, eventlines);\n                eventlines.processed();\n                // get meta tag\n                var meta = animations.getChildNodes(i, \"meta\");\n                if (meta.length() > 0) {\n                    // var lines\n                    // OMG - typo in attribute name in JSOUN export... what the hell! TODO - remove when corrected\n                    var varlines = meta.getChildNodes(0, (this._fileType !== Spriter.eFileType.JSON) ? \"varline\" : \"valline\");\n                    this.loadVarlines(entity, animation, varlines);\n                    varlines.processed();\n                    // tag lines\n                    var taglines = meta.getChildNodes(0, \"tagline\");\n                    this.loadTaglines(animation, taglines);\n                    taglines.processed();\n                }\n                meta.processed();\n                // add completely built animation to entity\n                entity.addAnimation(animation);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadMainline = function (animation, mainlines) {\n            var mainline = mainlines.getMainline(0);\n            mainline.type = Spriter.eTimelineType.MAIN_LINE;\n            var mainlineKeys = mainlines.getChildNodes(0, \"key\");\n            this.loadMainlineKeys(mainline, mainlineKeys);\n            mainlineKeys.processed();\n            animation.mainline = mainline;\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadMainlineKeys = function (mainline, mainlineKeys) {\n            for (var i = 0; i < mainlineKeys.length(); i++) {\n                var mainLineKey = mainlineKeys.getMainlineKey(i);\n                // load bone refs\n                var boneRefs = mainlineKeys.getChildNodes(i, \"bone_ref\");\n                for (var b = 0; b < boneRefs.length(); b++) {\n                    mainLineKey.addBoneRef(boneRefs.getRef(b));\n                }\n                boneRefs.processed();\n                // load sprite refs (object refs)\n                var spriteRefs = mainlineKeys.getChildNodes(i, \"object_ref\");\n                for (var s = 0; s < spriteRefs.length(); s++) {\n                    mainLineKey.addObjectRef(spriteRefs.getRef(s));\n                }\n                spriteRefs.processed();\n                mainline.add(mainLineKey);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTimelines = function (animation, aTimelines) {\n            for (var i = 0; i < aTimelines.length(); i++) {\n                var timeline = aTimelines.getTimeline(i);\n                var keys = aTimelines.getChildNodes(i, \"key\");\n                this.loadTimelineKeys(timeline, keys);\n                keys.processed();\n                animation.addTimeline(timeline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTimelineKeys = function (aTimeline, aKeys) {\n            for (var i = 0; i < aKeys.length(); i++) {\n                var key = aKeys.getTimelineKey(i, this._spriter);\n                aTimeline.add(key);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadSoundlines = function (animation, soundlines) {\n            for (var i = 0; i < soundlines.length(); i++) {\n                var soundline = soundlines.getSoundline(i);\n                soundline.type = Spriter.eTimelineType.SOUND_LINE;\n                var keys = soundlines.getChildNodes(i, \"key\");\n                this.loadKeys(soundline, keys);\n                keys.processed();\n                animation.addLine(soundline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadKeys = function (timeline, keys) {\n            for (var i = 0; i < keys.length(); i++) {\n                var key = keys.getKey(i);\n                timeline.add(key);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadEventlines = function (animation, eventlines) {\n            for (var i = 0; i < eventlines.length(); i++) {\n                var eventline = eventlines.getEventline(i);\n                eventline.type = Spriter.eTimelineType.EVENT_LINE;\n                var keys = eventlines.getChildNodes(i, \"key\");\n                this.loadKeys(eventline, keys);\n                keys.processed();\n                animation.addLine(eventline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTaglines = function (animation, taglines) {\n            for (var i = 0; i < taglines.length(); i++) {\n                var tagline = taglines.getTagline(i);\n                tagline.type = Spriter.eTimelineType.TAG_LINE;\n                var keys = taglines.getChildNodes(i, \"key\");\n                this.loadTagKeys(tagline, keys);\n                keys.processed();\n                animation.addLine(tagline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTagKeys = function (tagline, keys) {\n            for (var i = 0; i < keys.length(); i++) {\n                var key = keys.getTagKey(i);\n                var tagChangeElements = keys.getChildNodes(i, \"tag\");\n                var tagChanges = tagChangeElements.getTagChanges(this._spriter);\n                tagChangeElements.processed();\n                key.tagsOn = tagChanges;\n                tagline.add(key);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadVarlines = function (entity, animation, varlines) {\n            for (var i = 0; i < varlines.length(); i++) {\n                var varline = varlines.getVarline(i);\n                var type = entity.getVariableById(varline.varDefId).type;\n                var keys = varlines.getChildNodes(i, \"key\");\n                this.loadVariableKeys(varline, keys, type);\n                keys.processed();\n                animation.addLine(varline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadVariableKeys = function (varline, keys, type) {\n            for (var i = 0; i < keys.length(); i++) {\n                var key = keys.getVariableKey(i, type);\n                varline.add(key);\n            }\n        };\n        return Loader;\n    }());\n    Spriter.Loader = Loader;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter_1) {\n    var Spriter = (function () {\n        // -------------------------------------------------------------------------\n        function Spriter() {\n            this._folders = new Spriter_1.IdNameMap();\n            this._tags = new Spriter_1.IdNameMap();\n            this._entities = new Spriter_1.IdNameMap();\n        }\n        // -------------------------------------------------------------------------\n        Spriter.prototype.addFolder = function (folder) {\n            this._folders.add(folder, folder.id, folder.name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getFolderById = function (id) {\n            return this._folders.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getFolderByName = function (name) {\n            return this._folders.getByName(name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.addEntity = function (entity) {\n            this._entities.add(entity, entity.id, entity.name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getEntityById = function (id) {\n            return this._entities.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getEntityByName = function (name) {\n            return this._entities.getByName(name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.addTag = function (tag) {\n            this._tags.add(tag, tag.id, tag.name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getTagById = function (id) {\n            return this._tags.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getTagByName = function (name) {\n            return this._tags.getByName(name);\n        };\n        Object.defineProperty(Spriter.prototype, \"tagsLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._tags.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Spriter;\n    }());\n    Spriter_1.Spriter = Spriter;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var SpriterBone = (function () {\n        // -------------------------------------------------------------------------\n        function SpriterBone() {\n            this.timeline = -1;\n            this.timelineKey = -1;\n            this.transformed = new Spriter.SpatialInfo();\n        }\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.setOn = function (on) {\n            this._on = on;\n        };\n        Object.defineProperty(SpriterBone.prototype, \"on\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._on;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.setKey = function (entity, animation, timelineId, keyId) {\n            this.timeline = timelineId;\n            this.timelineKey = keyId;\n            var timeline = animation.getTimelineById(timelineId);\n            this.name = timeline.name;\n            this.objectInfo = (timeline.objectRef === -1) ? null : entity.getObjectInfoById(timeline.objectRef);\n            var keyFrom = timeline.at(keyId);\n            // in the end loop to first key. If animation is not looping, then repeat last key\n            var keyTo = (timeline.at(keyId + 1, animation.loopType !== Spriter.eAnimationLooping.NO_LOOPING));\n            this.key = keyFrom;\n            this.timeFrom = keyFrom.time;\n            this.timeTo = keyTo.time;\n            // if loop to key 0\n            if (this.timeTo < this.timeFrom) {\n                this.timeTo = animation.length;\n            }\n            this.from = keyFrom.info;\n            this.to = keyTo.info;\n            // create update mask\n            this.updateMask = 0;\n            if (Math.abs(this.from.x - this.to.x) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_X;\n            }\n            if (Math.abs(this.from.y - this.to.y) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_Y;\n            }\n            if (Math.abs(this.from.scaleX - this.to.scaleX) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_SCALE_X;\n            }\n            if (Math.abs(this.from.scaleY - this.to.scaleY) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_SCALE_Y;\n            }\n            if (Math.abs(this.from.pivotX - this.to.pivotX) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_PIVOT_X;\n            }\n            if (Math.abs(this.from.pivotY - this.to.pivotY) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_PIVOT_Y;\n            }\n            if (Math.abs(this.from.alpha - this.to.alpha) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_ALPHA;\n            }\n            if (Math.abs(this.from.angle - this.to.angle) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_ANGLE;\n            }\n            // init data\n            this.transformed.x = this.from.x;\n            this.transformed.y = this.from.y;\n            this.transformed.scaleX = this.from.scaleX;\n            this.transformed.scaleY = this.from.scaleY;\n            this.transformed.pivotX = this.from.pivotX;\n            this.transformed.pivotY = this.from.pivotY;\n            this.transformed.angle = this.from.angle;\n            this.transformed.alpha = this.from.alpha;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.tween = function (time) {\n            // calculate normalized time\n            //var t = Phaser.Math.clamp((time - this.timeFrom) / (this.timeTo - this.timeFrom), 0, 1);\n            var t = (this.updateMask > 0) ? this.getTweenTime(time) : 0;\n            this.transformed.x = (this.updateMask & SpriterBone.UPDATE_X) > 0 ?\n                Spriter.linear(this.from.x, this.to.x, t) : this.from.x;\n            this.transformed.y = (this.updateMask & SpriterBone.UPDATE_Y) > 0 ?\n                Spriter.linear(this.from.y, this.to.y, t) : this.from.y;\n            this.transformed.scaleX = (this.updateMask & SpriterBone.UPDATE_SCALE_X) > 0 ?\n                Spriter.linear(this.from.scaleX, this.to.scaleX, t) : this.from.scaleX;\n            this.transformed.scaleY = (this.updateMask & SpriterBone.UPDATE_SCALE_Y) > 0 ?\n                Spriter.linear(this.from.scaleY, this.to.scaleY, t) : this.from.scaleY;\n            this.transformed.pivotX = (this.updateMask & SpriterBone.UPDATE_PIVOT_X) > 0 ?\n                Spriter.linear(this.from.pivotX, this.to.pivotX, t) : this.from.pivotX;\n            this.transformed.pivotY = (this.updateMask & SpriterBone.UPDATE_PIVOT_Y) > 0 ?\n                Spriter.linear(this.from.pivotY, this.to.pivotY, t) : this.from.pivotY;\n            this.transformed.alpha = (this.updateMask & SpriterBone.UPDATE_ALPHA) > 0 ?\n                Spriter.linear(this.from.alpha, this.to.alpha, t) : this.from.alpha;\n            this.transformed.angle = (this.updateMask & SpriterBone.UPDATE_ANGLE) > 0 ?\n                Spriter.angleLinear(this.from.angle, this.to.angle, this.key.spin, t) : this.from.angle;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.update = function (parent) {\n            this.transformed.angle *= Phaser.Math.sign(parent.scaleX) * Phaser.Math.sign(parent.scaleY);\n            this.transformed.angle += parent.angle;\n            this.transformed.scaleX *= parent.scaleX;\n            this.transformed.scaleY *= parent.scaleY;\n            this.scalePosition(parent.scaleX, parent.scaleY);\n            this.rotatePosition(parent.angle);\n            this.translatePosition(parent.x, parent.y);\n            this.transformed.alpha *= parent.alpha;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.scalePosition = function (parentScaleX, parentScaleY) {\n            this.transformed.x *= parentScaleX;\n            this.transformed.y *= parentScaleY;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.rotatePosition = function (parentAngle) {\n            var x = this.transformed.x;\n            var y = this.transformed.y;\n            if (x !== 0 || y !== 0) {\n                var rads = parentAngle * (Math.PI / 180);\n                var cos = Math.cos(rads);\n                var sin = Math.sin(rads);\n                this.transformed.x = x * cos - y * sin;\n                this.transformed.y = x * sin + y * cos;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.translatePosition = function (parentX, parentY) {\n            this.transformed.x += parentX;\n            this.transformed.y += parentY;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.getTweenTime = function (time) {\n            if (this.key.curveType === 1 /* INSTANT */) {\n                return 0;\n            }\n            var t = Phaser.Math.clamp((time - this.timeFrom) / (this.timeTo - this.timeFrom), 0, 1);\n            switch (this.key.curveType) {\n                case 0 /* LINEAR */:\n                    return t;\n                case 2 /* QUADRATIC */:\n                    return Spriter.quadratic(0, this.key.c1, 1, t);\n                case 3 /* CUBIC */:\n                    return Spriter.cubic(0, this.key.c1, this.key.c2, 1, t);\n                case 4 /* QUARTIC */:\n                    return Spriter.quartic(0, this.key.c1, this.key.c2, this.key.c3, 1, t);\n                case 5 /* QUINTIC */:\n                    return Spriter.quintic(0, this.key.c1, this.key.c2, this.key.c3, this.key.c4, 1, t);\n                case 6 /* BEZIER */:\n                    return Spriter.bezier(this.key.c1, this.key.c2, this.key.c3, this.key.c4, t);\n            }\n            return 0;\n        };\n        SpriterBone.UPDATE_X = 1;\n        SpriterBone.UPDATE_Y = 2;\n        SpriterBone.UPDATE_SCALE_X = 4;\n        SpriterBone.UPDATE_SCALE_Y = 8;\n        SpriterBone.UPDATE_PIVOT_X = 16;\n        SpriterBone.UPDATE_PIVOT_Y = 32;\n        SpriterBone.UPDATE_ANGLE = 64;\n        SpriterBone.UPDATE_ALPHA = 128;\n        return SpriterBone;\n    }());\n    Spriter.SpriterBone = SpriterBone;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var SpriterGroup = (function (_super) {\n        __extends(SpriterGroup, _super);\n        // -------------------------------------------------------------------------\n        function SpriterGroup(game, spriter, texutreKey, entityName, animation, animationSpeedPercent) {\n            _super.call(this, game, null);\n            // onLoop(SpriterGroup);\n            this.onLoop = new Phaser.Signal();\n            // onFinish(SpriterGroup);\n            this.onFinish = new Phaser.Signal();\n            // onSound(SpriterGroup, string); // string for line name which equals soud name without extension\n            this.onSound = new Phaser.Signal();\n            // onEvent(SpriterGroup, string); // string for line name which equals event name\n            this.onEvent = new Phaser.Signal();\n            // onTagChange(SpriterGroup, string, boolean); // string for tag name, boolean for change (true = set / false = unset)\n            this.onTagChange = new Phaser.Signal();\n            // onVariableSet(SpriterGroup, Variable); // Variable is Spriter variable def with access to value\n            this.onVariableSet = new Phaser.Signal();\n            // onBoxUpdated(SpriterGroup, SpriterObject);\n            this.onBoxUpdated = new Phaser.Signal();\n            // onPointUpdated(SpriterGroup, SpriterObject);\n            this.onPointUpdated = new Phaser.Signal();\n            this._mainlineStepper = new Spriter.LineStepper();\n            this._lineSteppers = [];\n            this._lineSteppersCount = 0;\n            this._bones = [];\n            this._objects = [];\n            this._tags = 0; // up to 32 tags - 1 per bit\n            this._vars = [];\n            this._paused = false;\n            this._spriter = spriter;\n            this._entityName = entityName;\n            this._entity = spriter.getEntityByName(entityName);\n            this._textureKey = texutreKey;\n            this._root = new Spriter.SpatialInfo();\n            // clone variables\n            for (var i = 0; i < this._entity.variablesLength; i++) {\n                this._vars[i] = this._entity.getVariableById(i).clone();\n            }\n            // create charmap stack\n            this._charMapStack = new Spriter.CharMapStack(this._entity);\n            // set animation speed\n            if (animationSpeedPercent === undefined) {\n                animationSpeedPercent = 100;\n            }\n            this.setAnimationSpeedPercent(animationSpeedPercent);\n            // set animation\n            if (animation === undefined || animation === null) {\n                // set first animation\n                this.playAnimationById(0);\n            }\n            else if (typeof animation === \"number\") {\n                this.playAnimationById(animation);\n            }\n            else {\n                this.playAnimationByName(animation);\n            }\n        }\n        Object.defineProperty(SpriterGroup.prototype, \"spriter\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._spriter;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"entity\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._entity;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"charMapStack\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._charMapStack;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"paused\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._paused;\n            },\n            // -------------------------------------------------------------------------\n            set: function (paused) {\n                this._paused = paused;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"animationsCount\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._entity.animationsLength;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"currentAnimationName\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._animationName;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.pushCharMap = function (charMapName) {\n            this._charMapStack.push(charMapName);\n            this.resetSprites();\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.removeCharMap = function (charMapName) {\n            this._charMapStack.remove(charMapName);\n            this.resetSprites();\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.clearCharMaps = function () {\n            this._charMapStack.reset();\n            this.resetSprites();\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.resetSprites = function () {\n            for (var i = 0; i < this._objects.length; i++) {\n                this._objects[i].resetFile();\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.isTagOn = function (tagName) {\n            return this.isTagOnById(this._spriter.getTagByName(tagName).id);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.isTagOnById = function (tagId) {\n            return (this._tags & (1 << tagId)) > 0;\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.getVariable = function (varName) {\n            return this.getVariableById(this._entity.getVariableByName(varName).id);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.getVariableById = function (varId) {\n            return this._vars[varId];\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.getObject = function (objectName) {\n            for (var i = 0; i < this._objects.length; i++) {\n                var object = this._objects[i];\n                if (object.name === objectName) {\n                    return object;\n                }\n            }\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.setAnimationSpeedPercent = function (animationSpeedPercent) {\n            if (animationSpeedPercent === void 0) { animationSpeedPercent = 100; }\n            this._animationSpeed = animationSpeedPercent / 100;\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.playAnimationById = function (animationId) {\n            var animation = this._entity.getAnimationById(animationId);\n            if (animation === undefined || animation === null) {\n                console.warn(\"Animation \" + animationId + \" for entity \" + this._entityName + \" does not exist!\");\n                return;\n            }\n            this.playAnimation(animation);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.playAnimationByName = function (animationName) {\n            var animation = this._entity.getAnimationByName(animationName);\n            if (animation === undefined || animation === null) {\n                console.warn(\"Animation \" + animationName + \" for entity \" + this._entityName + \" does not exist!\");\n                return;\n            }\n            this.playAnimation(animation);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.playAnimation = function (animation) {\n            this._animationName = animation.name;\n            this._animation = animation;\n            this._finished = false;\n            // reset time to beginning of animation and find first from and to keys\n            this._mainlineStepper.reset();\n            this._mainlineStepper.line = this._animation.mainline;\n            this._time = 0;\n            // reset all additional time lines (soundline, varline, tagline, eventline)\n            this.resetLines();\n            // reset tags\n            this._tags = 0;\n            // reset variables to defaults\n            for (var i = 0; i < this._vars.length; i++) {\n                this._vars[i].reset();\n            }\n            // create bones and sprites - based on data in mainLine key 0\n            this.loadKeys(this._animation.mainline.at(0), true);\n            // first update - to set correct positions\n            this.updateCharacter();\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.resetLines = function () {\n            // reset steppers\n            this._lineSteppersCount = 0;\n            // go through all lines (sounds, events, tags, vars)\n            for (var i = 0; i < this._animation.linesLength; i++) {\n                var line = this._animation.getLineById(i);\n                // if not enough line steppers in array, add new one\n                if (this._lineSteppersCount >= this._lineSteppers.length) {\n                    this._lineSteppers[this._lineSteppersCount] = new Spriter.LineStepper();\n                }\n                // get free stepper\n                var stepper = this._lineSteppers[this._lineSteppersCount++];\n                stepper.reset();\n                stepper.line = line;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.setBones = function (bones, force) {\n            if (force === void 0) { force = false; }\n            // switch off all existing bones\n            for (var i = 0; i < this._bones.length; i++) {\n                if (this._bones[i] !== undefined) {\n                    this._bones[i].setOn(false);\n                }\n            }\n            // go through all bones and add new ones if necessary and activate used ones\n            for (var i = 0; i < bones.length; i++) {\n                var ref = bones[i];\n                // if bone does not exist add it and make active, else make it active only\n                if (this._bones[ref.id] === undefined) {\n                    var newBone = new Spriter.SpriterBone();\n                    newBone.type = 1 /* BONE */;\n                    this._bones[ref.id] = newBone;\n                }\n                var bone = this._bones[ref.id];\n                bone.setOn(true);\n                bone.parent = ref.parent;\n                if (bone.timelineKey !== ref.key || bone.timeline !== ref.timeline || force) {\n                    bone.setKey(this._entity, this._animation, ref.timeline, ref.key);\n                }\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.setObjects = function (objects, force) {\n            if (force === void 0) { force = false; }\n            // switch off (kill) all existing sprites\n            for (var i = 0; i < this._objects.length; i++) {\n                if (this._objects[i] !== undefined) {\n                    this._objects[i].setOn(false);\n                }\n            }\n            // go through all objects/sprites and add new ones if necessary and activate used ones\n            var zChange = false;\n            for (var i = 0; i < objects.length; i++) {\n                var ref = objects[i];\n                var object = null;\n                var sprite = null;\n                // if sprite does not exist add it and make active, else make it active only\n                if (this._objects[ref.id] === undefined) {\n                    sprite = new Phaser.Sprite(this.game, 0, 0, this._textureKey);\n                    object = new Spriter.SpriterObject(this, sprite);\n                    this._objects[ref.id] = object;\n                    this.add(sprite);\n                }\n                else {\n                    object = this._objects[ref.id];\n                    sprite = object.sprite;\n                }\n                object.parent = ref.parent;\n                object.type = this._animation.getTimelineById(ref.timeline).objectType;\n                // is it sprite or any other type of object? (box / point)\n                if (object.type === 0 /* SPRITE */) {\n                    object.setOn(true);\n                    if (object.sprite.z !== ref.z) {\n                        object.sprite.z = ref.z;\n                        zChange = true;\n                    }\n                }\n                else {\n                    object.setOn(true, true);\n                }\n                if (object.timelineKey !== ref.key || object.timeline !== ref.timeline || force) {\n                    object.setKey(this._entity, this._animation, ref.timeline, ref.key);\n                }\n            }\n            // need to sort sprites?\n            if (zChange) {\n                this.sort();\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.loadKeys = function (keyMainline, force) {\n            if (force === void 0) { force = false; }\n            this.setBones(keyMainline.boneRefs, force);\n            this.setObjects(keyMainline.objectRefs, force);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.updateAnimation = function () {\n            if (this._paused || this._finished) {\n                return;\n            }\n            var mainlineStepper = this._mainlineStepper;\n            // check if in the end of animation and whether to loop or not\n            if (this._time > this._animation.length) {\n                if (this._animation.loopType === Spriter.eAnimationLooping.NO_LOOPING) {\n                    this._time = this._animation.length;\n                    this._finished = true;\n                }\n                else {\n                    this._time -= this._animation.length;\n                    this.onLoop.dispatch(this);\n                }\n            }\n            // consume all new keys\n            var key;\n            while ((key = mainlineStepper.step(this._time)) !== null) {\n                //console.log(\"got key at: \" + key.time + \" time: \" + this._time);\n                this.loadKeys(key);\n                mainlineStepper.lastTime = key.time;\n            }\n            this.updateCharacter();\n            this.updateLines();\n            if (this._finished) {\n                this.onFinish.dispatch(this);\n            }\n            this._time += (this.game.time.physicsElapsedMS * this._animationSpeed);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.updateCharacter = function () {\n            for (var i = 0; i < this._bones.length; i++) {\n                var bone = this._bones[i];\n                if (bone.on) {\n                    var parentSpatial = (bone.parent === -1) ? this._root : this._bones[bone.parent].transformed;\n                    bone.tween(this._time);\n                    bone.update(parentSpatial);\n                }\n            }\n            for (var i = 0; i < this._objects.length; i++) {\n                var object = this._objects[i];\n                if (object.on) {\n                    var parentSpatial = (object.parent === -1) ? this._root : this._bones[object.parent].transformed;\n                    object.tween(this._time);\n                    object.update(parentSpatial);\n                    if (object.type === 0 /* SPRITE */) {\n                        object.updateSprite();\n                    }\n                    else if (object.type === 2 /* BOX */) {\n                        this.onBoxUpdated.dispatch(this, object);\n                    }\n                    else if (object.type === 3 /* POINT */) {\n                        this.onPointUpdated.dispatch(this, object);\n                    }\n                }\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.updateLines = function () {\n            for (var i = this._lineSteppersCount - 1; i >= 0; i--) {\n                var lineStepper = this._lineSteppers[i];\n                var line = lineStepper.line;\n                var key;\n                while ((key = lineStepper.step(this._time)) !== null) {\n                    switch (line.type) {\n                        case Spriter.eTimelineType.SOUND_LINE:\n                            //console.log(\"sound: \" + line.name + \" - key: \" + key.id + \", time: \" + key.time);\n                            this.onSound.dispatch(this, line.name);\n                            break;\n                        case Spriter.eTimelineType.EVENT_LINE:\n                            //console.log(\"event: \" + line.name + \" - key: \" + key.id + \", time: \" + key.time);\n                            this.onEvent.dispatch(this, line.name);\n                            break;\n                        case Spriter.eTimelineType.TAG_LINE:\n                            var tagsOn = key.tagsOn;\n                            var tagChanges = this._tags ^ tagsOn;\n                            this._tags = tagsOn;\n                            // go through all changes\n                            for (var j = 0; j < this._spriter.tagsLength; j++) {\n                                var mask = 1 << j;\n                                if (tagChanges & mask) {\n                                    //console.log(\"tag change: \" + this._spriter.getTagById(j).name + \" value: \" + ((tagsOn & mask) > 0) + \" - key: \" + key.id + \", time: \" + key.time);\n                                    this.onTagChange.dispatch(this, this._spriter.getTagById(j).name, (tagsOn & mask) > 0);\n                                }\n                            }\n                            break;\n                        case Spriter.eTimelineType.VAR_LINE:\n                            var newVal = key.value;\n                            var variable = this._vars[line.varDefId];\n                            variable.value = newVal;\n                            //console.log(\"var set: \" + variable.name + \" value: \" + variable.value + \" - key: \" + key.id + \", time: \" + key.time);\n                            this.onVariableSet.dispatch(this, variable);\n                            break;\n                    }\n                    lineStepper.lastTime = key.time;\n                }\n            }\n        };\n        return SpriterGroup;\n    }(Phaser.Group));\n    Spriter.SpriterGroup = SpriterGroup;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"SpriterBone.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var SpriterObject = (function (_super) {\n        __extends(SpriterObject, _super);\n        // -------------------------------------------------------------------------\n        function SpriterObject(parent, sprite) {\n            _super.call(this);\n            this._spriter = parent.spriter;\n            this._charMapStack = parent.charMapStack;\n            this._sprite = sprite;\n        }\n        Object.defineProperty(SpriterObject.prototype, \"sprite\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._sprite;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.setOn = function (on, hideSprite) {\n            if (hideSprite === void 0) { hideSprite = false; }\n            _super.prototype.setOn.call(this, on);\n            // hide sprite for non-sprite objects\n            this._sprite.exists = on && !hideSprite;\n            this._sprite.visible = (on && !this._hide && !hideSprite);\n        };\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.setKey = function (entity, animation, timelineId, keyId) {\n            _super.prototype.setKey.call(this, entity, animation, timelineId, keyId);\n            // set sprite - skip invisible objects - boxes, points\n            if (this.type === 0 /* SPRITE */) {\n                var spriteKey = this.key;\n                var file = this._spriter.getFolderById(spriteKey.folder).getFileById(spriteKey.file);\n                this._file = file;\n                this.setFile(file);\n            }\n            else {\n                this._file = null;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.resetFile = function () {\n            if (this.type === 0 /* SPRITE */) {\n                this.setFile(this._file);\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.setFile = function (file) {\n            file = this._charMapStack.getFile(file);\n            if (file !== null) {\n                this._hide = false;\n                this._sprite.frameName = file.name;\n            }\n            else {\n                this._hide = true;\n                this._sprite.visible = false;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.updateSprite = function () {\n            var t = this.transformed;\n            var s = this.sprite;\n            s.position.set(t.x, t.y);\n            s.scale.set(t.scaleX, t.scaleY);\n            s.anchor.set(t.pivotX, t.pivotY);\n            s.alpha = t.alpha;\n            s.angle = t.angle;\n        };\n        return SpriterObject;\n    }(Spriter.SpriterBone));\n    Spriter.SpriterObject = SpriterObject;\n})(Spriter || (Spriter = {}));\n//# sourceMappingURL=spriter.js.map"
+
+/***/ }),
+/* 347 */
 /*!************************************!*\
   !*** ./src/states/Lobby/Splash.js ***!
   \************************************/
@@ -13134,7 +13438,7 @@ var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-var _utils = __webpack_require__(/*! ../../utils */ 93);
+var _utils = __webpack_require__(/*! ../../utils */ 94);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13178,7 +13482,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 345 */
+/* 348 */
 /*!**********************************!*\
   !*** ./src/states/Lobby/Game.js ***!
   \**********************************/
@@ -13199,9 +13503,13 @@ var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-var _Hud = __webpack_require__(/*! ../../sprites/Hud */ 92);
+var _Hud = __webpack_require__(/*! ../../sprites/Hud */ 93);
 
 var _Hud2 = _interopRequireDefault(_Hud);
+
+var _PlayerActor = __webpack_require__(/*! ../../engine/PlayerActor */ 92);
+
+var _PlayerActor2 = _interopRequireDefault(_PlayerActor);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13237,13 +13545,12 @@ var _class = function (_Phaser$State) {
     value: function create() {
       var _this2 = this;
 
+      this.camera.flash('#000000');
       document.getElementById("chat-container").style.display = "block";
 
       this.background = this.game.add.sprite(0, 0, "lobby-bg");
       this.scaleX = this.game.width / this.background.width;
       this.scaleY = this.game.height / this.background.height;
-
-      // Group HUD / Icons
       this.hud = this.game.add.group();
 
       // create Spriter loader - class that can change Spriter file into internal structure
@@ -13259,29 +13566,32 @@ var _class = function (_Phaser$State) {
       // Scale background
       this.hud.scale.setTo(this.scaleX, this.scaleY);
 
-      // create Spriter file object - it wraps XML/JSON loaded with Phaser Loader
-      //var spriterFile = new Spriter.SpriterXml(this.cache.getXML("TESTXml"));
       var spriterFile = new Spriter.SpriterJSON(this.cache.getJSON("playerJson"),
       /* optional parameters */{
         imageNameType: Spriter.eImageNameType.NAME_ONLY
       });
 
-      // proces Spriter file (XML/JSON) with Spriter loader - outputs Spriter animation which you can instantiate multiple times with SpriterGroup
       spriterData = spriterLoader.load(spriterFile);
 
       // create actual renderable object - it is extension of Phaser.Group
-      this._spriterGroup = new Spriter.SpriterGroup(this.game, spriterData, "playerAtlas", "Animaciones", "Frontidle", 100);
-      this._spriterGroup.position.setTo(420, 400);
+      this.player = new _PlayerActor2.default(this.game, {
+        spriterData: spriterData,
+        textureKey: "playerAtlas",
+        entity: "Animaciones",
+        animation: "Frontidle",
+        animationSpeed: 100,
+        isSmall: false
+      });
+
+      this.player.position.setTo(420, 400);
 
       // adds SpriterGroup to Phaser.World to appear on screen
-      this.world.add(this._spriterGroup);
+      this.world.add(this.player);
 
       // Spriter animation can send info on when sounds, events, tags, variable - here we are listening to Phaser.Signals when animation variable is set
-      this._spriterGroup.onVariableSet.add(function (spriter, variable) {
+      this.player.onVariableSet.add(function (spriter, variable) {
         _this2._text = variable.string;
       }, this);
-
-      window._spriterGroup = this._spriterGroup;
 
       // // cycle animations
       // var key = this.game.input.keyboard.addKey(Phaser.Keyboard.A);
@@ -13311,7 +13621,7 @@ var _class = function (_Phaser$State) {
   }, {
     key: "update",
     value: function update() {
-      this._spriterGroup.updateAnimation();
+      this.player.updateAnimation();
     }
   }, {
     key: "render",
@@ -13324,7 +13634,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 346 */
+/* 349 */
 /*!**************************************!*\
   !*** ./src/states/Selector/Index.js ***!
   \**************************************/
@@ -13340,15 +13650,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Selector = undefined;
 
-var _Boot = __webpack_require__(/*! ./Boot */ 347);
+var _Boot = __webpack_require__(/*! ./Boot */ 350);
 
 var _Boot2 = _interopRequireDefault(_Boot);
 
-var _Splash = __webpack_require__(/*! ./Splash */ 348);
+var _Splash = __webpack_require__(/*! ./Splash */ 351);
 
 var _Splash2 = _interopRequireDefault(_Splash);
 
-var _Game = __webpack_require__(/*! ./Game */ 349);
+var _Game = __webpack_require__(/*! ./Game */ 352);
 
 var _Game2 = _interopRequireDefault(_Game);
 
@@ -13357,7 +13667,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Selector = exports.Selector = { BootState: _Boot2.default, SplashState: _Splash2.default, GameState: _Game2.default };
 
 /***/ }),
-/* 347 */
+/* 350 */
 /*!*************************************!*\
   !*** ./src/states/Selector/Boot.js ***!
   \*************************************/
@@ -13451,7 +13761,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 348 */
+/* 351 */
 /*!***************************************!*\
   !*** ./src/states/Selector/Splash.js ***!
   \***************************************/
@@ -13472,7 +13782,7 @@ var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-var _utils = __webpack_require__(/*! ../../utils */ 93);
+var _utils = __webpack_require__(/*! ../../utils */ 94);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13516,7 +13826,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 349 */
+/* 352 */
 /*!*************************************!*\
   !*** ./src/states/Selector/Game.js ***!
   \*************************************/
@@ -13537,9 +13847,9 @@ var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-__webpack_require__(/*! ../../plugins/slick-ui/src/Core */ 350);
+__webpack_require__(/*! ../../plugins/slick-ui/src/Core */ 353);
 
-var _phaserScrollable = __webpack_require__(/*! ../../plugins/phaser-scrollable */ 369);
+var _phaserScrollable = __webpack_require__(/*! ../../plugins/phaser-scrollable */ 372);
 
 var _phaserScrollable2 = _interopRequireDefault(_phaserScrollable);
 
@@ -13581,7 +13891,6 @@ var _class = function (_Phaser$State) {
     value: function create() {
       /* Scroll box group */
       this.scrollGroup = this.game.add.group();
-
       this.menuX = 55;
       this.menuY = 45;
 
@@ -13636,7 +13945,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 350 */
+/* 353 */
 /*!******************************************!*\
   !*** ./src/plugins/slick-ui/src/Core.js ***!
   \******************************************/
@@ -13647,44 +13956,44 @@ exports.default = _class;
 "use strict";
 
 
-__webpack_require__(/*! ./Plugin */ 351);
+__webpack_require__(/*! ./Plugin */ 354);
 
-__webpack_require__(/*! ./Container/Container */ 352);
+__webpack_require__(/*! ./Container/Container */ 355);
 
-__webpack_require__(/*! ./Element/Button */ 353);
+__webpack_require__(/*! ./Element/Button */ 356);
 
-__webpack_require__(/*! ./Element/Checkbox */ 354);
+__webpack_require__(/*! ./Element/Checkbox */ 357);
 
-__webpack_require__(/*! ./Element/DisplayObject */ 355);
+__webpack_require__(/*! ./Element/DisplayObject */ 358);
 
-__webpack_require__(/*! ./Element/Panel */ 356);
+__webpack_require__(/*! ./Element/Panel */ 359);
 
-__webpack_require__(/*! ./Element/Slider */ 357);
+__webpack_require__(/*! ./Element/Slider */ 360);
 
-__webpack_require__(/*! ./Element/Text */ 358);
+__webpack_require__(/*! ./Element/Text */ 361);
 
-__webpack_require__(/*! ./Element/TextField */ 359);
+__webpack_require__(/*! ./Element/TextField */ 362);
 
-__webpack_require__(/*! ./Keyboard/Key */ 360);
+__webpack_require__(/*! ./Keyboard/Key */ 363);
 
-__webpack_require__(/*! ./Keyboard/Keyboard */ 361);
+__webpack_require__(/*! ./Keyboard/Keyboard */ 364);
 
-__webpack_require__(/*! ./Element/Renderer/ButtonRenderer */ 362);
+__webpack_require__(/*! ./Element/Renderer/ButtonRenderer */ 365);
 
-__webpack_require__(/*! ./Element/Renderer/CheckboxRenderer */ 363);
+__webpack_require__(/*! ./Element/Renderer/CheckboxRenderer */ 366);
 
-__webpack_require__(/*! ./Element/Renderer/KeyRenderer */ 364);
+__webpack_require__(/*! ./Element/Renderer/KeyRenderer */ 367);
 
-__webpack_require__(/*! ./Element/Renderer/KeyboardRenderer */ 365);
+__webpack_require__(/*! ./Element/Renderer/KeyboardRenderer */ 368);
 
-__webpack_require__(/*! ./Element/Renderer/PanelRenderer */ 366);
+__webpack_require__(/*! ./Element/Renderer/PanelRenderer */ 369);
 
-__webpack_require__(/*! ./Element/Renderer/SliderRenderer */ 367);
+__webpack_require__(/*! ./Element/Renderer/SliderRenderer */ 370);
 
-__webpack_require__(/*! ./Element/Renderer/TextFieldRenderer */ 368);
+__webpack_require__(/*! ./Element/Renderer/TextFieldRenderer */ 371);
 
 /***/ }),
-/* 351 */
+/* 354 */
 /*!********************************************!*\
   !*** ./src/plugins/slick-ui/src/Plugin.js ***!
   \********************************************/
@@ -13802,7 +14111,7 @@ Phaser.Plugin.SlickUI.prototype.getRenderer = function (name) {
 };
 
 /***/ }),
-/* 352 */
+/* 355 */
 /*!*********************************************************!*\
   !*** ./src/plugins/slick-ui/src/Container/Container.js ***!
   \*********************************************************/
@@ -13914,7 +14223,7 @@ SlickUI.Container.Container.prototype.destroy = function () {
 };
 
 /***/ }),
-/* 353 */
+/* 356 */
 /*!****************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Button.js ***!
   \****************************************************/
@@ -14106,7 +14415,7 @@ Object.defineProperty(SlickUI.Element.Button.prototype, 'height', {
 });
 
 /***/ }),
-/* 354 */
+/* 357 */
 /*!******************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Checkbox.js ***!
   \******************************************************/
@@ -14293,7 +14602,7 @@ Object.defineProperty(SlickUI.Element.Checkbox.prototype, 'height', {
 });
 
 /***/ }),
-/* 355 */
+/* 358 */
 /*!***********************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/DisplayObject.js ***!
   \***********************************************************/
@@ -14482,7 +14791,7 @@ Object.defineProperty(SlickUI.Element.DisplayObject.prototype, 'height', {
 });
 
 /***/ }),
-/* 356 */
+/* 359 */
 /*!***************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Panel.js ***!
   \***************************************************/
@@ -14661,7 +14970,7 @@ Object.defineProperty(SlickUI.Element.Panel.prototype, 'height', {
 });
 
 /***/ }),
-/* 357 */
+/* 360 */
 /*!****************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Slider.js ***!
   \****************************************************/
@@ -14837,7 +15146,7 @@ Object.defineProperty(SlickUI.Element.Slider.prototype, 'visible', {
 });
 
 /***/ }),
-/* 358 */
+/* 361 */
 /*!**************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Text.js ***!
   \**************************************************/
@@ -15032,7 +15341,7 @@ Object.defineProperty(SlickUI.Element.Text.prototype, 'value', {
 });
 
 /***/ }),
-/* 359 */
+/* 362 */
 /*!*******************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/TextField.js ***!
   \*******************************************************/
@@ -15266,7 +15575,7 @@ Object.defineProperty(SlickUI.Element.TextField.prototype, 'height', {
 });
 
 /***/ }),
-/* 360 */
+/* 363 */
 /*!**************************************************!*\
   !*** ./src/plugins/slick-ui/src/Keyboard/Key.js ***!
   \**************************************************/
@@ -15339,7 +15648,7 @@ SlickUI.Keyboard.Key.prototype.init = function () {
 };
 
 /***/ }),
-/* 361 */
+/* 364 */
 /*!*******************************************************!*\
   !*** ./src/plugins/slick-ui/src/Keyboard/Keyboard.js ***!
   \*******************************************************/
@@ -15518,7 +15827,7 @@ SlickUI.Keyboard.Keyboard.prototype.toggleMode = function () {
 };
 
 /***/ }),
-/* 362 */
+/* 365 */
 /*!*********************************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Renderer/ButtonRenderer.js ***!
   \*********************************************************************/
@@ -15576,7 +15885,7 @@ SlickUI.Element.Renderer.ButtonRenderer.prototype.render = function (width, heig
 };
 
 /***/ }),
-/* 363 */
+/* 366 */
 /*!***********************************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Renderer/CheckboxRenderer.js ***!
   \***********************************************************************/
@@ -15612,7 +15921,7 @@ SlickUI.Element.Renderer.CheckboxRenderer.prototype.render = function (key) {
 };
 
 /***/ }),
-/* 364 */
+/* 367 */
 /*!******************************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Renderer/KeyRenderer.js ***!
   \******************************************************************/
@@ -15660,7 +15969,7 @@ SlickUI.Element.Renderer.KeyRenderer.prototype.render = function (width, height)
 };
 
 /***/ }),
-/* 365 */
+/* 368 */
 /*!***********************************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Renderer/KeyboardRenderer.js ***!
   \***********************************************************************/
@@ -15703,7 +16012,7 @@ SlickUI.Element.Renderer.KeyboardRenderer.prototype.render = function (height) {
 };
 
 /***/ }),
-/* 366 */
+/* 369 */
 /*!********************************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Renderer/PanelRenderer.js ***!
   \********************************************************************/
@@ -15755,7 +16064,7 @@ SlickUI.Element.Renderer.PanelRenderer.prototype.render = function (width, heigh
 };
 
 /***/ }),
-/* 367 */
+/* 370 */
 /*!*********************************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Renderer/SliderRenderer.js ***!
   \*********************************************************************/
@@ -15807,7 +16116,7 @@ SlickUI.Element.Renderer.SliderRenderer.prototype.render = function (size, verti
 };
 
 /***/ }),
-/* 368 */
+/* 371 */
 /*!************************************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Renderer/TextFieldRenderer.js ***!
   \************************************************************************/
@@ -15858,7 +16167,7 @@ SlickUI.Element.Renderer.TextFieldRenderer.prototype.render = function (width, h
 };
 
 /***/ }),
-/* 369 */
+/* 372 */
 /*!******************************************!*\
   !*** ./src/plugins/phaser-scrollable.js ***!
   \******************************************/
@@ -16291,7 +16600,7 @@ var ScrollableArea = function (_Phaser$Group) {
 exports.default = ScrollableArea;
 
 /***/ }),
-/* 370 */
+/* 373 */
 /*!***************************************!*\
   !*** ./src/states/TestStage/Index.js ***!
   \***************************************/
@@ -16307,15 +16616,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.TestStage = undefined;
 
-var _Boot = __webpack_require__(/*! ./Boot */ 371);
+var _Boot = __webpack_require__(/*! ./Boot */ 374);
 
 var _Boot2 = _interopRequireDefault(_Boot);
 
-var _Splash = __webpack_require__(/*! ./Splash */ 372);
+var _Splash = __webpack_require__(/*! ./Splash */ 375);
 
 var _Splash2 = _interopRequireDefault(_Splash);
 
-var _Game = __webpack_require__(/*! ./Game */ 373);
+var _Game = __webpack_require__(/*! ./Game */ 376);
 
 var _Game2 = _interopRequireDefault(_Game);
 
@@ -16324,7 +16633,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var TestStage = exports.TestStage = { BootState: _Boot2.default, SplashState: _Splash2.default, GameState: _Game2.default };
 
 /***/ }),
-/* 371 */
+/* 374 */
 /*!**************************************!*\
   !*** ./src/states/TestStage/Boot.js ***!
   \**************************************/
@@ -16391,17 +16700,12 @@ var _class = function (_Phaser$State) {
       this.load.image("loaderBar", "./assets/images/loader-bar.png");
 
       // Player Sprites
-      this.load.atlas("playerAtlas", "./assets/images/player/Atlas.png", "./assets/images/player/Atlas.json");
-      this.load.xml("playerXml", "./assets/images/player/TEST.xml");
-      this.load.json("playerJson", "./assets/images/player/TEST.json");
+      this.load.atlas("playerAtlas", "./assets/images/player/player.png", "./assets/images/player/player.json");
+      this.load.json("playerJson", "./assets/images/player/player.scon");
 
-      // item (book) image
-      this.load.image("playerItem", "./assets/images/player/Item.png");
-
-      this.load.image("player", "./assets/images/p1_front.png");
       this.load.json("map", "./assets/tilemaps/maps/salt_lake_v1.json");
       this.load.json("salt_lake_shape_1", "./assets/tilemaps/maps/salt_lake/shape1.json");
-      this.load.json("salt_lake_points", "./assets/tilemaps/maps/salt_lake/points.json");
+      this.load.json("map_points", "./assets/tilemaps/maps/salt_lake/points.json");
     }
   }, {
     key: "create",
@@ -16426,7 +16730,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 372 */
+/* 375 */
 /*!****************************************!*\
   !*** ./src/states/TestStage/Splash.js ***!
   \****************************************/
@@ -16447,7 +16751,7 @@ var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-var _utils = __webpack_require__(/*! ../../utils */ 93);
+var _utils = __webpack_require__(/*! ../../utils */ 94);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -16491,7 +16795,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 373 */
+/* 376 */
 /*!**************************************!*\
   !*** ./src/states/TestStage/Game.js ***!
   \**************************************/
@@ -16512,11 +16816,15 @@ var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-var _PlayerActor = __webpack_require__(/*! ../../engine/PlayerActor */ 374);
+var _PlayerActor = __webpack_require__(/*! ../../engine/PlayerActor */ 92);
 
 var _PlayerActor2 = _interopRequireDefault(_PlayerActor);
 
-var _Hud = __webpack_require__(/*! ../../sprites/Hud */ 92);
+var _Actor = __webpack_require__(/*! ../../engine/Actor */ 382);
+
+var _Actor2 = _interopRequireDefault(_Actor);
+
+var _Hud = __webpack_require__(/*! ../../sprites/Hud */ 93);
 
 var _Hud2 = _interopRequireDefault(_Hud);
 
@@ -16539,86 +16847,96 @@ var _class = function (_Phaser$State) {
   }
 
   _createClass(_class, [{
-    key: 'init',
-    value: function init() {}
+    key: "init",
+    value: function init() {
+      this.game.renderer.renderSession.roundPixels = true; // Make the phaser sprites look smoother
+    }
   }, {
-    key: 'preload',
+    key: "preload",
     value: function preload() {}
   }, {
-    key: 'shutdown',
+    key: "shutdown",
     value: function shutdown() {
       this.game.pncPlugin.destroyScene();
     }
   }, {
-    key: 'create',
+    key: "create",
     value: function create() {
-      var shape = game.cache.getJSON('map');
-      var points = game.cache.getJSON('salt_lake_points');
+      var spriterLoader = new Spriter.Loader();
+      var spriterData = 0;
+      var room = 0;
+      var sceneDefinition = {};
+      var shape = game.cache.getJSON("map");
+      var map_points = game.cache.getJSON("map_points");
       var navmeshPoints = [];
-      this.key = 'test-bg';
+      var hud = null;
+      var spriterFile = null;
+      this.actor = null;
+      this.key = "test-bg";
+      var bannerText = "Press W to enter debug background mode.";
 
       shape.layers[1].objects.map(function (point) {
         for (var i = 0; i < point.polyline.length; i++) {
-          navmeshPoints.push({ "x": point.x + point.polyline[i].x, "y": point.y + point.polyline[i].y });
+          navmeshPoints.push({
+            x: point.x + point.polyline[i].x,
+            y: point.y + point.polyline[i].y
+          });
         }
       });
 
-      /* navmeshPoints => Draws the full walk zone, shape => means every blocked zone,
-      // points => Are some points that are drawn onto the navmesh to make more natural the paths.
-      */
-      var sceneDefinition = {
-        bg: './assets/images/salt_lake.png',
+      sceneDefinition = {
+        bg: "./assets/images/salt_lake.png",
         navmeshPoints: navmeshPoints,
-        shape: this.game.cache.getJSON('salt_lake_shape_1'),
-        points: points
+        shape: this.game.cache.getJSON("salt_lake_shape_1"),
+        points: map_points
+      };
 
-        // creates a scene and immediately switches to it
-      };var room = this.game.pncPlugin.addScene(this.key, sceneDefinition, true);
+      // creates a scene and immediately switches to it
+      room = this.game.pncPlugin.addScene(this.key, sceneDefinition, true);
 
-      // adds actor using PlayerActor prototype which adds listeners for movement input
-      var actor = this.game.pncPlugin.addActor(room, {
-        x: 200,
-        y: 600,
-        image: 'player',
-        type: _PlayerActor2.default
-      });
-
-      var bannerText = 'Press W to enter debug background mode.';
       var banner = new _phaser2.default.Text(game, this.world.centerX, this.game.height - 30, bannerText);
       banner.padding.set(10, 16);
       banner.fontSize = 20;
-      banner.fill = '#000';
+      banner.fill = "#000";
       banner.smoothed = false;
       banner.anchor.setTo(0.5);
 
-      var hud = new _Hud2.default(game);
+      hud = new _Hud2.default(game);
 
       this.game.pncPlugin.addObject(room, banner);
       this.game.pncPlugin.addObject(room, hud);
 
-      // this.game.add.existing(hud)
+      spriterFile = new Spriter.SpriterJSON(this.cache.getJSON("playerJson"),
+      /* optional parameters */{
+        imageNameType: Spriter.eImageNameType.NAME_ONLY
+      });
 
-      // let bg = this.game.add.tileSprite(0,0, this.cache.getImage("background").width, this.cache.getImage("background").height, 'background')    // Stretch to fill all space as background
+      // Now create Player and add it onto the game
+      spriterData = spriterLoader.load(spriterFile);
 
-      // this.player = new Player({
-      //   game: this.game,
-      //   x: 250,
-      //   y: 150,
-      //   asset: 'player',
-      //   frame: 18
-      // })
+      // adds actor using PlayerActor prototype which adds listeners for movement input
+      this.game.pncPlugin.addActor(room, {
+        spriterData: spriterData,
+        textureKey: "playerAtlas",
+        isSmall: true,
+        spawnX: 200,
+        spawnY: 600
+      });
 
-      // this.game.add.existing(this.player)
-      // this.game.physics.enable(this.player, Phaser.Physics.ARCADE)
-
-      // this.game.input.onDown.add(this.player.moveCharacter, this);
-      // this.bgGroup.scale.setTo(this.game.width / bg.width, this.game.height / bg.height)
+      this.game.pncPlugin.addActor(room, {
+        spriterData: spriterData,
+        textureKey: "playerAtlas",
+        isSmall: true,
+        spawnX: 200,
+        spawnY: 600,
+        type: _Actor2.default
+      });
     }
   }, {
-    key: 'update',
+    key: "update",
     value: function update() {}
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       if (true) {
         // this.game.debug.inputInfo(32, 32);
@@ -16634,178 +16952,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 374 */
-/*!***********************************!*\
-  !*** ./src/engine/PlayerActor.js ***!
-  \***********************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _Actor2 = __webpack_require__(/*! ./Actor */ 129);
-
-var _Actor3 = _interopRequireDefault(_Actor2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var _class = function (_Actor) {
-  _inherits(_class, _Actor);
-
-  function _class(game, actorDefinition) {
-    _classCallCheck(this, _class);
-
-    var _this = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this, game, actorDefinition));
-
-    console.debug("PlayerActor initialised");
-    _this.initSignalListeners();
-    return _this;
-  }
-
-  _createClass(_class, [{
-    key: "lookAt",
-    value: function lookAt(pointer) {
-      var angle = Phaser.Math.angleBetween(this.x, this.y, pointer.x, pointer.y) * 180 / Math.PI;
-
-      console.log("Angulo del puntero direccion en Grados: " + angle);
-
-      if (angle > -100 && angle < -80) {
-        console.log("ANGULO SUPERIOR");
-      } else if (angle < -10 && angle > -80) {
-        console.log("ANGULO SUPERIOR DERECHO");
-      } else if (angle < -110 && angle > -170) {
-        console.log("ANGULO SUPERIOR IZQUIERDO");
-      } else if (angle > -10 && angle < 10) {
-        console.log("ANGULO DERECHO");
-      } else if (angle > -180 && angle < -170 || angle > 170 && angle < 180 || angle === 180) {
-        console.log("ANGULO IZQUIERDO");
-      } else if (angle > 80 && angle < 100) {
-        console.log("ANGULO INFERIOR");
-      } else if (angle > 10 && angle < 80) {
-        console.log("ANGULO INFERIOR DERECHO");
-      } else if (angle > 100 && angle < 170) {
-        console.log("ANGULO INFERIOR IZQUIERDO");
-      }
-    }
-  }, {
-    key: "initSignalListeners",
-    value: function initSignalListeners() {
-      this.game.pncPlugin.signals.sceneTappedSignal.add(function (pointer, navmesh) {
-        console.debug("Movement signal received");
-        if (!navmesh) {
-          return;
-        }
-
-        if (this.walkTween && this.walkTween.isRunning) {
-          this.walkTween.stop();
-        }
-
-        this.walkTween = this.game.add.tween(this);
-
-        this.lookAt(pointer);
-
-        var outOfBounds = navmesh.isPointerOutOfBounds(pointer);
-
-        if (outOfBounds) {
-          return false;
-        }
-
-        var path = navmesh.findPath();
-        console.log(path);
-
-        var pointer;
-        for (var i = 0; i < path.length; i++) {
-          pointer = path[i];
-          var distance = Phaser.Math.distance(path[i - 1] != undefined ? path[i - 1].x : this.x, path[i - 1] != undefined ? path[i - 1].y : this.y, pointer.x, pointer.y);
-          this.walkTween.to({ x: pointer.x, y: pointer.y }, distance * 7);
-        }
-
-        this.walkTween.start();
-      }, this);
-    }
-  }]);
-
-  return _class;
-}(_Actor3.default);
-
-exports.default = _class;
-
-/***/ }),
-/* 375 */
-/*!********************************************************************!*\
-  !*** ./node_modules/script-loader!./assets/lib/spriter/spriter.js ***!
-  \********************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! !./node_modules/script-loader/addScript.js */ 376)(__webpack_require__(/*! !./node_modules/raw-loader!./assets/lib/spriter/spriter.js */ 377))
-
-/***/ }),
-/* 376 */
-/*!*************************************************!*\
-  !*** ./node_modules/script-loader/addScript.js ***!
-  \*************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-module.exports = function(src) {
-	function log(error) {
-		(typeof console !== "undefined")
-		&& (console.error || console.log)("[Script Loader]", error);
-	}
-
-	// Check for IE =< 8
-	function isIE() {
-		return typeof attachEvent !== "undefined" && typeof addEventListener === "undefined";
-	}
-
-	try {
-		if (typeof execScript !== "undefined" && isIE()) {
-			execScript(src);
-		} else if (typeof eval !== "undefined") {
-			eval.call(null, src);
-		} else {
-			log("EvalError: No eval function available");
-		}
-	} catch (error) {
-		log(error);
-	}
-}
-
-
-/***/ }),
 /* 377 */
-/*!*****************************************************************!*\
-  !*** ./node_modules/raw-loader!./assets/lib/spriter/spriter.js ***!
-  \*****************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports) {
-
-module.exports = "var __extends = (this && this.__extends) || function (d, b) {\n    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];\n    function __() { this.constructor = d; }\n    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n};\nvar Spriter;\n(function (Spriter) {\n    var IdNameMap = (function () {\n        function IdNameMap() {\n            this._items = [];\n            this._itemNames = []; // keys are names and returned value is index into _tems array\n        }\n        // -------------------------------------------------------------------------\n        IdNameMap.prototype.add = function (item, id, name) {\n            if (id === undefined) {\n                id = this._items.length;\n            }\n            if (name === undefined || name === null) {\n                name = \"item_\" + id;\n            }\n            this._items[id] = item;\n            this._itemNames[name] = id;\n        };\n        // -------------------------------------------------------------------------\n        IdNameMap.prototype.getById = function (id) {\n            return this._items[id];\n        };\n        // -------------------------------------------------------------------------\n        IdNameMap.prototype.getByName = function (name) {\n            var id = this._itemNames[name];\n            // TODO remove\n            if (typeof id !== \"number\") {\n                console.warn(\"item \" + name + \"  not found!\");\n            }\n            return (typeof id === \"number\") ? this._items[id] : null;\n        };\n        Object.defineProperty(IdNameMap.prototype, \"length\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._items.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return IdNameMap;\n    }());\n    Spriter.IdNameMap = IdNameMap;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var LineStepper = (function () {\n        // -------------------------------------------------------------------------\n        function LineStepper() {\n            this.reset();\n        }\n        Object.defineProperty(LineStepper.prototype, \"current\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._line.at(this._currentIndex);\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"currentIndex\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._currentIndex;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"next\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._line.at(this._nextIndex);\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"nextIndex\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._nextIndex;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"lastTime\", {\n            // -------------------------------------------------------------------------\n            set: function (time) {\n                this._lastTime = time;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"line\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._line;\n            },\n            // -------------------------------------------------------------------------\n            set: function (line) {\n                this._line = line;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        LineStepper.prototype.reset = function () {\n            this._lastTime = -1;\n            this._currentIndex = -1;\n            this._nextIndex = 0;\n        };\n        // -------------------------------------------------------------------------\n        LineStepper.prototype.step = function (time) {\n            var index = this._nextIndex;\n            // get key at current position\n            var key = this._line.keys[index];\n            var keyTime = key.time;\n            // if current key time is bigger than time for stepTo, then we must first go till end of timeline and then continue from beginning\n            var loop = time < this._lastTime;\n            if ((!loop && (keyTime > this._lastTime && keyTime <= time)) ||\n                (loop && (keyTime > this._lastTime || keyTime <= time))) {\n                this._lastTime = keyTime;\n                this._currentIndex = index;\n                if ((++index) >= this._line.keys.length) {\n                    index = 0;\n                }\n                this._nextIndex = index;\n                return key;\n            }\n            return null;\n        };\n        return LineStepper;\n    }());\n    Spriter.LineStepper = LineStepper;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var NodeListBin = (function () {\n        // -------------------------------------------------------------------------\n        function NodeListBin(spriterBinFile, nodeList) {\n            this._file = spriterBinFile;\n            this._nodeList = nodeList;\n        }\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.length = function () {\n            return this._nodeList.length;\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.processed = function () {\n            this._file.processed();\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getChildNodes = function (index, elementName) {\n            return this._file.getNodesForElement(this._nodeList[index], elementName);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getFolder = function (index) {\n            return this._file.getFolder(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getFile = function (index) {\n            return this._file.getFile(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTag = function (index) {\n            return this._file.getTag(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getEntity = function (index) {\n            return this._file.getEntity(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getObjectInfo = function (index) {\n            return this._file.getObjectInfo(this._nodeList[index], index);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getCharMap = function (index) {\n            return this._file.getCharMap(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getCharMapEntry = function (index, charMap, spriter) {\n            this._file.getCharMapEntry(this._nodeList[index], charMap, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getVariable = function (index) {\n            return this._file.getVariable(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getAnimation = function (index) {\n            return this._file.getAnimation(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getMainline = function (index) {\n            return this._file.getBaseline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getMainlineKey = function (index) {\n            return this._file.getMainlineKey(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getRef = function (index) {\n            return this._file.getRef(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTimeline = function (index) {\n            return this._file.getTimeline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getSoundline = function (index) {\n            return this._file.getBaseline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getEventline = function (index) {\n            return this._file.getBaseline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTagline = function (index) {\n            return this._file.getBaseline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getVarline = function (index) {\n            return this._file.getVarline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getKey = function (index) {\n            return this._file.getKey(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTagKey = function (index) {\n            return this._file.getTagKey(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getVariableKey = function (index, type) {\n            return this._file.getVariableKey(this._nodeList[index], type);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTimelineKey = function (index, spriter) {\n            return this._file.getTimelineKey(this._nodeList[index], index, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTagChanges = function (spriter) {\n            var tags = 0;\n            for (var i = 0; i < this.length(); i++) {\n                var tagIndex = this._file.getTagChange(this._nodeList[i]);\n                tags |= (1 << tagIndex);\n            }\n            return tags;\n        };\n        return NodeListBin;\n    }());\n    Spriter.NodeListBin = NodeListBin;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var NodeListJSON = (function () {\n        // -------------------------------------------------------------------------\n        function NodeListJSON(spriterJSONFile, nodeList) {\n            this._file = spriterJSONFile;\n            this._nodeList = nodeList;\n            if (!Array.isArray(nodeList)) {\n                nodeList.length = 1;\n            }\n        }\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.length = function () {\n            return this._nodeList.length;\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.processed = function () {\n            this._file.processed();\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getNode = function (index) {\n            if (Array.isArray(this._nodeList)) {\n                return this._nodeList[index];\n            }\n            else {\n                return this._nodeList;\n            }\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getChildNodes = function (index, elementName) {\n            return this._file.getNodesForElement(this.getNode(index), elementName);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getFolder = function (index) {\n            return this._file.getFolder(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getFile = function (index) {\n            return this._file.getFile(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTag = function (index) {\n            return this._file.getTag(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getEntity = function (index) {\n            return this._file.getEntity(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getObjectInfo = function (index) {\n            return this._file.getObjectInfo(this.getNode(index), index);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getCharMap = function (index) {\n            return this._file.getCharMap(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getCharMapEntry = function (index, charMap, spriter) {\n            this._file.getCharMapEntry(this.getNode(index), charMap, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getVariable = function (index) {\n            return this._file.getVariable(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getAnimation = function (index) {\n            return this._file.getAnimation(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getMainline = function (index) {\n            return this._file.getBaseline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getMainlineKey = function (index) {\n            return this._file.getMainlineKey(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getRef = function (index) {\n            return this._file.getRef(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTimeline = function (index) {\n            return this._file.getTimeline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getSoundline = function (index) {\n            return this._file.getBaseline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getEventline = function (index) {\n            return this._file.getBaseline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTagline = function (index) {\n            return this._file.getBaseline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getVarline = function (index) {\n            return this._file.getVarline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getKey = function (index) {\n            return this._file.getKey(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTagKey = function (index) {\n            return this._file.getTagKey(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getVariableKey = function (index, type) {\n            return this._file.getVariableKey(this.getNode(index), type);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTimelineKey = function (index, spriter) {\n            return this._file.getTimelineKey(this.getNode(index), index, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTagChanges = function (spriter) {\n            var tags = 0;\n            for (var i = 0; i < this.length(); i++) {\n                var tagIndex = this._file.getTagChange(this.getNode(i));\n                tags |= (1 << tagIndex);\n            }\n            return tags;\n        };\n        return NodeListJSON;\n    }());\n    Spriter.NodeListJSON = NodeListJSON;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var NodeListXml = (function () {\n        // -------------------------------------------------------------------------\n        function NodeListXml(spriterXmlFile, nodeList) {\n            this._file = spriterXmlFile;\n            this._nodeList = nodeList;\n        }\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.length = function () {\n            return this._nodeList.length;\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.processed = function () {\n            this._file.processed();\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getChildNodes = function (index, elementName) {\n            return this._file.getNodesForElement(this._nodeList.item(index), elementName);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getFolder = function (index) {\n            return this._file.getFolder(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getFile = function (index) {\n            return this._file.getFile(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTag = function (index) {\n            return this._file.getTag(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getEntity = function (index) {\n            return this._file.getEntity(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getObjectInfo = function (index) {\n            return this._file.getObjectInfo(this._nodeList.item(index), index);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getCharMap = function (index) {\n            return this._file.getCharMap(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getCharMapEntry = function (index, charMap, spriter) {\n            this._file.getCharMapEntry(this._nodeList.item(index), charMap, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getVariable = function (index) {\n            return this._file.getVariable(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getAnimation = function (index) {\n            return this._file.getAnimation(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getMainline = function (index) {\n            return this._file.getBaseline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getMainlineKey = function (index) {\n            return this._file.getMainlineKey(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getRef = function (index) {\n            return this._file.getRef(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTimeline = function (index) {\n            return this._file.getTimeline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getSoundline = function (index) {\n            return this._file.getBaseline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getEventline = function (index) {\n            return this._file.getBaseline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTagline = function (index) {\n            return this._file.getBaseline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getVarline = function (index) {\n            return this._file.getVarline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getKey = function (index) {\n            return this._file.getKey(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTagKey = function (index) {\n            return this._file.getTagKey(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getVariableKey = function (index, type) {\n            return this._file.getVariableKey(this._nodeList.item(index), type);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTimelineKey = function (index, spriter) {\n            return this._file.getTimelineKey(this._nodeList.item(index), index, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTagChanges = function (spriter) {\n            var tags = 0;\n            for (var i = 0; i < this.length(); i++) {\n                var tagIndex = this._file.getTagChange(this._nodeList.item(i));\n                tags |= (1 << tagIndex);\n            }\n            return tags;\n        };\n        return NodeListXml;\n    }());\n    Spriter.NodeListXml = NodeListXml;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    (function (eFileType) {\n        eFileType[eFileType[\"XML\"] = 0] = \"XML\";\n        eFileType[eFileType[\"JSON\"] = 1] = \"JSON\";\n        eFileType[eFileType[\"BIN\"] = 2] = \"BIN\";\n    })(Spriter.eFileType || (Spriter.eFileType = {}));\n    var eFileType = Spriter.eFileType;\n    (function (eImageNameType) {\n        eImageNameType[eImageNameType[\"ORIGINAL\"] = 0] = \"ORIGINAL\";\n        eImageNameType[eImageNameType[\"NAME_ONLY\"] = 1] = \"NAME_ONLY\";\n        eImageNameType[eImageNameType[\"NAME_AND_EXTENSION\"] = 2] = \"NAME_AND_EXTENSION\";\n        eImageNameType[eImageNameType[\"FULL_PATH_NO_EXTENSION\"] = 3] = \"FULL_PATH_NO_EXTENSION\";\n    })(Spriter.eImageNameType || (Spriter.eImageNameType = {}));\n    var eImageNameType = Spriter.eImageNameType;\n    var SpriterFile = (function () {\n        // -------------------------------------------------------------------------\n        function SpriterFile(options) {\n            var hasOptions = typeof options !== \"undefined\" && options !== null;\n            // type of image names (path / name / extension)\n            this._imageNameType = (hasOptions && typeof options.imageNameType !== \"undefined\") ? options.imageNameType : eImageNameType.NAME_ONLY;\n            // min defs are present?\n            this._minDefs = (hasOptions && typeof options.minDefs !== \"undefined\") ? options.minDefs : null;\n        }\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.processed = function () {\n            this.popMinDefsStack();\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.setMinimized = function (minimized) {\n            this._minimized = minimized;\n            if (minimized) {\n                this._minDefsStack = [];\n                if (this._minDefs === null) {\n                    console.error(\"Spriter file is minimized - you must provide object with name definitions\");\n                    return;\n                }\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.getFileName = function (path) {\n            var name;\n            switch (this._imageNameType) {\n                case eImageNameType.NAME_ONLY:\n                    name = (path.split('\\\\').pop().split('/').pop().split('.'))[0];\n                    break;\n                case eImageNameType.NAME_AND_EXTENSION:\n                    name = path.split('\\\\').pop().split('/').pop();\n                    break;\n                case eImageNameType.FULL_PATH_NO_EXTENSION:\n                    name = (path.split('.'))[0];\n                    break;\n                case eImageNameType.ORIGINAL:\n                    name = path;\n                    break;\n            }\n            return name;\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.translateElementName = function (elementName) {\n            if (this._minimized) {\n                if (this._minDefs[\"name\"] !== elementName) {\n                    console.warn(\"current definition is \" + this._minDefs[\"name\"]);\n                    return elementName;\n                }\n                if (this._minDefs[\"minName\"] !== null) {\n                    elementName = this._minDefs[\"minName\"];\n                }\n            }\n            return elementName;\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.translateChildElementName = function (elementName) {\n            if (this._minimized && this._minDefs !== null) {\n                var elements = this._minDefs[\"childElements\"];\n                if (elements !== null) {\n                    elementName = elements[elementName] === null ? elementName : elements[elementName][\"minName\"];\n                }\n            }\n            return elementName;\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.translateAttributeName = function (attributeName) {\n            if (this._minimized && this._minDefs !== null) {\n                var attributes = this._minDefs[\"attributes\"];\n                if (attributes !== null) {\n                    attributeName = attributes[attributeName] === null ? attributeName : attributes[attributeName];\n                }\n            }\n            return attributeName;\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.setMinDefsToElementName = function (tagName) {\n            if (this._minimized) {\n                // save current level of min defs\n                this._minDefsStack.push(this._minDefs);\n                // get child definition and set it as current\n                var minDef = this._minDefs[\"childElements\"][tagName];\n                this._minDefs = minDef;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.popMinDefsStack = function () {\n            if (this._minimized) {\n                this._minDefs = this._minDefsStack.pop();\n            }\n        };\n        return SpriterFile;\n    }());\n    Spriter.SpriterFile = SpriterFile;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"SpriterFile.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var SpriterBin = (function (_super) {\n        __extends(SpriterBin, _super);\n        // -------------------------------------------------------------------------\n        function SpriterBin(binData) {\n            _super.call(this, null);\n            this._elements = {\n                \"spriter_data\": 1,\n                \"folder\": 2,\n                \"file\": 3,\n                \"entity\": 4,\n                \"obj_info\": 5,\n                \"frames\": 6,\n                \"i\": 7,\n                \"animation\": 8,\n                \"mainline\": 9,\n                \"key\": 10,\n                \"bone_ref\": 11,\n                \"object_ref\": 12,\n                \"timeline\": 13,\n                \"bone\": 14,\n                \"object\": 15\n            };\n            this._smallOffset = false;\n            this._bin = new DataView(binData);\n            this._smallOffset = this._bin.getUint8(0) === 1;\n        }\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getType = function () {\n            return Spriter.eFileType.BIN;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readUint8 = function () {\n            return this._bin.getUint8(this._tmpPosition++);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readInt8 = function () {\n            return this._bin.getInt8(this._tmpPosition++);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readUint16 = function () {\n            var value = this._bin.getUint16(this._tmpPosition, true);\n            this._tmpPosition += 2;\n            return value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readInt16 = function () {\n            var value = this._bin.getInt16(this._tmpPosition, true);\n            this._tmpPosition += 2;\n            return value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readUint32 = function () {\n            var value = this._bin.getUint32(this._tmpPosition, true);\n            this._tmpPosition += 4;\n            return value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readInt32 = function () {\n            var value = this._bin.getInt32(this._tmpPosition, true);\n            this._tmpPosition += 4;\n            return value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readFixed16_16 = function () {\n            var value = this._bin.getInt32(this._tmpPosition, true);\n            this._tmpPosition += 4;\n            return value / 65536;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readFixed1_7 = function () {\n            var value = this._bin.getInt8(this._tmpPosition++) & 0xFF;\n            return value / 128;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readString = function () {\n            var chars = [];\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                chars.push(this._bin.getUint8(this._tmpPosition++));\n            }\n            return String.fromCharCode.apply(null, chars);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getNodes = function (nodeName) {\n            return new Spriter.NodeListBin(this, this.getSubNodesOfElementType(1, this._elements[nodeName]));\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getNodesForElement = function (elementPosition, nodeName) {\n            return new Spriter.NodeListBin(this, this.getSubNodesOfElementType(elementPosition, this._elements[nodeName]));\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getSubNodesOfElementType = function (positon, elementType) {\n            var result = [];\n            var subelementsCount = this._bin.getUint8(positon + 1);\n            positon += 2;\n            for (var i = 0; i < subelementsCount; i++) {\n                var subelementOffset = this._smallOffset ? this._bin.getUint16(positon + i * 2, true) : this._bin.getUint32(positon + i * 4, true);\n                var subelementType = this._bin.getUint8(positon + subelementOffset);\n                if (subelementType === elementType) {\n                    result.push(positon + subelementOffset);\n                }\n            }\n            return result;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getAttribsPosition = function (position) {\n            var subelementsCount = this._bin.getUint8(position + 1);\n            return position + 2 + subelementsCount * (this._smallOffset ? 2 : 4);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getFolder = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_FOLDER_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_FOLDER_NAME:\n                        name = this.readString();\n                        break;\n                }\n            }\n            return new Spriter.Folder(id, name);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getFile = function (position) {\n            console.log(\"skip sound loading\");\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            var pivotX = 0;\n            var pivotY = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_FILE_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_FILE_NAME:\n                        name = this.readString();\n                        break;\n                    case SpriterBin.ATTR_FILE_PIVOT_X:\n                        pivotX = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_FILE_PIVOT_Y:\n                        pivotY = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_FILE_WIDTH:\n                    case SpriterBin.ATTR_FILE_HEIGHT:\n                        // ignore - just skip\n                        this._tmpPosition += 2;\n                        break;\n                }\n            }\n            return new Spriter.File(id, this.getFileName(name), pivotX, 1 - pivotY);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTag = function (position) {\n            console.error(\"implement loading Tag\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getEntity = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_ENTITY_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_ENTITY_NAME:\n                        name = this.readString();\n                        break;\n                }\n            }\n            return new Spriter.Entity(id, name);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getObjectInfo = function (position, index) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var name = \"\";\n            var type = 0 /* SPRITE */;\n            var width = 0;\n            var height = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_OBJ_INFO_NAME:\n                        name = this.readString();\n                        break;\n                    case SpriterBin.ATTR_OBJ_INFO_TYPE:\n                        if (this.readUint8() === 1) {\n                            type = 1 /* BONE */;\n                        }\n                        break;\n                    case SpriterBin.ATTR_OBJ_INFO_WIDTH:\n                        width = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_OBJ_INFO_HEIGHT:\n                        height = this.readFixed16_16();\n                        break;\n                }\n            }\n            console.error(\"add loading of pivots\");\n            return new Spriter.ObjectInfo(index, name, type, width, height, 0, 0);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getCharMap = function (position) {\n            console.error(\"add loading of charmaps\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getCharMapEntry = function (position, charMap, spriter) {\n            console.error(\"add loading of charmap entries\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getVariable = function (position) {\n            console.error(\"add loading of variables\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getAnimation = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            var length = 0;\n            var interval = 0;\n            var looping = Spriter.eAnimationLooping.LOOPING;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_ANIMATION_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_ANIMATION_NAME:\n                        name = this.readString();\n                        break;\n                    case SpriterBin.ATTR_ANIMATION_LENGTH:\n                        length = this.readUint32();\n                        break;\n                    case SpriterBin.ATTR_ANIMATION_INTERVAL:\n                        // ignore - skip\n                        this._tmpPosition += 2;\n                        break;\n                    case SpriterBin.ATTR_ANIMATION_LOOPING:\n                        looping = (this.readUint8() === 1) ? Spriter.eAnimationLooping.LOOPING : Spriter.eAnimationLooping.NO_LOOPING;\n                        break;\n                }\n            }\n            return new Spriter.Animation(id, name, length, looping);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getMainlineKey = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var time = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_MAINLINE_KEY_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_MAINLINE_KEY_TIME:\n                        time = this.readUint32();\n                        break;\n                }\n            }\n            return new Spriter.KeyMainline(id, time);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getRef = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var parent = -1;\n            var timeline = 0;\n            var key = 0;\n            var z_index = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_BONE_REF_ID:\n                    case SpriterBin.ATTR_OBJ_REF_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_BONE_REF_PARENT:\n                    case SpriterBin.ATTR_OBJ_REF_PARENT:\n                        parent = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_BONE_REF_TIMELINE:\n                    case SpriterBin.ATTR_OBJ_REF_TIMELINE:\n                        timeline = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_BONE_REF_KEY:\n                    case SpriterBin.ATTR_OBJ_REF_KEY:\n                        key = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_Z:\n                        z_index = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_NAME:\n                        // waste\n                        this.readString();\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_FOLDER:\n                    case SpriterBin.ATTR_OBJ_REF_FILE:\n                        ++this._tmpPosition;\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_ABS_X:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_Y:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_PIVOT_X:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_PIVOT_Y:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_SCALE_X:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_SCALE_Y:\n                    case SpriterBin.ATTR_OBJ_REF_ANGLE:\n                        // skip\n                        this._tmpPosition += 4;\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_ALPHA:\n                        // skip\n                        ++this._tmpPosition;\n                        break;\n                }\n            }\n            return new Spriter.Ref(id, parent, timeline, key, z_index);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTimeline = function (position) {\n            console.error(\"add loading of all types of objects\");\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            var obj = 0;\n            var type = 0 /* SPRITE */;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_TIMELINE_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_NAME:\n                        name = this.readString();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_OBJ:\n                        obj = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_OBJ_TYPE:\n                        if (this.readUint8() === 1) {\n                            type = 1 /* BONE */;\n                        }\n                        break;\n                }\n            }\n            return new Spriter.Timeline(id, name, type, obj);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getBaseline = function (position) {\n            console.error(\"add loading of baselines\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getVarline = function (position) {\n            console.error(\"add loading of varlines\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getKey = function (position) {\n            console.error(\"add loading of keys\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTagKey = function (position) {\n            console.error(\"add loading of tag keys\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getVariableKey = function (position, type) {\n            console.error(\"add loading of variable keys\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTimelineKey = function (position, index, spriter) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var time = 0;\n            var spin = 1;\n            // curve and params\n            var curve = 0 /* LINEAR */;\n            var c1 = 0;\n            var c2 = 0;\n            var c3 = 0;\n            var c4 = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_TIMELINE_KEY_ID:\n                        // skip\n                        ++this._tmpPosition;\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_TIME:\n                        time = this.readUint32();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_SPIN:\n                        spin = this.readInt8();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_CURVE:\n                        curve = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_C1:\n                        c1 = this.readFixed1_7();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_C2:\n                        c2 = this.readFixed1_7();\n                        break;\n                }\n            }\n            // get child element\n            position += 2;\n            var offset = position + (this._smallOffset ? this._bin.getUint16(position, true) : this._bin.getUint32(position, true));\n            var elementType = this._bin.getUint8(offset);\n            var key = null;\n            var keyDataElm = null;\n            var sprite = false;\n            if (elementType === 14 /* bone */) {\n                key = new Spriter.KeyBone(index, time, spin);\n            }\n            else if (elementType === 15 /* object */) {\n                key = new Spriter.KeyObject(index, time, spin);\n                sprite = true;\n            }\n            // other curve than linear?\n            if (curve !== 0 /* LINEAR */) {\n                key.setCurve(curve, c1, c2, c3, c4);\n            }\n            this._tmpPosition = this.getAttribsPosition(offset);\n            // spatial info\n            var info = key.info;\n            info.x = 0; //this.parseFloat(keyDataElm, \"x\");\n            info.y = 0; //-this.parseFloat(keyDataElm, \"y\");\n            info.scaleX = 1; // this.parseFloat(keyDataElm, \"scale_x\", 1);\n            info.scaleY = 1; //this.parseFloat(keyDataElm, \"scale_y\", 1);\n            info.angle = 0; //360 - this.parseFloat(keyDataElm, \"angle\");\n            info.alpha = 1; //this.parseFloat(keyDataElm, \"a\", 1);\n            var pivotX = 0;\n            var hasPivotX = false;\n            var pivotY = 0;\n            var hasPivotY = false;\n            var folder = 0;\n            var file = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_BONE_X:\n                    case SpriterBin.ATTR_OBJ_X:\n                        info.x = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_BONE_Y:\n                    case SpriterBin.ATTR_OBJ_Y:\n                        info.y = -this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_BONE_ANGLE:\n                    case SpriterBin.ATTR_OBJ_ANGLE:\n                        info.angle = 360 - this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_BONE_SCALE_X:\n                    case SpriterBin.ATTR_OBJ_SCALE_X:\n                        info.scaleX = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_BONE_SCALE_Y:\n                    case SpriterBin.ATTR_OBJ_SCALE_Y:\n                        info.scaleY = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_OBJ_FOLDER:\n                        folder = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_OBJ_FILE:\n                        file = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_OBJ_PIVOT_X:\n                        pivotX = this.readFixed16_16();\n                        hasPivotX = true;\n                        break;\n                    case SpriterBin.ATTR_OBJ_PIVOT_Y:\n                        pivotY = this.readFixed16_16();\n                        hasPivotY = true;\n                        break;\n                    case SpriterBin.ATTR_OBJ_ALPHA:\n                        info.alpha = this.readFixed1_7();\n                        break;\n                }\n            }\n            if (sprite) {\n                key.setFolderAndFile(folder, file);\n                // set pivot in spatial info different from default (based on pivot in file)\n                var fileObj = spriter.getFolderById(folder).getFileById(file);\n                info.pivotX = hasPivotX ? pivotX : fileObj.pivotX;\n                // 1 - to flip Y, default anchor is already flipped, so it needs to be flipped back to avoid double flipping\n                info.pivotY = 1 - (hasPivotY ? pivotY : 1 - fileObj.pivotY);\n            }\n            return key;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTagChange = function (position) {\n            console.error(\"add loading of tag changes\");\n            return null;\n        };\n        // spriter data\n        SpriterBin.ATTR_VERSION = 0;\n        SpriterBin.ATTR_GENERATOR = 1;\n        SpriterBin.ATTR_GENERATOR_VERSION = 2;\n        // folder\n        SpriterBin.ATTR_FOLDER_ID = 0;\n        SpriterBin.ATTR_FOLDER_NAME = 1;\n        // file\n        SpriterBin.ATTR_FILE_ID = 0;\n        SpriterBin.ATTR_FILE_NAME = 1;\n        SpriterBin.ATTR_FILE_WIDTH = 2;\n        SpriterBin.ATTR_FILE_HEIGHT = 3;\n        SpriterBin.ATTR_FILE_PIVOT_X = 4;\n        SpriterBin.ATTR_FILE_PIVOT_Y = 5;\n        // entity\n        SpriterBin.ATTR_ENTITY_ID = 0;\n        SpriterBin.ATTR_ENTITY_NAME = 1;\n        // obj_info\n        SpriterBin.ATTR_OBJ_INFO_NAME = 0;\n        SpriterBin.ATTR_OBJ_INFO_TYPE = 1;\n        SpriterBin.ATTR_OBJ_INFO_WIDTH = 2;\n        SpriterBin.ATTR_OBJ_INFO_HEIGHT = 3;\n        // frames\n        SpriterBin.ATTR_FRAMES_I_FOLDER = 0;\n        SpriterBin.ATTR_FRAMES_I_FILE = 1;\n        // animation\n        SpriterBin.ATTR_ANIMATION_ID = 0;\n        SpriterBin.ATTR_ANIMATION_NAME = 1;\n        SpriterBin.ATTR_ANIMATION_LENGTH = 2;\n        SpriterBin.ATTR_ANIMATION_INTERVAL = 3;\n        SpriterBin.ATTR_ANIMATION_LOOPING = 4;\n        // key\n        SpriterBin.ATTR_MAINLINE_KEY_ID = 0;\n        SpriterBin.ATTR_MAINLINE_KEY_TIME = 1;\n        // bone_ref\n        SpriterBin.ATTR_BONE_REF_ID = 0;\n        SpriterBin.ATTR_BONE_REF_PARENT = 1;\n        SpriterBin.ATTR_BONE_REF_TIMELINE = 2;\n        SpriterBin.ATTR_BONE_REF_KEY = 3;\n        // object_ref\n        SpriterBin.ATTR_OBJ_REF_ID = 4;\n        SpriterBin.ATTR_OBJ_REF_PARENT = 5;\n        SpriterBin.ATTR_OBJ_REF_TIMELINE = 6;\n        SpriterBin.ATTR_OBJ_REF_KEY = 7;\n        SpriterBin.ATTR_OBJ_REF_NAME = 8;\n        SpriterBin.ATTR_OBJ_REF_Z = 9;\n        SpriterBin.ATTR_OBJ_REF_FOLDER = 10;\n        SpriterBin.ATTR_OBJ_REF_FILE = 11;\n        SpriterBin.ATTR_OBJ_REF_ABS_X = 12;\n        SpriterBin.ATTR_OBJ_REF_ABS_Y = 13;\n        SpriterBin.ATTR_OBJ_REF_ABS_PIVOT_X = 14;\n        SpriterBin.ATTR_OBJ_REF_ABS_PIVOT_Y = 15;\n        SpriterBin.ATTR_OBJ_REF_ABS_SCALE_X = 16;\n        SpriterBin.ATTR_OBJ_REF_ABS_SCALE_Y = 17;\n        SpriterBin.ATTR_OBJ_REF_ANGLE = 18;\n        SpriterBin.ATTR_OBJ_REF_ALPHA = 19;\n        // timeline\n        SpriterBin.ATTR_TIMELINE_ID = 0;\n        SpriterBin.ATTR_TIMELINE_NAME = 1;\n        SpriterBin.ATTR_TIMELINE_OBJ = 2;\n        SpriterBin.ATTR_TIMELINE_OBJ_TYPE = 3;\n        // key\n        SpriterBin.ATTR_TIMELINE_KEY_ID = 0;\n        SpriterBin.ATTR_TIMELINE_KEY_TIME = 1;\n        SpriterBin.ATTR_TIMELINE_KEY_SPIN = 2;\n        SpriterBin.ATTR_TIMELINE_KEY_CURVE = 3;\n        SpriterBin.ATTR_TIMELINE_KEY_C1 = 4;\n        SpriterBin.ATTR_TIMELINE_KEY_C2 = 5;\n        // bone\n        SpriterBin.ATTR_BONE_X = 0;\n        SpriterBin.ATTR_BONE_Y = 1;\n        SpriterBin.ATTR_BONE_ANGLE = 2;\n        SpriterBin.ATTR_BONE_SCALE_X = 3;\n        SpriterBin.ATTR_BONE_SCALE_Y = 4;\n        // object\n        SpriterBin.ATTR_OBJ_FOLDER = 5;\n        SpriterBin.ATTR_OBJ_FILE = 6;\n        SpriterBin.ATTR_OBJ_X = 7;\n        SpriterBin.ATTR_OBJ_Y = 8;\n        SpriterBin.ATTR_OBJ_SCALE_X = 9;\n        SpriterBin.ATTR_OBJ_SCALE_Y = 10;\n        SpriterBin.ATTR_OBJ_PIVOT_X = 11;\n        SpriterBin.ATTR_OBJ_PIVOT_Y = 12;\n        SpriterBin.ATTR_OBJ_ANGLE = 13;\n        SpriterBin.ATTR_OBJ_ALPHA = 14;\n        return SpriterBin;\n    }(Spriter.SpriterFile));\n    Spriter.SpriterBin = SpriterBin;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"SpriterFile.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var SpriterJSON = (function (_super) {\n        __extends(SpriterJSON, _super);\n        // -------------------------------------------------------------------------\n        function SpriterJSON(JSONData, options) {\n            _super.call(this, options);\n            this._json = JSONData;\n            var minimized = JSONData[\"min\"] !== undefined;\n            this.setMinimized(minimized);\n        }\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getType = function () {\n            return Spriter.eFileType.JSON;\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.parseInt = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = 0; }\n            var value = element[this.translateAttributeName(attributeName)];\n            if (value === undefined) {\n                return defaultValue;\n            }\n            return typeof (value) === \"number\" ? value : parseInt(value);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.parseFloat = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = 0; }\n            var value = element[this.translateAttributeName(attributeName)];\n            if (value === undefined) {\n                return defaultValue;\n            }\n            return typeof (value) === \"number\" ? value : parseFloat(value);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.parseBoolean = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = false; }\n            var value = element[this.translateAttributeName(attributeName)];\n            if (value === undefined) {\n                return defaultValue;\n            }\n            return typeof (value) === \"boolean\" ? value : (value === \"true\");\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.parseString = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = \"\"; }\n            var value = element[this.translateAttributeName(attributeName)];\n            return value === undefined ? defaultValue : value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getNodes = function (nodeName) {\n            this.setMinDefsToElementName(nodeName);\n            var translatedName = this.translateElementName(nodeName);\n            return new Spriter.NodeListJSON(this, (this._json[translatedName] !== undefined) ? this._json[translatedName] : []);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getNodesForElement = function (element, nodeName) {\n            this.setMinDefsToElementName(nodeName);\n            var translatedName = this.translateElementName(nodeName);\n            return new Spriter.NodeListJSON(this, (element[translatedName] !== undefined) ? element[translatedName] : []);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getFolder = function (element) {\n            return new Spriter.Folder(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getFile = function (element) {\n            if (element[\"type\"] !== undefined && element[\"type\"] === \"sound\") {\n                return null;\n            }\n            return new Spriter.File(this.parseInt(element, \"id\"), this.getFileName(this.parseString(element, \"name\")), this.parseFloat(element, \"pivot_x\"), 1 - this.parseFloat(element, \"pivot_y\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTag = function (element) {\n            return new Spriter.Item(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getEntity = function (element) {\n            return new Spriter.Entity(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getObjectInfo = function (element, index) {\n            return new Spriter.ObjectInfo(index, this.parseString(element, \"name\"), Spriter.Types.getObjectTypeForName(this.parseString(element, \"type\")), this.parseFloat(element, \"w\"), this.parseFloat(element, \"h\"), this.parseFloat(element, \"pivot_x\"), this.parseFloat(element, \"pivot_y\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getCharMap = function (element) {\n            return new Spriter.CharMap(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getCharMapEntry = function (element, charMap, spriter) {\n            var sourceName = spriter.getFolderById(this.parseInt(element, \"folder\")).\n                getFileById(this.parseInt(element, \"file\")).name;\n            var target = null;\n            if (element[\"target_folder\"] !== undefined && element[\"target_file\"] !== undefined) {\n                target = spriter.getFolderById(this.parseInt(element, \"target_folder\")).\n                    getFileById(this.parseInt(element, \"target_file\"));\n            }\n            charMap.put(sourceName, target);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getVariable = function (element) {\n            var type = Spriter.Types.getVariableTypeForName(this.parseString(element, \"type\"));\n            return new Spriter.Variable(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), type, (type === 2 /* STRING */) ? this.parseString(element, \"default\") : this.parseFloat(element, \"default\", 0));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getAnimation = function (element) {\n            return new Spriter.Animation(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), this.parseFloat(element, \"length\"), this.parseBoolean(element, \"looping\", true) === true ? Spriter.eAnimationLooping.LOOPING : Spriter.eAnimationLooping.NO_LOOPING);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getMainlineKey = function (element) {\n            return new Spriter.KeyMainline(this.parseInt(element, \"id\"), this.parseFloat(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getRef = function (element) {\n            return new Spriter.Ref(this.parseInt(element, \"id\"), this.parseInt(element, \"parent\", -1), this.parseInt(element, \"timeline\"), this.parseInt(element, \"key\"), this.parseInt(element, \"z_index\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTimeline = function (element) {\n            return new Spriter.Timeline(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), Spriter.Types.getObjectTypeForName(this.parseString(element, \"object_type\", \"sprite\")), this.parseInt(element, \"obj\", -1));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getBaseline = function (element) {\n            return new Spriter.Baseline(this.parseInt(element, \"id\"), this.parseString(element, \"name\", null));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getVarline = function (element) {\n            return new Spriter.Varline(this.parseInt(element, \"id\"), this.parseInt(element, \"def\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getKey = function (element) {\n            return new Spriter.Key(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTagKey = function (element) {\n            return new Spriter.KeyTag(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getVariableKey = function (element, type) {\n            return new Spriter.KeyVariable(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"), (type === 2 /* STRING */) ? this.parseString(element, \"val\") : this.parseFloat(element, \"val\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTimelineKey = function (element, index, spriter) {\n            var time = this.parseInt(element, \"time\");\n            var spin = this.parseInt(element, \"spin\", 1);\n            // curve and params\n            var curve = this.parseString(element, \"curve_type\", \"linear\");\n            var c1 = this.parseFloat(element, \"c1\", 0);\n            var c2 = this.parseFloat(element, \"c2\", 0);\n            var c3 = this.parseFloat(element, \"c3\", 0);\n            var c4 = this.parseFloat(element, \"c4\", 0);\n            // sprite or bone key?\n            var boneTag = this.translateChildElementName(\"bone\");\n            var objectTag = this.translateChildElementName(\"object\");\n            var key = null;\n            var keyDataElm = null;\n            var sprite = false;\n            if (element[boneTag] !== undefined) {\n                keyDataElm = element[boneTag];\n                key = new Spriter.KeyBone(index, time, spin);\n                this.setMinDefsToElementName(\"bone\");\n            }\n            else if (element[objectTag] !== undefined) {\n                keyDataElm = element[objectTag];\n                key = new Spriter.KeyObject(index, time, spin);\n                this.setMinDefsToElementName(\"object\");\n                sprite = true;\n            }\n            // other curve than linear?\n            if (curve !== \"linear\") {\n                key.setCurve(Spriter.Types.getCurveTypeForName(curve), c1, c2, c3, c4);\n            }\n            // spatial info\n            var info = key.info;\n            info.x = this.parseFloat(keyDataElm, \"x\");\n            info.y = -this.parseFloat(keyDataElm, \"y\");\n            info.scaleX = this.parseFloat(keyDataElm, \"scale_x\", 1);\n            info.scaleY = this.parseFloat(keyDataElm, \"scale_y\", 1);\n            info.angle = 360 - this.parseFloat(keyDataElm, \"angle\");\n            info.alpha = this.parseFloat(keyDataElm, \"a\", 1);\n            if (sprite) {\n                // sprite specific - set file and folder\n                var folderId = this.parseInt(keyDataElm, \"folder\");\n                var fileId = this.parseInt(keyDataElm, \"file\");\n                key.setFolderAndFile(folderId, fileId);\n                // set pivot in spatial info different from default (based on pivot in file)\n                var file = spriter.getFolderById(folderId).getFileById(fileId);\n                info.pivotX = this.parseFloat(keyDataElm, \"pivot_x\", file.pivotX);\n                // 1 - to flip Y, default anchor is already flipped, so it needs to be flipped back to avoid double flipping\n                info.pivotY = 1 - this.parseFloat(keyDataElm, \"pivot_y\", 1 - file.pivotY);\n            }\n            this.popMinDefsStack();\n            return key;\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTagChange = function (element) {\n            return this.parseInt(element, \"t\");\n        };\n        return SpriterJSON;\n    }(Spriter.SpriterFile));\n    Spriter.SpriterJSON = SpriterJSON;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"SpriterFile.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var SpriterXml = (function (_super) {\n        __extends(SpriterXml, _super);\n        // -------------------------------------------------------------------------\n        function SpriterXml(xmlData, options) {\n            _super.call(this, options);\n            this._xml = xmlData;\n            var minimized = xmlData.documentElement.hasAttribute(\"min\");\n            this.setMinimized(minimized);\n        }\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getType = function () {\n            return Spriter.eFileType.XML;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.parseInt = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = 0; }\n            var value = element.getAttribute(this.translateAttributeName(attributeName));\n            return value !== null ? parseInt(value) : defaultValue;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.parseFloat = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = 0; }\n            var value = element.getAttribute(this.translateAttributeName(attributeName));\n            return value !== null ? parseFloat(value) : defaultValue;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.parseString = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = \"\"; }\n            var value = element.getAttribute(this.translateAttributeName(attributeName));\n            return value !== null ? value : defaultValue;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getNodes = function (nodeName) {\n            this.setMinDefsToElementName(nodeName);\n            var translatedName = this.translateElementName(nodeName);\n            return new Spriter.NodeListXml(this, this._xml.documentElement.getElementsByTagName(translatedName));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getNodesForElement = function (element, nodeName) {\n            this.setMinDefsToElementName(nodeName);\n            var translatedName = this.translateElementName(nodeName);\n            return new Spriter.NodeListXml(this, element.getElementsByTagName(translatedName));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getFolder = function (element) {\n            return new Spriter.Folder(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getFile = function (element) {\n            if (element.hasAttribute(\"type\") && element.getAttribute(\"type\") === \"sound\") {\n                return null;\n            }\n            return new Spriter.File(this.parseInt(element, \"id\"), this.getFileName(this.parseString(element, \"name\")), this.parseFloat(element, \"pivot_x\"), 1 - this.parseFloat(element, \"pivot_y\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTag = function (element) {\n            return new Spriter.Item(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getEntity = function (element) {\n            return new Spriter.Entity(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getObjectInfo = function (element, index) {\n            return new Spriter.ObjectInfo(index, this.parseString(element, \"name\"), Spriter.Types.getObjectTypeForName(this.parseString(element, \"type\")), this.parseFloat(element, \"w\"), this.parseFloat(element, \"h\"), this.parseFloat(element, \"pivot_x\"), this.parseFloat(element, \"pivot_y\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getCharMap = function (element) {\n            return new Spriter.CharMap(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getCharMapEntry = function (element, charMap, spriter) {\n            var sourceName = spriter.getFolderById(this.parseInt(element, \"folder\")).\n                getFileById(this.parseInt(element, \"file\")).name;\n            var target = null;\n            if (element.hasAttribute(\"target_folder\") && element.hasAttribute(\"target_file\")) {\n                target = spriter.getFolderById(this.parseInt(element, \"target_folder\")).\n                    getFileById(this.parseInt(element, \"target_file\"));\n            }\n            charMap.put(sourceName, target);\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getVariable = function (element) {\n            var type = Spriter.Types.getVariableTypeForName(this.parseString(element, \"type\"));\n            return new Spriter.Variable(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), type, (type === 2 /* STRING */) ? this.parseString(element, \"default\") : this.parseFloat(element, \"default\", 0));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getAnimation = function (element) {\n            return new Spriter.Animation(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), this.parseFloat(element, \"length\"), this.parseString(element, \"looping\", \"true\") === \"true\" ? Spriter.eAnimationLooping.LOOPING : Spriter.eAnimationLooping.NO_LOOPING);\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getMainlineKey = function (element) {\n            return new Spriter.KeyMainline(this.parseInt(element, \"id\"), this.parseFloat(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getRef = function (element) {\n            return new Spriter.Ref(this.parseInt(element, \"id\"), this.parseInt(element, \"parent\", -1), this.parseInt(element, \"timeline\"), this.parseInt(element, \"key\"), this.parseInt(element, \"z_index\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTimeline = function (element) {\n            return new Spriter.Timeline(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), Spriter.Types.getObjectTypeForName(this.parseString(element, \"object_type\", \"sprite\")), this.parseInt(element, \"obj\", -1));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getBaseline = function (element) {\n            return new Spriter.Baseline(this.parseInt(element, \"id\"), this.parseString(element, \"name\", null));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getVarline = function (element) {\n            return new Spriter.Varline(this.parseInt(element, \"id\"), this.parseInt(element, \"def\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getKey = function (element) {\n            return new Spriter.Key(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTagKey = function (element) {\n            return new Spriter.KeyTag(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getVariableKey = function (element, type) {\n            return new Spriter.KeyVariable(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"), (type === 2 /* STRING */) ? this.parseString(element, \"val\") : this.parseFloat(element, \"val\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTimelineKey = function (element, index, spriter) {\n            var time = this.parseInt(element, \"time\");\n            var spin = this.parseInt(element, \"spin\", 1);\n            // curve and params\n            var curve = this.parseString(element, \"curve_type\", \"linear\");\n            var c1 = this.parseFloat(element, \"c1\", 0);\n            var c2 = this.parseFloat(element, \"c2\", 0);\n            var c3 = this.parseFloat(element, \"c3\", 0);\n            var c4 = this.parseFloat(element, \"c4\", 0);\n            // sprite or bone key?\n            var boneTag = this.translateChildElementName(\"bone\");\n            var objectTag = this.translateChildElementName(\"object\");\n            var key = null;\n            var keyDataElm = (element.firstElementChild);\n            var sprite = false;\n            if (keyDataElm.tagName === boneTag) {\n                key = new Spriter.KeyBone(index, time, spin);\n                this.setMinDefsToElementName(\"bone\");\n            }\n            else if (keyDataElm.tagName === objectTag) {\n                this.setMinDefsToElementName(\"object\");\n                key = new Spriter.KeyObject(index, time, spin);\n                sprite = true;\n            }\n            // other curve than linear?\n            if (curve !== \"linear\") {\n                key.setCurve(Spriter.Types.getCurveTypeForName(curve), c1, c2, c3, c4);\n            }\n            // spatial info\n            var info = key.info;\n            info.x = this.parseFloat(keyDataElm, \"x\");\n            info.y = -this.parseFloat(keyDataElm, \"y\");\n            info.scaleX = this.parseFloat(keyDataElm, \"scale_x\", 1);\n            info.scaleY = this.parseFloat(keyDataElm, \"scale_y\", 1);\n            info.angle = 360 - this.parseFloat(keyDataElm, \"angle\");\n            info.alpha = this.parseFloat(keyDataElm, \"a\", 1);\n            if (sprite) {\n                // sprite specific - set file and folder\n                var folderId = this.parseInt(keyDataElm, \"folder\");\n                var fileId = this.parseInt(keyDataElm, \"file\");\n                key.setFolderAndFile(folderId, fileId);\n                // set pivot in spatial info different from default (based on pivot in file)\n                var file = spriter.getFolderById(folderId).getFileById(fileId);\n                info.pivotX = this.parseFloat(keyDataElm, \"pivot_x\", file.pivotX);\n                // 1 - to flip Y, default anchor is already flipped, so it needs to be flipped back to avoid double flipping\n                info.pivotY = 1 - this.parseFloat(keyDataElm, \"pivot_y\", 1 - file.pivotY);\n            }\n            this.popMinDefsStack();\n            return key;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTagChange = function (element) {\n            return this.parseInt(element, \"t\");\n        };\n        return SpriterXml;\n    }(Spriter.SpriterFile));\n    Spriter.SpriterXml = SpriterXml;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Item = (function () {\n        // -------------------------------------------------------------------------\n        function Item(id, name) {\n            this._id = id;\n            this._name = name;\n        }\n        Object.defineProperty(Item.prototype, \"id\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._id;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Item.prototype, \"name\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._name;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Item;\n    }());\n    Spriter.Item = Item;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"../IdNameMap.ts\" />\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    (function (eAnimationLooping) {\n        eAnimationLooping[eAnimationLooping[\"NO_LOOPING\"] = 0] = \"NO_LOOPING\";\n        eAnimationLooping[eAnimationLooping[\"LOOPING\"] = 1] = \"LOOPING\";\n    })(Spriter.eAnimationLooping || (Spriter.eAnimationLooping = {}));\n    var eAnimationLooping = Spriter.eAnimationLooping;\n    ;\n    var Animation = (function (_super) {\n        __extends(Animation, _super);\n        // -------------------------------------------------------------------------\n        function Animation(id, name, length, loopType) {\n            _super.call(this, id, name);\n            this._length = length;\n            this._loopType = loopType;\n            this._timelines = new Spriter.IdNameMap();\n            this._lines = new Spriter.IdNameMap();\n        }\n        Object.defineProperty(Animation.prototype, \"mainline\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._mainline;\n            },\n            // -------------------------------------------------------------------------\n            set: function (mainline) {\n                this._mainline = mainline;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        Animation.prototype.addTimeline = function (timeline) {\n            this._timelines.add(timeline, timeline.id, timeline.name);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.getTimelineById = function (id) {\n            return this._timelines.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.getTimelineByName = function (name) {\n            return this._timelines.getByName(name);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.addLine = function (line) {\n            this._lines.add(line, this._lines.length, line.name);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.getLineById = function (id) {\n            return this._lines.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.getLineByName = function (name) {\n            return this._lines.getByName(name);\n        };\n        Object.defineProperty(Animation.prototype, \"linesLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._lines.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Animation.prototype, \"length\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Animation.prototype, \"loopType\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._loopType;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Animation;\n    }(Spriter.Item));\n    Spriter.Animation = Animation;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"../IdNameMap.ts\" />\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var Entity = (function (_super) {\n        __extends(Entity, _super);\n        // -------------------------------------------------------------------------\n        function Entity(id, name) {\n            _super.call(this, id, name);\n            this._objectInfos = new Spriter.IdNameMap();\n            this._charMaps = new Spriter.IdNameMap();\n            this._variables = new Spriter.IdNameMap();\n            this._animations = new Spriter.IdNameMap();\n        }\n        // -------------------------------------------------------------------------\n        Entity.prototype.addObjectInfo = function (objectInfo) {\n            this._objectInfos.add(objectInfo, objectInfo.id, objectInfo.name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getObjectInfoById = function (id) {\n            return this._objectInfos.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getObjectInfoByName = function (name) {\n            return this._objectInfos.getByName(name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.addCharMap = function (charMap) {\n            this._charMaps.add(charMap, charMap.id, charMap.name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getCharMapById = function (id) {\n            return this._charMaps.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getCharMapByName = function (name) {\n            return this._charMaps.getByName(name);\n        };\n        Object.defineProperty(Entity.prototype, \"charMapsLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._charMaps.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        Entity.prototype.addVariable = function (variable) {\n            this._variables.add(variable, variable.id, variable.name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getVariableById = function (id) {\n            return this._variables.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getVariableByName = function (name) {\n            return this._variables.getByName(name);\n        };\n        Object.defineProperty(Entity.prototype, \"variablesLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._variables.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        Entity.prototype.addAnimation = function (animation) {\n            this._animations.add(animation, animation.id, animation.name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getAnimationById = function (id) {\n            return this._animations.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getAnimationByName = function (name) {\n            return this._animations.getByName(name);\n        };\n        Object.defineProperty(Entity.prototype, \"animationsLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._animations.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Entity;\n    }(Spriter.Item));\n    Spriter.Entity = Entity;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var File = (function (_super) {\n        __extends(File, _super);\n        // -------------------------------------------------------------------------\n        function File(id, name, pivotX, pivotY) {\n            _super.call(this, id, name);\n            this._pivotX = pivotX;\n            this._pivotY = pivotY;\n        }\n        Object.defineProperty(File.prototype, \"pivotX\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._pivotX;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(File.prototype, \"pivotY\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._pivotY;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return File;\n    }(Spriter.Item));\n    Spriter.File = File;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"../IdNameMap.ts\" />\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var Folder = (function (_super) {\n        __extends(Folder, _super);\n        // -------------------------------------------------------------------------\n        function Folder(id, name) {\n            _super.call(this, id, name);\n            this._files = new Spriter.IdNameMap();\n        }\n        // -------------------------------------------------------------------------\n        Folder.prototype.addFile = function (file) {\n            this._files.add(file, file.id, file.name);\n        };\n        // -------------------------------------------------------------------------\n        Folder.prototype.getFileById = function (id) {\n            return this._files.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Folder.prototype.getFileByName = function (name) {\n            return this._files.getByName(name);\n        };\n        return Folder;\n    }(Spriter.Item));\n    Spriter.Folder = Folder;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var CharMap = (function (_super) {\n        __extends(CharMap, _super);\n        function CharMap() {\n            _super.apply(this, arguments);\n        }\n        // -------------------------------------------------------------------------\n        CharMap.prototype.put = function (key, value) {\n            if (this._map === undefined) {\n                this._map = {};\n            }\n            if (this._map[key] !== undefined) {\n                console.error(\"Key with name \" + key + \" already exists\");\n            }\n            this._map[key] = value;\n        };\n        // -------------------------------------------------------------------------\n        CharMap.prototype.value = function (key) {\n            return this._map[key];\n        };\n        return CharMap;\n    }(Spriter.Item));\n    Spriter.CharMap = CharMap;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var CharMapStack = (function () {\n        // -------------------------------------------------------------------------\n        function CharMapStack(entity) {\n            this._stack = [];\n            this._length = 0;\n            this._entity = entity;\n        }\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.reset = function () {\n            this._length = 0;\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.push = function (charMapName) {\n            var charMap = this.getCharMap(charMapName);\n            this._stack[this._length++] = charMap;\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.remove = function (charMapName) {\n            var charMap = this.getCharMap(charMapName);\n            var index = this.findCharMap(charMap);\n            // shift all items down\n            if (index !== -1) {\n                for (var i = index; i < this._length - 2; i++) {\n                    this._stack[i] = this._stack[i + 1];\n                }\n                this._stack[--this._length] = null;\n            }\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.getFile = function (file) {\n            for (var i = this._length - 1; i >= 0; i--) {\n                var value = this._stack[i].value(file.name);\n                if (value !== undefined) {\n                    return value;\n                }\n            }\n            return file;\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.getCharMap = function (charMapName) {\n            var charMap = this._entity.getCharMapByName(charMapName);\n            if (charMapName === null) {\n                console.error(\"charmap with name \" + charMapName + \" does not exist\");\n            }\n            return charMap;\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.findCharMap = function (charMap) {\n            for (var i = 0; i < this._length; i++) {\n                if (this._stack[i] === charMap) {\n                    return i;\n                }\n            }\n            return -1;\n        };\n        return CharMapStack;\n    }());\n    Spriter.CharMapStack = CharMapStack;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Key = (function () {\n        // -------------------------------------------------------------------------\n        function Key(id, time) {\n            this._id = id;\n            this._time = time;\n        }\n        Object.defineProperty(Key.prototype, \"id\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._id;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Key.prototype, \"time\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._time;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Key;\n    }());\n    Spriter.Key = Key;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var KeyMainline = (function (_super) {\n        __extends(KeyMainline, _super);\n        function KeyMainline() {\n            _super.apply(this, arguments);\n            this._boneRefs = [];\n            this._objectRefs = [];\n        }\n        Object.defineProperty(KeyMainline.prototype, \"boneRefs\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._boneRefs;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        KeyMainline.prototype.addBoneRef = function (boneRef) {\n            this._boneRefs.push(boneRef);\n        };\n        Object.defineProperty(KeyMainline.prototype, \"objectRefs\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._objectRefs;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        KeyMainline.prototype.addObjectRef = function (objectRef) {\n            this._objectRefs.push(objectRef);\n        };\n        return KeyMainline;\n    }(Spriter.Key));\n    Spriter.KeyMainline = KeyMainline;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var KeyTag = (function (_super) {\n        __extends(KeyTag, _super);\n        function KeyTag() {\n            _super.apply(this, arguments);\n        }\n        Object.defineProperty(KeyTag.prototype, \"tagsOn\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._tagsOn;\n            },\n            // -------------------------------------------------------------------------\n            set: function (tagsOn) {\n                this._tagsOn = tagsOn;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return KeyTag;\n    }(Spriter.Key));\n    Spriter.KeyTag = KeyTag;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var KeyVariable = (function (_super) {\n        __extends(KeyVariable, _super);\n        // -------------------------------------------------------------------------\n        function KeyVariable(id, time, value) {\n            _super.call(this, id, time);\n            this._value = value;\n        }\n        Object.defineProperty(KeyVariable.prototype, \"value\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return KeyVariable;\n    }(Spriter.Key));\n    Spriter.KeyVariable = KeyVariable;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    (function (eTimelineType) {\n        eTimelineType[eTimelineType[\"UNKNOWN\"] = 0] = \"UNKNOWN\";\n        eTimelineType[eTimelineType[\"MAIN_LINE\"] = 1] = \"MAIN_LINE\";\n        eTimelineType[eTimelineType[\"TIME_LINE\"] = 2] = \"TIME_LINE\";\n        eTimelineType[eTimelineType[\"SOUND_LINE\"] = 3] = \"SOUND_LINE\";\n        eTimelineType[eTimelineType[\"EVENT_LINE\"] = 4] = \"EVENT_LINE\";\n        eTimelineType[eTimelineType[\"TAG_LINE\"] = 5] = \"TAG_LINE\";\n        eTimelineType[eTimelineType[\"VAR_LINE\"] = 6] = \"VAR_LINE\";\n    })(Spriter.eTimelineType || (Spriter.eTimelineType = {}));\n    var eTimelineType = Spriter.eTimelineType;\n    var Baseline = (function (_super) {\n        __extends(Baseline, _super);\n        // -------------------------------------------------------------------------\n        function Baseline(id, name) {\n            if (name === void 0) { name = null; }\n            _super.call(this, id, name);\n            this._type = eTimelineType.UNKNOWN;\n        }\n        Object.defineProperty(Baseline.prototype, \"type\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._type;\n            },\n            // -------------------------------------------------------------------------\n            set: function (type) {\n                this._type = type;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Baseline.prototype, \"keys\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._keys;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        Baseline.prototype.add = function (key) {\n            if (this._keys === null || this._keys === undefined) {\n                this._keys = [];\n            }\n            this._keys.push(key);\n        };\n        // -------------------------------------------------------------------------\n        Baseline.prototype.at = function (index, loop) {\n            if (loop === void 0) { loop = true; }\n            if (index < 0) {\n                return null;\n            }\n            var length = this._keys.length;\n            if (index >= length) {\n                if (loop) {\n                    index = index % length;\n                }\n                else {\n                    index = length - 1;\n                }\n            }\n            return this._keys[index];\n        };\n        return Baseline;\n    }(Spriter.Item));\n    Spriter.Baseline = Baseline;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    // -------------------------------------------------------------------------\n    function linear(a, b, t) {\n        return ((b - a) * t) + a;\n    }\n    Spriter.linear = linear;\n    // -------------------------------------------------------------------------\n    function quadratic(a, b, c, t) {\n        return linear(linear(a, b, t), linear(b, c, t), t);\n    }\n    Spriter.quadratic = quadratic;\n    // -------------------------------------------------------------------------\n    function cubic(a, b, c, d, t) {\n        return linear(quadratic(a, b, c, t), quadratic(b, c, d, t), t);\n    }\n    Spriter.cubic = cubic;\n    // -------------------------------------------------------------------------\n    function quartic(a, b, c, d, e, t) {\n        return linear(cubic(a, b, c, d, t), cubic(b, c, d, e, t), t);\n    }\n    Spriter.quartic = quartic;\n    // -------------------------------------------------------------------------\n    function quintic(a, b, c, d, e, f, t) {\n        return linear(quartic(a, b, c, d, e, t), quartic(b, c, d, e, f, t), t);\n    }\n    Spriter.quintic = quintic;\n    // -------------------------------------------------------------------------\n    // B(t) = (1 − t)^3 * P0 + 3(1 − t)^2 * t * P1 + 3(1 − t) *  t^2 * P2 + t^3 * P3  , 0 ≤ t ≤ 1.\n    function bezierCoord(p1, p2, t) {\n        // p0 = 0, p3 = 1\n        var p0 = 0;\n        var p3 = 1;\n        var u = 1 - t;\n        var t2 = t * t;\n        var u2 = u * u;\n        var u3 = u2 * u;\n        var t3 = t2 * t;\n        return 0 + 3 * u2 * t * p1 + 3 * u * t2 * p2 + t3 * p3;\n    }\n    // -------------------------------------------------------------------------\n    function bezier(p1x, p1y, p2x, p2y, t) {\n        var epsilon = 0.001;\n        var maxIterations = 10;\n        // binary search\n        //establish bounds\n        var lower = 0;\n        var upper = 1;\n        var percent = (upper + lower) / 2;\n        //initial x\n        var x = bezierCoord(p1x, p2x, percent);\n        //loop until returned x - t is less than epsilon\n        var iterations = 0;\n        while (Math.abs(t - x) > epsilon && iterations < maxIterations) {\n            if (t > x) {\n                lower = percent;\n            }\n            else {\n                upper = percent;\n            }\n            percent = (upper + lower) / 2;\n            x = bezierCoord(p1x, p2x, percent);\n            ++iterations;\n        }\n        //we're within tolerance of the desired x value. Return the y value.\n        return bezierCoord(p1y, p2y, percent);\n    }\n    Spriter.bezier = bezier;\n    // -------------------------------------------------------------------------\n    function angleLinear(angleA, angleB, spin, t) {\n        // no spin\n        if (spin === 0) {\n            return angleA;\n        }\n        // spin left\n        if (spin > 0) {\n            if (angleB > angleA) {\n                angleB -= 360;\n            }\n        }\n        else {\n            if (angleB < angleA) {\n                angleB += 360;\n            }\n        }\n        return this.linear(angleA, angleB, t);\n    }\n    Spriter.angleLinear = angleLinear;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var Variable = (function (_super) {\n        __extends(Variable, _super);\n        // -------------------------------------------------------------------------\n        function Variable(id, name, type, defaultValue) {\n            _super.call(this, id, name);\n            this._type = type;\n            this._default = defaultValue;\n            this.reset();\n        }\n        // -------------------------------------------------------------------------\n        Variable.prototype.clone = function () {\n            return new Variable(this.id, this.name, this.type, this._default);\n        };\n        // -------------------------------------------------------------------------\n        Variable.prototype.reset = function () {\n            this.value = this._default;\n        };\n        Object.defineProperty(Variable.prototype, \"type\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._type;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Variable.prototype, \"value\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            // -------------------------------------------------------------------------\n            set: function (value) {\n                if (this._type === 0 /* INT */) {\n                    this._value = Math.floor(value);\n                }\n                else {\n                    this._value = value;\n                }\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Variable.prototype, \"int\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Variable.prototype, \"float\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Variable.prototype, \"string\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Variable;\n    }(Spriter.Item));\n    Spriter.Variable = Variable;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Varline = (function (_super) {\n        __extends(Varline, _super);\n        // -------------------------------------------------------------------------\n        function Varline(id, varDefId) {\n            _super.call(this, id, null);\n            this._varDefId = varDefId;\n            this.type = Spriter.eTimelineType.VAR_LINE;\n        }\n        Object.defineProperty(Varline.prototype, \"varDefId\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._varDefId;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Varline;\n    }(Spriter.Baseline));\n    Spriter.Varline = Varline;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var ObjectInfo = (function (_super) {\n        __extends(ObjectInfo, _super);\n        // -------------------------------------------------------------------------\n        function ObjectInfo(id, name, type, width, height, pivotX, pivotY) {\n            _super.call(this, id, name);\n            this._type = type;\n            this._width = width;\n            this._height = height;\n            this._pivotX = pivotX;\n            this._pivotY = pivotY;\n        }\n        Object.defineProperty(ObjectInfo.prototype, \"type\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._type;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(ObjectInfo.prototype, \"width\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._width;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(ObjectInfo.prototype, \"height\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._height;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(ObjectInfo.prototype, \"pivotX\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._pivotX;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(ObjectInfo.prototype, \"pivotY\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._pivotY;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return ObjectInfo;\n    }(Spriter.Item));\n    Spriter.ObjectInfo = ObjectInfo;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Types = (function () {\n        function Types() {\n        }\n        // -------------------------------------------------------------------------\n        Types.getObjectTypeForName = function (typeName) {\n            var type = Types.nameToObjectType[typeName];\n            if (type === undefined) {\n                console.error(\"Unknown type of object: \" + typeName);\n            }\n            return type;\n        };\n        // -------------------------------------------------------------------------\n        Types.getCurveTypeForName = function (typeName) {\n            var type = Types.nameToCurveType[typeName];\n            if (type === undefined) {\n                console.error(\"Unknown type of curve: \" + typeName);\n            }\n            return type;\n        };\n        // -------------------------------------------------------------------------\n        Types.getVariableTypeForName = function (typeName) {\n            var type = Types.nameToVariableType[typeName];\n            if (type === undefined) {\n                console.error(\"Unknown type of variable: \" + typeName);\n            }\n            return type;\n        };\n        Types.nameToObjectType = {\n            \"sprite\": 0 /* SPRITE */,\n            \"bone\": 1 /* BONE */,\n            \"box\": 2 /* BOX */,\n            \"point\": 3 /* POINT */,\n            \"sound\": 4 /* SOUND */\n        };\n        Types.nameToCurveType = {\n            \"instant\": 1 /* INSTANT */,\n            \"linear\": 0 /* LINEAR */,\n            \"quadratic\": 2 /* QUADRATIC */,\n            \"cubic\": 3 /* CUBIC */,\n            \"quartic\": 4 /* QUARTIC */,\n            \"quintic\": 5 /* QUINTIC */,\n            \"bezier\": 6 /* BEZIER */\n        };\n        Types.nameToVariableType = {\n            \"int\": 0 /* INT */,\n            \"float\": 1 /* FLOAT */,\n            \"string\": 2 /* STRING */\n        };\n        return Types;\n    }());\n    Spriter.Types = Types;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Ref = (function () {\n        // -------------------------------------------------------------------------\n        function Ref(id, parent, timeline, key, z) {\n            if (z === void 0) { z = 0; }\n            this.id = id;\n            this.parent = parent;\n            this.timeline = timeline;\n            this.key = key;\n            this.z = z;\n        }\n        return Ref;\n    }());\n    Spriter.Ref = Ref;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Timeline = (function (_super) {\n        __extends(Timeline, _super);\n        // -------------------------------------------------------------------------\n        function Timeline(id, name, type, objectRef) {\n            if (type === void 0) { type = 0 /* SPRITE */; }\n            if (objectRef === void 0) { objectRef = -1; }\n            _super.call(this, id, name);\n            this.type = Spriter.eTimelineType.TIME_LINE;\n            this._objectType = type;\n            this._objectRef = objectRef;\n        }\n        Object.defineProperty(Timeline.prototype, \"objectType\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._objectType;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Timeline.prototype, \"objectRef\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._objectRef;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Timeline;\n    }(Spriter.Baseline));\n    Spriter.Timeline = Timeline;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var KeyTimeline = (function (_super) {\n        __extends(KeyTimeline, _super);\n        // -------------------------------------------------------------------------\n        function KeyTimeline(id, time, spin) {\n            _super.call(this, id, time);\n            this._info = new Spriter.SpatialInfo();\n            this._spin = spin;\n            this.setCurve(0 /* LINEAR */);\n        }\n        // -------------------------------------------------------------------------\n        KeyTimeline.prototype.setCurve = function (curveType, c1, c2, c3, c4) {\n            if (c1 === void 0) { c1 = 0; }\n            if (c2 === void 0) { c2 = 0; }\n            if (c3 === void 0) { c3 = 0; }\n            if (c4 === void 0) { c4 = 0; }\n            this._curveType = curveType;\n            this._c1 = c1;\n            this._c2 = c2;\n            this._c3 = c3;\n            this._c4 = c4;\n        };\n        Object.defineProperty(KeyTimeline.prototype, \"spin\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._spin;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"curveType\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._curveType;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"c1\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._c1;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"c2\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._c2;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"c3\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._c3;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"c4\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._c4;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"info\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._info;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return KeyTimeline;\n    }(Spriter.Key));\n    Spriter.KeyTimeline = KeyTimeline;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var SpatialInfo = (function () {\n        function SpatialInfo() {\n            this.x = 0;\n            this.y = 0;\n            this.scaleX = 1;\n            this.scaleY = 1;\n            this.pivotX = 0;\n            this.pivotY = 0;\n            this.alpha = 1;\n            this.angle = 0;\n        }\n        return SpatialInfo;\n    }());\n    Spriter.SpatialInfo = SpatialInfo;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"KeyTimeline.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var KeyObject = (function (_super) {\n        __extends(KeyObject, _super);\n        function KeyObject() {\n            _super.apply(this, arguments);\n        }\n        // -------------------------------------------------------------------------\n        KeyObject.prototype.setFolderAndFile = function (folder, file) {\n            this._folder = folder;\n            this._file = file;\n        };\n        Object.defineProperty(KeyObject.prototype, \"folder\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._folder;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyObject.prototype, \"file\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._file;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return KeyObject;\n    }(Spriter.KeyTimeline));\n    Spriter.KeyObject = KeyObject;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"KeyTimeline.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var KeyBone = (function (_super) {\n        __extends(KeyBone, _super);\n        function KeyBone() {\n            _super.apply(this, arguments);\n        }\n        return KeyBone;\n    }(Spriter.KeyTimeline));\n    Spriter.KeyBone = KeyBone;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Loader = (function () {\n        function Loader() {\n        }\n        // -------------------------------------------------------------------------\n        Loader.prototype.load = function (file) {\n            this._spriter = new Spriter.Spriter();\n            this._fileType = file.getType();\n            // folders and files\n            var folders = file.getNodes(\"folder\");\n            this.loadFolders(this._spriter, folders);\n            folders.processed();\n            // tags\n            var tags = file.getNodes(\"tag_list\");\n            this.loadTags(this._spriter, tags);\n            tags.processed();\n            // entity\n            var entities = file.getNodes(\"entity\");\n            this.loadEntities(this._spriter, entities);\n            entities.processed();\n            return this._spriter;\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadFolders = function (spriter, folders) {\n            // through all folders\n            for (var i = 0; i < folders.length(); i++) {\n                var folder = folders.getFolder(i);\n                // images in folder - ignore sounds\n                var files = folders.getChildNodes(i, \"file\");\n                this.loadFiles(folder, files);\n                files.processed();\n                // add folder to spriter object\n                spriter.addFolder(folder);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadFiles = function (folder, files) {\n            for (var f = 0; f < files.length(); f++) {\n                var file = files.getFile(f);\n                // null is returned if file is not image but sound\n                if (file !== null) {\n                    folder.addFile(file);\n                }\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTags = function (spriter, tags) {\n            // no tags\n            if (tags.length() === 0) {\n                return;\n            }\n            // different structure for json than for xml\n            var tagDefs;\n            if (this._fileType !== Spriter.eFileType.JSON) {\n                tagDefs = tags.getChildNodes(0, \"i\");\n            }\n            else {\n                tagDefs = tags;\n            }\n            for (var i = 0; i < tagDefs.length(); i++) {\n                var tag = tagDefs.getTag(i);\n                spriter.addTag(tag);\n            }\n            // different structure for json than for xml\n            if (this._fileType !== Spriter.eFileType.JSON) {\n                tagDefs.processed();\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadEntities = function (spriter, entities) {\n            for (var i = 0; i < entities.length(); i++) {\n                var entity = entities.getEntity(i);\n                // bones, boxes, ...\n                var objInfos = entities.getChildNodes(i, \"obj_info\");\n                this.loadObjInfo(entity, objInfos);\n                objInfos.processed();\n                // character maps\n                var charMaps = entities.getChildNodes(i, \"character_map\");\n                this.loadCharMaps(entity, charMaps);\n                charMaps.processed();\n                // variable definitions\n                var variables = entities.getChildNodes(i, \"var_defs\");\n                this.loadVariables(entity, variables);\n                variables.processed();\n                // animations\n                var animations = entities.getChildNodes(i, \"animation\");\n                this.loadAnimations(entity, animations);\n                animations.processed();\n                spriter.addEntity(entity);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadObjInfo = function (entity, objInfos) {\n            for (var i = 0; i < objInfos.length(); i++) {\n                var objInfo = objInfos.getObjectInfo(i);\n                entity.addObjectInfo(objInfo);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadCharMaps = function (entity, charMaps) {\n            for (var i = 0; i < charMaps.length(); i++) {\n                var charMap = charMaps.getCharMap(i);\n                var charMapEntries = charMaps.getChildNodes(i, \"map\");\n                this.loadCharMapEntries(charMap, charMapEntries);\n                charMapEntries.processed();\n                entity.addCharMap(charMap);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadCharMapEntries = function (charMap, charMapEntries) {\n            for (var i = 0; i < charMapEntries.length(); i++) {\n                charMapEntries.getCharMapEntry(i, charMap, this._spriter);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadVariables = function (entity, variables) {\n            // no variables\n            if (variables.length() === 0) {\n                return;\n            }\n            // different structure for json than for xml\n            var varDefs;\n            if (this._fileType !== Spriter.eFileType.JSON) {\n                varDefs = variables.getChildNodes(0, \"i\");\n            }\n            else {\n                varDefs = variables;\n            }\n            for (var i = 0; i < varDefs.length(); i++) {\n                var varDef = varDefs.getVariable(i);\n                entity.addVariable(varDef);\n            }\n            // different structure for json than for xml\n            if (this._fileType !== Spriter.eFileType.JSON) {\n                varDefs.processed();\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadAnimations = function (entity, animations) {\n            for (var i = 0; i < animations.length(); i++) {\n                var animation = animations.getAnimation(i);\n                // main line keys\n                var mainlines = animations.getChildNodes(i, \"mainline\");\n                this.loadMainline(animation, mainlines);\n                mainlines.processed();\n                // timelines\n                var timelines = animations.getChildNodes(i, \"timeline\");\n                this.loadTimelines(animation, timelines);\n                timelines.processed();\n                // sound lines\n                var soundlines = animations.getChildNodes(i, \"soundline\");\n                this.loadSoundlines(animation, soundlines);\n                soundlines.processed();\n                // event lines\n                var eventlines = animations.getChildNodes(i, \"eventline\");\n                this.loadEventlines(animation, eventlines);\n                eventlines.processed();\n                // get meta tag\n                var meta = animations.getChildNodes(i, \"meta\");\n                if (meta.length() > 0) {\n                    // var lines\n                    // OMG - typo in attribute name in JSOUN export... what the hell! TODO - remove when corrected\n                    var varlines = meta.getChildNodes(0, (this._fileType !== Spriter.eFileType.JSON) ? \"varline\" : \"valline\");\n                    this.loadVarlines(entity, animation, varlines);\n                    varlines.processed();\n                    // tag lines\n                    var taglines = meta.getChildNodes(0, \"tagline\");\n                    this.loadTaglines(animation, taglines);\n                    taglines.processed();\n                }\n                meta.processed();\n                // add completely built animation to entity\n                entity.addAnimation(animation);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadMainline = function (animation, mainlines) {\n            var mainline = mainlines.getMainline(0);\n            mainline.type = Spriter.eTimelineType.MAIN_LINE;\n            var mainlineKeys = mainlines.getChildNodes(0, \"key\");\n            this.loadMainlineKeys(mainline, mainlineKeys);\n            mainlineKeys.processed();\n            animation.mainline = mainline;\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadMainlineKeys = function (mainline, mainlineKeys) {\n            for (var i = 0; i < mainlineKeys.length(); i++) {\n                var mainLineKey = mainlineKeys.getMainlineKey(i);\n                // load bone refs\n                var boneRefs = mainlineKeys.getChildNodes(i, \"bone_ref\");\n                for (var b = 0; b < boneRefs.length(); b++) {\n                    mainLineKey.addBoneRef(boneRefs.getRef(b));\n                }\n                boneRefs.processed();\n                // load sprite refs (object refs)\n                var spriteRefs = mainlineKeys.getChildNodes(i, \"object_ref\");\n                for (var s = 0; s < spriteRefs.length(); s++) {\n                    mainLineKey.addObjectRef(spriteRefs.getRef(s));\n                }\n                spriteRefs.processed();\n                mainline.add(mainLineKey);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTimelines = function (animation, aTimelines) {\n            for (var i = 0; i < aTimelines.length(); i++) {\n                var timeline = aTimelines.getTimeline(i);\n                var keys = aTimelines.getChildNodes(i, \"key\");\n                this.loadTimelineKeys(timeline, keys);\n                keys.processed();\n                animation.addTimeline(timeline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTimelineKeys = function (aTimeline, aKeys) {\n            for (var i = 0; i < aKeys.length(); i++) {\n                var key = aKeys.getTimelineKey(i, this._spriter);\n                aTimeline.add(key);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadSoundlines = function (animation, soundlines) {\n            for (var i = 0; i < soundlines.length(); i++) {\n                var soundline = soundlines.getSoundline(i);\n                soundline.type = Spriter.eTimelineType.SOUND_LINE;\n                var keys = soundlines.getChildNodes(i, \"key\");\n                this.loadKeys(soundline, keys);\n                keys.processed();\n                animation.addLine(soundline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadKeys = function (timeline, keys) {\n            for (var i = 0; i < keys.length(); i++) {\n                var key = keys.getKey(i);\n                timeline.add(key);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadEventlines = function (animation, eventlines) {\n            for (var i = 0; i < eventlines.length(); i++) {\n                var eventline = eventlines.getEventline(i);\n                eventline.type = Spriter.eTimelineType.EVENT_LINE;\n                var keys = eventlines.getChildNodes(i, \"key\");\n                this.loadKeys(eventline, keys);\n                keys.processed();\n                animation.addLine(eventline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTaglines = function (animation, taglines) {\n            for (var i = 0; i < taglines.length(); i++) {\n                var tagline = taglines.getTagline(i);\n                tagline.type = Spriter.eTimelineType.TAG_LINE;\n                var keys = taglines.getChildNodes(i, \"key\");\n                this.loadTagKeys(tagline, keys);\n                keys.processed();\n                animation.addLine(tagline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTagKeys = function (tagline, keys) {\n            for (var i = 0; i < keys.length(); i++) {\n                var key = keys.getTagKey(i);\n                var tagChangeElements = keys.getChildNodes(i, \"tag\");\n                var tagChanges = tagChangeElements.getTagChanges(this._spriter);\n                tagChangeElements.processed();\n                key.tagsOn = tagChanges;\n                tagline.add(key);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadVarlines = function (entity, animation, varlines) {\n            for (var i = 0; i < varlines.length(); i++) {\n                var varline = varlines.getVarline(i);\n                var type = entity.getVariableById(varline.varDefId).type;\n                var keys = varlines.getChildNodes(i, \"key\");\n                this.loadVariableKeys(varline, keys, type);\n                keys.processed();\n                animation.addLine(varline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadVariableKeys = function (varline, keys, type) {\n            for (var i = 0; i < keys.length(); i++) {\n                var key = keys.getVariableKey(i, type);\n                varline.add(key);\n            }\n        };\n        return Loader;\n    }());\n    Spriter.Loader = Loader;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter_1) {\n    var Spriter = (function () {\n        // -------------------------------------------------------------------------\n        function Spriter() {\n            this._folders = new Spriter_1.IdNameMap();\n            this._tags = new Spriter_1.IdNameMap();\n            this._entities = new Spriter_1.IdNameMap();\n        }\n        // -------------------------------------------------------------------------\n        Spriter.prototype.addFolder = function (folder) {\n            this._folders.add(folder, folder.id, folder.name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getFolderById = function (id) {\n            return this._folders.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getFolderByName = function (name) {\n            return this._folders.getByName(name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.addEntity = function (entity) {\n            this._entities.add(entity, entity.id, entity.name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getEntityById = function (id) {\n            return this._entities.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getEntityByName = function (name) {\n            return this._entities.getByName(name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.addTag = function (tag) {\n            this._tags.add(tag, tag.id, tag.name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getTagById = function (id) {\n            return this._tags.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getTagByName = function (name) {\n            return this._tags.getByName(name);\n        };\n        Object.defineProperty(Spriter.prototype, \"tagsLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._tags.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Spriter;\n    }());\n    Spriter_1.Spriter = Spriter;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var SpriterBone = (function () {\n        // -------------------------------------------------------------------------\n        function SpriterBone() {\n            this.timeline = -1;\n            this.timelineKey = -1;\n            this.transformed = new Spriter.SpatialInfo();\n        }\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.setOn = function (on) {\n            this._on = on;\n        };\n        Object.defineProperty(SpriterBone.prototype, \"on\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._on;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.setKey = function (entity, animation, timelineId, keyId) {\n            this.timeline = timelineId;\n            this.timelineKey = keyId;\n            var timeline = animation.getTimelineById(timelineId);\n            this.name = timeline.name;\n            this.objectInfo = (timeline.objectRef === -1) ? null : entity.getObjectInfoById(timeline.objectRef);\n            var keyFrom = timeline.at(keyId);\n            // in the end loop to first key. If animation is not looping, then repeat last key\n            var keyTo = (timeline.at(keyId + 1, animation.loopType !== Spriter.eAnimationLooping.NO_LOOPING));\n            this.key = keyFrom;\n            this.timeFrom = keyFrom.time;\n            this.timeTo = keyTo.time;\n            // if loop to key 0\n            if (this.timeTo < this.timeFrom) {\n                this.timeTo = animation.length;\n            }\n            this.from = keyFrom.info;\n            this.to = keyTo.info;\n            // create update mask\n            this.updateMask = 0;\n            if (Math.abs(this.from.x - this.to.x) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_X;\n            }\n            if (Math.abs(this.from.y - this.to.y) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_Y;\n            }\n            if (Math.abs(this.from.scaleX - this.to.scaleX) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_SCALE_X;\n            }\n            if (Math.abs(this.from.scaleY - this.to.scaleY) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_SCALE_Y;\n            }\n            if (Math.abs(this.from.pivotX - this.to.pivotX) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_PIVOT_X;\n            }\n            if (Math.abs(this.from.pivotY - this.to.pivotY) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_PIVOT_Y;\n            }\n            if (Math.abs(this.from.alpha - this.to.alpha) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_ALPHA;\n            }\n            if (Math.abs(this.from.angle - this.to.angle) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_ANGLE;\n            }\n            // init data\n            this.transformed.x = this.from.x;\n            this.transformed.y = this.from.y;\n            this.transformed.scaleX = this.from.scaleX;\n            this.transformed.scaleY = this.from.scaleY;\n            this.transformed.pivotX = this.from.pivotX;\n            this.transformed.pivotY = this.from.pivotY;\n            this.transformed.angle = this.from.angle;\n            this.transformed.alpha = this.from.alpha;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.tween = function (time) {\n            // calculate normalized time\n            //var t = Phaser.Math.clamp((time - this.timeFrom) / (this.timeTo - this.timeFrom), 0, 1);\n            var t = (this.updateMask > 0) ? this.getTweenTime(time) : 0;\n            this.transformed.x = (this.updateMask & SpriterBone.UPDATE_X) > 0 ?\n                Spriter.linear(this.from.x, this.to.x, t) : this.from.x;\n            this.transformed.y = (this.updateMask & SpriterBone.UPDATE_Y) > 0 ?\n                Spriter.linear(this.from.y, this.to.y, t) : this.from.y;\n            this.transformed.scaleX = (this.updateMask & SpriterBone.UPDATE_SCALE_X) > 0 ?\n                Spriter.linear(this.from.scaleX, this.to.scaleX, t) : this.from.scaleX;\n            this.transformed.scaleY = (this.updateMask & SpriterBone.UPDATE_SCALE_Y) > 0 ?\n                Spriter.linear(this.from.scaleY, this.to.scaleY, t) : this.from.scaleY;\n            this.transformed.pivotX = (this.updateMask & SpriterBone.UPDATE_PIVOT_X) > 0 ?\n                Spriter.linear(this.from.pivotX, this.to.pivotX, t) : this.from.pivotX;\n            this.transformed.pivotY = (this.updateMask & SpriterBone.UPDATE_PIVOT_Y) > 0 ?\n                Spriter.linear(this.from.pivotY, this.to.pivotY, t) : this.from.pivotY;\n            this.transformed.alpha = (this.updateMask & SpriterBone.UPDATE_ALPHA) > 0 ?\n                Spriter.linear(this.from.alpha, this.to.alpha, t) : this.from.alpha;\n            this.transformed.angle = (this.updateMask & SpriterBone.UPDATE_ANGLE) > 0 ?\n                Spriter.angleLinear(this.from.angle, this.to.angle, this.key.spin, t) : this.from.angle;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.update = function (parent) {\n            this.transformed.angle *= Phaser.Math.sign(parent.scaleX) * Phaser.Math.sign(parent.scaleY);\n            this.transformed.angle += parent.angle;\n            this.transformed.scaleX *= parent.scaleX;\n            this.transformed.scaleY *= parent.scaleY;\n            this.scalePosition(parent.scaleX, parent.scaleY);\n            this.rotatePosition(parent.angle);\n            this.translatePosition(parent.x, parent.y);\n            this.transformed.alpha *= parent.alpha;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.scalePosition = function (parentScaleX, parentScaleY) {\n            this.transformed.x *= parentScaleX;\n            this.transformed.y *= parentScaleY;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.rotatePosition = function (parentAngle) {\n            var x = this.transformed.x;\n            var y = this.transformed.y;\n            if (x !== 0 || y !== 0) {\n                var rads = parentAngle * (Math.PI / 180);\n                var cos = Math.cos(rads);\n                var sin = Math.sin(rads);\n                this.transformed.x = x * cos - y * sin;\n                this.transformed.y = x * sin + y * cos;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.translatePosition = function (parentX, parentY) {\n            this.transformed.x += parentX;\n            this.transformed.y += parentY;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.getTweenTime = function (time) {\n            if (this.key.curveType === 1 /* INSTANT */) {\n                return 0;\n            }\n            var t = Phaser.Math.clamp((time - this.timeFrom) / (this.timeTo - this.timeFrom), 0, 1);\n            switch (this.key.curveType) {\n                case 0 /* LINEAR */:\n                    return t;\n                case 2 /* QUADRATIC */:\n                    return Spriter.quadratic(0, this.key.c1, 1, t);\n                case 3 /* CUBIC */:\n                    return Spriter.cubic(0, this.key.c1, this.key.c2, 1, t);\n                case 4 /* QUARTIC */:\n                    return Spriter.quartic(0, this.key.c1, this.key.c2, this.key.c3, 1, t);\n                case 5 /* QUINTIC */:\n                    return Spriter.quintic(0, this.key.c1, this.key.c2, this.key.c3, this.key.c4, 1, t);\n                case 6 /* BEZIER */:\n                    return Spriter.bezier(this.key.c1, this.key.c2, this.key.c3, this.key.c4, t);\n            }\n            return 0;\n        };\n        SpriterBone.UPDATE_X = 1;\n        SpriterBone.UPDATE_Y = 2;\n        SpriterBone.UPDATE_SCALE_X = 4;\n        SpriterBone.UPDATE_SCALE_Y = 8;\n        SpriterBone.UPDATE_PIVOT_X = 16;\n        SpriterBone.UPDATE_PIVOT_Y = 32;\n        SpriterBone.UPDATE_ANGLE = 64;\n        SpriterBone.UPDATE_ALPHA = 128;\n        return SpriterBone;\n    }());\n    Spriter.SpriterBone = SpriterBone;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var SpriterGroup = (function (_super) {\n        __extends(SpriterGroup, _super);\n        // -------------------------------------------------------------------------\n        function SpriterGroup(game, spriter, texutreKey, entityName, animation, animationSpeedPercent) {\n            _super.call(this, game, null);\n            // onLoop(SpriterGroup);\n            this.onLoop = new Phaser.Signal();\n            // onFinish(SpriterGroup);\n            this.onFinish = new Phaser.Signal();\n            // onSound(SpriterGroup, string); // string for line name which equals soud name without extension\n            this.onSound = new Phaser.Signal();\n            // onEvent(SpriterGroup, string); // string for line name which equals event name\n            this.onEvent = new Phaser.Signal();\n            // onTagChange(SpriterGroup, string, boolean); // string for tag name, boolean for change (true = set / false = unset)\n            this.onTagChange = new Phaser.Signal();\n            // onVariableSet(SpriterGroup, Variable); // Variable is Spriter variable def with access to value\n            this.onVariableSet = new Phaser.Signal();\n            // onBoxUpdated(SpriterGroup, SpriterObject);\n            this.onBoxUpdated = new Phaser.Signal();\n            // onPointUpdated(SpriterGroup, SpriterObject);\n            this.onPointUpdated = new Phaser.Signal();\n            this._mainlineStepper = new Spriter.LineStepper();\n            this._lineSteppers = [];\n            this._lineSteppersCount = 0;\n            this._bones = [];\n            this._objects = [];\n            this._tags = 0; // up to 32 tags - 1 per bit\n            this._vars = [];\n            this._paused = false;\n            this._spriter = spriter;\n            this._entityName = entityName;\n            this._entity = spriter.getEntityByName(entityName);\n            this._textureKey = texutreKey;\n            this._root = new Spriter.SpatialInfo();\n            // clone variables\n            for (var i = 0; i < this._entity.variablesLength; i++) {\n                this._vars[i] = this._entity.getVariableById(i).clone();\n            }\n            // create charmap stack\n            this._charMapStack = new Spriter.CharMapStack(this._entity);\n            // set animation speed\n            if (animationSpeedPercent === undefined) {\n                animationSpeedPercent = 100;\n            }\n            this.setAnimationSpeedPercent(animationSpeedPercent);\n            // set animation\n            if (animation === undefined || animation === null) {\n                // set first animation\n                this.playAnimationById(0);\n            }\n            else if (typeof animation === \"number\") {\n                this.playAnimationById(animation);\n            }\n            else {\n                this.playAnimationByName(animation);\n            }\n        }\n        Object.defineProperty(SpriterGroup.prototype, \"spriter\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._spriter;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"entity\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._entity;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"charMapStack\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._charMapStack;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"paused\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._paused;\n            },\n            // -------------------------------------------------------------------------\n            set: function (paused) {\n                this._paused = paused;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"animationsCount\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._entity.animationsLength;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"currentAnimationName\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._animationName;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.pushCharMap = function (charMapName) {\n            this._charMapStack.push(charMapName);\n            this.resetSprites();\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.removeCharMap = function (charMapName) {\n            this._charMapStack.remove(charMapName);\n            this.resetSprites();\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.clearCharMaps = function () {\n            this._charMapStack.reset();\n            this.resetSprites();\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.resetSprites = function () {\n            for (var i = 0; i < this._objects.length; i++) {\n                this._objects[i].resetFile();\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.isTagOn = function (tagName) {\n            return this.isTagOnById(this._spriter.getTagByName(tagName).id);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.isTagOnById = function (tagId) {\n            return (this._tags & (1 << tagId)) > 0;\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.getVariable = function (varName) {\n            return this.getVariableById(this._entity.getVariableByName(varName).id);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.getVariableById = function (varId) {\n            return this._vars[varId];\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.getObject = function (objectName) {\n            for (var i = 0; i < this._objects.length; i++) {\n                var object = this._objects[i];\n                if (object.name === objectName) {\n                    return object;\n                }\n            }\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.setAnimationSpeedPercent = function (animationSpeedPercent) {\n            if (animationSpeedPercent === void 0) { animationSpeedPercent = 100; }\n            this._animationSpeed = animationSpeedPercent / 100;\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.playAnimationById = function (animationId) {\n            var animation = this._entity.getAnimationById(animationId);\n            if (animation === undefined || animation === null) {\n                console.warn(\"Animation \" + animationId + \" for entity \" + this._entityName + \" does not exist!\");\n                return;\n            }\n            this.playAnimation(animation);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.playAnimationByName = function (animationName) {\n            var animation = this._entity.getAnimationByName(animationName);\n            if (animation === undefined || animation === null) {\n                console.warn(\"Animation \" + animationName + \" for entity \" + this._entityName + \" does not exist!\");\n                return;\n            }\n            this.playAnimation(animation);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.playAnimation = function (animation) {\n            this._animationName = animation.name;\n            this._animation = animation;\n            this._finished = false;\n            // reset time to beginning of animation and find first from and to keys\n            this._mainlineStepper.reset();\n            this._mainlineStepper.line = this._animation.mainline;\n            this._time = 0;\n            // reset all additional time lines (soundline, varline, tagline, eventline)\n            this.resetLines();\n            // reset tags\n            this._tags = 0;\n            // reset variables to defaults\n            for (var i = 0; i < this._vars.length; i++) {\n                this._vars[i].reset();\n            }\n            // create bones and sprites - based on data in mainLine key 0\n            this.loadKeys(this._animation.mainline.at(0), true);\n            // first update - to set correct positions\n            this.updateCharacter();\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.resetLines = function () {\n            // reset steppers\n            this._lineSteppersCount = 0;\n            // go through all lines (sounds, events, tags, vars)\n            for (var i = 0; i < this._animation.linesLength; i++) {\n                var line = this._animation.getLineById(i);\n                // if not enough line steppers in array, add new one\n                if (this._lineSteppersCount >= this._lineSteppers.length) {\n                    this._lineSteppers[this._lineSteppersCount] = new Spriter.LineStepper();\n                }\n                // get free stepper\n                var stepper = this._lineSteppers[this._lineSteppersCount++];\n                stepper.reset();\n                stepper.line = line;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.setBones = function (bones, force) {\n            if (force === void 0) { force = false; }\n            // switch off all existing bones\n            for (var i = 0; i < this._bones.length; i++) {\n                if (this._bones[i] !== undefined) {\n                    this._bones[i].setOn(false);\n                }\n            }\n            // go through all bones and add new ones if necessary and activate used ones\n            for (var i = 0; i < bones.length; i++) {\n                var ref = bones[i];\n                // if bone does not exist add it and make active, else make it active only\n                if (this._bones[ref.id] === undefined) {\n                    var newBone = new Spriter.SpriterBone();\n                    newBone.type = 1 /* BONE */;\n                    this._bones[ref.id] = newBone;\n                }\n                var bone = this._bones[ref.id];\n                bone.setOn(true);\n                bone.parent = ref.parent;\n                if (bone.timelineKey !== ref.key || bone.timeline !== ref.timeline || force) {\n                    bone.setKey(this._entity, this._animation, ref.timeline, ref.key);\n                }\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.setObjects = function (objects, force) {\n            if (force === void 0) { force = false; }\n            // switch off (kill) all existing sprites\n            for (var i = 0; i < this._objects.length; i++) {\n                if (this._objects[i] !== undefined) {\n                    this._objects[i].setOn(false);\n                }\n            }\n            // go through all objects/sprites and add new ones if necessary and activate used ones\n            var zChange = false;\n            for (var i = 0; i < objects.length; i++) {\n                var ref = objects[i];\n                var object = null;\n                var sprite = null;\n                // if sprite does not exist add it and make active, else make it active only\n                if (this._objects[ref.id] === undefined) {\n                    sprite = new Phaser.Sprite(this.game, 0, 0, this._textureKey);\n                    object = new Spriter.SpriterObject(this, sprite);\n                    this._objects[ref.id] = object;\n                    this.add(sprite);\n                }\n                else {\n                    object = this._objects[ref.id];\n                    sprite = object.sprite;\n                }\n                object.parent = ref.parent;\n                object.type = this._animation.getTimelineById(ref.timeline).objectType;\n                // is it sprite or any other type of object? (box / point)\n                if (object.type === 0 /* SPRITE */) {\n                    object.setOn(true);\n                    if (object.sprite.z !== ref.z) {\n                        object.sprite.z = ref.z;\n                        zChange = true;\n                    }\n                }\n                else {\n                    object.setOn(true, true);\n                }\n                if (object.timelineKey !== ref.key || object.timeline !== ref.timeline || force) {\n                    object.setKey(this._entity, this._animation, ref.timeline, ref.key);\n                }\n            }\n            // need to sort sprites?\n            if (zChange) {\n                this.sort();\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.loadKeys = function (keyMainline, force) {\n            if (force === void 0) { force = false; }\n            this.setBones(keyMainline.boneRefs, force);\n            this.setObjects(keyMainline.objectRefs, force);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.updateAnimation = function () {\n            if (this._paused || this._finished) {\n                return;\n            }\n            var mainlineStepper = this._mainlineStepper;\n            // check if in the end of animation and whether to loop or not\n            if (this._time > this._animation.length) {\n                if (this._animation.loopType === Spriter.eAnimationLooping.NO_LOOPING) {\n                    this._time = this._animation.length;\n                    this._finished = true;\n                }\n                else {\n                    this._time -= this._animation.length;\n                    this.onLoop.dispatch(this);\n                }\n            }\n            // consume all new keys\n            var key;\n            while ((key = mainlineStepper.step(this._time)) !== null) {\n                //console.log(\"got key at: \" + key.time + \" time: \" + this._time);\n                this.loadKeys(key);\n                mainlineStepper.lastTime = key.time;\n            }\n            this.updateCharacter();\n            this.updateLines();\n            if (this._finished) {\n                this.onFinish.dispatch(this);\n            }\n            this._time += (this.game.time.physicsElapsedMS * this._animationSpeed);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.updateCharacter = function () {\n            for (var i = 0; i < this._bones.length; i++) {\n                var bone = this._bones[i];\n                if (bone.on) {\n                    var parentSpatial = (bone.parent === -1) ? this._root : this._bones[bone.parent].transformed;\n                    bone.tween(this._time);\n                    bone.update(parentSpatial);\n                }\n            }\n            for (var i = 0; i < this._objects.length; i++) {\n                var object = this._objects[i];\n                if (object.on) {\n                    var parentSpatial = (object.parent === -1) ? this._root : this._bones[object.parent].transformed;\n                    object.tween(this._time);\n                    object.update(parentSpatial);\n                    if (object.type === 0 /* SPRITE */) {\n                        object.updateSprite();\n                    }\n                    else if (object.type === 2 /* BOX */) {\n                        this.onBoxUpdated.dispatch(this, object);\n                    }\n                    else if (object.type === 3 /* POINT */) {\n                        this.onPointUpdated.dispatch(this, object);\n                    }\n                }\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.updateLines = function () {\n            for (var i = this._lineSteppersCount - 1; i >= 0; i--) {\n                var lineStepper = this._lineSteppers[i];\n                var line = lineStepper.line;\n                var key;\n                while ((key = lineStepper.step(this._time)) !== null) {\n                    switch (line.type) {\n                        case Spriter.eTimelineType.SOUND_LINE:\n                            //console.log(\"sound: \" + line.name + \" - key: \" + key.id + \", time: \" + key.time);\n                            this.onSound.dispatch(this, line.name);\n                            break;\n                        case Spriter.eTimelineType.EVENT_LINE:\n                            //console.log(\"event: \" + line.name + \" - key: \" + key.id + \", time: \" + key.time);\n                            this.onEvent.dispatch(this, line.name);\n                            break;\n                        case Spriter.eTimelineType.TAG_LINE:\n                            var tagsOn = key.tagsOn;\n                            var tagChanges = this._tags ^ tagsOn;\n                            this._tags = tagsOn;\n                            // go through all changes\n                            for (var j = 0; j < this._spriter.tagsLength; j++) {\n                                var mask = 1 << j;\n                                if (tagChanges & mask) {\n                                    //console.log(\"tag change: \" + this._spriter.getTagById(j).name + \" value: \" + ((tagsOn & mask) > 0) + \" - key: \" + key.id + \", time: \" + key.time);\n                                    this.onTagChange.dispatch(this, this._spriter.getTagById(j).name, (tagsOn & mask) > 0);\n                                }\n                            }\n                            break;\n                        case Spriter.eTimelineType.VAR_LINE:\n                            var newVal = key.value;\n                            var variable = this._vars[line.varDefId];\n                            variable.value = newVal;\n                            //console.log(\"var set: \" + variable.name + \" value: \" + variable.value + \" - key: \" + key.id + \", time: \" + key.time);\n                            this.onVariableSet.dispatch(this, variable);\n                            break;\n                    }\n                    lineStepper.lastTime = key.time;\n                }\n            }\n        };\n        return SpriterGroup;\n    }(Phaser.Group));\n    Spriter.SpriterGroup = SpriterGroup;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"SpriterBone.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var SpriterObject = (function (_super) {\n        __extends(SpriterObject, _super);\n        // -------------------------------------------------------------------------\n        function SpriterObject(parent, sprite) {\n            _super.call(this);\n            this._spriter = parent.spriter;\n            this._charMapStack = parent.charMapStack;\n            this._sprite = sprite;\n        }\n        Object.defineProperty(SpriterObject.prototype, \"sprite\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._sprite;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.setOn = function (on, hideSprite) {\n            if (hideSprite === void 0) { hideSprite = false; }\n            _super.prototype.setOn.call(this, on);\n            // hide sprite for non-sprite objects\n            this._sprite.exists = on && !hideSprite;\n            this._sprite.visible = (on && !this._hide && !hideSprite);\n        };\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.setKey = function (entity, animation, timelineId, keyId) {\n            _super.prototype.setKey.call(this, entity, animation, timelineId, keyId);\n            // set sprite - skip invisible objects - boxes, points\n            if (this.type === 0 /* SPRITE */) {\n                var spriteKey = this.key;\n                var file = this._spriter.getFolderById(spriteKey.folder).getFileById(spriteKey.file);\n                this._file = file;\n                this.setFile(file);\n            }\n            else {\n                this._file = null;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.resetFile = function () {\n            if (this.type === 0 /* SPRITE */) {\n                this.setFile(this._file);\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.setFile = function (file) {\n            file = this._charMapStack.getFile(file);\n            if (file !== null) {\n                this._hide = false;\n                this._sprite.frameName = file.name;\n            }\n            else {\n                this._hide = true;\n                this._sprite.visible = false;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.updateSprite = function () {\n            var t = this.transformed;\n            var s = this.sprite;\n            s.position.set(t.x, t.y);\n            s.scale.set(t.scaleX, t.scaleY);\n            s.anchor.set(t.pivotX, t.pivotY);\n            s.alpha = t.alpha;\n            s.angle = t.angle;\n        };\n        return SpriterObject;\n    }(Spriter.SpriterBone));\n    Spriter.SpriterObject = SpriterObject;\n})(Spriter || (Spriter = {}));\n//# sourceMappingURL=spriter.js.map"
-
-/***/ }),
-/* 378 */
 /*!***********************!*\
   !*** ./src/config.js ***!
   \***********************/
@@ -16825,6 +16972,328 @@ exports.default = {
   localStorageName: 'phaseres6webpack'
 };
 
+/***/ }),
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */
+/*!***********************************!*\
+  !*** ./src/engine/ActorConfig.js ***!
+  \***********************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    FRONT_IDLE_INDEX: 4,
+    BACK_IDLE_INDEX: 0,
+    BACKLEFT_ANIMATION_INDEX: 2,
+    BACKRIGHT_ANIMATION_INDEX: 1,
+    FRONTLEFT_ANIMATION_INDEX: 5,
+    FRONTRIGHT_ANIMATION_INDEX: 3,
+    RIGHT_ANIMATION_INDEX: 6,
+    LEFT_ANIMATION_INDEX: 7,
+    ENTITY: 'Animaciones',
+    START_ANIMATION_INDEX: 4
+};
+
+/***/ }),
+/* 382 */
+/*!*****************************!*\
+  !*** ./src/engine/Actor.js ***!
+  \*****************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(/*! script-loader!../../assets/lib/spriter/spriter.js */ 130);
+
+var _ActorConfig = __webpack_require__(/*! ./ActorConfig */ 381);
+
+var _ActorConfig2 = _interopRequireDefault(_ActorConfig);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Actor = function (_Spriter$SpriterGroup) {
+  _inherits(Actor, _Spriter$SpriterGroup);
+
+  function Actor(game, actorDefinition) {
+    _classCallCheck(this, Actor);
+
+    var _this = _possibleConstructorReturn(this, (Actor.__proto__ || Object.getPrototypeOf(Actor)).call(this, game, actorDefinition.spriterData, actorDefinition.textureKey, _ActorConfig2.default.ENTITY, _ActorConfig2.default.START_ANIMATION_INDEX));
+
+    if (actorDefinition.isSmall) {
+      _this.scaleX = 90 / _this.width;
+      _this.scaleY = 120 / _this.height;
+
+      _this.scale.setTo(_this.scaleX, _this.scaleY);
+    }
+
+    console.debug("Actor initialised");
+
+    window.player = _this;
+    _this._animationSpeed = 0.6;
+    _this.id = 1;
+
+    // player bounds - circle
+    _this.drawBounds();
+    return _this;
+  }
+
+  _createClass(Actor, [{
+    key: "drawBounds",
+    value: function drawBounds() {
+      var _this2 = this;
+
+      this.bounds = null;
+      this.boundsGrp = this.game.make.group(null);
+      var bmd = this.game.make.bitmapData(60, 60);
+      var maskBitmap = this.game.make.bitmapData(60, 60);
+
+      bmd.circle(30, 30, 30, "rgba(43, 41, 42, 0.3)");
+      bmd.circle(30, 30, 20, "rgba(43, 41, 42, 0.7)");
+
+      maskBitmap.circle(30, 30, 30, "rgba(224, 119, 44, 0.5)");
+
+      this.maskImg = this.game.make.image(0, 0, maskBitmap);
+      this.maskImg.width = this.maskImg.width + this.maskImg.width;
+      this.maskImg.anchor.set(0.5);
+      this.maskImg.visible = false;
+
+      this.bounds = this.game.make.sprite(0, 0, bmd);
+      this.bounds.width = this.bounds.width + this.bounds.width;
+      this.bounds.anchor.set(0.5);
+
+      this.boundsGrp.add(this.bounds);
+      this.boundsGrp.add(this.maskImg);
+
+      // Add input
+      this.bounds.inputEnabled = true;
+      this.bounds.input.useHandCursor = true;
+
+      this.bounds.events.onInputOver.add(function (sprite) {
+        _this2.maskImg.visible = true;
+      }, this);
+
+      this.bounds.events.onInputOut.add(function (sprite) {
+        _this2.maskImg.visible = false;
+      }, this);
+
+      window.boundsGrp = this.boundsGrp;
+
+      this.addAt(this.boundsGrp, 0);
+    }
+  }, {
+    key: "update",
+    value: function update() {
+      this.updateAnimation();
+
+      if (this.walkTween && this.walkTween.isRunning) {
+        this.calcAngle(this.xyPoint);
+
+        if (this.angleTo != this.walkTween.angleToBegin) {
+          this.lookAt();
+        }
+      }
+    }
+  }, {
+    key: "walkTo",
+    value: function walkTo(point, walkSpeed) {
+      if (!walkSpeed) {
+        walkSpeed = this.walkSpeed;
+      }
+      if (this.walkingTween) {
+        this.walkingTween.stop();
+        this.walkingTween = null;
+      }
+      var distance = Phaser.Math.distance(this.x, this.y, point.x, point.y);
+      this.walkingTween = this.game.add.tween(this).to({
+        x: point.x,
+        y: point.y
+      }, distance * this.averageWalkSpeed * (1 / walkSpeed)).start();
+    }
+  }, {
+    key: "walkPath",
+    value: function walkPath(path, polys, finalPoint, walkSpeed) {
+      if (!walkSpeed) {
+        walkSpeed = this.walkSpeed;
+      }
+      if (this.walkingTween) {
+        this.walkingTween.stop();
+        this.walkingTween = null;
+      }
+      this.walkingTween = this.game.add.tween(this);
+
+      for (var i = 0; i < path.length; i++) {
+        var point = polys[path[i]].centroid;
+        var distance = Phaser.Math.distance(this.x, this.y, point.x, point.y);
+        if (i == path.length - 1 && polys[path[i]].contains(finalPoint.x, finalPoint.y)) {
+          this.walkingTween.to({
+            x: finalPoint.x,
+            y: finalPoint.y
+          }, distance * walkSpeed / 10, Phaser.Easing.Linear.None);
+        } else {
+          if (distance != 0) {
+            this.walkingTween.to({
+              x: point.x,
+              y: point.y
+            }, distance * walkSpeed / 10, Phaser.Easing.Linear.None);
+          }
+        }
+      }
+
+      this.walkingTween.start();
+    }
+  }, {
+    key: "calcAngle",
+    value: function calcAngle(pointer) {
+      if (pointer) {
+        this.angleTo = Phaser.Math.angleBetween(this.x, this.y, pointer.x, pointer.y) * 180 / Math.PI;
+      }
+
+      if (this.angleTo > -100 && this.angleTo < -80) {
+        this.angleTo = "UPPER";
+      } else if (this.angleTo < -10 && this.angleTo > -80) {
+        this.angleTo = "UPPER_RIGHT";
+      } else if (this.angleTo < -110 && this.angleTo > -170) {
+        this.angleTo = "UPPER_LEFT";
+      } else if (this.angleTo > -10 && this.angleTo < 10) {
+        this.angleTo = "RIGHT";
+      } else if (this.angleTo > -180 && this.angleTo < -170 || this.angleTo > 170 && this.angleTo < 180 || this.angleTo === 180) {
+        this.angleTo = "LEFT";
+      } else if (this.angleTo > 80 && this.angleTo < 100) {
+        this.angleTo = "LOWER";
+      } else if (this.angleTo > 10 && this.angleTo < 80) {
+        this.angleTo = "LOWER_RIGHT";
+      } else if (this.angleTo > 100 && this.angleTo < 170) {
+        this.angleTo = "LOWER_LEFT";
+      }
+    }
+  }, {
+    key: "lookAt",
+    value: function lookAt() {
+      if (this.angleTo == "UPPER") {
+        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        console.log("ANGULO SUPERIOR");
+      } else if (this.angleTo == "UPPER_RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.BACKRIGHT_ANIMATION_INDEX);
+        console.log("ANGULO SUPERIOR DERECHO");
+      } else if (this.angleTo == "UPPER_LEFT") {
+        this.playAnimationById(_ActorConfig2.default.BACKLEFT_ANIMATION_INDEX);
+        console.log("ANGULO SUPERIOR IZQUIERDO");
+      } else if (this.angleTo == "RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.RIGHT_ANIMATION_INDEX);
+        console.log("ANGULO DERECHO");
+      } else if (this.angleTo == "LEFT") {
+        this.playAnimationById(_ActorConfig2.default.LEFT_ANIMATION_INDEX);
+        console.log("ANGULO IZQUIERDO");
+      } else if (this.angleTo == "LOWER") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO INFERIOR");
+      } else if (this.angleTo == "LOWER_RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.FRONTLEFT_ANIMATION_INDEX);
+        console.log("ANGULO INFERIOR DERECHO");
+      } else if (this.angleTo == "LOWER_LEFT") {
+        this.playAnimationById(_ActorConfig2.default.FRONTLEFT_ANIMATION_INDEX);
+        console.log("ANGULO INFERIOR IZQUIERDO");
+      }
+    }
+  }, {
+    key: "stopAndLookAt",
+    value: function stopAndLookAt(tween) {
+      if (tween.angleToBegin == "UPPER") {
+        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        console.log("ANGULO SUPERIOR");
+      } else if (tween.angleToBegin == "UPPER_RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        console.log("ANGULO SUPERIOR DERECHO");
+      } else if (tween.angleToBegin == "UPPER_LEFT") {
+        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        console.log("ANGULO SUPERIOR IZQUIERDO");
+      } else if (tween.angleToBegin == "RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO DERECHO");
+      } else if (tween.angleToBegin == "LEFT") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO IZQUIERDO");
+      } else if (tween.angleToBegin == "LOWER") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO INFERIOR");
+      } else if (tween.angleToBegin == "LOWER_RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO INFERIOR DERECHO");
+      } else if (tween.angleToBegin == "LOWER_LEFT") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO INFERIOR IZQUIERDO");
+      }
+    }
+  }, {
+    key: "movementComplete",
+    value: function movementComplete(player, tween) {
+      this.stopAndLookAt(tween);
+    }
+  }, {
+    key: "moveTo",
+    value: function moveTo(goTo, navmesh) {
+      this.xyPoint = goTo;
+
+      console.debug("Other Player movement signal received");
+      if (!navmesh) {
+        return;
+      }
+
+      if (this.walkTween && this.walkTween.isRunning) {
+        this.walkTween.stop();
+      }
+
+      this.walkTween = this.game.add.tween(this);
+      this.walkTween.onComplete.add(this.movementComplete, this);
+
+      this.calcAngle(goTo);
+      this.walkTween.angleToBegin = this.angleTo;
+
+      this.lookAt();
+
+      var path = navmesh.findPath({ player: this, goTo: goTo });
+      console.log(path);
+
+      var pointer;
+      for (var i = 0; i < path.length; i++) {
+        pointer = path[i];
+        var distance = Phaser.Math.distance(path[i - 1] != undefined ? path[i - 1].x : this.x, path[i - 1] != undefined ? path[i - 1].y : this.y, pointer.x, pointer.y);
+        this.walkTween.to({ x: pointer.x, y: pointer.y }, distance * 7);
+      }
+
+      this.walkTween.start();
+    }
+  }]);
+
+  return Actor;
+}(Spriter.SpriterGroup);
+
+exports.default = Actor;
+
 /***/ })
-],[130]);
+],[131]);
 //# sourceMappingURL=bundle.js.map

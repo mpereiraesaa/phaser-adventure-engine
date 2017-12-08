@@ -1,6 +1,7 @@
 /* globals __DEV__ */
 import Phaser from "phaser";
 import Hud from "../../sprites/Hud";
+import PlayerActor from "../../engine/PlayerActor";
 
 export default class extends Phaser.State {
   init() {}
@@ -12,13 +13,12 @@ export default class extends Phaser.State {
   }
 
   create() {
+    this.camera.flash('#000000');
     document.getElementById("chat-container").style.display = "block";
 
     this.background = this.game.add.sprite(0, 0, "lobby-bg");
     this.scaleX = this.game.width / this.background.width;
     this.scaleY = this.game.height / this.background.height;
-
-    // Group HUD / Icons
     this.hud = this.game.add.group();
 
     // create Spriter loader - class that can change Spriter file into internal structure
@@ -34,8 +34,6 @@ export default class extends Phaser.State {
     // Scale background
     this.hud.scale.setTo(this.scaleX, this.scaleY);
 
-    // create Spriter file object - it wraps XML/JSON loaded with Phaser Loader
-    //var spriterFile = new Spriter.SpriterXml(this.cache.getXML("TESTXml"));
     var spriterFile = new Spriter.SpriterJSON(
       this.cache.getJSON("playerJson"),
       /* optional parameters */ {
@@ -43,29 +41,27 @@ export default class extends Phaser.State {
       }
     );
 
-    // proces Spriter file (XML/JSON) with Spriter loader - outputs Spriter animation which you can instantiate multiple times with SpriterGroup
     spriterData = spriterLoader.load(spriterFile);
 
     // create actual renderable object - it is extension of Phaser.Group
-    this._spriterGroup = new Spriter.SpriterGroup(
-      this.game,
-      spriterData,
-      "playerAtlas",
-      "Animaciones",
-      "Frontidle",
-      100
-    );
-    this._spriterGroup.position.setTo(420, 400);
+    this.player = new PlayerActor(this.game, {
+      spriterData: spriterData,
+      textureKey: "playerAtlas",
+      entity: "Animaciones",
+      animation: "Frontidle",
+      animationSpeed: 100,
+      isSmall: false
+    });
+
+    this.player.position.setTo(420, 400);
 
     // adds SpriterGroup to Phaser.World to appear on screen
-    this.world.add(this._spriterGroup);
+    this.world.add(this.player);
 
     // Spriter animation can send info on when sounds, events, tags, variable - here we are listening to Phaser.Signals when animation variable is set
-    this._spriterGroup.onVariableSet.add((spriter, variable) => {
+    this.player.onVariableSet.add((spriter, variable) => {
       this._text = variable.string;
     }, this);
-
-    window._spriterGroup = this._spriterGroup
 
     // // cycle animations
     // var key = this.game.input.keyboard.addKey(Phaser.Keyboard.A);
@@ -94,7 +90,7 @@ export default class extends Phaser.State {
   }
 
   update() {
-    this._spriterGroup.updateAnimation();
+    this.player.updateAnimation();
   }
 
   render() {}
