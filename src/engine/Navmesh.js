@@ -2,7 +2,7 @@ import Const from "./lib/constellation";
 
 export default class Navmesh {
   constructor(game) {
-    this.backgroundScale = {}
+    this.backgroundScale = {};
     console.debug("Navmesh initialised");
     this.directPath = false;
     this.game = game;
@@ -90,30 +90,17 @@ export default class Navmesh {
     }
   }
 
-  findPath(playerMovement) {
-    if (!playerMovement) {
-      this.characterNodeId = this.grid.addNode(
-        this.characterLocation.x,
-        this.characterLocation.y,
-        { id: "character" }
-      );
-      this.pointerNodeId = this.grid.addNode(
-        this.pointerLocation.x,
-        this.pointerLocation.y,
-        { id: "pointer" }
-      );
-    } else {
-      this.characterNodeId = this.grid.addNode(
-        playerMovement.player.x,
-        playerMovement.player.y,
-        { id: "character" }
-      );
-      this.pointerNodeId = this.grid.addNode(
-        playerMovement.goTo.x,
-        playerMovement.goTo.y,
-        { id: "pointer" }
-      );
-    }
+  findPath() {
+    this.characterNodeId = this.grid.addNode(
+      this.characterLocation.x,
+      this.characterLocation.y,
+      { id: "character" }
+    );
+    this.pointerNodeId = this.grid.addNode(
+      this.pointerLocation.x,
+      this.pointerLocation.y,
+      { id: "pointer" }
+    );
 
     var lineOfSightPoints = this.intersectorLine.coordinatesOnLine();
 
@@ -157,31 +144,31 @@ export default class Navmesh {
       let _nodes = this.getCurrentNodes();
 
       let waypoint = this.grid.getNearestFromArrayNodeToPoint(
-        this.characterNodeId,
+        this.characterLocation,
         _nodes
       );
 
       let distanceWaypoint = Phaser.Math.distance(
         waypoint.x,
         waypoint.y,
-        this.pointerNodeId.x,
-        this.pointerNodeId.y
+        this.pointerLocation.x,
+        this.pointerLocation.y
       );
 
       let distanceDirect = Phaser.Math.distance(
-        this.characterNodeId.x,
-        this.characterNodeId.y,
-        this.pointerNodeId.x,
-        this.pointerNodeId.y
+        this.characterLocation.x,
+        this.characterLocation.y,
+        this.pointerLocation.x,
+        this.pointerLocation.y
       );
 
       if (distanceWaypoint < distanceDirect) {
         path.push(waypoint);
       }
 
-      path.push(this.pointerNodeId);
+      path.push(this.pointerLocation);
     } else {
-      this.directPath = direct
+      this.directPath = direct;
       console.log("intersects obstacle");
       var snap;
       for (var i = 0; i < crossingPoints.length; i++) {
@@ -231,7 +218,11 @@ export default class Navmesh {
       data = pointer.data;
     }
     this.game.pncPlugin.signals.sceneTappedSignal.halt();
-    var node = this.grid.addNode(pointer.x * this.backgroundScale.x, pointer.y * this.backgroundScale.y, data);
+    var node = this.grid.addNode(
+      pointer.x * this.backgroundScale.x,
+      pointer.y * this.backgroundScale.y,
+      data
+    );
     this.currentNodes.push(node.id);
     this.drawAll();
     return node;

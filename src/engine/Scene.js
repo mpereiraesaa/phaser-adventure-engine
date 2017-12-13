@@ -1,6 +1,6 @@
 import Navmesh from "./Navmesh";
+import Actor from "./Actor";
 import PlayerActor from "./PlayerActor";
-import Hud from "../sprites/Hud";
 
 export default class Scene extends Phaser.State {
   constructor(key, sceneDefinition) {
@@ -10,12 +10,32 @@ export default class Scene extends Phaser.State {
     this.preloadItems = [];
     this.actors = [];
     this.objects = [];
+    this.player = null;
+    this.willMove = null;
+    this.game_width = 0;
+    this.game_height = 0;
+
+    this.spriterLoader = new Spriter.Loader();
+
+    this.spriterFile = new Spriter.SpriterJSON(
+      game.cache.getJSON("playerJson"),
+      /* optional parameters */ {
+        imageNameType: Spriter.eImageNameType.NAME_ONLY
+      }
+    );
+
+    // Now create Player and add it onto the game
+    this.spriterData = this.spriterLoader.load(this.spriterFile);
   }
 
   preload() {
     /*
     Hacky implementation for now - need to standardise scenedef and process this separately
      */
+    // Default player
+    // this.game.load.atlas("playerAtlas", "./assets/images/player/player.png", "./assets/images/player/player.json");
+    // this.game.load.json("playerJson", "./assets/images/player/player.scon");
+
     if (this.sceneDefinition.bg) {
       this.game.load.image(this.key + "bg", this.sceneDefinition.bg);
     }
@@ -27,14 +47,18 @@ export default class Scene extends Phaser.State {
     }
   }
 
+  shutdown() {
+    document.getElementById("chat-bar").style.display = "none";
+  }
+
   create() {
     console.debug("Scene initialised");
+    document.getElementById("chat-bar").style.display = "block";
     this.camera.flash("#000000");
     this.createSceneHierarchy();
+    this.game.network.scene = this;
 
-    // Just a Simple POC of moving the bot in game.
-    this.pocKey = this.game.input.keyboard.addKey(Phaser.Keyboard.C);
-    this.pocKey.onDown.add(this.movePoc, this);
+    this.game.network.otherPlayers = new Map();
 
     if (this.sceneDefinition.bg) {
       this.initBackground();
@@ -72,14 +96,35 @@ export default class Scene extends Phaser.State {
     }
   }
 
+  chatEvent() {
+    document
+      .getElementById("chat-bar")
+      .addEventListener("keypress", function(e) {
+        let key = e.which || e.keyCode;
+        if (key === 13) {
+          // 13 is enter
+          // code for enter
+          let message = document.getElementById("chat-bar").value;
+
+          this.game.network.sendKeyMessage({
+            chatbox: true,
+            message: message
+          });
+        }
+      });
+  }
+
   animateActors() {
     let i = 0;
-    for(; i < this.actors.length; i++) {
-      this.actors[i].updateAnimation();
+    for (; i < this.layers.actors.children.length; i++) {
+      this.layers.actors.children[i].updateAnimation();
     }
   }
 
   update() {
+    this.game.network.frameCounter++;
+    this.handleInput();
+
     if (this.background.input.pointerOver()) {
       this.navmesh.updatePointerLocation(
         this.background.input.pointerX(),
@@ -89,10 +134,10 @@ export default class Scene extends Phaser.State {
     this.navmesh.updateCharacterLocation(this.actors[0].x, this.actors[0].y);
 
     // Animate actors on screen
-    this.animateActors()
+    this.animateActors();
 
     // We check for depth of players
-    this.layers.actors.sort('y', Phaser.Group.SORT_ASCENDING)
+    this.layers.actors.sort("y", Phaser.Group.SORT_ASCENDING);
   }
 
   findActor(id) {
@@ -151,14 +196,122 @@ export default class Scene extends Phaser.State {
     this.addLayer("actors");
   }
 
-  moveOtherPlayer(id, x, y) {
-    let actor = this.findActor(id);
+  handleKeyMessages() {
+    const earlyMessages = [];
+    const lateMessages = [];
 
-    actor.moveTo({x: x, y: y}, this.navmesh);
+    this.game.network.keyMessages.forEach(messageEvent => {
+      if (this.game.network.otherPlayers) {
+        if (messageEvent.channel === this.game.network.currentChannelName) {
+          if (this.game.network.otherPlayers.has(messageEvent.message.uuid)) {
+            this.addCharacter(messageEvent.message.uuid);
+
+            const otherplayer = this.game.network.otherPlayers.get(
+              messageEvent.message.uuid
+            );
+            // otherplayer.position.set(messageEvent.message.position.x, messageEvent.message.position.y);
+            otherplayer.initialRemoteFrame = messageEvent.message.frameCounter;
+            otherplayer.initialLocalFrame = this.game.network.frameCounter;
+            this.game.network.sendKeyMessage({});
+          }
+
+          if (
+            messageEvent.message.position &&
+            this.game.network.otherPlayers.has(messageEvent.message.uuid)
+          ) {
+            this.game.network.keyMessages.push(messageEvent);
+            const otherplayer = this.game.network.otherPlayers.get(
+              messageEvent.message.uuid
+            );
+            const frameDelta =
+              messageEvent.message.frameCounter - otherplayer.lastKeyFrame;
+            const initDelta =
+              otherplayer.initialRemoteFrame - otherplayer.initialLocalFrame;
+            const frameDelay =
+              messageEvent.message.frameCounter -
+              this.game.network.frameCounter -
+              initDelta +
+              this.game.network.syncOtherPlayerFrameDelay;
+
+            if (frameDelay > 0) {
+              if (!messageEvent.hasOwnProperty("frameDelay")) {
+                messageEvent.frameDelay = frameDelay;
+                otherplayer.totalRecvedFrameDelay += frameDelay;
+                otherplayer.totalRecvedFrames++;
+              }
+
+              earlyMessages.push(messageEvent);
+              return;
+            } else if (frameDelay < 0) {
+              otherplayer.totalRecvedFrameDelay += frameDelay;
+              otherplayer.totalRecvedFrames++;
+              lateMessages.push(messageEvent);
+              return;
+            }
+
+            otherplayer.lastKeyFrame = messageEvent.message.frameCounter;
+
+            if (messageEvent.message.keyMessage.willMove) {
+              if (
+                messageEvent.message.keyMessage.x &&
+                messageEvent.message.keyMessage.y &&
+                messageEvent.message.keyMessage.path
+              ) {
+                otherplayer.willMove = {
+                  x: messageEvent.message.keyMessage.x,
+                  y: messageEvent.message.keyMessage.y,
+                  path: messageEvent.message.keyMessage.path,
+                  clientWidth: messageEvent.message.keyMessage.clientWidth,
+                  clientHeight: messageEvent.message.keyMessage.clientHeight,
+                };
+              }
+            }
+          }
+        }
+      }
+    });
+
+    if (lateMessages.length > 0) {
+      console.log({ lateMessages, earlyMessages });
+    }
+
+    this.game.network.keyMessages.length = 0;
+
+    earlyMessages.forEach(em => {
+      this.game.network.keyMessages.push(em);
+    });
   }
 
-  movePoc() {
-    this.moveOtherPlayer(1, 319, 516)
+  resetPath(path, clientRes) {
+    let result = [];
+    for (var i = 0; i < path.length; i++) {
+      result[i] = {
+        x: (path[i].x / clientRes.clientWidth) * this.game.width,
+        y: (path[i].y / clientRes.clientHeight) * this.game.height
+      };
+    }
+
+    return result;
+  }
+
+  handleInput() {
+    this.handleKeyMessages();
+
+    if (this.player) {
+      for (const uuid of this.game.network.otherPlayers.keys()) {
+        const otherplayer = this.game.network.otherPlayers.get(uuid);
+        if (otherplayer.willMove) {
+          let clientRes = {
+            clientWidth: otherplayer.willMove.clientWidth,
+            clientHeight: otherplayer.willMove.clientHeight
+          };
+          let path = this.resetPath(otherplayer.willMove.path, clientRes);
+          
+          otherplayer.moveTo({ x: otherplayer.willMove.x, y: otherplayer.willMove.y }, path);
+          otherplayer.willMove = null;
+        }
+      }
+    }
   }
 
   /**
@@ -173,12 +326,19 @@ export default class Scene extends Phaser.State {
     this.layers.background.add(this.background);
     this.background.inputEnabled = true;
     this.background.events.onInputUp.add(function(sprite, pointer, g) {
-      console.log(`x: ${pointer.x}, y: ${pointer.y}`);
       this.game.pncPlugin.signals.sceneTappedSignal.dispatch(
         pointer,
         this.navmesh
       );
     }, this);
+  }
+
+  drawMessage() {
+    //  You can either set the tab size in the style object:
+    let style = { font: "20px Courier", fill: "#fff" };
+    let text = game.make.text(100, 64, "Aadsasssssssssss", style);
+
+    this.initObjects(text);
   }
 
   /**
@@ -196,6 +356,28 @@ export default class Scene extends Phaser.State {
     }
   }
 
+  addCharacter(uuid) {
+    if (this.game.network.otherPlayers.has(uuid)) {
+      return;
+    }
+
+    let actorDefinition = {
+      spriterData: this.spriterData,
+      textureKey: "playerAtlas",
+      isSmall: true,
+      spawnX: 200,
+      spawnY: 600,
+      type: Actor,
+      uuid: uuid
+    };
+
+    if (!this.state) {
+      this.actors.push(actorDefinition);
+    } else {
+      this.addActorToScene(actorDefinition);
+    }
+  }
+
   initObjects(gameObject) {
     // if this state is not active defer object creation until it is
     if (!this.state) {
@@ -203,6 +385,15 @@ export default class Scene extends Phaser.State {
     } else {
       this.layers.background.add(gameObject);
     }
+  }
+
+  removeCharacter(uuid) {
+    if (!this.game.network.otherPlayers.has(uuid)) {
+      return;
+    }
+
+    this.game.network.otherPlayers.get(uuid).destroy();
+    this.game.network.otherPlayers.delete(uuid);
   }
 
   /**
@@ -214,9 +405,15 @@ export default class Scene extends Phaser.State {
 
     if (actorDefinition.type === undefined) {
       actor = new PlayerActor(game, actorDefinition);
+      this.game.network.player = actor;
+      this.player = actor;
     } else {
       actorDefinition.id = 1;
       actor = new actorDefinition.type(game, actorDefinition);
+    }
+
+    if (actorDefinition.uuid) {
+      this.game.network.otherPlayers.set(actorDefinition.uuid, actor);
     }
 
     // Set spawn position for actor
@@ -227,6 +424,8 @@ export default class Scene extends Phaser.State {
     }, this);
 
     this.layers.actors.add(actor);
+
+    this.game.network.sendKeyMessage({});
 
     return actor;
   }

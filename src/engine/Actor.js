@@ -234,11 +234,11 @@ export default class Actor extends Spriter.SpriterGroup {
     this.stopAndLookAt(tween);
   }
 
-  moveTo(goTo, navmesh) {
+  moveTo(goTo, path) {
     this.xyPoint = goTo;
 
     console.debug("Other Player movement signal received");
-    if (!navmesh) {
+    if (!path) {
       return;
     }
 
@@ -253,9 +253,6 @@ export default class Actor extends Spriter.SpriterGroup {
     this.walkTween.angleToBegin = this.angleTo;
 
     this.lookAt();
-
-    var path = navmesh.findPath({ player: this, goTo: goTo });
-    console.log(path);
 
     var pointer;
     for (var i = 0; i < path.length; i++) {

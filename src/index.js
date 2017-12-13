@@ -4,7 +4,7 @@ import {TestStage} from "./states/TestStage/Index"
 
 import 'script-loader!../assets/lib/spriter/spriter.js';
 
-const Start = (game) => {
+const Start = (game, networkInstance) => {
   game.state.add("SelectorBoot", Selector.BootState, false);
   game.state.add("SelectorSplash", Selector.SplashState, false);
   game.state.add("SelectorGame", Selector.GameState, false);
@@ -16,6 +16,9 @@ const Start = (game) => {
   game.state.add("LobbyBoot", Lobby.BootState, false);
   game.state.add("LobbySplash", Lobby.SplashState, false);
   game.state.add("LobbyGame", Lobby.GameState, false);
+
+  // This allows two windows to run update function at same time.
+  game.state.disableVisibilityChange = true;
 
   game.state.start("LobbyBoot");
 };

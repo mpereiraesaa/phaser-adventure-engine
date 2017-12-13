@@ -83,15 +83,6 @@ export default class extends Phaser.State {
       spawnX: 200,
       spawnY: 600
     });
-
-    this.game.pncPlugin.addActor(room, {
-      spriterData: spriterData,
-      textureKey: "playerAtlas",
-      isSmall: true,
-      spawnX: 200,
-      spawnY: 600,
-      type: Actor
-    });
   }
 
   update() {}

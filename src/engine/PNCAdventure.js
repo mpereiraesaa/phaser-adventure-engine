@@ -46,6 +46,14 @@ export default class extends Phaser.Plugin {
     return this.scenes[key];
   }
 
+  addOtherCharacter(scene, uuid) {
+    return scene.addCharacter(uuid);
+  }
+
+  removeOtherCharacter(scene, uuid) {
+    return scene.removeCharacter(uuid);
+  }
+
   addObject(scene, gameObject) {
     return scene.initObjects(gameObject);
   }

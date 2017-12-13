@@ -164,7 +164,7 @@ module.exports = !__webpack_require__(/*! ./_fails */ 3)(function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
-var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 95);
+var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 96);
 var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 23);
 var dP = Object.defineProperty;
 
@@ -366,7 +366,7 @@ var createDesc = __webpack_require__(/*! ./_property-desc */ 32);
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
 var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 23);
 var has = __webpack_require__(/*! ./_has */ 11);
-var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 95);
+var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 96);
 var gOPD = Object.getOwnPropertyDescriptor;
 
 exports.f = __webpack_require__(/*! ./_descriptors */ 6) ? gOPD : function getOwnPropertyDescriptor(O, P) {
@@ -642,7 +642,7 @@ if (__webpack_require__(/*! ./_descriptors */ 6)) {
   var redefineAll = __webpack_require__(/*! ./_redefine-all */ 42);
   var toInteger = __webpack_require__(/*! ./_to-integer */ 25);
   var toLength = __webpack_require__(/*! ./_to-length */ 8);
-  var toIndex = __webpack_require__(/*! ./_to-index */ 121);
+  var toIndex = __webpack_require__(/*! ./_to-index */ 122);
   var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 36);
   var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 23);
   var has = __webpack_require__(/*! ./_has */ 11);
@@ -664,7 +664,7 @@ if (__webpack_require__(/*! ./_descriptors */ 6)) {
   var $iterDetect = __webpack_require__(/*! ./_iter-detect */ 56);
   var setSpecies = __webpack_require__(/*! ./_set-species */ 39);
   var arrayFill = __webpack_require__(/*! ./_array-fill */ 86);
-  var arrayCopyWithin = __webpack_require__(/*! ./_array-copy-within */ 111);
+  var arrayCopyWithin = __webpack_require__(/*! ./_array-copy-within */ 112);
   var $DP = __webpack_require__(/*! ./_object-dp */ 7);
   var $GOPD = __webpack_require__(/*! ./_object-gopd */ 16);
   var dP = $DP.f;
@@ -1118,10 +1118,10 @@ if (__webpack_require__(/*! ./_descriptors */ 6)) {
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Map = __webpack_require__(/*! ./es6.map */ 116);
+var Map = __webpack_require__(/*! ./es6.map */ 117);
 var $export = __webpack_require__(/*! ./_export */ 0);
 var shared = __webpack_require__(/*! ./_shared */ 51)('metadata');
-var store = shared.store || (shared.store = new (__webpack_require__(/*! ./es6.weak-map */ 119))());
+var store = shared.store || (shared.store = new (__webpack_require__(/*! ./es6.weak-map */ 120))());
 
 var getOrCreateMetadataMap = function (target, targetKey, create) {
   var targetMetadata = store.get(target);
@@ -1310,7 +1310,7 @@ module.exports = false;
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys = __webpack_require__(/*! ./_object-keys-internal */ 97);
+var $keys = __webpack_require__(/*! ./_object-keys-internal */ 98);
 var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 69);
 
 module.exports = Object.keys || function keys(O) {
@@ -1347,7 +1347,7 @@ module.exports = function (index, length) {
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
-var dPs = __webpack_require__(/*! ./_object-dps */ 98);
+var dPs = __webpack_require__(/*! ./_object-dps */ 99);
 var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 69);
 var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 68)('IE_PROTO');
 var Empty = function () { /* empty */ };
@@ -1398,7 +1398,7 @@ module.exports = Object.create || function create(O, Properties) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-var $keys = __webpack_require__(/*! ./_object-keys-internal */ 97);
+var $keys = __webpack_require__(/*! ./_object-keys-internal */ 98);
 var hiddenKeys = __webpack_require__(/*! ./_enum-bug-keys */ 69).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
@@ -1457,7 +1457,7 @@ module.exports = function (it, Constructor, name, forbiddenField) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var ctx = __webpack_require__(/*! ./_ctx */ 19);
-var call = __webpack_require__(/*! ./_iter-call */ 109);
+var call = __webpack_require__(/*! ./_iter-call */ 110);
 var isArrayIter = __webpack_require__(/*! ./_is-array-iter */ 82);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
@@ -2118,7 +2118,7 @@ module.exports = function (it) {
 var global = __webpack_require__(/*! ./_global */ 2);
 var core = __webpack_require__(/*! ./_core */ 22);
 var LIBRARY = __webpack_require__(/*! ./_library */ 34);
-var wksExt = __webpack_require__(/*! ./_wks-ext */ 96);
+var wksExt = __webpack_require__(/*! ./_wks-ext */ 97);
 var defineProperty = __webpack_require__(/*! ./_object-dp */ 7).f;
 module.exports = function (name) {
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
@@ -2545,7 +2545,7 @@ module.exports = __webpack_require__(/*! ./_core */ 22).getIteratorMethod = func
 /***/ (function(module, exports, __webpack_require__) {
 
 // 9.4.2.3 ArraySpeciesCreate(originalArray, length)
-var speciesConstructor = __webpack_require__(/*! ./_array-species-constructor */ 224);
+var speciesConstructor = __webpack_require__(/*! ./_array-species-constructor */ 226);
 
 module.exports = function (original, length) {
   return new (speciesConstructor(original))(length);
@@ -2591,7 +2591,7 @@ module.exports = function fill(value /* , start = 0, end = @length */) {
 "use strict";
 
 var addToUnscopables = __webpack_require__(/*! ./_add-to-unscopables */ 31);
-var step = __webpack_require__(/*! ./_iter-step */ 112);
+var step = __webpack_require__(/*! ./_iter-step */ 113);
 var Iterators = __webpack_require__(/*! ./_iterators */ 45);
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
 
@@ -2635,7 +2635,7 @@ addToUnscopables('entries');
 /***/ (function(module, exports, __webpack_require__) {
 
 var ctx = __webpack_require__(/*! ./_ctx */ 19);
-var invoke = __webpack_require__(/*! ./_invoke */ 102);
+var invoke = __webpack_require__(/*! ./_invoke */ 103);
 var html = __webpack_require__(/*! ./_html */ 70);
 var cel = __webpack_require__(/*! ./_dom-create */ 66);
 var global = __webpack_require__(/*! ./_global */ 2);
@@ -2850,7 +2850,7 @@ var fails = __webpack_require__(/*! ./_fails */ 3);
 var anInstance = __webpack_require__(/*! ./_an-instance */ 40);
 var toInteger = __webpack_require__(/*! ./_to-integer */ 25);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
-var toIndex = __webpack_require__(/*! ./_to-index */ 121);
+var toIndex = __webpack_require__(/*! ./_to-index */ 122);
 var gOPN = __webpack_require__(/*! ./_object-gopn */ 38).f;
 var dP = __webpack_require__(/*! ./_object-dp */ 7).f;
 var arrayFill = __webpack_require__(/*! ./_array-fill */ 86);
@@ -3119,6 +3119,17 @@ exports[DATA_VIEW] = $DataView;
 
 /***/ }),
 /* 92 */
+/*!********************************************************************!*\
+  !*** ./node_modules/script-loader!./assets/lib/spriter/spriter.js ***!
+  \********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! !./node_modules/script-loader/addScript.js */ 348)(__webpack_require__(/*! !./node_modules/raw-loader!./assets/lib/spriter/spriter.js */ 349))
+
+/***/ }),
+/* 93 */
 /*!***********************************!*\
   !*** ./src/engine/PlayerActor.js ***!
   \***********************************/
@@ -3135,9 +3146,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(/*! script-loader!../../assets/lib/spriter/spriter.js */ 130);
+__webpack_require__(/*! script-loader!../../assets/lib/spriter/spriter.js */ 92);
 
-var _ActorConfig = __webpack_require__(/*! ./ActorConfig */ 381);
+var _ActorConfig = __webpack_require__(/*! ./ActorConfig */ 132);
 
 var _ActorConfig2 = _interopRequireDefault(_ActorConfig);
 
@@ -3397,7 +3408,15 @@ var PlayerActor = function (_Spriter$SpriterGroup) {
         this.lookAt();
 
         var path = navmesh.findPath();
-        console.log(path);
+
+        this.game.network.sendKeyMessage({
+          willMove: true,
+          x: pointer.x,
+          y: pointer.y,
+          path: path,
+          clientWidth: game.width,
+          clientHeight: game.height
+        });
 
         var pointer;
         for (var i = 0; i < path.length; i++) {
@@ -3417,7 +3436,7 @@ var PlayerActor = function (_Spriter$SpriterGroup) {
 exports.default = PlayerActor;
 
 /***/ }),
-/* 93 */
+/* 94 */
 /*!****************************!*\
   !*** ./src/sprites/Hud.js ***!
   \****************************/
@@ -3635,7 +3654,7 @@ var Hud = function (_Phaser$Group) {
 exports.default = Hud;
 
 /***/ }),
-/* 94 */
+/* 95 */
 /*!**********************!*\
   !*** ./src/utils.js ***!
   \**********************/
@@ -3656,7 +3675,7 @@ var centerGameObjects = exports.centerGameObjects = function centerGameObjects(o
 };
 
 /***/ }),
-/* 95 */
+/* 96 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/_ie8-dom-define.js ***!
   \*********************************************************/
@@ -3670,7 +3689,7 @@ module.exports = !__webpack_require__(/*! ./_descriptors */ 6) && !__webpack_req
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /*!**************************************************!*\
   !*** ./node_modules/core-js/modules/_wks-ext.js ***!
   \**************************************************/
@@ -3682,7 +3701,7 @@ exports.f = __webpack_require__(/*! ./_wks */ 5);
 
 
 /***/ }),
-/* 97 */
+/* 98 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/_object-keys-internal.js ***!
   \***************************************************************/
@@ -3710,7 +3729,7 @@ module.exports = function (object, names) {
 
 
 /***/ }),
-/* 98 */
+/* 99 */
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_object-dps.js ***!
   \*****************************************************/
@@ -3734,7 +3753,7 @@ module.exports = __webpack_require__(/*! ./_descriptors */ 6) ? Object.definePro
 
 
 /***/ }),
-/* 99 */
+/* 100 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/_object-gopn-ext.js ***!
   \**********************************************************/
@@ -3764,7 +3783,7 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 
 /***/ }),
-/* 100 */
+/* 101 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/_object-assign.js ***!
   \********************************************************/
@@ -3810,7 +3829,7 @@ module.exports = !$assign || __webpack_require__(/*! ./_fails */ 3)(function () 
 
 
 /***/ }),
-/* 101 */
+/* 102 */
 /*!***********************************************!*\
   !*** ./node_modules/core-js/modules/_bind.js ***!
   \***********************************************/
@@ -3822,7 +3841,7 @@ module.exports = !$assign || __webpack_require__(/*! ./_fails */ 3)(function () 
 
 var aFunction = __webpack_require__(/*! ./_a-function */ 10);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
-var invoke = __webpack_require__(/*! ./_invoke */ 102);
+var invoke = __webpack_require__(/*! ./_invoke */ 103);
 var arraySlice = [].slice;
 var factories = {};
 
@@ -3847,7 +3866,7 @@ module.exports = Function.bind || function bind(that /* , ...args */) {
 
 
 /***/ }),
-/* 102 */
+/* 103 */
 /*!*************************************************!*\
   !*** ./node_modules/core-js/modules/_invoke.js ***!
   \*************************************************/
@@ -3874,7 +3893,7 @@ module.exports = function (fn, args, that) {
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_parse-int.js ***!
   \****************************************************/
@@ -3894,7 +3913,7 @@ module.exports = $parseInt(ws + '08') !== 8 || $parseInt(ws + '0x16') !== 22 ? f
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/_parse-float.js ***!
   \******************************************************/
@@ -3913,7 +3932,7 @@ module.exports = 1 / $parseFloat(__webpack_require__(/*! ./_string-ws */ 72) + '
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/_a-number-value.js ***!
   \*********************************************************/
@@ -3929,7 +3948,7 @@ module.exports = function (it, msg) {
 
 
 /***/ }),
-/* 106 */
+/* 107 */
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_is-integer.js ***!
   \*****************************************************/
@@ -3946,7 +3965,7 @@ module.exports = function isInteger(it) {
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_math-log1p.js ***!
   \*****************************************************/
@@ -3961,7 +3980,7 @@ module.exports = Math.log1p || function log1p(x) {
 
 
 /***/ }),
-/* 108 */
+/* 109 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/_math-fround.js ***!
   \******************************************************/
@@ -3995,7 +4014,7 @@ module.exports = Math.fround || function fround(x) {
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_iter-call.js ***!
   \****************************************************/
@@ -4018,7 +4037,7 @@ module.exports = function (iterator, fn, value, entries) {
 
 
 /***/ }),
-/* 110 */
+/* 111 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/_array-reduce.js ***!
   \*******************************************************/
@@ -4057,7 +4076,7 @@ module.exports = function (that, callbackfn, aLen, memo, isRight) {
 
 
 /***/ }),
-/* 111 */
+/* 112 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/_array-copy-within.js ***!
   \************************************************************/
@@ -4095,7 +4114,7 @@ module.exports = [].copyWithin || function copyWithin(target /* = 0 */, start /*
 
 
 /***/ }),
-/* 112 */
+/* 113 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_iter-step.js ***!
   \****************************************************/
@@ -4109,7 +4128,7 @@ module.exports = function (done, value) {
 
 
 /***/ }),
-/* 113 */
+/* 114 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.flags.js ***!
   \**********************************************************/
@@ -4125,7 +4144,7 @@ if (__webpack_require__(/*! ./_descriptors */ 6) && /./g.flags != 'g') __webpack
 
 
 /***/ }),
-/* 114 */
+/* 115 */
 /*!**************************************************!*\
   !*** ./node_modules/core-js/modules/_perform.js ***!
   \**************************************************/
@@ -4143,7 +4162,7 @@ module.exports = function (exec) {
 
 
 /***/ }),
-/* 115 */
+/* 116 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/_promise-resolve.js ***!
   \**********************************************************/
@@ -4166,7 +4185,7 @@ module.exports = function (C, x) {
 
 
 /***/ }),
-/* 116 */
+/* 117 */
 /*!*************************************************!*\
   !*** ./node_modules/core-js/modules/es6.map.js ***!
   \*************************************************/
@@ -4176,7 +4195,7 @@ module.exports = function (C, x) {
 
 "use strict";
 
-var strong = __webpack_require__(/*! ./_collection-strong */ 117);
+var strong = __webpack_require__(/*! ./_collection-strong */ 118);
 var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var MAP = 'Map';
 
@@ -4197,7 +4216,7 @@ module.exports = __webpack_require__(/*! ./_collection */ 60)(MAP, function (get
 
 
 /***/ }),
-/* 117 */
+/* 118 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/_collection-strong.js ***!
   \************************************************************/
@@ -4214,7 +4233,7 @@ var ctx = __webpack_require__(/*! ./_ctx */ 19);
 var anInstance = __webpack_require__(/*! ./_an-instance */ 40);
 var forOf = __webpack_require__(/*! ./_for-of */ 41);
 var $iterDefine = __webpack_require__(/*! ./_iter-define */ 78);
-var step = __webpack_require__(/*! ./_iter-step */ 112);
+var step = __webpack_require__(/*! ./_iter-step */ 113);
 var setSpecies = __webpack_require__(/*! ./_set-species */ 39);
 var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ 6);
 var fastKey = __webpack_require__(/*! ./_meta */ 30).fastKey;
@@ -4353,7 +4372,7 @@ module.exports = {
 
 
 /***/ }),
-/* 118 */
+/* 119 */
 /*!*************************************************!*\
   !*** ./node_modules/core-js/modules/es6.set.js ***!
   \*************************************************/
@@ -4363,7 +4382,7 @@ module.exports = {
 
 "use strict";
 
-var strong = __webpack_require__(/*! ./_collection-strong */ 117);
+var strong = __webpack_require__(/*! ./_collection-strong */ 118);
 var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var SET = 'Set';
 
@@ -4379,7 +4398,7 @@ module.exports = __webpack_require__(/*! ./_collection */ 60)(SET, function (get
 
 
 /***/ }),
-/* 119 */
+/* 120 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.weak-map.js ***!
   \******************************************************/
@@ -4392,8 +4411,8 @@ module.exports = __webpack_require__(/*! ./_collection */ 60)(SET, function (get
 var each = __webpack_require__(/*! ./_array-methods */ 27)(0);
 var redefine = __webpack_require__(/*! ./_redefine */ 13);
 var meta = __webpack_require__(/*! ./_meta */ 30);
-var assign = __webpack_require__(/*! ./_object-assign */ 100);
-var weak = __webpack_require__(/*! ./_collection-weak */ 120);
+var assign = __webpack_require__(/*! ./_object-assign */ 101);
+var weak = __webpack_require__(/*! ./_collection-weak */ 121);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
 var fails = __webpack_require__(/*! ./_fails */ 3);
 var validate = __webpack_require__(/*! ./_validate-collection */ 46);
@@ -4450,7 +4469,7 @@ if (fails(function () { return new $WeakMap().set((Object.freeze || Object)(tmp)
 
 
 /***/ }),
-/* 120 */
+/* 121 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/_collection-weak.js ***!
   \**********************************************************/
@@ -4547,7 +4566,7 @@ module.exports = {
 
 
 /***/ }),
-/* 121 */
+/* 122 */
 /*!***************************************************!*\
   !*** ./node_modules/core-js/modules/_to-index.js ***!
   \***************************************************/
@@ -4568,7 +4587,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 122 */
+/* 123 */
 /*!***************************************************!*\
   !*** ./node_modules/core-js/modules/_own-keys.js ***!
   \***************************************************/
@@ -4589,7 +4608,7 @@ module.exports = Reflect && Reflect.ownKeys || function ownKeys(it) {
 
 
 /***/ }),
-/* 123 */
+/* 124 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/_flatten-into-array.js ***!
   \*************************************************************/
@@ -4640,7 +4659,7 @@ module.exports = flattenIntoArray;
 
 
 /***/ }),
-/* 124 */
+/* 125 */
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_string-pad.js ***!
   \*****************************************************/
@@ -4667,7 +4686,7 @@ module.exports = function (that, maxLength, fillString, left) {
 
 
 /***/ }),
-/* 125 */
+/* 126 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/_object-to-array.js ***!
   \**********************************************************/
@@ -4694,7 +4713,7 @@ module.exports = function (isEntries) {
 
 
 /***/ }),
-/* 126 */
+/* 127 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/_collection-to-json.js ***!
   \*************************************************************/
@@ -4704,7 +4723,7 @@ module.exports = function (isEntries) {
 
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
 var classof = __webpack_require__(/*! ./_classof */ 50);
-var from = __webpack_require__(/*! ./_array-from-iterable */ 127);
+var from = __webpack_require__(/*! ./_array-from-iterable */ 128);
 module.exports = function (NAME) {
   return function toJSON() {
     if (classof(this) != NAME) throw TypeError(NAME + "#toJSON isn't generic");
@@ -4714,7 +4733,7 @@ module.exports = function (NAME) {
 
 
 /***/ }),
-/* 127 */
+/* 128 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/_array-from-iterable.js ***!
   \**************************************************************/
@@ -4732,7 +4751,7 @@ module.exports = function (iter, ITERATOR) {
 
 
 /***/ }),
-/* 128 */
+/* 129 */
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_math-scale.js ***!
   \*****************************************************/
@@ -4761,19 +4780,324 @@ module.exports = Math.scale || function scale(x, inLow, inHigh, outLow, outHigh)
 
 
 /***/ }),
-/* 129 */,
-/* 130 */
-/*!********************************************************************!*\
-  !*** ./node_modules/script-loader!./assets/lib/spriter/spriter.js ***!
-  \********************************************************************/
+/* 130 */,
+/* 131 */
+/*!*****************************!*\
+  !*** ./src/engine/Actor.js ***!
+  \*****************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! !./node_modules/script-loader/addScript.js */ 345)(__webpack_require__(/*! !./node_modules/raw-loader!./assets/lib/spriter/spriter.js */ 346))
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(/*! script-loader!../../assets/lib/spriter/spriter.js */ 92);
+
+var _ActorConfig = __webpack_require__(/*! ./ActorConfig */ 132);
+
+var _ActorConfig2 = _interopRequireDefault(_ActorConfig);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Actor = function (_Spriter$SpriterGroup) {
+  _inherits(Actor, _Spriter$SpriterGroup);
+
+  function Actor(game, actorDefinition) {
+    _classCallCheck(this, Actor);
+
+    var _this = _possibleConstructorReturn(this, (Actor.__proto__ || Object.getPrototypeOf(Actor)).call(this, game, actorDefinition.spriterData, actorDefinition.textureKey, _ActorConfig2.default.ENTITY, _ActorConfig2.default.START_ANIMATION_INDEX));
+
+    if (actorDefinition.isSmall) {
+      _this.scaleX = 90 / _this.width;
+      _this.scaleY = 120 / _this.height;
+
+      _this.scale.setTo(_this.scaleX, _this.scaleY);
+    }
+
+    console.debug("Actor initialised");
+
+    window.player = _this;
+    _this._animationSpeed = 0.6;
+    _this.id = 1;
+
+    // player bounds - circle
+    _this.drawBounds();
+    return _this;
+  }
+
+  _createClass(Actor, [{
+    key: "drawBounds",
+    value: function drawBounds() {
+      var _this2 = this;
+
+      this.bounds = null;
+      this.boundsGrp = this.game.make.group(null);
+      var bmd = this.game.make.bitmapData(60, 60);
+      var maskBitmap = this.game.make.bitmapData(60, 60);
+
+      bmd.circle(30, 30, 30, "rgba(43, 41, 42, 0.3)");
+      bmd.circle(30, 30, 20, "rgba(43, 41, 42, 0.7)");
+
+      maskBitmap.circle(30, 30, 30, "rgba(224, 119, 44, 0.5)");
+
+      this.maskImg = this.game.make.image(0, 0, maskBitmap);
+      this.maskImg.width = this.maskImg.width + this.maskImg.width;
+      this.maskImg.anchor.set(0.5);
+      this.maskImg.visible = false;
+
+      this.bounds = this.game.make.sprite(0, 0, bmd);
+      this.bounds.width = this.bounds.width + this.bounds.width;
+      this.bounds.anchor.set(0.5);
+
+      this.boundsGrp.add(this.bounds);
+      this.boundsGrp.add(this.maskImg);
+
+      // Add input
+      this.bounds.inputEnabled = true;
+      this.bounds.input.useHandCursor = true;
+
+      this.bounds.events.onInputOver.add(function (sprite) {
+        _this2.maskImg.visible = true;
+      }, this);
+
+      this.bounds.events.onInputOut.add(function (sprite) {
+        _this2.maskImg.visible = false;
+      }, this);
+
+      window.boundsGrp = this.boundsGrp;
+
+      this.addAt(this.boundsGrp, 0);
+    }
+  }, {
+    key: "update",
+    value: function update() {
+      this.updateAnimation();
+
+      if (this.walkTween && this.walkTween.isRunning) {
+        this.calcAngle(this.xyPoint);
+
+        if (this.angleTo != this.walkTween.angleToBegin) {
+          this.lookAt();
+        }
+      }
+    }
+  }, {
+    key: "walkTo",
+    value: function walkTo(point, walkSpeed) {
+      if (!walkSpeed) {
+        walkSpeed = this.walkSpeed;
+      }
+      if (this.walkingTween) {
+        this.walkingTween.stop();
+        this.walkingTween = null;
+      }
+      var distance = Phaser.Math.distance(this.x, this.y, point.x, point.y);
+      this.walkingTween = this.game.add.tween(this).to({
+        x: point.x,
+        y: point.y
+      }, distance * this.averageWalkSpeed * (1 / walkSpeed)).start();
+    }
+  }, {
+    key: "walkPath",
+    value: function walkPath(path, polys, finalPoint, walkSpeed) {
+      if (!walkSpeed) {
+        walkSpeed = this.walkSpeed;
+      }
+      if (this.walkingTween) {
+        this.walkingTween.stop();
+        this.walkingTween = null;
+      }
+      this.walkingTween = this.game.add.tween(this);
+
+      for (var i = 0; i < path.length; i++) {
+        var point = polys[path[i]].centroid;
+        var distance = Phaser.Math.distance(this.x, this.y, point.x, point.y);
+        if (i == path.length - 1 && polys[path[i]].contains(finalPoint.x, finalPoint.y)) {
+          this.walkingTween.to({
+            x: finalPoint.x,
+            y: finalPoint.y
+          }, distance * walkSpeed / 10, Phaser.Easing.Linear.None);
+        } else {
+          if (distance != 0) {
+            this.walkingTween.to({
+              x: point.x,
+              y: point.y
+            }, distance * walkSpeed / 10, Phaser.Easing.Linear.None);
+          }
+        }
+      }
+
+      this.walkingTween.start();
+    }
+  }, {
+    key: "calcAngle",
+    value: function calcAngle(pointer) {
+      if (pointer) {
+        this.angleTo = Phaser.Math.angleBetween(this.x, this.y, pointer.x, pointer.y) * 180 / Math.PI;
+      }
+
+      if (this.angleTo > -100 && this.angleTo < -80) {
+        this.angleTo = "UPPER";
+      } else if (this.angleTo < -10 && this.angleTo > -80) {
+        this.angleTo = "UPPER_RIGHT";
+      } else if (this.angleTo < -110 && this.angleTo > -170) {
+        this.angleTo = "UPPER_LEFT";
+      } else if (this.angleTo > -10 && this.angleTo < 10) {
+        this.angleTo = "RIGHT";
+      } else if (this.angleTo > -180 && this.angleTo < -170 || this.angleTo > 170 && this.angleTo < 180 || this.angleTo === 180) {
+        this.angleTo = "LEFT";
+      } else if (this.angleTo > 80 && this.angleTo < 100) {
+        this.angleTo = "LOWER";
+      } else if (this.angleTo > 10 && this.angleTo < 80) {
+        this.angleTo = "LOWER_RIGHT";
+      } else if (this.angleTo > 100 && this.angleTo < 170) {
+        this.angleTo = "LOWER_LEFT";
+      }
+    }
+  }, {
+    key: "lookAt",
+    value: function lookAt() {
+      if (this.angleTo == "UPPER") {
+        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        console.log("ANGULO SUPERIOR");
+      } else if (this.angleTo == "UPPER_RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.BACKRIGHT_ANIMATION_INDEX);
+        console.log("ANGULO SUPERIOR DERECHO");
+      } else if (this.angleTo == "UPPER_LEFT") {
+        this.playAnimationById(_ActorConfig2.default.BACKLEFT_ANIMATION_INDEX);
+        console.log("ANGULO SUPERIOR IZQUIERDO");
+      } else if (this.angleTo == "RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.RIGHT_ANIMATION_INDEX);
+        console.log("ANGULO DERECHO");
+      } else if (this.angleTo == "LEFT") {
+        this.playAnimationById(_ActorConfig2.default.LEFT_ANIMATION_INDEX);
+        console.log("ANGULO IZQUIERDO");
+      } else if (this.angleTo == "LOWER") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO INFERIOR");
+      } else if (this.angleTo == "LOWER_RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.FRONTLEFT_ANIMATION_INDEX);
+        console.log("ANGULO INFERIOR DERECHO");
+      } else if (this.angleTo == "LOWER_LEFT") {
+        this.playAnimationById(_ActorConfig2.default.FRONTLEFT_ANIMATION_INDEX);
+        console.log("ANGULO INFERIOR IZQUIERDO");
+      }
+    }
+  }, {
+    key: "stopAndLookAt",
+    value: function stopAndLookAt(tween) {
+      if (tween.angleToBegin == "UPPER") {
+        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        console.log("ANGULO SUPERIOR");
+      } else if (tween.angleToBegin == "UPPER_RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        console.log("ANGULO SUPERIOR DERECHO");
+      } else if (tween.angleToBegin == "UPPER_LEFT") {
+        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        console.log("ANGULO SUPERIOR IZQUIERDO");
+      } else if (tween.angleToBegin == "RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO DERECHO");
+      } else if (tween.angleToBegin == "LEFT") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO IZQUIERDO");
+      } else if (tween.angleToBegin == "LOWER") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO INFERIOR");
+      } else if (tween.angleToBegin == "LOWER_RIGHT") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO INFERIOR DERECHO");
+      } else if (tween.angleToBegin == "LOWER_LEFT") {
+        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        console.log("ANGULO INFERIOR IZQUIERDO");
+      }
+    }
+  }, {
+    key: "movementComplete",
+    value: function movementComplete(player, tween) {
+      this.stopAndLookAt(tween);
+    }
+  }, {
+    key: "moveTo",
+    value: function moveTo(goTo, path) {
+      this.xyPoint = goTo;
+
+      console.debug("Other Player movement signal received");
+      if (!path) {
+        return;
+      }
+
+      if (this.walkTween && this.walkTween.isRunning) {
+        this.walkTween.stop();
+      }
+
+      this.walkTween = this.game.add.tween(this);
+      this.walkTween.onComplete.add(this.movementComplete, this);
+
+      this.calcAngle(goTo);
+      this.walkTween.angleToBegin = this.angleTo;
+
+      this.lookAt();
+
+      var pointer;
+      for (var i = 0; i < path.length; i++) {
+        pointer = path[i];
+        var distance = Phaser.Math.distance(path[i - 1] != undefined ? path[i - 1].x : this.x, path[i - 1] != undefined ? path[i - 1].y : this.y, pointer.x, pointer.y);
+        this.walkTween.to({ x: pointer.x, y: pointer.y }, distance * 7);
+      }
+
+      this.walkTween.start();
+    }
+  }]);
+
+  return Actor;
+}(Spriter.SpriterGroup);
+
+exports.default = Actor;
 
 /***/ }),
-/* 131 */
+/* 132 */
+/*!***********************************!*\
+  !*** ./src/engine/ActorConfig.js ***!
+  \***********************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    FRONT_IDLE_INDEX: 4,
+    BACK_IDLE_INDEX: 0,
+    BACKLEFT_ANIMATION_INDEX: 2,
+    BACKRIGHT_ANIMATION_INDEX: 1,
+    FRONTLEFT_ANIMATION_INDEX: 5,
+    FRONTRIGHT_ANIMATION_INDEX: 3,
+    RIGHT_ANIMATION_INDEX: 6,
+    LEFT_ANIMATION_INDEX: 7,
+    ENTITY: 'Animaciones',
+    START_ANIMATION_INDEX: 4
+};
+
+/***/ }),
+/* 133 */
 /*!******************************************!*\
   !*** multi babel-polyfill ./src/main.js ***!
   \******************************************/
@@ -4781,12 +5105,12 @@ __webpack_require__(/*! !./node_modules/script-loader/addScript.js */ 345)(__web
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! babel-polyfill */132);
-module.exports = __webpack_require__(/*! /var/www/project-phaser/src/main.js */334);
+__webpack_require__(/*! babel-polyfill */134);
+module.exports = __webpack_require__(/*! /var/www/project-phaser/src/main.js */336);
 
 
 /***/ }),
-/* 132 */
+/* 134 */
 /*!**************************************************!*\
   !*** ./node_modules/babel-polyfill/lib/index.js ***!
   \**************************************************/
@@ -4797,11 +5121,11 @@ module.exports = __webpack_require__(/*! /var/www/project-phaser/src/main.js */3
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
 
-__webpack_require__(/*! core-js/shim */ 133);
+__webpack_require__(/*! core-js/shim */ 135);
 
-__webpack_require__(/*! regenerator-runtime/runtime */ 330);
+__webpack_require__(/*! regenerator-runtime/runtime */ 332);
 
-__webpack_require__(/*! core-js/fn/regexp/escape */ 331);
+__webpack_require__(/*! core-js/fn/regexp/escape */ 333);
 
 if (global._babelPolyfill) {
   throw new Error("only one instance of babel-polyfill is allowed");
@@ -4826,7 +5150,7 @@ define(String.prototype, "padRight", "".padEnd);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../webpack/buildin/global.js */ 47)))
 
 /***/ }),
-/* 133 */
+/* 135 */
 /*!**************************************!*\
   !*** ./node_modules/core-js/shim.js ***!
   \**************************************/
@@ -4834,207 +5158,207 @@ define(String.prototype, "padRight", "".padEnd);
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./modules/es6.symbol */ 134);
-__webpack_require__(/*! ./modules/es6.object.create */ 136);
-__webpack_require__(/*! ./modules/es6.object.define-property */ 137);
-__webpack_require__(/*! ./modules/es6.object.define-properties */ 138);
-__webpack_require__(/*! ./modules/es6.object.get-own-property-descriptor */ 139);
-__webpack_require__(/*! ./modules/es6.object.get-prototype-of */ 140);
-__webpack_require__(/*! ./modules/es6.object.keys */ 141);
-__webpack_require__(/*! ./modules/es6.object.get-own-property-names */ 142);
-__webpack_require__(/*! ./modules/es6.object.freeze */ 143);
-__webpack_require__(/*! ./modules/es6.object.seal */ 144);
-__webpack_require__(/*! ./modules/es6.object.prevent-extensions */ 145);
-__webpack_require__(/*! ./modules/es6.object.is-frozen */ 146);
-__webpack_require__(/*! ./modules/es6.object.is-sealed */ 147);
-__webpack_require__(/*! ./modules/es6.object.is-extensible */ 148);
-__webpack_require__(/*! ./modules/es6.object.assign */ 149);
-__webpack_require__(/*! ./modules/es6.object.is */ 150);
-__webpack_require__(/*! ./modules/es6.object.set-prototype-of */ 152);
-__webpack_require__(/*! ./modules/es6.object.to-string */ 153);
-__webpack_require__(/*! ./modules/es6.function.bind */ 154);
-__webpack_require__(/*! ./modules/es6.function.name */ 155);
-__webpack_require__(/*! ./modules/es6.function.has-instance */ 156);
-__webpack_require__(/*! ./modules/es6.parse-int */ 157);
-__webpack_require__(/*! ./modules/es6.parse-float */ 158);
-__webpack_require__(/*! ./modules/es6.number.constructor */ 159);
-__webpack_require__(/*! ./modules/es6.number.to-fixed */ 160);
-__webpack_require__(/*! ./modules/es6.number.to-precision */ 161);
-__webpack_require__(/*! ./modules/es6.number.epsilon */ 162);
-__webpack_require__(/*! ./modules/es6.number.is-finite */ 163);
-__webpack_require__(/*! ./modules/es6.number.is-integer */ 164);
-__webpack_require__(/*! ./modules/es6.number.is-nan */ 165);
-__webpack_require__(/*! ./modules/es6.number.is-safe-integer */ 166);
-__webpack_require__(/*! ./modules/es6.number.max-safe-integer */ 167);
-__webpack_require__(/*! ./modules/es6.number.min-safe-integer */ 168);
-__webpack_require__(/*! ./modules/es6.number.parse-float */ 169);
-__webpack_require__(/*! ./modules/es6.number.parse-int */ 170);
-__webpack_require__(/*! ./modules/es6.math.acosh */ 171);
-__webpack_require__(/*! ./modules/es6.math.asinh */ 172);
-__webpack_require__(/*! ./modules/es6.math.atanh */ 173);
-__webpack_require__(/*! ./modules/es6.math.cbrt */ 174);
-__webpack_require__(/*! ./modules/es6.math.clz32 */ 175);
-__webpack_require__(/*! ./modules/es6.math.cosh */ 176);
-__webpack_require__(/*! ./modules/es6.math.expm1 */ 177);
-__webpack_require__(/*! ./modules/es6.math.fround */ 178);
-__webpack_require__(/*! ./modules/es6.math.hypot */ 179);
-__webpack_require__(/*! ./modules/es6.math.imul */ 180);
-__webpack_require__(/*! ./modules/es6.math.log10 */ 181);
-__webpack_require__(/*! ./modules/es6.math.log1p */ 182);
-__webpack_require__(/*! ./modules/es6.math.log2 */ 183);
-__webpack_require__(/*! ./modules/es6.math.sign */ 184);
-__webpack_require__(/*! ./modules/es6.math.sinh */ 185);
-__webpack_require__(/*! ./modules/es6.math.tanh */ 186);
-__webpack_require__(/*! ./modules/es6.math.trunc */ 187);
-__webpack_require__(/*! ./modules/es6.string.from-code-point */ 188);
-__webpack_require__(/*! ./modules/es6.string.raw */ 189);
-__webpack_require__(/*! ./modules/es6.string.trim */ 190);
-__webpack_require__(/*! ./modules/es6.string.iterator */ 191);
-__webpack_require__(/*! ./modules/es6.string.code-point-at */ 192);
-__webpack_require__(/*! ./modules/es6.string.ends-with */ 193);
-__webpack_require__(/*! ./modules/es6.string.includes */ 194);
-__webpack_require__(/*! ./modules/es6.string.repeat */ 195);
-__webpack_require__(/*! ./modules/es6.string.starts-with */ 196);
-__webpack_require__(/*! ./modules/es6.string.anchor */ 197);
-__webpack_require__(/*! ./modules/es6.string.big */ 198);
-__webpack_require__(/*! ./modules/es6.string.blink */ 199);
-__webpack_require__(/*! ./modules/es6.string.bold */ 200);
-__webpack_require__(/*! ./modules/es6.string.fixed */ 201);
-__webpack_require__(/*! ./modules/es6.string.fontcolor */ 202);
-__webpack_require__(/*! ./modules/es6.string.fontsize */ 203);
-__webpack_require__(/*! ./modules/es6.string.italics */ 204);
-__webpack_require__(/*! ./modules/es6.string.link */ 205);
-__webpack_require__(/*! ./modules/es6.string.small */ 206);
-__webpack_require__(/*! ./modules/es6.string.strike */ 207);
-__webpack_require__(/*! ./modules/es6.string.sub */ 208);
-__webpack_require__(/*! ./modules/es6.string.sup */ 209);
-__webpack_require__(/*! ./modules/es6.date.now */ 210);
-__webpack_require__(/*! ./modules/es6.date.to-json */ 211);
-__webpack_require__(/*! ./modules/es6.date.to-iso-string */ 212);
-__webpack_require__(/*! ./modules/es6.date.to-string */ 214);
-__webpack_require__(/*! ./modules/es6.date.to-primitive */ 215);
-__webpack_require__(/*! ./modules/es6.array.is-array */ 217);
-__webpack_require__(/*! ./modules/es6.array.from */ 218);
-__webpack_require__(/*! ./modules/es6.array.of */ 219);
-__webpack_require__(/*! ./modules/es6.array.join */ 220);
-__webpack_require__(/*! ./modules/es6.array.slice */ 221);
-__webpack_require__(/*! ./modules/es6.array.sort */ 222);
-__webpack_require__(/*! ./modules/es6.array.for-each */ 223);
-__webpack_require__(/*! ./modules/es6.array.map */ 225);
-__webpack_require__(/*! ./modules/es6.array.filter */ 226);
-__webpack_require__(/*! ./modules/es6.array.some */ 227);
-__webpack_require__(/*! ./modules/es6.array.every */ 228);
-__webpack_require__(/*! ./modules/es6.array.reduce */ 229);
-__webpack_require__(/*! ./modules/es6.array.reduce-right */ 230);
-__webpack_require__(/*! ./modules/es6.array.index-of */ 231);
-__webpack_require__(/*! ./modules/es6.array.last-index-of */ 232);
-__webpack_require__(/*! ./modules/es6.array.copy-within */ 233);
-__webpack_require__(/*! ./modules/es6.array.fill */ 234);
-__webpack_require__(/*! ./modules/es6.array.find */ 235);
-__webpack_require__(/*! ./modules/es6.array.find-index */ 236);
-__webpack_require__(/*! ./modules/es6.array.species */ 237);
+__webpack_require__(/*! ./modules/es6.symbol */ 136);
+__webpack_require__(/*! ./modules/es6.object.create */ 138);
+__webpack_require__(/*! ./modules/es6.object.define-property */ 139);
+__webpack_require__(/*! ./modules/es6.object.define-properties */ 140);
+__webpack_require__(/*! ./modules/es6.object.get-own-property-descriptor */ 141);
+__webpack_require__(/*! ./modules/es6.object.get-prototype-of */ 142);
+__webpack_require__(/*! ./modules/es6.object.keys */ 143);
+__webpack_require__(/*! ./modules/es6.object.get-own-property-names */ 144);
+__webpack_require__(/*! ./modules/es6.object.freeze */ 145);
+__webpack_require__(/*! ./modules/es6.object.seal */ 146);
+__webpack_require__(/*! ./modules/es6.object.prevent-extensions */ 147);
+__webpack_require__(/*! ./modules/es6.object.is-frozen */ 148);
+__webpack_require__(/*! ./modules/es6.object.is-sealed */ 149);
+__webpack_require__(/*! ./modules/es6.object.is-extensible */ 150);
+__webpack_require__(/*! ./modules/es6.object.assign */ 151);
+__webpack_require__(/*! ./modules/es6.object.is */ 152);
+__webpack_require__(/*! ./modules/es6.object.set-prototype-of */ 154);
+__webpack_require__(/*! ./modules/es6.object.to-string */ 155);
+__webpack_require__(/*! ./modules/es6.function.bind */ 156);
+__webpack_require__(/*! ./modules/es6.function.name */ 157);
+__webpack_require__(/*! ./modules/es6.function.has-instance */ 158);
+__webpack_require__(/*! ./modules/es6.parse-int */ 159);
+__webpack_require__(/*! ./modules/es6.parse-float */ 160);
+__webpack_require__(/*! ./modules/es6.number.constructor */ 161);
+__webpack_require__(/*! ./modules/es6.number.to-fixed */ 162);
+__webpack_require__(/*! ./modules/es6.number.to-precision */ 163);
+__webpack_require__(/*! ./modules/es6.number.epsilon */ 164);
+__webpack_require__(/*! ./modules/es6.number.is-finite */ 165);
+__webpack_require__(/*! ./modules/es6.number.is-integer */ 166);
+__webpack_require__(/*! ./modules/es6.number.is-nan */ 167);
+__webpack_require__(/*! ./modules/es6.number.is-safe-integer */ 168);
+__webpack_require__(/*! ./modules/es6.number.max-safe-integer */ 169);
+__webpack_require__(/*! ./modules/es6.number.min-safe-integer */ 170);
+__webpack_require__(/*! ./modules/es6.number.parse-float */ 171);
+__webpack_require__(/*! ./modules/es6.number.parse-int */ 172);
+__webpack_require__(/*! ./modules/es6.math.acosh */ 173);
+__webpack_require__(/*! ./modules/es6.math.asinh */ 174);
+__webpack_require__(/*! ./modules/es6.math.atanh */ 175);
+__webpack_require__(/*! ./modules/es6.math.cbrt */ 176);
+__webpack_require__(/*! ./modules/es6.math.clz32 */ 177);
+__webpack_require__(/*! ./modules/es6.math.cosh */ 178);
+__webpack_require__(/*! ./modules/es6.math.expm1 */ 179);
+__webpack_require__(/*! ./modules/es6.math.fround */ 180);
+__webpack_require__(/*! ./modules/es6.math.hypot */ 181);
+__webpack_require__(/*! ./modules/es6.math.imul */ 182);
+__webpack_require__(/*! ./modules/es6.math.log10 */ 183);
+__webpack_require__(/*! ./modules/es6.math.log1p */ 184);
+__webpack_require__(/*! ./modules/es6.math.log2 */ 185);
+__webpack_require__(/*! ./modules/es6.math.sign */ 186);
+__webpack_require__(/*! ./modules/es6.math.sinh */ 187);
+__webpack_require__(/*! ./modules/es6.math.tanh */ 188);
+__webpack_require__(/*! ./modules/es6.math.trunc */ 189);
+__webpack_require__(/*! ./modules/es6.string.from-code-point */ 190);
+__webpack_require__(/*! ./modules/es6.string.raw */ 191);
+__webpack_require__(/*! ./modules/es6.string.trim */ 192);
+__webpack_require__(/*! ./modules/es6.string.iterator */ 193);
+__webpack_require__(/*! ./modules/es6.string.code-point-at */ 194);
+__webpack_require__(/*! ./modules/es6.string.ends-with */ 195);
+__webpack_require__(/*! ./modules/es6.string.includes */ 196);
+__webpack_require__(/*! ./modules/es6.string.repeat */ 197);
+__webpack_require__(/*! ./modules/es6.string.starts-with */ 198);
+__webpack_require__(/*! ./modules/es6.string.anchor */ 199);
+__webpack_require__(/*! ./modules/es6.string.big */ 200);
+__webpack_require__(/*! ./modules/es6.string.blink */ 201);
+__webpack_require__(/*! ./modules/es6.string.bold */ 202);
+__webpack_require__(/*! ./modules/es6.string.fixed */ 203);
+__webpack_require__(/*! ./modules/es6.string.fontcolor */ 204);
+__webpack_require__(/*! ./modules/es6.string.fontsize */ 205);
+__webpack_require__(/*! ./modules/es6.string.italics */ 206);
+__webpack_require__(/*! ./modules/es6.string.link */ 207);
+__webpack_require__(/*! ./modules/es6.string.small */ 208);
+__webpack_require__(/*! ./modules/es6.string.strike */ 209);
+__webpack_require__(/*! ./modules/es6.string.sub */ 210);
+__webpack_require__(/*! ./modules/es6.string.sup */ 211);
+__webpack_require__(/*! ./modules/es6.date.now */ 212);
+__webpack_require__(/*! ./modules/es6.date.to-json */ 213);
+__webpack_require__(/*! ./modules/es6.date.to-iso-string */ 214);
+__webpack_require__(/*! ./modules/es6.date.to-string */ 216);
+__webpack_require__(/*! ./modules/es6.date.to-primitive */ 217);
+__webpack_require__(/*! ./modules/es6.array.is-array */ 219);
+__webpack_require__(/*! ./modules/es6.array.from */ 220);
+__webpack_require__(/*! ./modules/es6.array.of */ 221);
+__webpack_require__(/*! ./modules/es6.array.join */ 222);
+__webpack_require__(/*! ./modules/es6.array.slice */ 223);
+__webpack_require__(/*! ./modules/es6.array.sort */ 224);
+__webpack_require__(/*! ./modules/es6.array.for-each */ 225);
+__webpack_require__(/*! ./modules/es6.array.map */ 227);
+__webpack_require__(/*! ./modules/es6.array.filter */ 228);
+__webpack_require__(/*! ./modules/es6.array.some */ 229);
+__webpack_require__(/*! ./modules/es6.array.every */ 230);
+__webpack_require__(/*! ./modules/es6.array.reduce */ 231);
+__webpack_require__(/*! ./modules/es6.array.reduce-right */ 232);
+__webpack_require__(/*! ./modules/es6.array.index-of */ 233);
+__webpack_require__(/*! ./modules/es6.array.last-index-of */ 234);
+__webpack_require__(/*! ./modules/es6.array.copy-within */ 235);
+__webpack_require__(/*! ./modules/es6.array.fill */ 236);
+__webpack_require__(/*! ./modules/es6.array.find */ 237);
+__webpack_require__(/*! ./modules/es6.array.find-index */ 238);
+__webpack_require__(/*! ./modules/es6.array.species */ 239);
 __webpack_require__(/*! ./modules/es6.array.iterator */ 87);
-__webpack_require__(/*! ./modules/es6.regexp.constructor */ 238);
-__webpack_require__(/*! ./modules/es6.regexp.to-string */ 239);
-__webpack_require__(/*! ./modules/es6.regexp.flags */ 113);
-__webpack_require__(/*! ./modules/es6.regexp.match */ 240);
-__webpack_require__(/*! ./modules/es6.regexp.replace */ 241);
-__webpack_require__(/*! ./modules/es6.regexp.search */ 242);
-__webpack_require__(/*! ./modules/es6.regexp.split */ 243);
-__webpack_require__(/*! ./modules/es6.promise */ 244);
-__webpack_require__(/*! ./modules/es6.map */ 116);
-__webpack_require__(/*! ./modules/es6.set */ 118);
-__webpack_require__(/*! ./modules/es6.weak-map */ 119);
-__webpack_require__(/*! ./modules/es6.weak-set */ 245);
-__webpack_require__(/*! ./modules/es6.typed.array-buffer */ 246);
-__webpack_require__(/*! ./modules/es6.typed.data-view */ 247);
-__webpack_require__(/*! ./modules/es6.typed.int8-array */ 248);
-__webpack_require__(/*! ./modules/es6.typed.uint8-array */ 249);
-__webpack_require__(/*! ./modules/es6.typed.uint8-clamped-array */ 250);
-__webpack_require__(/*! ./modules/es6.typed.int16-array */ 251);
-__webpack_require__(/*! ./modules/es6.typed.uint16-array */ 252);
-__webpack_require__(/*! ./modules/es6.typed.int32-array */ 253);
-__webpack_require__(/*! ./modules/es6.typed.uint32-array */ 254);
-__webpack_require__(/*! ./modules/es6.typed.float32-array */ 255);
-__webpack_require__(/*! ./modules/es6.typed.float64-array */ 256);
-__webpack_require__(/*! ./modules/es6.reflect.apply */ 257);
-__webpack_require__(/*! ./modules/es6.reflect.construct */ 258);
-__webpack_require__(/*! ./modules/es6.reflect.define-property */ 259);
-__webpack_require__(/*! ./modules/es6.reflect.delete-property */ 260);
-__webpack_require__(/*! ./modules/es6.reflect.enumerate */ 261);
-__webpack_require__(/*! ./modules/es6.reflect.get */ 262);
-__webpack_require__(/*! ./modules/es6.reflect.get-own-property-descriptor */ 263);
-__webpack_require__(/*! ./modules/es6.reflect.get-prototype-of */ 264);
-__webpack_require__(/*! ./modules/es6.reflect.has */ 265);
-__webpack_require__(/*! ./modules/es6.reflect.is-extensible */ 266);
-__webpack_require__(/*! ./modules/es6.reflect.own-keys */ 267);
-__webpack_require__(/*! ./modules/es6.reflect.prevent-extensions */ 268);
-__webpack_require__(/*! ./modules/es6.reflect.set */ 269);
-__webpack_require__(/*! ./modules/es6.reflect.set-prototype-of */ 270);
-__webpack_require__(/*! ./modules/es7.array.includes */ 271);
-__webpack_require__(/*! ./modules/es7.array.flat-map */ 272);
-__webpack_require__(/*! ./modules/es7.array.flatten */ 273);
-__webpack_require__(/*! ./modules/es7.string.at */ 274);
-__webpack_require__(/*! ./modules/es7.string.pad-start */ 275);
-__webpack_require__(/*! ./modules/es7.string.pad-end */ 276);
-__webpack_require__(/*! ./modules/es7.string.trim-left */ 277);
-__webpack_require__(/*! ./modules/es7.string.trim-right */ 278);
-__webpack_require__(/*! ./modules/es7.string.match-all */ 279);
-__webpack_require__(/*! ./modules/es7.symbol.async-iterator */ 280);
-__webpack_require__(/*! ./modules/es7.symbol.observable */ 281);
-__webpack_require__(/*! ./modules/es7.object.get-own-property-descriptors */ 282);
-__webpack_require__(/*! ./modules/es7.object.values */ 283);
-__webpack_require__(/*! ./modules/es7.object.entries */ 284);
-__webpack_require__(/*! ./modules/es7.object.define-getter */ 285);
-__webpack_require__(/*! ./modules/es7.object.define-setter */ 286);
-__webpack_require__(/*! ./modules/es7.object.lookup-getter */ 287);
-__webpack_require__(/*! ./modules/es7.object.lookup-setter */ 288);
-__webpack_require__(/*! ./modules/es7.map.to-json */ 289);
-__webpack_require__(/*! ./modules/es7.set.to-json */ 290);
-__webpack_require__(/*! ./modules/es7.map.of */ 291);
-__webpack_require__(/*! ./modules/es7.set.of */ 292);
-__webpack_require__(/*! ./modules/es7.weak-map.of */ 293);
-__webpack_require__(/*! ./modules/es7.weak-set.of */ 294);
-__webpack_require__(/*! ./modules/es7.map.from */ 295);
-__webpack_require__(/*! ./modules/es7.set.from */ 296);
-__webpack_require__(/*! ./modules/es7.weak-map.from */ 297);
-__webpack_require__(/*! ./modules/es7.weak-set.from */ 298);
-__webpack_require__(/*! ./modules/es7.global */ 299);
-__webpack_require__(/*! ./modules/es7.system.global */ 300);
-__webpack_require__(/*! ./modules/es7.error.is-error */ 301);
-__webpack_require__(/*! ./modules/es7.math.clamp */ 302);
-__webpack_require__(/*! ./modules/es7.math.deg-per-rad */ 303);
-__webpack_require__(/*! ./modules/es7.math.degrees */ 304);
-__webpack_require__(/*! ./modules/es7.math.fscale */ 305);
-__webpack_require__(/*! ./modules/es7.math.iaddh */ 306);
-__webpack_require__(/*! ./modules/es7.math.isubh */ 307);
-__webpack_require__(/*! ./modules/es7.math.imulh */ 308);
-__webpack_require__(/*! ./modules/es7.math.rad-per-deg */ 309);
-__webpack_require__(/*! ./modules/es7.math.radians */ 310);
-__webpack_require__(/*! ./modules/es7.math.scale */ 311);
-__webpack_require__(/*! ./modules/es7.math.umulh */ 312);
-__webpack_require__(/*! ./modules/es7.math.signbit */ 313);
-__webpack_require__(/*! ./modules/es7.promise.finally */ 314);
-__webpack_require__(/*! ./modules/es7.promise.try */ 315);
-__webpack_require__(/*! ./modules/es7.reflect.define-metadata */ 316);
-__webpack_require__(/*! ./modules/es7.reflect.delete-metadata */ 317);
-__webpack_require__(/*! ./modules/es7.reflect.get-metadata */ 318);
-__webpack_require__(/*! ./modules/es7.reflect.get-metadata-keys */ 319);
-__webpack_require__(/*! ./modules/es7.reflect.get-own-metadata */ 320);
-__webpack_require__(/*! ./modules/es7.reflect.get-own-metadata-keys */ 321);
-__webpack_require__(/*! ./modules/es7.reflect.has-metadata */ 322);
-__webpack_require__(/*! ./modules/es7.reflect.has-own-metadata */ 323);
-__webpack_require__(/*! ./modules/es7.reflect.metadata */ 324);
-__webpack_require__(/*! ./modules/es7.asap */ 325);
-__webpack_require__(/*! ./modules/es7.observable */ 326);
-__webpack_require__(/*! ./modules/web.timers */ 327);
-__webpack_require__(/*! ./modules/web.immediate */ 328);
-__webpack_require__(/*! ./modules/web.dom.iterable */ 329);
+__webpack_require__(/*! ./modules/es6.regexp.constructor */ 240);
+__webpack_require__(/*! ./modules/es6.regexp.to-string */ 241);
+__webpack_require__(/*! ./modules/es6.regexp.flags */ 114);
+__webpack_require__(/*! ./modules/es6.regexp.match */ 242);
+__webpack_require__(/*! ./modules/es6.regexp.replace */ 243);
+__webpack_require__(/*! ./modules/es6.regexp.search */ 244);
+__webpack_require__(/*! ./modules/es6.regexp.split */ 245);
+__webpack_require__(/*! ./modules/es6.promise */ 246);
+__webpack_require__(/*! ./modules/es6.map */ 117);
+__webpack_require__(/*! ./modules/es6.set */ 119);
+__webpack_require__(/*! ./modules/es6.weak-map */ 120);
+__webpack_require__(/*! ./modules/es6.weak-set */ 247);
+__webpack_require__(/*! ./modules/es6.typed.array-buffer */ 248);
+__webpack_require__(/*! ./modules/es6.typed.data-view */ 249);
+__webpack_require__(/*! ./modules/es6.typed.int8-array */ 250);
+__webpack_require__(/*! ./modules/es6.typed.uint8-array */ 251);
+__webpack_require__(/*! ./modules/es6.typed.uint8-clamped-array */ 252);
+__webpack_require__(/*! ./modules/es6.typed.int16-array */ 253);
+__webpack_require__(/*! ./modules/es6.typed.uint16-array */ 254);
+__webpack_require__(/*! ./modules/es6.typed.int32-array */ 255);
+__webpack_require__(/*! ./modules/es6.typed.uint32-array */ 256);
+__webpack_require__(/*! ./modules/es6.typed.float32-array */ 257);
+__webpack_require__(/*! ./modules/es6.typed.float64-array */ 258);
+__webpack_require__(/*! ./modules/es6.reflect.apply */ 259);
+__webpack_require__(/*! ./modules/es6.reflect.construct */ 260);
+__webpack_require__(/*! ./modules/es6.reflect.define-property */ 261);
+__webpack_require__(/*! ./modules/es6.reflect.delete-property */ 262);
+__webpack_require__(/*! ./modules/es6.reflect.enumerate */ 263);
+__webpack_require__(/*! ./modules/es6.reflect.get */ 264);
+__webpack_require__(/*! ./modules/es6.reflect.get-own-property-descriptor */ 265);
+__webpack_require__(/*! ./modules/es6.reflect.get-prototype-of */ 266);
+__webpack_require__(/*! ./modules/es6.reflect.has */ 267);
+__webpack_require__(/*! ./modules/es6.reflect.is-extensible */ 268);
+__webpack_require__(/*! ./modules/es6.reflect.own-keys */ 269);
+__webpack_require__(/*! ./modules/es6.reflect.prevent-extensions */ 270);
+__webpack_require__(/*! ./modules/es6.reflect.set */ 271);
+__webpack_require__(/*! ./modules/es6.reflect.set-prototype-of */ 272);
+__webpack_require__(/*! ./modules/es7.array.includes */ 273);
+__webpack_require__(/*! ./modules/es7.array.flat-map */ 274);
+__webpack_require__(/*! ./modules/es7.array.flatten */ 275);
+__webpack_require__(/*! ./modules/es7.string.at */ 276);
+__webpack_require__(/*! ./modules/es7.string.pad-start */ 277);
+__webpack_require__(/*! ./modules/es7.string.pad-end */ 278);
+__webpack_require__(/*! ./modules/es7.string.trim-left */ 279);
+__webpack_require__(/*! ./modules/es7.string.trim-right */ 280);
+__webpack_require__(/*! ./modules/es7.string.match-all */ 281);
+__webpack_require__(/*! ./modules/es7.symbol.async-iterator */ 282);
+__webpack_require__(/*! ./modules/es7.symbol.observable */ 283);
+__webpack_require__(/*! ./modules/es7.object.get-own-property-descriptors */ 284);
+__webpack_require__(/*! ./modules/es7.object.values */ 285);
+__webpack_require__(/*! ./modules/es7.object.entries */ 286);
+__webpack_require__(/*! ./modules/es7.object.define-getter */ 287);
+__webpack_require__(/*! ./modules/es7.object.define-setter */ 288);
+__webpack_require__(/*! ./modules/es7.object.lookup-getter */ 289);
+__webpack_require__(/*! ./modules/es7.object.lookup-setter */ 290);
+__webpack_require__(/*! ./modules/es7.map.to-json */ 291);
+__webpack_require__(/*! ./modules/es7.set.to-json */ 292);
+__webpack_require__(/*! ./modules/es7.map.of */ 293);
+__webpack_require__(/*! ./modules/es7.set.of */ 294);
+__webpack_require__(/*! ./modules/es7.weak-map.of */ 295);
+__webpack_require__(/*! ./modules/es7.weak-set.of */ 296);
+__webpack_require__(/*! ./modules/es7.map.from */ 297);
+__webpack_require__(/*! ./modules/es7.set.from */ 298);
+__webpack_require__(/*! ./modules/es7.weak-map.from */ 299);
+__webpack_require__(/*! ./modules/es7.weak-set.from */ 300);
+__webpack_require__(/*! ./modules/es7.global */ 301);
+__webpack_require__(/*! ./modules/es7.system.global */ 302);
+__webpack_require__(/*! ./modules/es7.error.is-error */ 303);
+__webpack_require__(/*! ./modules/es7.math.clamp */ 304);
+__webpack_require__(/*! ./modules/es7.math.deg-per-rad */ 305);
+__webpack_require__(/*! ./modules/es7.math.degrees */ 306);
+__webpack_require__(/*! ./modules/es7.math.fscale */ 307);
+__webpack_require__(/*! ./modules/es7.math.iaddh */ 308);
+__webpack_require__(/*! ./modules/es7.math.isubh */ 309);
+__webpack_require__(/*! ./modules/es7.math.imulh */ 310);
+__webpack_require__(/*! ./modules/es7.math.rad-per-deg */ 311);
+__webpack_require__(/*! ./modules/es7.math.radians */ 312);
+__webpack_require__(/*! ./modules/es7.math.scale */ 313);
+__webpack_require__(/*! ./modules/es7.math.umulh */ 314);
+__webpack_require__(/*! ./modules/es7.math.signbit */ 315);
+__webpack_require__(/*! ./modules/es7.promise.finally */ 316);
+__webpack_require__(/*! ./modules/es7.promise.try */ 317);
+__webpack_require__(/*! ./modules/es7.reflect.define-metadata */ 318);
+__webpack_require__(/*! ./modules/es7.reflect.delete-metadata */ 319);
+__webpack_require__(/*! ./modules/es7.reflect.get-metadata */ 320);
+__webpack_require__(/*! ./modules/es7.reflect.get-metadata-keys */ 321);
+__webpack_require__(/*! ./modules/es7.reflect.get-own-metadata */ 322);
+__webpack_require__(/*! ./modules/es7.reflect.get-own-metadata-keys */ 323);
+__webpack_require__(/*! ./modules/es7.reflect.has-metadata */ 324);
+__webpack_require__(/*! ./modules/es7.reflect.has-own-metadata */ 325);
+__webpack_require__(/*! ./modules/es7.reflect.metadata */ 326);
+__webpack_require__(/*! ./modules/es7.asap */ 327);
+__webpack_require__(/*! ./modules/es7.observable */ 328);
+__webpack_require__(/*! ./modules/web.timers */ 329);
+__webpack_require__(/*! ./modules/web.immediate */ 330);
+__webpack_require__(/*! ./modules/web.dom.iterable */ 331);
 module.exports = __webpack_require__(/*! ./modules/_core */ 22);
 
 
 /***/ }),
-/* 134 */
+/* 136 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/es6.symbol.js ***!
   \****************************************************/
@@ -5056,16 +5380,16 @@ var shared = __webpack_require__(/*! ./_shared */ 51);
 var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 43);
 var uid = __webpack_require__(/*! ./_uid */ 33);
 var wks = __webpack_require__(/*! ./_wks */ 5);
-var wksExt = __webpack_require__(/*! ./_wks-ext */ 96);
+var wksExt = __webpack_require__(/*! ./_wks-ext */ 97);
 var wksDefine = __webpack_require__(/*! ./_wks-define */ 67);
-var enumKeys = __webpack_require__(/*! ./_enum-keys */ 135);
+var enumKeys = __webpack_require__(/*! ./_enum-keys */ 137);
 var isArray = __webpack_require__(/*! ./_is-array */ 54);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
 var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 23);
 var createDesc = __webpack_require__(/*! ./_property-desc */ 32);
 var _create = __webpack_require__(/*! ./_object-create */ 37);
-var gOPNExt = __webpack_require__(/*! ./_object-gopn-ext */ 99);
+var gOPNExt = __webpack_require__(/*! ./_object-gopn-ext */ 100);
 var $GOPD = __webpack_require__(/*! ./_object-gopd */ 16);
 var $DP = __webpack_require__(/*! ./_object-dp */ 7);
 var $keys = __webpack_require__(/*! ./_object-keys */ 35);
@@ -5280,7 +5604,7 @@ setToStringTag(global.JSON, 'JSON', true);
 
 
 /***/ }),
-/* 135 */
+/* 137 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_enum-keys.js ***!
   \****************************************************/
@@ -5306,7 +5630,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 136 */
+/* 138 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.create.js ***!
   \***********************************************************/
@@ -5320,7 +5644,7 @@ $export($export.S, 'Object', { create: __webpack_require__(/*! ./_object-create 
 
 
 /***/ }),
-/* 137 */
+/* 139 */
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.define-property.js ***!
   \********************************************************************/
@@ -5334,7 +5658,7 @@ $export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ 6), '
 
 
 /***/ }),
-/* 138 */
+/* 140 */
 /*!**********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.define-properties.js ***!
   \**********************************************************************/
@@ -5344,11 +5668,11 @@ $export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ 6), '
 
 var $export = __webpack_require__(/*! ./_export */ 0);
 // 19.1.2.3 / 15.2.3.7 Object.defineProperties(O, Properties)
-$export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ 6), 'Object', { defineProperties: __webpack_require__(/*! ./_object-dps */ 98) });
+$export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ 6), 'Object', { defineProperties: __webpack_require__(/*! ./_object-dps */ 99) });
 
 
 /***/ }),
-/* 139 */
+/* 141 */
 /*!********************************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.get-own-property-descriptor.js ***!
   \********************************************************************************/
@@ -5368,7 +5692,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('getOwnPropertyDescriptor', functio
 
 
 /***/ }),
-/* 140 */
+/* 142 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.get-prototype-of.js ***!
   \*********************************************************************/
@@ -5388,7 +5712,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('getPrototypeOf', function () {
 
 
 /***/ }),
-/* 141 */
+/* 143 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.keys.js ***!
   \*********************************************************/
@@ -5408,7 +5732,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('keys', function () {
 
 
 /***/ }),
-/* 142 */
+/* 144 */
 /*!***************************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.get-own-property-names.js ***!
   \***************************************************************************/
@@ -5418,12 +5742,12 @@ __webpack_require__(/*! ./_object-sap */ 26)('keys', function () {
 
 // 19.1.2.7 Object.getOwnPropertyNames(O)
 __webpack_require__(/*! ./_object-sap */ 26)('getOwnPropertyNames', function () {
-  return __webpack_require__(/*! ./_object-gopn-ext */ 99).f;
+  return __webpack_require__(/*! ./_object-gopn-ext */ 100).f;
 });
 
 
 /***/ }),
-/* 143 */
+/* 145 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.freeze.js ***!
   \***********************************************************/
@@ -5443,7 +5767,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('freeze', function ($freeze) {
 
 
 /***/ }),
-/* 144 */
+/* 146 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.seal.js ***!
   \*********************************************************/
@@ -5463,7 +5787,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('seal', function ($seal) {
 
 
 /***/ }),
-/* 145 */
+/* 147 */
 /*!***********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.prevent-extensions.js ***!
   \***********************************************************************/
@@ -5483,7 +5807,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('preventExtensions', function ($pre
 
 
 /***/ }),
-/* 146 */
+/* 148 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.is-frozen.js ***!
   \**************************************************************/
@@ -5502,7 +5826,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('isFrozen', function ($isFrozen) {
 
 
 /***/ }),
-/* 147 */
+/* 149 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.is-sealed.js ***!
   \**************************************************************/
@@ -5521,7 +5845,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('isSealed', function ($isSealed) {
 
 
 /***/ }),
-/* 148 */
+/* 150 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.is-extensible.js ***!
   \******************************************************************/
@@ -5540,7 +5864,7 @@ __webpack_require__(/*! ./_object-sap */ 26)('isExtensible', function ($isExtens
 
 
 /***/ }),
-/* 149 */
+/* 151 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.assign.js ***!
   \***********************************************************/
@@ -5551,11 +5875,11 @@ __webpack_require__(/*! ./_object-sap */ 26)('isExtensible', function ($isExtens
 // 19.1.3.1 Object.assign(target, source)
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_object-assign */ 100) });
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_object-assign */ 101) });
 
 
 /***/ }),
-/* 150 */
+/* 152 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.is.js ***!
   \*******************************************************/
@@ -5565,11 +5889,11 @@ $export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_ob
 
 // 19.1.3.10 Object.is(value1, value2)
 var $export = __webpack_require__(/*! ./_export */ 0);
-$export($export.S, 'Object', { is: __webpack_require__(/*! ./_same-value */ 151) });
+$export($export.S, 'Object', { is: __webpack_require__(/*! ./_same-value */ 153) });
 
 
 /***/ }),
-/* 151 */
+/* 153 */
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_same-value.js ***!
   \*****************************************************/
@@ -5585,7 +5909,7 @@ module.exports = Object.is || function is(x, y) {
 
 
 /***/ }),
-/* 152 */
+/* 154 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.set-prototype-of.js ***!
   \*********************************************************************/
@@ -5599,7 +5923,7 @@ $export($export.S, 'Object', { setPrototypeOf: __webpack_require__(/*! ./_set-pr
 
 
 /***/ }),
-/* 153 */
+/* 155 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.to-string.js ***!
   \**************************************************************/
@@ -5621,7 +5945,7 @@ if (test + '' != '[object z]') {
 
 
 /***/ }),
-/* 154 */
+/* 156 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.function.bind.js ***!
   \***********************************************************/
@@ -5632,11 +5956,11 @@ if (test + '' != '[object z]') {
 // 19.2.3.2 / 15.3.4.5 Function.prototype.bind(thisArg, args...)
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.P, 'Function', { bind: __webpack_require__(/*! ./_bind */ 101) });
+$export($export.P, 'Function', { bind: __webpack_require__(/*! ./_bind */ 102) });
 
 
 /***/ }),
-/* 155 */
+/* 157 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.function.name.js ***!
   \***********************************************************/
@@ -5663,7 +5987,7 @@ NAME in FProto || __webpack_require__(/*! ./_descriptors */ 6) && dP(FProto, NAM
 
 
 /***/ }),
-/* 156 */
+/* 158 */
 /*!*******************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.function.has-instance.js ***!
   \*******************************************************************/
@@ -5688,7 +6012,7 @@ if (!(HAS_INSTANCE in FunctionProto)) __webpack_require__(/*! ./_object-dp */ 7)
 
 
 /***/ }),
-/* 157 */
+/* 159 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.parse-int.js ***!
   \*******************************************************/
@@ -5697,13 +6021,13 @@ if (!(HAS_INSTANCE in FunctionProto)) __webpack_require__(/*! ./_object-dp */ 7)
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $parseInt = __webpack_require__(/*! ./_parse-int */ 103);
+var $parseInt = __webpack_require__(/*! ./_parse-int */ 104);
 // 18.2.5 parseInt(string, radix)
 $export($export.G + $export.F * (parseInt != $parseInt), { parseInt: $parseInt });
 
 
 /***/ }),
-/* 158 */
+/* 160 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.parse-float.js ***!
   \*********************************************************/
@@ -5712,13 +6036,13 @@ $export($export.G + $export.F * (parseInt != $parseInt), { parseInt: $parseInt }
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $parseFloat = __webpack_require__(/*! ./_parse-float */ 104);
+var $parseFloat = __webpack_require__(/*! ./_parse-float */ 105);
 // 18.2.4 parseFloat(string)
 $export($export.G + $export.F * (parseFloat != $parseFloat), { parseFloat: $parseFloat });
 
 
 /***/ }),
-/* 159 */
+/* 161 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.constructor.js ***!
   \****************************************************************/
@@ -5799,7 +6123,7 @@ if (!$Number(' 0o1') || !$Number('0b1') || $Number('+0x1')) {
 
 
 /***/ }),
-/* 160 */
+/* 162 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.to-fixed.js ***!
   \*************************************************************/
@@ -5811,7 +6135,7 @@ if (!$Number(' 0o1') || !$Number('0b1') || $Number('+0x1')) {
 
 var $export = __webpack_require__(/*! ./_export */ 0);
 var toInteger = __webpack_require__(/*! ./_to-integer */ 25);
-var aNumberValue = __webpack_require__(/*! ./_a-number-value */ 105);
+var aNumberValue = __webpack_require__(/*! ./_a-number-value */ 106);
 var repeat = __webpack_require__(/*! ./_string-repeat */ 74);
 var $toFixed = 1.0.toFixed;
 var floor = Math.floor;
@@ -5925,7 +6249,7 @@ $export($export.P + $export.F * (!!$toFixed && (
 
 
 /***/ }),
-/* 161 */
+/* 163 */
 /*!*****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.to-precision.js ***!
   \*****************************************************************/
@@ -5937,7 +6261,7 @@ $export($export.P + $export.F * (!!$toFixed && (
 
 var $export = __webpack_require__(/*! ./_export */ 0);
 var $fails = __webpack_require__(/*! ./_fails */ 3);
-var aNumberValue = __webpack_require__(/*! ./_a-number-value */ 105);
+var aNumberValue = __webpack_require__(/*! ./_a-number-value */ 106);
 var $toPrecision = 1.0.toPrecision;
 
 $export($export.P + $export.F * ($fails(function () {
@@ -5955,7 +6279,7 @@ $export($export.P + $export.F * ($fails(function () {
 
 
 /***/ }),
-/* 162 */
+/* 164 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.epsilon.js ***!
   \************************************************************/
@@ -5970,7 +6294,7 @@ $export($export.S, 'Number', { EPSILON: Math.pow(2, -52) });
 
 
 /***/ }),
-/* 163 */
+/* 165 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.is-finite.js ***!
   \**************************************************************/
@@ -5990,7 +6314,7 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 164 */
+/* 166 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.is-integer.js ***!
   \***************************************************************/
@@ -6001,11 +6325,11 @@ $export($export.S, 'Number', {
 // 20.1.2.3 Number.isInteger(number)
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.S, 'Number', { isInteger: __webpack_require__(/*! ./_is-integer */ 106) });
+$export($export.S, 'Number', { isInteger: __webpack_require__(/*! ./_is-integer */ 107) });
 
 
 /***/ }),
-/* 165 */
+/* 167 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.is-nan.js ***!
   \***********************************************************/
@@ -6025,7 +6349,7 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 166 */
+/* 168 */
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.is-safe-integer.js ***!
   \********************************************************************/
@@ -6035,7 +6359,7 @@ $export($export.S, 'Number', {
 
 // 20.1.2.5 Number.isSafeInteger(number)
 var $export = __webpack_require__(/*! ./_export */ 0);
-var isInteger = __webpack_require__(/*! ./_is-integer */ 106);
+var isInteger = __webpack_require__(/*! ./_is-integer */ 107);
 var abs = Math.abs;
 
 $export($export.S, 'Number', {
@@ -6046,7 +6370,7 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 167 */
+/* 169 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.max-safe-integer.js ***!
   \*********************************************************************/
@@ -6061,7 +6385,7 @@ $export($export.S, 'Number', { MAX_SAFE_INTEGER: 0x1fffffffffffff });
 
 
 /***/ }),
-/* 168 */
+/* 170 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.min-safe-integer.js ***!
   \*********************************************************************/
@@ -6076,7 +6400,7 @@ $export($export.S, 'Number', { MIN_SAFE_INTEGER: -0x1fffffffffffff });
 
 
 /***/ }),
-/* 169 */
+/* 171 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.parse-float.js ***!
   \****************************************************************/
@@ -6085,13 +6409,13 @@ $export($export.S, 'Number', { MIN_SAFE_INTEGER: -0x1fffffffffffff });
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $parseFloat = __webpack_require__(/*! ./_parse-float */ 104);
+var $parseFloat = __webpack_require__(/*! ./_parse-float */ 105);
 // 20.1.2.12 Number.parseFloat(string)
 $export($export.S + $export.F * (Number.parseFloat != $parseFloat), 'Number', { parseFloat: $parseFloat });
 
 
 /***/ }),
-/* 170 */
+/* 172 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.number.parse-int.js ***!
   \**************************************************************/
@@ -6100,13 +6424,13 @@ $export($export.S + $export.F * (Number.parseFloat != $parseFloat), 'Number', { 
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $parseInt = __webpack_require__(/*! ./_parse-int */ 103);
+var $parseInt = __webpack_require__(/*! ./_parse-int */ 104);
 // 20.1.2.13 Number.parseInt(string, radix)
 $export($export.S + $export.F * (Number.parseInt != $parseInt), 'Number', { parseInt: $parseInt });
 
 
 /***/ }),
-/* 171 */
+/* 173 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.acosh.js ***!
   \********************************************************/
@@ -6116,7 +6440,7 @@ $export($export.S + $export.F * (Number.parseInt != $parseInt), 'Number', { pars
 
 // 20.2.2.3 Math.acosh(x)
 var $export = __webpack_require__(/*! ./_export */ 0);
-var log1p = __webpack_require__(/*! ./_math-log1p */ 107);
+var log1p = __webpack_require__(/*! ./_math-log1p */ 108);
 var sqrt = Math.sqrt;
 var $acosh = Math.acosh;
 
@@ -6135,7 +6459,7 @@ $export($export.S + $export.F * !($acosh
 
 
 /***/ }),
-/* 172 */
+/* 174 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.asinh.js ***!
   \********************************************************/
@@ -6156,7 +6480,7 @@ $export($export.S + $export.F * !($asinh && 1 / $asinh(0) > 0), 'Math', { asinh:
 
 
 /***/ }),
-/* 173 */
+/* 175 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.atanh.js ***!
   \********************************************************/
@@ -6177,7 +6501,7 @@ $export($export.S + $export.F * !($atanh && 1 / $atanh(-0) < 0), 'Math', {
 
 
 /***/ }),
-/* 174 */
+/* 176 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.cbrt.js ***!
   \*******************************************************/
@@ -6197,7 +6521,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 175 */
+/* 177 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.clz32.js ***!
   \********************************************************/
@@ -6216,7 +6540,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 176 */
+/* 178 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.cosh.js ***!
   \*******************************************************/
@@ -6236,7 +6560,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 177 */
+/* 179 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.expm1.js ***!
   \********************************************************/
@@ -6252,7 +6576,7 @@ $export($export.S + $export.F * ($expm1 != Math.expm1), 'Math', { expm1: $expm1 
 
 
 /***/ }),
-/* 178 */
+/* 180 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.fround.js ***!
   \*********************************************************/
@@ -6263,11 +6587,11 @@ $export($export.S + $export.F * ($expm1 != Math.expm1), 'Math', { expm1: $expm1 
 // 20.2.2.16 Math.fround(x)
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.S, 'Math', { fround: __webpack_require__(/*! ./_math-fround */ 108) });
+$export($export.S, 'Math', { fround: __webpack_require__(/*! ./_math-fround */ 109) });
 
 
 /***/ }),
-/* 179 */
+/* 181 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.hypot.js ***!
   \********************************************************/
@@ -6303,7 +6627,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 180 */
+/* 182 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.imul.js ***!
   \*******************************************************/
@@ -6331,7 +6655,7 @@ $export($export.S + $export.F * __webpack_require__(/*! ./_fails */ 3)(function 
 
 
 /***/ }),
-/* 181 */
+/* 183 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.log10.js ***!
   \********************************************************/
@@ -6350,7 +6674,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 182 */
+/* 184 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.log1p.js ***!
   \********************************************************/
@@ -6361,11 +6685,11 @@ $export($export.S, 'Math', {
 // 20.2.2.20 Math.log1p(x)
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.S, 'Math', { log1p: __webpack_require__(/*! ./_math-log1p */ 107) });
+$export($export.S, 'Math', { log1p: __webpack_require__(/*! ./_math-log1p */ 108) });
 
 
 /***/ }),
-/* 183 */
+/* 185 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.log2.js ***!
   \*******************************************************/
@@ -6384,7 +6708,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 184 */
+/* 186 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.sign.js ***!
   \*******************************************************/
@@ -6399,7 +6723,7 @@ $export($export.S, 'Math', { sign: __webpack_require__(/*! ./_math-sign */ 75) }
 
 
 /***/ }),
-/* 185 */
+/* 187 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.sinh.js ***!
   \*******************************************************/
@@ -6425,7 +6749,7 @@ $export($export.S + $export.F * __webpack_require__(/*! ./_fails */ 3)(function 
 
 
 /***/ }),
-/* 186 */
+/* 188 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.tanh.js ***!
   \*******************************************************/
@@ -6448,7 +6772,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 187 */
+/* 189 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.math.trunc.js ***!
   \********************************************************/
@@ -6467,7 +6791,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 188 */
+/* 190 */
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.from-code-point.js ***!
   \********************************************************************/
@@ -6501,7 +6825,7 @@ $export($export.S + $export.F * (!!$fromCodePoint && $fromCodePoint.length != 1)
 
 
 /***/ }),
-/* 189 */
+/* 191 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.raw.js ***!
   \********************************************************/
@@ -6530,7 +6854,7 @@ $export($export.S, 'String', {
 
 
 /***/ }),
-/* 190 */
+/* 192 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.trim.js ***!
   \*********************************************************/
@@ -6549,7 +6873,7 @@ __webpack_require__(/*! ./_string-trim */ 44)('trim', function ($trim) {
 
 
 /***/ }),
-/* 191 */
+/* 193 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.iterator.js ***!
   \*************************************************************/
@@ -6578,7 +6902,7 @@ __webpack_require__(/*! ./_iter-define */ 78)(String, 'String', function (iterat
 
 
 /***/ }),
-/* 192 */
+/* 194 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.code-point-at.js ***!
   \******************************************************************/
@@ -6599,7 +6923,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 193 */
+/* 195 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.ends-with.js ***!
   \**************************************************************/
@@ -6631,7 +6955,7 @@ $export($export.P + $export.F * __webpack_require__(/*! ./_fails-is-regexp */ 81
 
 
 /***/ }),
-/* 194 */
+/* 196 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.includes.js ***!
   \*************************************************************/
@@ -6655,7 +6979,7 @@ $export($export.P + $export.F * __webpack_require__(/*! ./_fails-is-regexp */ 81
 
 
 /***/ }),
-/* 195 */
+/* 197 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.repeat.js ***!
   \***********************************************************/
@@ -6672,7 +6996,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 196 */
+/* 198 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.starts-with.js ***!
   \****************************************************************/
@@ -6702,7 +7026,7 @@ $export($export.P + $export.F * __webpack_require__(/*! ./_fails-is-regexp */ 81
 
 
 /***/ }),
-/* 197 */
+/* 199 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.anchor.js ***!
   \***********************************************************/
@@ -6721,7 +7045,7 @@ __webpack_require__(/*! ./_string-html */ 14)('anchor', function (createHTML) {
 
 
 /***/ }),
-/* 198 */
+/* 200 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.big.js ***!
   \********************************************************/
@@ -6740,7 +7064,7 @@ __webpack_require__(/*! ./_string-html */ 14)('big', function (createHTML) {
 
 
 /***/ }),
-/* 199 */
+/* 201 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.blink.js ***!
   \**********************************************************/
@@ -6759,7 +7083,7 @@ __webpack_require__(/*! ./_string-html */ 14)('blink', function (createHTML) {
 
 
 /***/ }),
-/* 200 */
+/* 202 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.bold.js ***!
   \*********************************************************/
@@ -6778,7 +7102,7 @@ __webpack_require__(/*! ./_string-html */ 14)('bold', function (createHTML) {
 
 
 /***/ }),
-/* 201 */
+/* 203 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.fixed.js ***!
   \**********************************************************/
@@ -6797,7 +7121,7 @@ __webpack_require__(/*! ./_string-html */ 14)('fixed', function (createHTML) {
 
 
 /***/ }),
-/* 202 */
+/* 204 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.fontcolor.js ***!
   \**************************************************************/
@@ -6816,7 +7140,7 @@ __webpack_require__(/*! ./_string-html */ 14)('fontcolor', function (createHTML)
 
 
 /***/ }),
-/* 203 */
+/* 205 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.fontsize.js ***!
   \*************************************************************/
@@ -6835,7 +7159,7 @@ __webpack_require__(/*! ./_string-html */ 14)('fontsize', function (createHTML) 
 
 
 /***/ }),
-/* 204 */
+/* 206 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.italics.js ***!
   \************************************************************/
@@ -6854,7 +7178,7 @@ __webpack_require__(/*! ./_string-html */ 14)('italics', function (createHTML) {
 
 
 /***/ }),
-/* 205 */
+/* 207 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.link.js ***!
   \*********************************************************/
@@ -6873,7 +7197,7 @@ __webpack_require__(/*! ./_string-html */ 14)('link', function (createHTML) {
 
 
 /***/ }),
-/* 206 */
+/* 208 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.small.js ***!
   \**********************************************************/
@@ -6892,7 +7216,7 @@ __webpack_require__(/*! ./_string-html */ 14)('small', function (createHTML) {
 
 
 /***/ }),
-/* 207 */
+/* 209 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.strike.js ***!
   \***********************************************************/
@@ -6911,7 +7235,7 @@ __webpack_require__(/*! ./_string-html */ 14)('strike', function (createHTML) {
 
 
 /***/ }),
-/* 208 */
+/* 210 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.sub.js ***!
   \********************************************************/
@@ -6930,7 +7254,7 @@ __webpack_require__(/*! ./_string-html */ 14)('sub', function (createHTML) {
 
 
 /***/ }),
-/* 209 */
+/* 211 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.string.sup.js ***!
   \********************************************************/
@@ -6949,7 +7273,7 @@ __webpack_require__(/*! ./_string-html */ 14)('sup', function (createHTML) {
 
 
 /***/ }),
-/* 210 */
+/* 212 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.date.now.js ***!
   \******************************************************/
@@ -6964,7 +7288,7 @@ $export($export.S, 'Date', { now: function () { return new Date().getTime(); } }
 
 
 /***/ }),
-/* 211 */
+/* 213 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.date.to-json.js ***!
   \**********************************************************/
@@ -6992,7 +7316,7 @@ $export($export.P + $export.F * __webpack_require__(/*! ./_fails */ 3)(function 
 
 
 /***/ }),
-/* 212 */
+/* 214 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.date.to-iso-string.js ***!
   \****************************************************************/
@@ -7002,7 +7326,7 @@ $export($export.P + $export.F * __webpack_require__(/*! ./_fails */ 3)(function 
 
 // 20.3.4.36 / 15.9.5.43 Date.prototype.toISOString()
 var $export = __webpack_require__(/*! ./_export */ 0);
-var toISOString = __webpack_require__(/*! ./_date-to-iso-string */ 213);
+var toISOString = __webpack_require__(/*! ./_date-to-iso-string */ 215);
 
 // PhantomJS / old WebKit has a broken implementations
 $export($export.P + $export.F * (Date.prototype.toISOString !== toISOString), 'Date', {
@@ -7011,7 +7335,7 @@ $export($export.P + $export.F * (Date.prototype.toISOString !== toISOString), 'D
 
 
 /***/ }),
-/* 213 */
+/* 215 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/_date-to-iso-string.js ***!
   \*************************************************************/
@@ -7049,7 +7373,7 @@ module.exports = (fails(function () {
 
 
 /***/ }),
-/* 214 */
+/* 216 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.date.to-string.js ***!
   \************************************************************/
@@ -7072,7 +7396,7 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 
 
 /***/ }),
-/* 215 */
+/* 217 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.date.to-primitive.js ***!
   \***************************************************************/
@@ -7083,11 +7407,11 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 var TO_PRIMITIVE = __webpack_require__(/*! ./_wks */ 5)('toPrimitive');
 var proto = Date.prototype;
 
-if (!(TO_PRIMITIVE in proto)) __webpack_require__(/*! ./_hide */ 12)(proto, TO_PRIMITIVE, __webpack_require__(/*! ./_date-to-primitive */ 216));
+if (!(TO_PRIMITIVE in proto)) __webpack_require__(/*! ./_hide */ 12)(proto, TO_PRIMITIVE, __webpack_require__(/*! ./_date-to-primitive */ 218));
 
 
 /***/ }),
-/* 216 */
+/* 218 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/_date-to-primitive.js ***!
   \************************************************************/
@@ -7108,7 +7432,7 @@ module.exports = function (hint) {
 
 
 /***/ }),
-/* 217 */
+/* 219 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.is-array.js ***!
   \************************************************************/
@@ -7123,7 +7447,7 @@ $export($export.S, 'Array', { isArray: __webpack_require__(/*! ./_is-array */ 54
 
 
 /***/ }),
-/* 218 */
+/* 220 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.from.js ***!
   \********************************************************/
@@ -7136,7 +7460,7 @@ $export($export.S, 'Array', { isArray: __webpack_require__(/*! ./_is-array */ 54
 var ctx = __webpack_require__(/*! ./_ctx */ 19);
 var $export = __webpack_require__(/*! ./_export */ 0);
 var toObject = __webpack_require__(/*! ./_to-object */ 9);
-var call = __webpack_require__(/*! ./_iter-call */ 109);
+var call = __webpack_require__(/*! ./_iter-call */ 110);
 var isArrayIter = __webpack_require__(/*! ./_is-array-iter */ 82);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
 var createProperty = __webpack_require__(/*! ./_create-property */ 83);
@@ -7172,7 +7496,7 @@ $export($export.S + $export.F * !__webpack_require__(/*! ./_iter-detect */ 56)(f
 
 
 /***/ }),
-/* 219 */
+/* 221 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.of.js ***!
   \******************************************************/
@@ -7203,7 +7527,7 @@ $export($export.S + $export.F * __webpack_require__(/*! ./_fails */ 3)(function 
 
 
 /***/ }),
-/* 220 */
+/* 222 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.join.js ***!
   \********************************************************/
@@ -7227,7 +7551,7 @@ $export($export.P + $export.F * (__webpack_require__(/*! ./_iobject */ 48) != Ob
 
 
 /***/ }),
-/* 221 */
+/* 223 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.slice.js ***!
   \*********************************************************/
@@ -7267,7 +7591,7 @@ $export($export.P + $export.F * __webpack_require__(/*! ./_fails */ 3)(function 
 
 
 /***/ }),
-/* 222 */
+/* 224 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.sort.js ***!
   \********************************************************/
@@ -7302,7 +7626,7 @@ $export($export.P + $export.F * (fails(function () {
 
 
 /***/ }),
-/* 223 */
+/* 225 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.for-each.js ***!
   \************************************************************/
@@ -7325,7 +7649,7 @@ $export($export.P + $export.F * !STRICT, 'Array', {
 
 
 /***/ }),
-/* 224 */
+/* 226 */
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/modules/_array-species-constructor.js ***!
   \********************************************************************/
@@ -7352,7 +7676,7 @@ module.exports = function (original) {
 
 
 /***/ }),
-/* 225 */
+/* 227 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.map.js ***!
   \*******************************************************/
@@ -7374,7 +7698,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 
 
 /***/ }),
-/* 226 */
+/* 228 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.filter.js ***!
   \**********************************************************/
@@ -7396,7 +7720,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 
 
 /***/ }),
-/* 227 */
+/* 229 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.some.js ***!
   \********************************************************/
@@ -7418,7 +7742,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 
 
 /***/ }),
-/* 228 */
+/* 230 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.every.js ***!
   \*********************************************************/
@@ -7440,7 +7764,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 
 
 /***/ }),
-/* 229 */
+/* 231 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.reduce.js ***!
   \**********************************************************/
@@ -7451,7 +7775,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 "use strict";
 
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $reduce = __webpack_require__(/*! ./_array-reduce */ 110);
+var $reduce = __webpack_require__(/*! ./_array-reduce */ 111);
 
 $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)([].reduce, true), 'Array', {
   // 22.1.3.18 / 15.4.4.21 Array.prototype.reduce(callbackfn [, initialValue])
@@ -7462,7 +7786,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 
 
 /***/ }),
-/* 230 */
+/* 232 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.reduce-right.js ***!
   \****************************************************************/
@@ -7473,7 +7797,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 "use strict";
 
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $reduce = __webpack_require__(/*! ./_array-reduce */ 110);
+var $reduce = __webpack_require__(/*! ./_array-reduce */ 111);
 
 $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)([].reduceRight, true), 'Array', {
   // 22.1.3.19 / 15.4.4.22 Array.prototype.reduceRight(callbackfn [, initialValue])
@@ -7484,7 +7808,7 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ 21)
 
 
 /***/ }),
-/* 231 */
+/* 233 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.index-of.js ***!
   \************************************************************/
@@ -7511,7 +7835,7 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(/*! ./_st
 
 
 /***/ }),
-/* 232 */
+/* 234 */
 /*!*****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.last-index-of.js ***!
   \*****************************************************************/
@@ -7545,7 +7869,7 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(/*! ./_st
 
 
 /***/ }),
-/* 233 */
+/* 235 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.copy-within.js ***!
   \***************************************************************/
@@ -7556,13 +7880,13 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(/*! ./_st
 // 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.P, 'Array', { copyWithin: __webpack_require__(/*! ./_array-copy-within */ 111) });
+$export($export.P, 'Array', { copyWithin: __webpack_require__(/*! ./_array-copy-within */ 112) });
 
 __webpack_require__(/*! ./_add-to-unscopables */ 31)('copyWithin');
 
 
 /***/ }),
-/* 234 */
+/* 236 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.fill.js ***!
   \********************************************************/
@@ -7579,7 +7903,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)('fill');
 
 
 /***/ }),
-/* 235 */
+/* 237 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.find.js ***!
   \********************************************************/
@@ -7605,7 +7929,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)(KEY);
 
 
 /***/ }),
-/* 236 */
+/* 238 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.find-index.js ***!
   \**************************************************************/
@@ -7631,7 +7955,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)(KEY);
 
 
 /***/ }),
-/* 237 */
+/* 239 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.species.js ***!
   \***********************************************************/
@@ -7643,7 +7967,7 @@ __webpack_require__(/*! ./_set-species */ 39)('Array');
 
 
 /***/ }),
-/* 238 */
+/* 240 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.constructor.js ***!
   \****************************************************************/
@@ -7697,7 +8021,7 @@ __webpack_require__(/*! ./_set-species */ 39)('RegExp');
 
 
 /***/ }),
-/* 239 */
+/* 241 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.to-string.js ***!
   \**************************************************************/
@@ -7707,7 +8031,7 @@ __webpack_require__(/*! ./_set-species */ 39)('RegExp');
 
 "use strict";
 
-__webpack_require__(/*! ./es6.regexp.flags */ 113);
+__webpack_require__(/*! ./es6.regexp.flags */ 114);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var $flags = __webpack_require__(/*! ./_flags */ 57);
 var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ 6);
@@ -7734,7 +8058,7 @@ if (__webpack_require__(/*! ./_fails */ 3)(function () { return $toString.call({
 
 
 /***/ }),
-/* 240 */
+/* 242 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.match.js ***!
   \**********************************************************/
@@ -7755,7 +8079,7 @@ __webpack_require__(/*! ./_fix-re-wks */ 58)('match', 1, function (defined, MATC
 
 
 /***/ }),
-/* 241 */
+/* 243 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.replace.js ***!
   \************************************************************/
@@ -7778,7 +8102,7 @@ __webpack_require__(/*! ./_fix-re-wks */ 58)('replace', 2, function (defined, RE
 
 
 /***/ }),
-/* 242 */
+/* 244 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.search.js ***!
   \***********************************************************/
@@ -7799,7 +8123,7 @@ __webpack_require__(/*! ./_fix-re-wks */ 58)('search', 1, function (defined, SEA
 
 
 /***/ }),
-/* 243 */
+/* 245 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.split.js ***!
   \**********************************************************/
@@ -7881,7 +8205,7 @@ __webpack_require__(/*! ./_fix-re-wks */ 58)('split', 2, function (defined, SPLI
 
 
 /***/ }),
-/* 244 */
+/* 246 */
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/es6.promise.js ***!
   \*****************************************************/
@@ -7904,8 +8228,8 @@ var speciesConstructor = __webpack_require__(/*! ./_species-constructor */ 59);
 var task = __webpack_require__(/*! ./_task */ 88).set;
 var microtask = __webpack_require__(/*! ./_microtask */ 89)();
 var newPromiseCapabilityModule = __webpack_require__(/*! ./_new-promise-capability */ 90);
-var perform = __webpack_require__(/*! ./_perform */ 114);
-var promiseResolve = __webpack_require__(/*! ./_promise-resolve */ 115);
+var perform = __webpack_require__(/*! ./_perform */ 115);
+var promiseResolve = __webpack_require__(/*! ./_promise-resolve */ 116);
 var PROMISE = 'Promise';
 var TypeError = global.TypeError;
 var process = global.process;
@@ -8173,7 +8497,7 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(/*! ./_iter-
 
 
 /***/ }),
-/* 245 */
+/* 247 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/es6.weak-set.js ***!
   \******************************************************/
@@ -8183,7 +8507,7 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(/*! ./_iter-
 
 "use strict";
 
-var weak = __webpack_require__(/*! ./_collection-weak */ 120);
+var weak = __webpack_require__(/*! ./_collection-weak */ 121);
 var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var WEAK_SET = 'WeakSet';
 
@@ -8199,7 +8523,7 @@ __webpack_require__(/*! ./_collection */ 60)(WEAK_SET, function (get) {
 
 
 /***/ }),
-/* 246 */
+/* 248 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.array-buffer.js ***!
   \****************************************************************/
@@ -8257,7 +8581,7 @@ __webpack_require__(/*! ./_set-species */ 39)(ARRAY_BUFFER);
 
 
 /***/ }),
-/* 247 */
+/* 249 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.data-view.js ***!
   \*************************************************************/
@@ -8272,7 +8596,7 @@ $export($export.G + $export.W + $export.F * !__webpack_require__(/*! ./_typed */
 
 
 /***/ }),
-/* 248 */
+/* 250 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.int8-array.js ***!
   \**************************************************************/
@@ -8288,7 +8612,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Int8', 1, function (init) {
 
 
 /***/ }),
-/* 249 */
+/* 251 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.uint8-array.js ***!
   \***************************************************************/
@@ -8304,7 +8628,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Uint8', 1, function (init) {
 
 
 /***/ }),
-/* 250 */
+/* 252 */
 /*!***********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.uint8-clamped-array.js ***!
   \***********************************************************************/
@@ -8320,7 +8644,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Uint8', 1, function (init) {
 
 
 /***/ }),
-/* 251 */
+/* 253 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.int16-array.js ***!
   \***************************************************************/
@@ -8336,7 +8660,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Int16', 2, function (init) {
 
 
 /***/ }),
-/* 252 */
+/* 254 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.uint16-array.js ***!
   \****************************************************************/
@@ -8352,7 +8676,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Uint16', 2, function (init) {
 
 
 /***/ }),
-/* 253 */
+/* 255 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.int32-array.js ***!
   \***************************************************************/
@@ -8368,7 +8692,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Int32', 4, function (init) {
 
 
 /***/ }),
-/* 254 */
+/* 256 */
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.uint32-array.js ***!
   \****************************************************************/
@@ -8384,7 +8708,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Uint32', 4, function (init) {
 
 
 /***/ }),
-/* 255 */
+/* 257 */
 /*!*****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.float32-array.js ***!
   \*****************************************************************/
@@ -8400,7 +8724,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Float32', 4, function (init) {
 
 
 /***/ }),
-/* 256 */
+/* 258 */
 /*!*****************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.typed.float64-array.js ***!
   \*****************************************************************/
@@ -8416,7 +8740,7 @@ __webpack_require__(/*! ./_typed-array */ 28)('Float64', 8, function (init) {
 
 
 /***/ }),
-/* 257 */
+/* 259 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.apply.js ***!
   \***********************************************************/
@@ -8443,7 +8767,7 @@ $export($export.S + $export.F * !__webpack_require__(/*! ./_fails */ 3)(function
 
 
 /***/ }),
-/* 258 */
+/* 260 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.construct.js ***!
   \***************************************************************/
@@ -8458,7 +8782,7 @@ var aFunction = __webpack_require__(/*! ./_a-function */ 10);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
 var fails = __webpack_require__(/*! ./_fails */ 3);
-var bind = __webpack_require__(/*! ./_bind */ 101);
+var bind = __webpack_require__(/*! ./_bind */ 102);
 var rConstruct = (__webpack_require__(/*! ./_global */ 2).Reflect || {}).construct;
 
 // MS Edge supports only 2 arguments and argumentsList argument is optional
@@ -8501,7 +8825,7 @@ $export($export.S + $export.F * (NEW_TARGET_BUG || ARGS_BUG), 'Reflect', {
 
 
 /***/ }),
-/* 259 */
+/* 261 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.define-property.js ***!
   \*********************************************************************/
@@ -8535,7 +8859,7 @@ $export($export.S + $export.F * __webpack_require__(/*! ./_fails */ 3)(function 
 
 
 /***/ }),
-/* 260 */
+/* 262 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.delete-property.js ***!
   \*********************************************************************/
@@ -8557,7 +8881,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 261 */
+/* 263 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.enumerate.js ***!
   \***************************************************************/
@@ -8595,7 +8919,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 262 */
+/* 264 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.get.js ***!
   \*********************************************************/
@@ -8627,7 +8951,7 @@ $export($export.S, 'Reflect', { get: get });
 
 
 /***/ }),
-/* 263 */
+/* 265 */
 /*!*********************************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.get-own-property-descriptor.js ***!
   \*********************************************************************************/
@@ -8648,7 +8972,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 264 */
+/* 266 */
 /*!**********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.get-prototype-of.js ***!
   \**********************************************************************/
@@ -8669,7 +8993,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 265 */
+/* 267 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.has.js ***!
   \*********************************************************/
@@ -8688,7 +9012,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 266 */
+/* 268 */
 /*!*******************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.is-extensible.js ***!
   \*******************************************************************/
@@ -8710,7 +9034,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 267 */
+/* 269 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.own-keys.js ***!
   \**************************************************************/
@@ -8721,11 +9045,11 @@ $export($export.S, 'Reflect', {
 // 26.1.11 Reflect.ownKeys(target)
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.S, 'Reflect', { ownKeys: __webpack_require__(/*! ./_own-keys */ 122) });
+$export($export.S, 'Reflect', { ownKeys: __webpack_require__(/*! ./_own-keys */ 123) });
 
 
 /***/ }),
-/* 268 */
+/* 270 */
 /*!************************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.prevent-extensions.js ***!
   \************************************************************************/
@@ -8752,7 +9076,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 269 */
+/* 271 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.set.js ***!
   \*********************************************************/
@@ -8794,7 +9118,7 @@ $export($export.S, 'Reflect', { set: set });
 
 
 /***/ }),
-/* 270 */
+/* 272 */
 /*!**********************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.reflect.set-prototype-of.js ***!
   \**********************************************************************/
@@ -8820,7 +9144,7 @@ if (setProto) $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 271 */
+/* 273 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.array.includes.js ***!
   \************************************************************/
@@ -8844,7 +9168,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)('includes');
 
 
 /***/ }),
-/* 272 */
+/* 274 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.array.flat-map.js ***!
   \************************************************************/
@@ -8856,7 +9180,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)('includes');
 
 // https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap
 var $export = __webpack_require__(/*! ./_export */ 0);
-var flattenIntoArray = __webpack_require__(/*! ./_flatten-into-array */ 123);
+var flattenIntoArray = __webpack_require__(/*! ./_flatten-into-array */ 124);
 var toObject = __webpack_require__(/*! ./_to-object */ 9);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
 var aFunction = __webpack_require__(/*! ./_a-function */ 10);
@@ -8878,7 +9202,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)('flatMap');
 
 
 /***/ }),
-/* 273 */
+/* 275 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.array.flatten.js ***!
   \***********************************************************/
@@ -8890,7 +9214,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)('flatMap');
 
 // https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatten
 var $export = __webpack_require__(/*! ./_export */ 0);
-var flattenIntoArray = __webpack_require__(/*! ./_flatten-into-array */ 123);
+var flattenIntoArray = __webpack_require__(/*! ./_flatten-into-array */ 124);
 var toObject = __webpack_require__(/*! ./_to-object */ 9);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
 var toInteger = __webpack_require__(/*! ./_to-integer */ 25);
@@ -8911,7 +9235,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 31)('flatten');
 
 
 /***/ }),
-/* 274 */
+/* 276 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es7.string.at.js ***!
   \*******************************************************/
@@ -8933,7 +9257,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 275 */
+/* 277 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.string.pad-start.js ***!
   \**************************************************************/
@@ -8945,7 +9269,7 @@ $export($export.P, 'String', {
 
 // https://github.com/tc39/proposal-string-pad-start-end
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $pad = __webpack_require__(/*! ./_string-pad */ 124);
+var $pad = __webpack_require__(/*! ./_string-pad */ 125);
 
 $export($export.P, 'String', {
   padStart: function padStart(maxLength /* , fillString = ' ' */) {
@@ -8955,7 +9279,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 276 */
+/* 278 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.string.pad-end.js ***!
   \************************************************************/
@@ -8967,7 +9291,7 @@ $export($export.P, 'String', {
 
 // https://github.com/tc39/proposal-string-pad-start-end
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $pad = __webpack_require__(/*! ./_string-pad */ 124);
+var $pad = __webpack_require__(/*! ./_string-pad */ 125);
 
 $export($export.P, 'String', {
   padEnd: function padEnd(maxLength /* , fillString = ' ' */) {
@@ -8977,7 +9301,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 277 */
+/* 279 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.string.trim-left.js ***!
   \**************************************************************/
@@ -8996,7 +9320,7 @@ __webpack_require__(/*! ./_string-trim */ 44)('trimLeft', function ($trim) {
 
 
 /***/ }),
-/* 278 */
+/* 280 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.string.trim-right.js ***!
   \***************************************************************/
@@ -9015,7 +9339,7 @@ __webpack_require__(/*! ./_string-trim */ 44)('trimRight', function ($trim) {
 
 
 /***/ }),
-/* 279 */
+/* 281 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.string.match-all.js ***!
   \**************************************************************/
@@ -9057,7 +9381,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 280 */
+/* 282 */
 /*!*******************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.symbol.async-iterator.js ***!
   \*******************************************************************/
@@ -9069,7 +9393,7 @@ __webpack_require__(/*! ./_wks-define */ 67)('asyncIterator');
 
 
 /***/ }),
-/* 281 */
+/* 283 */
 /*!***************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.symbol.observable.js ***!
   \***************************************************************/
@@ -9081,7 +9405,7 @@ __webpack_require__(/*! ./_wks-define */ 67)('observable');
 
 
 /***/ }),
-/* 282 */
+/* 284 */
 /*!*********************************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.object.get-own-property-descriptors.js ***!
   \*********************************************************************************/
@@ -9091,7 +9415,7 @@ __webpack_require__(/*! ./_wks-define */ 67)('observable');
 
 // https://github.com/tc39/proposal-object-getownpropertydescriptors
 var $export = __webpack_require__(/*! ./_export */ 0);
-var ownKeys = __webpack_require__(/*! ./_own-keys */ 122);
+var ownKeys = __webpack_require__(/*! ./_own-keys */ 123);
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
 var gOPD = __webpack_require__(/*! ./_object-gopd */ 16);
 var createProperty = __webpack_require__(/*! ./_create-property */ 83);
@@ -9114,7 +9438,7 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 283 */
+/* 285 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.object.values.js ***!
   \***********************************************************/
@@ -9124,7 +9448,7 @@ $export($export.S, 'Object', {
 
 // https://github.com/tc39/proposal-object-values-entries
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $values = __webpack_require__(/*! ./_object-to-array */ 125)(false);
+var $values = __webpack_require__(/*! ./_object-to-array */ 126)(false);
 
 $export($export.S, 'Object', {
   values: function values(it) {
@@ -9134,7 +9458,7 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 284 */
+/* 286 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.object.entries.js ***!
   \************************************************************/
@@ -9144,7 +9468,7 @@ $export($export.S, 'Object', {
 
 // https://github.com/tc39/proposal-object-values-entries
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $entries = __webpack_require__(/*! ./_object-to-array */ 125)(true);
+var $entries = __webpack_require__(/*! ./_object-to-array */ 126)(true);
 
 $export($export.S, 'Object', {
   entries: function entries(it) {
@@ -9154,7 +9478,7 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 285 */
+/* 287 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.object.define-getter.js ***!
   \******************************************************************/
@@ -9178,7 +9502,7 @@ __webpack_require__(/*! ./_descriptors */ 6) && $export($export.P + __webpack_re
 
 
 /***/ }),
-/* 286 */
+/* 288 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.object.define-setter.js ***!
   \******************************************************************/
@@ -9202,7 +9526,7 @@ __webpack_require__(/*! ./_descriptors */ 6) && $export($export.P + __webpack_re
 
 
 /***/ }),
-/* 287 */
+/* 289 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.object.lookup-getter.js ***!
   \******************************************************************/
@@ -9232,7 +9556,7 @@ __webpack_require__(/*! ./_descriptors */ 6) && $export($export.P + __webpack_re
 
 
 /***/ }),
-/* 288 */
+/* 290 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.object.lookup-setter.js ***!
   \******************************************************************/
@@ -9262,7 +9586,7 @@ __webpack_require__(/*! ./_descriptors */ 6) && $export($export.P + __webpack_re
 
 
 /***/ }),
-/* 289 */
+/* 291 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.map.to-json.js ***!
   \*********************************************************/
@@ -9273,11 +9597,11 @@ __webpack_require__(/*! ./_descriptors */ 6) && $export($export.P + __webpack_re
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(/*! ./_collection-to-json */ 126)('Map') });
+$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(/*! ./_collection-to-json */ 127)('Map') });
 
 
 /***/ }),
-/* 290 */
+/* 292 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.set.to-json.js ***!
   \*********************************************************/
@@ -9288,11 +9612,11 @@ $export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(/*! ./_colle
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.P + $export.R, 'Set', { toJSON: __webpack_require__(/*! ./_collection-to-json */ 126)('Set') });
+$export($export.P + $export.R, 'Set', { toJSON: __webpack_require__(/*! ./_collection-to-json */ 127)('Set') });
 
 
 /***/ }),
-/* 291 */
+/* 293 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/es7.map.of.js ***!
   \****************************************************/
@@ -9305,7 +9629,7 @@ __webpack_require__(/*! ./_set-collection-of */ 63)('Map');
 
 
 /***/ }),
-/* 292 */
+/* 294 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/es7.set.of.js ***!
   \****************************************************/
@@ -9318,7 +9642,7 @@ __webpack_require__(/*! ./_set-collection-of */ 63)('Set');
 
 
 /***/ }),
-/* 293 */
+/* 295 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.weak-map.of.js ***!
   \*********************************************************/
@@ -9331,7 +9655,7 @@ __webpack_require__(/*! ./_set-collection-of */ 63)('WeakMap');
 
 
 /***/ }),
-/* 294 */
+/* 296 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.weak-set.of.js ***!
   \*********************************************************/
@@ -9344,7 +9668,7 @@ __webpack_require__(/*! ./_set-collection-of */ 63)('WeakSet');
 
 
 /***/ }),
-/* 295 */
+/* 297 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/es7.map.from.js ***!
   \******************************************************/
@@ -9357,7 +9681,7 @@ __webpack_require__(/*! ./_set-collection-from */ 64)('Map');
 
 
 /***/ }),
-/* 296 */
+/* 298 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/es7.set.from.js ***!
   \******************************************************/
@@ -9370,7 +9694,7 @@ __webpack_require__(/*! ./_set-collection-from */ 64)('Set');
 
 
 /***/ }),
-/* 297 */
+/* 299 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.weak-map.from.js ***!
   \***********************************************************/
@@ -9383,7 +9707,7 @@ __webpack_require__(/*! ./_set-collection-from */ 64)('WeakMap');
 
 
 /***/ }),
-/* 298 */
+/* 300 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.weak-set.from.js ***!
   \***********************************************************/
@@ -9396,7 +9720,7 @@ __webpack_require__(/*! ./_set-collection-from */ 64)('WeakSet');
 
 
 /***/ }),
-/* 299 */
+/* 301 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/es7.global.js ***!
   \****************************************************/
@@ -9411,7 +9735,7 @@ $export($export.G, { global: __webpack_require__(/*! ./_global */ 2) });
 
 
 /***/ }),
-/* 300 */
+/* 302 */
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.system.global.js ***!
   \***********************************************************/
@@ -9426,7 +9750,7 @@ $export($export.S, 'System', { global: __webpack_require__(/*! ./_global */ 2) }
 
 
 /***/ }),
-/* 301 */
+/* 303 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.error.is-error.js ***!
   \************************************************************/
@@ -9446,7 +9770,7 @@ $export($export.S, 'Error', {
 
 
 /***/ }),
-/* 302 */
+/* 304 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.clamp.js ***!
   \********************************************************/
@@ -9465,7 +9789,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 303 */
+/* 305 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.deg-per-rad.js ***!
   \**************************************************************/
@@ -9480,7 +9804,7 @@ $export($export.S, 'Math', { DEG_PER_RAD: Math.PI / 180 });
 
 
 /***/ }),
-/* 304 */
+/* 306 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.degrees.js ***!
   \**********************************************************/
@@ -9500,7 +9824,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 305 */
+/* 307 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.fscale.js ***!
   \*********************************************************/
@@ -9510,8 +9834,8 @@ $export($export.S, 'Math', {
 
 // https://rwaldron.github.io/proposal-math-extensions/
 var $export = __webpack_require__(/*! ./_export */ 0);
-var scale = __webpack_require__(/*! ./_math-scale */ 128);
-var fround = __webpack_require__(/*! ./_math-fround */ 108);
+var scale = __webpack_require__(/*! ./_math-scale */ 129);
+var fround = __webpack_require__(/*! ./_math-fround */ 109);
 
 $export($export.S, 'Math', {
   fscale: function fscale(x, inLow, inHigh, outLow, outHigh) {
@@ -9521,7 +9845,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 306 */
+/* 308 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.iaddh.js ***!
   \********************************************************/
@@ -9543,7 +9867,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 307 */
+/* 309 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.isubh.js ***!
   \********************************************************/
@@ -9565,7 +9889,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 308 */
+/* 310 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.imulh.js ***!
   \********************************************************/
@@ -9592,7 +9916,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 309 */
+/* 311 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.rad-per-deg.js ***!
   \**************************************************************/
@@ -9607,7 +9931,7 @@ $export($export.S, 'Math', { RAD_PER_DEG: 180 / Math.PI });
 
 
 /***/ }),
-/* 310 */
+/* 312 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.radians.js ***!
   \**********************************************************/
@@ -9627,7 +9951,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 311 */
+/* 313 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.scale.js ***!
   \********************************************************/
@@ -9638,11 +9962,11 @@ $export($export.S, 'Math', {
 // https://rwaldron.github.io/proposal-math-extensions/
 var $export = __webpack_require__(/*! ./_export */ 0);
 
-$export($export.S, 'Math', { scale: __webpack_require__(/*! ./_math-scale */ 128) });
+$export($export.S, 'Math', { scale: __webpack_require__(/*! ./_math-scale */ 129) });
 
 
 /***/ }),
-/* 312 */
+/* 314 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.umulh.js ***!
   \********************************************************/
@@ -9669,7 +9993,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 313 */
+/* 315 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.math.signbit.js ***!
   \**********************************************************/
@@ -9687,7 +10011,7 @@ $export($export.S, 'Math', { signbit: function signbit(x) {
 
 
 /***/ }),
-/* 314 */
+/* 316 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.promise.finally.js ***!
   \*************************************************************/
@@ -9702,7 +10026,7 @@ var $export = __webpack_require__(/*! ./_export */ 0);
 var core = __webpack_require__(/*! ./_core */ 22);
 var global = __webpack_require__(/*! ./_global */ 2);
 var speciesConstructor = __webpack_require__(/*! ./_species-constructor */ 59);
-var promiseResolve = __webpack_require__(/*! ./_promise-resolve */ 115);
+var promiseResolve = __webpack_require__(/*! ./_promise-resolve */ 116);
 
 $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
   var C = speciesConstructor(this, core.Promise || global.Promise);
@@ -9719,7 +10043,7 @@ $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
 
 
 /***/ }),
-/* 315 */
+/* 317 */
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.promise.try.js ***!
   \*********************************************************/
@@ -9732,7 +10056,7 @@ $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
 // https://github.com/tc39/proposal-promise-try
 var $export = __webpack_require__(/*! ./_export */ 0);
 var newPromiseCapability = __webpack_require__(/*! ./_new-promise-capability */ 90);
-var perform = __webpack_require__(/*! ./_perform */ 114);
+var perform = __webpack_require__(/*! ./_perform */ 115);
 
 $export($export.S, 'Promise', { 'try': function (callbackfn) {
   var promiseCapability = newPromiseCapability.f(this);
@@ -9743,7 +10067,7 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
 
 
 /***/ }),
-/* 316 */
+/* 318 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.define-metadata.js ***!
   \*********************************************************************/
@@ -9762,7 +10086,7 @@ metadata.exp({ defineMetadata: function defineMetadata(metadataKey, metadataValu
 
 
 /***/ }),
-/* 317 */
+/* 319 */
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.delete-metadata.js ***!
   \*********************************************************************/
@@ -9788,7 +10112,7 @@ metadata.exp({ deleteMetadata: function deleteMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 318 */
+/* 320 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.get-metadata.js ***!
   \******************************************************************/
@@ -9816,7 +10140,7 @@ metadata.exp({ getMetadata: function getMetadata(metadataKey, target /* , target
 
 
 /***/ }),
-/* 319 */
+/* 321 */
 /*!***********************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.get-metadata-keys.js ***!
   \***********************************************************************/
@@ -9824,8 +10148,8 @@ metadata.exp({ getMetadata: function getMetadata(metadataKey, target /* , target
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Set = __webpack_require__(/*! ./es6.set */ 118);
-var from = __webpack_require__(/*! ./_array-from-iterable */ 127);
+var Set = __webpack_require__(/*! ./es6.set */ 119);
+var from = __webpack_require__(/*! ./_array-from-iterable */ 128);
 var metadata = __webpack_require__(/*! ./_metadata */ 29);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ 17);
@@ -9846,7 +10170,7 @@ metadata.exp({ getMetadataKeys: function getMetadataKeys(target /* , targetKey *
 
 
 /***/ }),
-/* 320 */
+/* 322 */
 /*!**********************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.get-own-metadata.js ***!
   \**********************************************************************/
@@ -9866,7 +10190,7 @@ metadata.exp({ getOwnMetadata: function getOwnMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 321 */
+/* 323 */
 /*!***************************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.get-own-metadata-keys.js ***!
   \***************************************************************************/
@@ -9885,7 +10209,7 @@ metadata.exp({ getOwnMetadataKeys: function getOwnMetadataKeys(target /* , targe
 
 
 /***/ }),
-/* 322 */
+/* 324 */
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.has-metadata.js ***!
   \******************************************************************/
@@ -9912,7 +10236,7 @@ metadata.exp({ hasMetadata: function hasMetadata(metadataKey, target /* , target
 
 
 /***/ }),
-/* 323 */
+/* 325 */
 /*!**********************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.has-own-metadata.js ***!
   \**********************************************************************/
@@ -9932,7 +10256,7 @@ metadata.exp({ hasOwnMetadata: function hasOwnMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 324 */
+/* 326 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es7.reflect.metadata.js ***!
   \**************************************************************/
@@ -9958,7 +10282,7 @@ $metadata.exp({ metadata: function metadata(metadataKey, metadataValue) {
 
 
 /***/ }),
-/* 325 */
+/* 327 */
 /*!**************************************************!*\
   !*** ./node_modules/core-js/modules/es7.asap.js ***!
   \**************************************************/
@@ -9981,7 +10305,7 @@ $export($export.G, {
 
 
 /***/ }),
-/* 326 */
+/* 328 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/es7.observable.js ***!
   \********************************************************/
@@ -10192,7 +10516,7 @@ __webpack_require__(/*! ./_set-species */ 39)('Observable');
 
 
 /***/ }),
-/* 327 */
+/* 329 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/web.timers.js ***!
   \****************************************************/
@@ -10223,7 +10547,7 @@ $export($export.G + $export.B + $export.F * MSIE, {
 
 
 /***/ }),
-/* 328 */
+/* 330 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/web.immediate.js ***!
   \*******************************************************/
@@ -10240,7 +10564,7 @@ $export($export.G + $export.B, {
 
 
 /***/ }),
-/* 329 */
+/* 331 */
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/web.dom.iterable.js ***!
   \**********************************************************/
@@ -10309,7 +10633,7 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
 
 
 /***/ }),
-/* 330 */
+/* 332 */
 /*!*********************************************************************************!*\
   !*** ./node_modules/babel-polyfill/node_modules/regenerator-runtime/runtime.js ***!
   \*********************************************************************************/
@@ -11057,7 +11381,7 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 47)))
 
 /***/ }),
-/* 331 */
+/* 333 */
 /*!**************************************************!*\
   !*** ./node_modules/core-js/fn/regexp/escape.js ***!
   \**************************************************/
@@ -11065,12 +11389,12 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/core.regexp.escape */ 332);
+__webpack_require__(/*! ../../modules/core.regexp.escape */ 334);
 module.exports = __webpack_require__(/*! ../../modules/_core */ 22).RegExp.escape;
 
 
 /***/ }),
-/* 332 */
+/* 334 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/core.regexp.escape.js ***!
   \************************************************************/
@@ -11080,13 +11404,13 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ 22).RegExp.escap
 
 // https://github.com/benjamingr/RexExp.escape
 var $export = __webpack_require__(/*! ./_export */ 0);
-var $re = __webpack_require__(/*! ./_replacer */ 333)(/[\\^$*+?.()|[\]{}]/g, '\\$&');
+var $re = __webpack_require__(/*! ./_replacer */ 335)(/[\\^$*+?.()|[\]{}]/g, '\\$&');
 
 $export($export.S, 'RegExp', { escape: function escape(it) { return $re(it); } });
 
 
 /***/ }),
-/* 333 */
+/* 335 */
 /*!***************************************************!*\
   !*** ./node_modules/core-js/modules/_replacer.js ***!
   \***************************************************/
@@ -11105,7 +11429,7 @@ module.exports = function (regExp, replace) {
 
 
 /***/ }),
-/* 334 */
+/* 336 */
 /*!*********************!*\
   !*** ./src/main.js ***!
   \*********************/
@@ -11116,17 +11440,17 @@ module.exports = function (regExp, replace) {
 "use strict";
 
 
-__webpack_require__(/*! pixi */ 129);
+__webpack_require__(/*! pixi */ 130);
 
 var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-var _index = __webpack_require__(/*! ./index */ 338);
+var _Network = __webpack_require__(/*! ./Network */ 340);
 
-var _index2 = _interopRequireDefault(_index);
+var _Network2 = _interopRequireDefault(_Network);
 
-var _config = __webpack_require__(/*! ./config */ 377);
+var _config = __webpack_require__(/*! ./config */ 381);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -11153,7 +11477,7 @@ var Game = function (_Phaser$Game) {
     var _this = _possibleConstructorReturn(this, (Game.__proto__ || Object.getPrototypeOf(Game)).call(this, width, height, _phaser2.default.CANVAS, 'content', null));
 
     if (!window.cordova) {
-      (0, _index2.default)(_this);
+      new _Network2.default(_this);
     }
     return _this;
   }
@@ -11175,7 +11499,7 @@ if (window.cordova) {
       this.receivedEvent('deviceready');
 
       // When the device is ready, start Phaser Boot state.
-      (0, _index2.default)(this);
+      new _Network2.default(this);
     },
 
     receivedEvent: function receivedEvent(id) {
@@ -11187,10 +11511,224 @@ if (window.cordova) {
 }
 
 /***/ }),
-/* 335 */,
-/* 336 */,
 /* 337 */,
-/* 338 */
+/* 338 */,
+/* 339 */,
+/* 340 */
+/*!************************!*\
+  !*** ./src/Network.js ***!
+  \************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _index = __webpack_require__(/*! ./index */ 341);
+
+var _index2 = _interopRequireDefault(_index);
+
+var _pubnub = __webpack_require__(/*! pubnub */ 380);
+
+var _pubnub2 = _interopRequireDefault(_pubnub);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Network = function () {
+  function Network(game) {
+    _classCallCheck(this, Network);
+
+    this.game = game;
+    this.syncOtherPlayerFrameDelay = 0;
+    this.currentChannelName = 'alpha';
+    this.uniqueID = _pubnub2.default.generateUUID();
+    this.updateOccupancyCounter = false;
+    this.checkIfJoined = false;
+    this.otherPlayers = null;
+    this.player = null;
+    this.scene = {};
+    this.frameCounter = 0;
+
+    // wrapped network into phaser game object
+    this.game.network = this;
+
+    // Setup your PubNub Keys
+    window.pubnub = this.pubnub = new _pubnub2.default({
+      publishKey: 'pub-c-83603ce4-b7ec-4da7-bb8a-9b5997f8ae7c',
+      subscribeKey: 'sub-c-da7cca86-dbb5-11e7-9445-0e38ba8011c7',
+      uuid: this.uniqueID
+    });
+
+    // Subscribe to the two PubNub Channels
+    this.pubnub.subscribe({
+      channels: [this.currentChannelName],
+      withPresence: true
+    });
+
+    this.keyMessages = [];
+
+    this.listener = {
+      status: this.listenerStatus.bind(this),
+      message: this.listenerMessage.bind(this),
+      presence: this.listenerPresence.bind(this)
+    };
+
+    this.installEvents();
+  }
+
+  _createClass(Network, [{
+    key: 'listenerStatus',
+    value: function listenerStatus() {
+      (0, _index2.default)(this.game);
+    }
+  }, {
+    key: 'listenerMessage',
+    value: function listenerMessage(messageEvent) {
+      if (messageEvent.message.uuid === this.uniqueID) {
+        return; // this blocks drawing a new character set by the server for ourselve, to lower latency
+      }
+      if (this.otherPlayers) {
+        // If player exists
+        if (messageEvent.channel === this.currentChannelName) {
+          // If the messages channel is equal to your current channel
+          if (!this.otherPlayers.has(messageEvent.message.uuid)) {
+            // If the message isn't equal to your uuid
+            this.game.pncPlugin.addOtherCharacter(this.scene, messageEvent.message.uuid);
+            this.sendKeyMessage({}); // Send publish to all clients about user information
+            var otherplayer = this.otherPlayers.get(messageEvent.message.uuid);
+            otherplayer.position.set(messageEvent.message.position.x, messageEvent.message.position.y); // set the position of each player according to x y
+            otherplayer.initialRemoteFrame = messageEvent.message.frameCounter;
+            otherplayer.initialLocalFrame = this.frameCounter;
+            otherplayer.totalRecvedFrameDelay = 0;
+            otherplayer.totalRecvedFrames = 0;
+          }
+          if (messageEvent.message.position && this.otherPlayers.has(messageEvent.message.uuid)) {
+            // If the message contains the position of the player and the player has a uuid that matches with one in the level
+            this.keyMessages.push(messageEvent);
+          }
+        }
+      }
+    }
+  }, {
+    key: 'checkFlag',
+    value: function checkFlag() {
+      var textResponse1 = void 0;
+      // Function that reruns until response
+      if (this.otherPlayers && this.checkIfJoined === true) {
+        // If the globalother heros exists and if the player joined equals true
+        clearInterval(this.occupancyCounter); // Destroy the timer for that scene
+        this.updateOccupancyCounter = true; // Update the variable that stops the timer from running
+        // Run PubNub HereNow function that controls the occupancy
+        this.pubnub.hereNow({
+          includeUUIDs: true,
+          includeState: true
+        }, function (status, response) {
+          // If I get a valid response from the channel change the text objects to the correct occupancy count
+          if (typeof response.channels.alpha !== "undefined") {
+            textResponse1 = response.channels.alpha.occupancy.toString();
+          } else {
+            textResponse1 = "0";
+          }
+          window.text1 = 'Level 1 Occupancy: ' + textResponse1;
+        });
+      }
+    }
+  }, {
+    key: 'listenerPresence',
+    value: function listenerPresence(presenceEvent) {
+      // PubNub on presence message / event
+      this.occupancyCounter;
+
+      if (this.updateOccupancyCounter === false) {
+        this.occupancyCounter = setInterval(this.checkFlag, 200); // Start timer to run the checkflag function above
+      }
+
+      debugger;
+      if (presenceEvent.action === "join") {
+        // If we recieve a presence event that says a player joined the channel from the pubnub servers
+        this.checkIfJoined = true;
+        this.checkFlag();
+        // text = presenceEvent.totalOccupancy.toString()
+        if (presenceEvent.uuid !== this.uniqueID) {
+          this.sendKeyMessage({}); // Send message of players location on screen
+        }
+      } else if (presenceEvent.action === "leave" || presenceEvent.action === "timeout") {
+        this.checkFlag();
+        try {
+          if (this.game.pncPlugin) {
+            this.game.pncPlugin.removeOtherCharacter(this.scene, presenceEvent.uuid);
+          }
+        } catch (err) {
+          console.log(err);
+        }
+      }
+    }
+  }, {
+    key: 'sendKeyMessage',
+    value: function sendKeyMessage(keyMessage) {
+      try {
+        if (this.player) {
+          this.pubnub.publish({
+            message: {
+              uuid: this.uniqueID,
+              keyMessage: keyMessage,
+              position: this.player.position,
+              frameCounter: this.frameCounter
+            },
+            channel: this.currentChannelName,
+            sendByPost: false // true to send via posts
+          });
+        }
+        console.log("send message!");
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }, {
+    key: 'globalUnsubscribe',
+    value: function globalUnsubscribe() {
+      try {
+        console.log('unsubscribing', this.currentChannelName);
+        this.pubnub.unsubscribe({
+          channels: [this.currentChannelName],
+          withPresence: true
+        });
+        this.pubnub.removeListener(this.listener);
+      } catch (err) {
+        console.log("Failed to UnSub");
+      }
+    }
+  }, {
+    key: 'installEvents',
+    value: function installEvents() {
+      var _this = this;
+
+      // If person leaves or refreshes the window, run the unsubscribe function
+      window.addEventListener("beforeunload", function () {
+        navigator.sendBeacon('https://pubsub.pubnub.com/v2/presence/sub_key/mySubKey/channel/ch1/leave?uuid=' + _this.uniqueID); // pub
+        _this.globalUnsubscribe();
+      });
+
+      this.pubnub.addListener(this.listener);
+    }
+  }]);
+
+  return Network;
+}();
+
+exports.default = Network;
+
+/***/ }),
+/* 341 */
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
@@ -11205,15 +11743,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Index = __webpack_require__(/*! ./states/Lobby/Index */ 339);
+var _Index = __webpack_require__(/*! ./states/Lobby/Index */ 342);
 
-var _Index2 = __webpack_require__(/*! ./states/Selector/Index */ 349);
+var _Index2 = __webpack_require__(/*! ./states/Selector/Index */ 352);
 
-var _Index3 = __webpack_require__(/*! ./states/TestStage/Index */ 373);
+var _Index3 = __webpack_require__(/*! ./states/TestStage/Index */ 376);
 
-__webpack_require__(/*! script-loader!../assets/lib/spriter/spriter.js */ 130);
+__webpack_require__(/*! script-loader!../assets/lib/spriter/spriter.js */ 92);
 
-var Start = function Start(game) {
+var Start = function Start(game, networkInstance) {
   game.state.add("SelectorBoot", _Index2.Selector.BootState, false);
   game.state.add("SelectorSplash", _Index2.Selector.SplashState, false);
   game.state.add("SelectorGame", _Index2.Selector.GameState, false);
@@ -11226,13 +11764,16 @@ var Start = function Start(game) {
   game.state.add("LobbySplash", _Index.Lobby.SplashState, false);
   game.state.add("LobbyGame", _Index.Lobby.GameState, false);
 
+  // This allows two windows to run update function at same time.
+  game.state.disableVisibilityChange = true;
+
   game.state.start("LobbyBoot");
 };
 
 exports.default = Start;
 
 /***/ }),
-/* 339 */
+/* 342 */
 /*!***********************************!*\
   !*** ./src/states/Lobby/Index.js ***!
   \***********************************/
@@ -11248,15 +11789,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Lobby = undefined;
 
-var _Boot = __webpack_require__(/*! ./Boot */ 340);
+var _Boot = __webpack_require__(/*! ./Boot */ 343);
 
 var _Boot2 = _interopRequireDefault(_Boot);
 
-var _Splash = __webpack_require__(/*! ./Splash */ 347);
+var _Splash = __webpack_require__(/*! ./Splash */ 350);
 
 var _Splash2 = _interopRequireDefault(_Splash);
 
-var _Game = __webpack_require__(/*! ./Game */ 348);
+var _Game = __webpack_require__(/*! ./Game */ 351);
 
 var _Game2 = _interopRequireDefault(_Game);
 
@@ -11265,7 +11806,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Lobby = exports.Lobby = { BootState: _Boot2.default, SplashState: _Splash2.default, GameState: _Game2.default };
 
 /***/ }),
-/* 340 */
+/* 343 */
 /*!**********************************!*\
   !*** ./src/states/Lobby/Boot.js ***!
   \**********************************/
@@ -11286,7 +11827,7 @@ var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-var _PNCAdventure = __webpack_require__(/*! ../../engine/PNCAdventure */ 341);
+var _PNCAdventure = __webpack_require__(/*! ../../engine/PNCAdventure */ 344);
 
 var _PNCAdventure2 = _interopRequireDefault(_PNCAdventure);
 
@@ -11377,7 +11918,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 341 */
+/* 344 */
 /*!************************************!*\
   !*** ./src/engine/PNCAdventure.js ***!
   \************************************/
@@ -11394,7 +11935,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Scene = __webpack_require__(/*! ./Scene */ 342);
+var _Scene = __webpack_require__(/*! ./Scene */ 345);
 
 var _Scene2 = _interopRequireDefault(_Scene);
 
@@ -11464,6 +12005,16 @@ var _class = function (_Phaser$Plugin) {
       return this.scenes[key];
     }
   }, {
+    key: "addOtherCharacter",
+    value: function addOtherCharacter(scene, uuid) {
+      return scene.addCharacter(uuid);
+    }
+  }, {
+    key: "removeOtherCharacter",
+    value: function removeOtherCharacter(scene, uuid) {
+      return scene.removeCharacter(uuid);
+    }
+  }, {
     key: "addObject",
     value: function addObject(scene, gameObject) {
       return scene.initObjects(gameObject);
@@ -11488,7 +12039,7 @@ var _class = function (_Phaser$Plugin) {
 exports.default = _class;
 
 /***/ }),
-/* 342 */
+/* 345 */
 /*!*****************************!*\
   !*** ./src/engine/Scene.js ***!
   \*****************************/
@@ -11505,17 +12056,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Navmesh = __webpack_require__(/*! ./Navmesh */ 343);
+var _Navmesh = __webpack_require__(/*! ./Navmesh */ 346);
 
 var _Navmesh2 = _interopRequireDefault(_Navmesh);
 
-var _PlayerActor = __webpack_require__(/*! ./PlayerActor */ 92);
+var _Actor = __webpack_require__(/*! ./Actor */ 131);
+
+var _Actor2 = _interopRequireDefault(_Actor);
+
+var _PlayerActor = __webpack_require__(/*! ./PlayerActor */ 93);
 
 var _PlayerActor2 = _interopRequireDefault(_PlayerActor);
-
-var _Hud = __webpack_require__(/*! ../sprites/Hud */ 93);
-
-var _Hud2 = _interopRequireDefault(_Hud);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11538,6 +12089,20 @@ var Scene = function (_Phaser$State) {
     _this.preloadItems = [];
     _this.actors = [];
     _this.objects = [];
+    _this.player = null;
+    _this.willMove = null;
+    _this.game_width = 0;
+    _this.game_height = 0;
+
+    _this.spriterLoader = new Spriter.Loader();
+
+    _this.spriterFile = new Spriter.SpriterJSON(game.cache.getJSON("playerJson"),
+    /* optional parameters */{
+      imageNameType: Spriter.eImageNameType.NAME_ONLY
+    });
+
+    // Now create Player and add it onto the game
+    _this.spriterData = _this.spriterLoader.load(_this.spriterFile);
     return _this;
   }
 
@@ -11547,6 +12112,10 @@ var Scene = function (_Phaser$State) {
       /*
       Hacky implementation for now - need to standardise scenedef and process this separately
        */
+      // Default player
+      // this.game.load.atlas("playerAtlas", "./assets/images/player/player.png", "./assets/images/player/player.json");
+      // this.game.load.json("playerJson", "./assets/images/player/player.scon");
+
       if (this.sceneDefinition.bg) {
         this.game.load.image(this.key + "bg", this.sceneDefinition.bg);
       }
@@ -11555,15 +12124,20 @@ var Scene = function (_Phaser$State) {
       }
     }
   }, {
+    key: "shutdown",
+    value: function shutdown() {
+      document.getElementById("chat-bar").style.display = "none";
+    }
+  }, {
     key: "create",
     value: function create() {
       console.debug("Scene initialised");
+      document.getElementById("chat-bar").style.display = "block";
       this.camera.flash("#000000");
       this.createSceneHierarchy();
+      this.game.network.scene = this;
 
-      // Just a Simple POC of moving the bot in game.
-      this.pocKey = this.game.input.keyboard.addKey(Phaser.Keyboard.C);
-      this.pocKey.onDown.add(this.movePoc, this);
+      this.game.network.otherPlayers = new Map();
 
       if (this.sceneDefinition.bg) {
         this.initBackground();
@@ -11601,16 +12175,36 @@ var Scene = function (_Phaser$State) {
       }
     }
   }, {
+    key: "chatEvent",
+    value: function chatEvent() {
+      document.getElementById("chat-bar").addEventListener("keypress", function (e) {
+        var key = e.which || e.keyCode;
+        if (key === 13) {
+          // 13 is enter
+          // code for enter
+          var message = document.getElementById("chat-bar").value;
+
+          this.game.network.sendKeyMessage({
+            chatbox: true,
+            message: message
+          });
+        }
+      });
+    }
+  }, {
     key: "animateActors",
     value: function animateActors() {
       var i = 0;
-      for (; i < this.actors.length; i++) {
-        this.actors[i].updateAnimation();
+      for (; i < this.layers.actors.children.length; i++) {
+        this.layers.actors.children[i].updateAnimation();
       }
     }
   }, {
     key: "update",
     value: function update() {
+      this.game.network.frameCounter++;
+      this.handleInput();
+
       if (this.background.input.pointerOver()) {
         this.navmesh.updatePointerLocation(this.background.input.pointerX(), this.background.input.pointerY());
       }
@@ -11620,7 +12214,7 @@ var Scene = function (_Phaser$State) {
       this.animateActors();
 
       // We check for depth of players
-      this.layers.actors.sort('y', Phaser.Group.SORT_ASCENDING);
+      this.layers.actors.sort("y", Phaser.Group.SORT_ASCENDING);
     }
   }, {
     key: "findActor",
@@ -11686,16 +12280,131 @@ var Scene = function (_Phaser$State) {
       this.addLayer("actors");
     }
   }, {
-    key: "moveOtherPlayer",
-    value: function moveOtherPlayer(id, x, y) {
-      var actor = this.findActor(id);
+    key: "handleKeyMessages",
+    value: function handleKeyMessages() {
+      var _this2 = this;
 
-      actor.moveTo({ x: x, y: y }, this.navmesh);
+      var earlyMessages = [];
+      var lateMessages = [];
+
+      this.game.network.keyMessages.forEach(function (messageEvent) {
+        if (_this2.game.network.otherPlayers) {
+          if (messageEvent.channel === _this2.game.network.currentChannelName) {
+            if (_this2.game.network.otherPlayers.has(messageEvent.message.uuid)) {
+              _this2.addCharacter(messageEvent.message.uuid);
+
+              var otherplayer = _this2.game.network.otherPlayers.get(messageEvent.message.uuid);
+              // otherplayer.position.set(messageEvent.message.position.x, messageEvent.message.position.y);
+              otherplayer.initialRemoteFrame = messageEvent.message.frameCounter;
+              otherplayer.initialLocalFrame = _this2.game.network.frameCounter;
+              _this2.game.network.sendKeyMessage({});
+            }
+
+            if (messageEvent.message.position && _this2.game.network.otherPlayers.has(messageEvent.message.uuid)) {
+              _this2.game.network.keyMessages.push(messageEvent);
+              var _otherplayer = _this2.game.network.otherPlayers.get(messageEvent.message.uuid);
+              var frameDelta = messageEvent.message.frameCounter - _otherplayer.lastKeyFrame;
+              var initDelta = _otherplayer.initialRemoteFrame - _otherplayer.initialLocalFrame;
+              var frameDelay = messageEvent.message.frameCounter - _this2.game.network.frameCounter - initDelta + _this2.game.network.syncOtherPlayerFrameDelay;
+
+              if (frameDelay > 0) {
+                if (!messageEvent.hasOwnProperty("frameDelay")) {
+                  messageEvent.frameDelay = frameDelay;
+                  _otherplayer.totalRecvedFrameDelay += frameDelay;
+                  _otherplayer.totalRecvedFrames++;
+                }
+
+                earlyMessages.push(messageEvent);
+                return;
+              } else if (frameDelay < 0) {
+                _otherplayer.totalRecvedFrameDelay += frameDelay;
+                _otherplayer.totalRecvedFrames++;
+                lateMessages.push(messageEvent);
+                return;
+              }
+
+              _otherplayer.lastKeyFrame = messageEvent.message.frameCounter;
+
+              if (messageEvent.message.keyMessage.willMove) {
+                if (messageEvent.message.keyMessage.x && messageEvent.message.keyMessage.y && messageEvent.message.keyMessage.path) {
+                  _otherplayer.willMove = {
+                    x: messageEvent.message.keyMessage.x,
+                    y: messageEvent.message.keyMessage.y,
+                    path: messageEvent.message.keyMessage.path,
+                    clientWidth: messageEvent.message.keyMessage.clientWidth,
+                    clientHeight: messageEvent.message.keyMessage.clientHeight
+                  };
+                }
+              }
+            }
+          }
+        }
+      });
+
+      if (lateMessages.length > 0) {
+        console.log({ lateMessages: lateMessages, earlyMessages: earlyMessages });
+      }
+
+      this.game.network.keyMessages.length = 0;
+
+      earlyMessages.forEach(function (em) {
+        _this2.game.network.keyMessages.push(em);
+      });
     }
   }, {
-    key: "movePoc",
-    value: function movePoc() {
-      this.moveOtherPlayer(1, 319, 516);
+    key: "resetPath",
+    value: function resetPath(path, clientRes) {
+      var result = [];
+      for (var i = 0; i < path.length; i++) {
+        result[i] = {
+          x: path[i].x / clientRes.clientWidth * this.game.width,
+          y: path[i].y / clientRes.clientHeight * this.game.height
+        };
+      }
+
+      return result;
+    }
+  }, {
+    key: "handleInput",
+    value: function handleInput() {
+      this.handleKeyMessages();
+
+      if (this.player) {
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+          for (var _iterator = this.game.network.otherPlayers.keys()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var uuid = _step.value;
+
+            var otherplayer = this.game.network.otherPlayers.get(uuid);
+            if (otherplayer.willMove) {
+              var clientRes = {
+                clientWidth: otherplayer.willMove.clientWidth,
+                clientHeight: otherplayer.willMove.clientHeight
+              };
+              var path = this.resetPath(otherplayer.willMove.path, clientRes);
+
+              otherplayer.moveTo({ x: otherplayer.willMove.x, y: otherplayer.willMove.y }, path);
+              otherplayer.willMove = null;
+            }
+          }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+              _iterator.return();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
+          }
+        }
+      }
     }
 
     /**
@@ -11713,9 +12422,17 @@ var Scene = function (_Phaser$State) {
       this.layers.background.add(this.background);
       this.background.inputEnabled = true;
       this.background.events.onInputUp.add(function (sprite, pointer, g) {
-        console.log("x: " + pointer.x + ", y: " + pointer.y);
         this.game.pncPlugin.signals.sceneTappedSignal.dispatch(pointer, this.navmesh);
       }, this);
+    }
+  }, {
+    key: "drawMessage",
+    value: function drawMessage() {
+      //  You can either set the tab size in the style object:
+      var style = { font: "20px Courier", fill: "#fff" };
+      var text = game.make.text(100, 64, "Aadsasssssssssss", style);
+
+      this.initObjects(text);
     }
 
     /**
@@ -11736,6 +12453,29 @@ var Scene = function (_Phaser$State) {
       }
     }
   }, {
+    key: "addCharacter",
+    value: function addCharacter(uuid) {
+      if (this.game.network.otherPlayers.has(uuid)) {
+        return;
+      }
+
+      var actorDefinition = {
+        spriterData: this.spriterData,
+        textureKey: "playerAtlas",
+        isSmall: true,
+        spawnX: 200,
+        spawnY: 600,
+        type: _Actor2.default,
+        uuid: uuid
+      };
+
+      if (!this.state) {
+        this.actors.push(actorDefinition);
+      } else {
+        this.addActorToScene(actorDefinition);
+      }
+    }
+  }, {
     key: "initObjects",
     value: function initObjects(gameObject) {
       // if this state is not active defer object creation until it is
@@ -11744,6 +12484,16 @@ var Scene = function (_Phaser$State) {
       } else {
         this.layers.background.add(gameObject);
       }
+    }
+  }, {
+    key: "removeCharacter",
+    value: function removeCharacter(uuid) {
+      if (!this.game.network.otherPlayers.has(uuid)) {
+        return;
+      }
+
+      this.game.network.otherPlayers.get(uuid).destroy();
+      this.game.network.otherPlayers.delete(uuid);
     }
 
     /**
@@ -11754,25 +12504,33 @@ var Scene = function (_Phaser$State) {
   }, {
     key: "addActorToScene",
     value: function addActorToScene(actorDefinition) {
-      var _this2 = this;
+      var _this3 = this;
 
       var actor;
 
       if (actorDefinition.type === undefined) {
         actor = new _PlayerActor2.default(game, actorDefinition);
+        this.game.network.player = actor;
+        this.player = actor;
       } else {
         actorDefinition.id = 1;
         actor = new actorDefinition.type(game, actorDefinition);
+      }
+
+      if (actorDefinition.uuid) {
+        this.game.network.otherPlayers.set(actorDefinition.uuid, actor);
       }
 
       // Set spawn position for actor
       actor.position.setTo(actorDefinition.spawnX, actorDefinition.spawnY);
 
       actor.onVariableSet.add(function (spriter, variable) {
-        _this2._text = variable.string;
+        _this3._text = variable.string;
       }, this);
 
       this.layers.actors.add(actor);
+
+      this.game.network.sendKeyMessage({});
 
       return actor;
     }
@@ -11784,7 +12542,7 @@ var Scene = function (_Phaser$State) {
 exports.default = Scene;
 
 /***/ }),
-/* 343 */
+/* 346 */
 /*!*******************************!*\
   !*** ./src/engine/Navmesh.js ***!
   \*******************************/
@@ -11801,7 +12559,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _constellation = __webpack_require__(/*! ./lib/constellation */ 344);
+var _constellation = __webpack_require__(/*! ./lib/constellation */ 347);
 
 var _constellation2 = _interopRequireDefault(_constellation);
 
@@ -11901,14 +12659,9 @@ var Navmesh = function () {
     }
   }, {
     key: "findPath",
-    value: function findPath(playerMovement) {
-      if (!playerMovement) {
-        this.characterNodeId = this.grid.addNode(this.characterLocation.x, this.characterLocation.y, { id: "character" });
-        this.pointerNodeId = this.grid.addNode(this.pointerLocation.x, this.pointerLocation.y, { id: "pointer" });
-      } else {
-        this.characterNodeId = this.grid.addNode(playerMovement.player.x, playerMovement.player.y, { id: "character" });
-        this.pointerNodeId = this.grid.addNode(playerMovement.goTo.x, playerMovement.goTo.y, { id: "pointer" });
-      }
+    value: function findPath() {
+      this.characterNodeId = this.grid.addNode(this.characterLocation.x, this.characterLocation.y, { id: "character" });
+      this.pointerNodeId = this.grid.addNode(this.pointerLocation.x, this.pointerLocation.y, { id: "pointer" });
 
       var lineOfSightPoints = this.intersectorLine.coordinatesOnLine();
 
@@ -11951,17 +12704,17 @@ var Navmesh = function () {
         console.log("direct path");
         var _nodes = this.getCurrentNodes();
 
-        var waypoint = this.grid.getNearestFromArrayNodeToPoint(this.characterNodeId, _nodes);
+        var waypoint = this.grid.getNearestFromArrayNodeToPoint(this.characterLocation, _nodes);
 
-        var distanceWaypoint = Phaser.Math.distance(waypoint.x, waypoint.y, this.pointerNodeId.x, this.pointerNodeId.y);
+        var distanceWaypoint = Phaser.Math.distance(waypoint.x, waypoint.y, this.pointerLocation.x, this.pointerLocation.y);
 
-        var distanceDirect = Phaser.Math.distance(this.characterNodeId.x, this.characterNodeId.y, this.pointerNodeId.x, this.pointerNodeId.y);
+        var distanceDirect = Phaser.Math.distance(this.characterLocation.x, this.characterLocation.y, this.pointerLocation.x, this.pointerLocation.y);
 
         if (distanceWaypoint < distanceDirect) {
           path.push(waypoint);
         }
 
-        path.push(this.pointerNodeId);
+        path.push(this.pointerLocation);
       } else {
         this.directPath = direct;
         console.log("intersects obstacle");
@@ -12194,7 +12947,7 @@ var Navmesh = function () {
 exports.default = Navmesh;
 
 /***/ }),
-/* 344 */
+/* 347 */
 /*!*****************************************!*\
   !*** ./src/engine/lib/constellation.js ***!
   \*****************************************/
@@ -13368,7 +14121,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 });
 
 /***/ }),
-/* 345 */
+/* 348 */
 /*!*************************************************!*\
   !*** ./node_modules/script-loader/addScript.js ***!
   \*************************************************/
@@ -13406,7 +14159,7 @@ module.exports = function(src) {
 
 
 /***/ }),
-/* 346 */
+/* 349 */
 /*!*****************************************************************!*\
   !*** ./node_modules/raw-loader!./assets/lib/spriter/spriter.js ***!
   \*****************************************************************/
@@ -13417,7 +14170,7 @@ module.exports = function(src) {
 module.exports = "var __extends = (this && this.__extends) || function (d, b) {\n    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];\n    function __() { this.constructor = d; }\n    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n};\nvar Spriter;\n(function (Spriter) {\n    var IdNameMap = (function () {\n        function IdNameMap() {\n            this._items = [];\n            this._itemNames = []; // keys are names and returned value is index into _tems array\n        }\n        // -------------------------------------------------------------------------\n        IdNameMap.prototype.add = function (item, id, name) {\n            if (id === undefined) {\n                id = this._items.length;\n            }\n            if (name === undefined || name === null) {\n                name = \"item_\" + id;\n            }\n            this._items[id] = item;\n            this._itemNames[name] = id;\n        };\n        // -------------------------------------------------------------------------\n        IdNameMap.prototype.getById = function (id) {\n            return this._items[id];\n        };\n        // -------------------------------------------------------------------------\n        IdNameMap.prototype.getByName = function (name) {\n            var id = this._itemNames[name];\n            // TODO remove\n            if (typeof id !== \"number\") {\n                console.warn(\"item \" + name + \"  not found!\");\n            }\n            return (typeof id === \"number\") ? this._items[id] : null;\n        };\n        Object.defineProperty(IdNameMap.prototype, \"length\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._items.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return IdNameMap;\n    }());\n    Spriter.IdNameMap = IdNameMap;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var LineStepper = (function () {\n        // -------------------------------------------------------------------------\n        function LineStepper() {\n            this.reset();\n        }\n        Object.defineProperty(LineStepper.prototype, \"current\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._line.at(this._currentIndex);\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"currentIndex\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._currentIndex;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"next\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._line.at(this._nextIndex);\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"nextIndex\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._nextIndex;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"lastTime\", {\n            // -------------------------------------------------------------------------\n            set: function (time) {\n                this._lastTime = time;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(LineStepper.prototype, \"line\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._line;\n            },\n            // -------------------------------------------------------------------------\n            set: function (line) {\n                this._line = line;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        LineStepper.prototype.reset = function () {\n            this._lastTime = -1;\n            this._currentIndex = -1;\n            this._nextIndex = 0;\n        };\n        // -------------------------------------------------------------------------\n        LineStepper.prototype.step = function (time) {\n            var index = this._nextIndex;\n            // get key at current position\n            var key = this._line.keys[index];\n            var keyTime = key.time;\n            // if current key time is bigger than time for stepTo, then we must first go till end of timeline and then continue from beginning\n            var loop = time < this._lastTime;\n            if ((!loop && (keyTime > this._lastTime && keyTime <= time)) ||\n                (loop && (keyTime > this._lastTime || keyTime <= time))) {\n                this._lastTime = keyTime;\n                this._currentIndex = index;\n                if ((++index) >= this._line.keys.length) {\n                    index = 0;\n                }\n                this._nextIndex = index;\n                return key;\n            }\n            return null;\n        };\n        return LineStepper;\n    }());\n    Spriter.LineStepper = LineStepper;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var NodeListBin = (function () {\n        // -------------------------------------------------------------------------\n        function NodeListBin(spriterBinFile, nodeList) {\n            this._file = spriterBinFile;\n            this._nodeList = nodeList;\n        }\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.length = function () {\n            return this._nodeList.length;\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.processed = function () {\n            this._file.processed();\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getChildNodes = function (index, elementName) {\n            return this._file.getNodesForElement(this._nodeList[index], elementName);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getFolder = function (index) {\n            return this._file.getFolder(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getFile = function (index) {\n            return this._file.getFile(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTag = function (index) {\n            return this._file.getTag(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getEntity = function (index) {\n            return this._file.getEntity(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getObjectInfo = function (index) {\n            return this._file.getObjectInfo(this._nodeList[index], index);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getCharMap = function (index) {\n            return this._file.getCharMap(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getCharMapEntry = function (index, charMap, spriter) {\n            this._file.getCharMapEntry(this._nodeList[index], charMap, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getVariable = function (index) {\n            return this._file.getVariable(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getAnimation = function (index) {\n            return this._file.getAnimation(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getMainline = function (index) {\n            return this._file.getBaseline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getMainlineKey = function (index) {\n            return this._file.getMainlineKey(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getRef = function (index) {\n            return this._file.getRef(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTimeline = function (index) {\n            return this._file.getTimeline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getSoundline = function (index) {\n            return this._file.getBaseline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getEventline = function (index) {\n            return this._file.getBaseline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTagline = function (index) {\n            return this._file.getBaseline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getVarline = function (index) {\n            return this._file.getVarline(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getKey = function (index) {\n            return this._file.getKey(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTagKey = function (index) {\n            return this._file.getTagKey(this._nodeList[index]);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getVariableKey = function (index, type) {\n            return this._file.getVariableKey(this._nodeList[index], type);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTimelineKey = function (index, spriter) {\n            return this._file.getTimelineKey(this._nodeList[index], index, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListBin.prototype.getTagChanges = function (spriter) {\n            var tags = 0;\n            for (var i = 0; i < this.length(); i++) {\n                var tagIndex = this._file.getTagChange(this._nodeList[i]);\n                tags |= (1 << tagIndex);\n            }\n            return tags;\n        };\n        return NodeListBin;\n    }());\n    Spriter.NodeListBin = NodeListBin;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var NodeListJSON = (function () {\n        // -------------------------------------------------------------------------\n        function NodeListJSON(spriterJSONFile, nodeList) {\n            this._file = spriterJSONFile;\n            this._nodeList = nodeList;\n            if (!Array.isArray(nodeList)) {\n                nodeList.length = 1;\n            }\n        }\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.length = function () {\n            return this._nodeList.length;\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.processed = function () {\n            this._file.processed();\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getNode = function (index) {\n            if (Array.isArray(this._nodeList)) {\n                return this._nodeList[index];\n            }\n            else {\n                return this._nodeList;\n            }\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getChildNodes = function (index, elementName) {\n            return this._file.getNodesForElement(this.getNode(index), elementName);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getFolder = function (index) {\n            return this._file.getFolder(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getFile = function (index) {\n            return this._file.getFile(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTag = function (index) {\n            return this._file.getTag(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getEntity = function (index) {\n            return this._file.getEntity(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getObjectInfo = function (index) {\n            return this._file.getObjectInfo(this.getNode(index), index);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getCharMap = function (index) {\n            return this._file.getCharMap(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getCharMapEntry = function (index, charMap, spriter) {\n            this._file.getCharMapEntry(this.getNode(index), charMap, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getVariable = function (index) {\n            return this._file.getVariable(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getAnimation = function (index) {\n            return this._file.getAnimation(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getMainline = function (index) {\n            return this._file.getBaseline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getMainlineKey = function (index) {\n            return this._file.getMainlineKey(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getRef = function (index) {\n            return this._file.getRef(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTimeline = function (index) {\n            return this._file.getTimeline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getSoundline = function (index) {\n            return this._file.getBaseline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getEventline = function (index) {\n            return this._file.getBaseline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTagline = function (index) {\n            return this._file.getBaseline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getVarline = function (index) {\n            return this._file.getVarline(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getKey = function (index) {\n            return this._file.getKey(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTagKey = function (index) {\n            return this._file.getTagKey(this.getNode(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getVariableKey = function (index, type) {\n            return this._file.getVariableKey(this.getNode(index), type);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTimelineKey = function (index, spriter) {\n            return this._file.getTimelineKey(this.getNode(index), index, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListJSON.prototype.getTagChanges = function (spriter) {\n            var tags = 0;\n            for (var i = 0; i < this.length(); i++) {\n                var tagIndex = this._file.getTagChange(this.getNode(i));\n                tags |= (1 << tagIndex);\n            }\n            return tags;\n        };\n        return NodeListJSON;\n    }());\n    Spriter.NodeListJSON = NodeListJSON;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var NodeListXml = (function () {\n        // -------------------------------------------------------------------------\n        function NodeListXml(spriterXmlFile, nodeList) {\n            this._file = spriterXmlFile;\n            this._nodeList = nodeList;\n        }\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.length = function () {\n            return this._nodeList.length;\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.processed = function () {\n            this._file.processed();\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getChildNodes = function (index, elementName) {\n            return this._file.getNodesForElement(this._nodeList.item(index), elementName);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getFolder = function (index) {\n            return this._file.getFolder(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getFile = function (index) {\n            return this._file.getFile(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTag = function (index) {\n            return this._file.getTag(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getEntity = function (index) {\n            return this._file.getEntity(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getObjectInfo = function (index) {\n            return this._file.getObjectInfo(this._nodeList.item(index), index);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getCharMap = function (index) {\n            return this._file.getCharMap(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getCharMapEntry = function (index, charMap, spriter) {\n            this._file.getCharMapEntry(this._nodeList.item(index), charMap, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getVariable = function (index) {\n            return this._file.getVariable(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getAnimation = function (index) {\n            return this._file.getAnimation(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getMainline = function (index) {\n            return this._file.getBaseline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getMainlineKey = function (index) {\n            return this._file.getMainlineKey(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getRef = function (index) {\n            return this._file.getRef(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTimeline = function (index) {\n            return this._file.getTimeline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getSoundline = function (index) {\n            return this._file.getBaseline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getEventline = function (index) {\n            return this._file.getBaseline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTagline = function (index) {\n            return this._file.getBaseline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getVarline = function (index) {\n            return this._file.getVarline(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getKey = function (index) {\n            return this._file.getKey(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTagKey = function (index) {\n            return this._file.getTagKey(this._nodeList.item(index));\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getVariableKey = function (index, type) {\n            return this._file.getVariableKey(this._nodeList.item(index), type);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTimelineKey = function (index, spriter) {\n            return this._file.getTimelineKey(this._nodeList.item(index), index, spriter);\n        };\n        // -------------------------------------------------------------------------\n        NodeListXml.prototype.getTagChanges = function (spriter) {\n            var tags = 0;\n            for (var i = 0; i < this.length(); i++) {\n                var tagIndex = this._file.getTagChange(this._nodeList.item(i));\n                tags |= (1 << tagIndex);\n            }\n            return tags;\n        };\n        return NodeListXml;\n    }());\n    Spriter.NodeListXml = NodeListXml;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    (function (eFileType) {\n        eFileType[eFileType[\"XML\"] = 0] = \"XML\";\n        eFileType[eFileType[\"JSON\"] = 1] = \"JSON\";\n        eFileType[eFileType[\"BIN\"] = 2] = \"BIN\";\n    })(Spriter.eFileType || (Spriter.eFileType = {}));\n    var eFileType = Spriter.eFileType;\n    (function (eImageNameType) {\n        eImageNameType[eImageNameType[\"ORIGINAL\"] = 0] = \"ORIGINAL\";\n        eImageNameType[eImageNameType[\"NAME_ONLY\"] = 1] = \"NAME_ONLY\";\n        eImageNameType[eImageNameType[\"NAME_AND_EXTENSION\"] = 2] = \"NAME_AND_EXTENSION\";\n        eImageNameType[eImageNameType[\"FULL_PATH_NO_EXTENSION\"] = 3] = \"FULL_PATH_NO_EXTENSION\";\n    })(Spriter.eImageNameType || (Spriter.eImageNameType = {}));\n    var eImageNameType = Spriter.eImageNameType;\n    var SpriterFile = (function () {\n        // -------------------------------------------------------------------------\n        function SpriterFile(options) {\n            var hasOptions = typeof options !== \"undefined\" && options !== null;\n            // type of image names (path / name / extension)\n            this._imageNameType = (hasOptions && typeof options.imageNameType !== \"undefined\") ? options.imageNameType : eImageNameType.NAME_ONLY;\n            // min defs are present?\n            this._minDefs = (hasOptions && typeof options.minDefs !== \"undefined\") ? options.minDefs : null;\n        }\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.processed = function () {\n            this.popMinDefsStack();\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.setMinimized = function (minimized) {\n            this._minimized = minimized;\n            if (minimized) {\n                this._minDefsStack = [];\n                if (this._minDefs === null) {\n                    console.error(\"Spriter file is minimized - you must provide object with name definitions\");\n                    return;\n                }\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.getFileName = function (path) {\n            var name;\n            switch (this._imageNameType) {\n                case eImageNameType.NAME_ONLY:\n                    name = (path.split('\\\\').pop().split('/').pop().split('.'))[0];\n                    break;\n                case eImageNameType.NAME_AND_EXTENSION:\n                    name = path.split('\\\\').pop().split('/').pop();\n                    break;\n                case eImageNameType.FULL_PATH_NO_EXTENSION:\n                    name = (path.split('.'))[0];\n                    break;\n                case eImageNameType.ORIGINAL:\n                    name = path;\n                    break;\n            }\n            return name;\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.translateElementName = function (elementName) {\n            if (this._minimized) {\n                if (this._minDefs[\"name\"] !== elementName) {\n                    console.warn(\"current definition is \" + this._minDefs[\"name\"]);\n                    return elementName;\n                }\n                if (this._minDefs[\"minName\"] !== null) {\n                    elementName = this._minDefs[\"minName\"];\n                }\n            }\n            return elementName;\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.translateChildElementName = function (elementName) {\n            if (this._minimized && this._minDefs !== null) {\n                var elements = this._minDefs[\"childElements\"];\n                if (elements !== null) {\n                    elementName = elements[elementName] === null ? elementName : elements[elementName][\"minName\"];\n                }\n            }\n            return elementName;\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.translateAttributeName = function (attributeName) {\n            if (this._minimized && this._minDefs !== null) {\n                var attributes = this._minDefs[\"attributes\"];\n                if (attributes !== null) {\n                    attributeName = attributes[attributeName] === null ? attributeName : attributes[attributeName];\n                }\n            }\n            return attributeName;\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.setMinDefsToElementName = function (tagName) {\n            if (this._minimized) {\n                // save current level of min defs\n                this._minDefsStack.push(this._minDefs);\n                // get child definition and set it as current\n                var minDef = this._minDefs[\"childElements\"][tagName];\n                this._minDefs = minDef;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterFile.prototype.popMinDefsStack = function () {\n            if (this._minimized) {\n                this._minDefs = this._minDefsStack.pop();\n            }\n        };\n        return SpriterFile;\n    }());\n    Spriter.SpriterFile = SpriterFile;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"SpriterFile.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var SpriterBin = (function (_super) {\n        __extends(SpriterBin, _super);\n        // -------------------------------------------------------------------------\n        function SpriterBin(binData) {\n            _super.call(this, null);\n            this._elements = {\n                \"spriter_data\": 1,\n                \"folder\": 2,\n                \"file\": 3,\n                \"entity\": 4,\n                \"obj_info\": 5,\n                \"frames\": 6,\n                \"i\": 7,\n                \"animation\": 8,\n                \"mainline\": 9,\n                \"key\": 10,\n                \"bone_ref\": 11,\n                \"object_ref\": 12,\n                \"timeline\": 13,\n                \"bone\": 14,\n                \"object\": 15\n            };\n            this._smallOffset = false;\n            this._bin = new DataView(binData);\n            this._smallOffset = this._bin.getUint8(0) === 1;\n        }\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getType = function () {\n            return Spriter.eFileType.BIN;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readUint8 = function () {\n            return this._bin.getUint8(this._tmpPosition++);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readInt8 = function () {\n            return this._bin.getInt8(this._tmpPosition++);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readUint16 = function () {\n            var value = this._bin.getUint16(this._tmpPosition, true);\n            this._tmpPosition += 2;\n            return value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readInt16 = function () {\n            var value = this._bin.getInt16(this._tmpPosition, true);\n            this._tmpPosition += 2;\n            return value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readUint32 = function () {\n            var value = this._bin.getUint32(this._tmpPosition, true);\n            this._tmpPosition += 4;\n            return value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readInt32 = function () {\n            var value = this._bin.getInt32(this._tmpPosition, true);\n            this._tmpPosition += 4;\n            return value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readFixed16_16 = function () {\n            var value = this._bin.getInt32(this._tmpPosition, true);\n            this._tmpPosition += 4;\n            return value / 65536;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readFixed1_7 = function () {\n            var value = this._bin.getInt8(this._tmpPosition++) & 0xFF;\n            return value / 128;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.readString = function () {\n            var chars = [];\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                chars.push(this._bin.getUint8(this._tmpPosition++));\n            }\n            return String.fromCharCode.apply(null, chars);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getNodes = function (nodeName) {\n            return new Spriter.NodeListBin(this, this.getSubNodesOfElementType(1, this._elements[nodeName]));\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getNodesForElement = function (elementPosition, nodeName) {\n            return new Spriter.NodeListBin(this, this.getSubNodesOfElementType(elementPosition, this._elements[nodeName]));\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getSubNodesOfElementType = function (positon, elementType) {\n            var result = [];\n            var subelementsCount = this._bin.getUint8(positon + 1);\n            positon += 2;\n            for (var i = 0; i < subelementsCount; i++) {\n                var subelementOffset = this._smallOffset ? this._bin.getUint16(positon + i * 2, true) : this._bin.getUint32(positon + i * 4, true);\n                var subelementType = this._bin.getUint8(positon + subelementOffset);\n                if (subelementType === elementType) {\n                    result.push(positon + subelementOffset);\n                }\n            }\n            return result;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getAttribsPosition = function (position) {\n            var subelementsCount = this._bin.getUint8(position + 1);\n            return position + 2 + subelementsCount * (this._smallOffset ? 2 : 4);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getFolder = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_FOLDER_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_FOLDER_NAME:\n                        name = this.readString();\n                        break;\n                }\n            }\n            return new Spriter.Folder(id, name);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getFile = function (position) {\n            console.log(\"skip sound loading\");\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            var pivotX = 0;\n            var pivotY = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_FILE_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_FILE_NAME:\n                        name = this.readString();\n                        break;\n                    case SpriterBin.ATTR_FILE_PIVOT_X:\n                        pivotX = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_FILE_PIVOT_Y:\n                        pivotY = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_FILE_WIDTH:\n                    case SpriterBin.ATTR_FILE_HEIGHT:\n                        // ignore - just skip\n                        this._tmpPosition += 2;\n                        break;\n                }\n            }\n            return new Spriter.File(id, this.getFileName(name), pivotX, 1 - pivotY);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTag = function (position) {\n            console.error(\"implement loading Tag\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getEntity = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_ENTITY_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_ENTITY_NAME:\n                        name = this.readString();\n                        break;\n                }\n            }\n            return new Spriter.Entity(id, name);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getObjectInfo = function (position, index) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var name = \"\";\n            var type = 0 /* SPRITE */;\n            var width = 0;\n            var height = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_OBJ_INFO_NAME:\n                        name = this.readString();\n                        break;\n                    case SpriterBin.ATTR_OBJ_INFO_TYPE:\n                        if (this.readUint8() === 1) {\n                            type = 1 /* BONE */;\n                        }\n                        break;\n                    case SpriterBin.ATTR_OBJ_INFO_WIDTH:\n                        width = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_OBJ_INFO_HEIGHT:\n                        height = this.readFixed16_16();\n                        break;\n                }\n            }\n            console.error(\"add loading of pivots\");\n            return new Spriter.ObjectInfo(index, name, type, width, height, 0, 0);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getCharMap = function (position) {\n            console.error(\"add loading of charmaps\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getCharMapEntry = function (position, charMap, spriter) {\n            console.error(\"add loading of charmap entries\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getVariable = function (position) {\n            console.error(\"add loading of variables\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getAnimation = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            var length = 0;\n            var interval = 0;\n            var looping = Spriter.eAnimationLooping.LOOPING;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_ANIMATION_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_ANIMATION_NAME:\n                        name = this.readString();\n                        break;\n                    case SpriterBin.ATTR_ANIMATION_LENGTH:\n                        length = this.readUint32();\n                        break;\n                    case SpriterBin.ATTR_ANIMATION_INTERVAL:\n                        // ignore - skip\n                        this._tmpPosition += 2;\n                        break;\n                    case SpriterBin.ATTR_ANIMATION_LOOPING:\n                        looping = (this.readUint8() === 1) ? Spriter.eAnimationLooping.LOOPING : Spriter.eAnimationLooping.NO_LOOPING;\n                        break;\n                }\n            }\n            return new Spriter.Animation(id, name, length, looping);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getMainlineKey = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var time = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_MAINLINE_KEY_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_MAINLINE_KEY_TIME:\n                        time = this.readUint32();\n                        break;\n                }\n            }\n            return new Spriter.KeyMainline(id, time);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getRef = function (position) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var parent = -1;\n            var timeline = 0;\n            var key = 0;\n            var z_index = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_BONE_REF_ID:\n                    case SpriterBin.ATTR_OBJ_REF_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_BONE_REF_PARENT:\n                    case SpriterBin.ATTR_OBJ_REF_PARENT:\n                        parent = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_BONE_REF_TIMELINE:\n                    case SpriterBin.ATTR_OBJ_REF_TIMELINE:\n                        timeline = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_BONE_REF_KEY:\n                    case SpriterBin.ATTR_OBJ_REF_KEY:\n                        key = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_Z:\n                        z_index = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_NAME:\n                        // waste\n                        this.readString();\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_FOLDER:\n                    case SpriterBin.ATTR_OBJ_REF_FILE:\n                        ++this._tmpPosition;\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_ABS_X:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_Y:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_PIVOT_X:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_PIVOT_Y:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_SCALE_X:\n                    case SpriterBin.ATTR_OBJ_REF_ABS_SCALE_Y:\n                    case SpriterBin.ATTR_OBJ_REF_ANGLE:\n                        // skip\n                        this._tmpPosition += 4;\n                        break;\n                    case SpriterBin.ATTR_OBJ_REF_ALPHA:\n                        // skip\n                        ++this._tmpPosition;\n                        break;\n                }\n            }\n            return new Spriter.Ref(id, parent, timeline, key, z_index);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTimeline = function (position) {\n            console.error(\"add loading of all types of objects\");\n            this._tmpPosition = this.getAttribsPosition(position);\n            var id = 0;\n            var name = \"\";\n            var obj = 0;\n            var type = 0 /* SPRITE */;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_TIMELINE_ID:\n                        id = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_NAME:\n                        name = this.readString();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_OBJ:\n                        obj = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_OBJ_TYPE:\n                        if (this.readUint8() === 1) {\n                            type = 1 /* BONE */;\n                        }\n                        break;\n                }\n            }\n            return new Spriter.Timeline(id, name, type, obj);\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getBaseline = function (position) {\n            console.error(\"add loading of baselines\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getVarline = function (position) {\n            console.error(\"add loading of varlines\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getKey = function (position) {\n            console.error(\"add loading of keys\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTagKey = function (position) {\n            console.error(\"add loading of tag keys\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getVariableKey = function (position, type) {\n            console.error(\"add loading of variable keys\");\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTimelineKey = function (position, index, spriter) {\n            this._tmpPosition = this.getAttribsPosition(position);\n            var time = 0;\n            var spin = 1;\n            // curve and params\n            var curve = 0 /* LINEAR */;\n            var c1 = 0;\n            var c2 = 0;\n            var c3 = 0;\n            var c4 = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_TIMELINE_KEY_ID:\n                        // skip\n                        ++this._tmpPosition;\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_TIME:\n                        time = this.readUint32();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_SPIN:\n                        spin = this.readInt8();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_CURVE:\n                        curve = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_C1:\n                        c1 = this.readFixed1_7();\n                        break;\n                    case SpriterBin.ATTR_TIMELINE_KEY_C2:\n                        c2 = this.readFixed1_7();\n                        break;\n                }\n            }\n            // get child element\n            position += 2;\n            var offset = position + (this._smallOffset ? this._bin.getUint16(position, true) : this._bin.getUint32(position, true));\n            var elementType = this._bin.getUint8(offset);\n            var key = null;\n            var keyDataElm = null;\n            var sprite = false;\n            if (elementType === 14 /* bone */) {\n                key = new Spriter.KeyBone(index, time, spin);\n            }\n            else if (elementType === 15 /* object */) {\n                key = new Spriter.KeyObject(index, time, spin);\n                sprite = true;\n            }\n            // other curve than linear?\n            if (curve !== 0 /* LINEAR */) {\n                key.setCurve(curve, c1, c2, c3, c4);\n            }\n            this._tmpPosition = this.getAttribsPosition(offset);\n            // spatial info\n            var info = key.info;\n            info.x = 0; //this.parseFloat(keyDataElm, \"x\");\n            info.y = 0; //-this.parseFloat(keyDataElm, \"y\");\n            info.scaleX = 1; // this.parseFloat(keyDataElm, \"scale_x\", 1);\n            info.scaleY = 1; //this.parseFloat(keyDataElm, \"scale_y\", 1);\n            info.angle = 0; //360 - this.parseFloat(keyDataElm, \"angle\");\n            info.alpha = 1; //this.parseFloat(keyDataElm, \"a\", 1);\n            var pivotX = 0;\n            var hasPivotX = false;\n            var pivotY = 0;\n            var hasPivotY = false;\n            var folder = 0;\n            var file = 0;\n            for (var i = this._bin.getUint8(this._tmpPosition++) - 1; i >= 0; i--) {\n                switch (this._bin.getUint8(this._tmpPosition++)) {\n                    case SpriterBin.ATTR_BONE_X:\n                    case SpriterBin.ATTR_OBJ_X:\n                        info.x = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_BONE_Y:\n                    case SpriterBin.ATTR_OBJ_Y:\n                        info.y = -this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_BONE_ANGLE:\n                    case SpriterBin.ATTR_OBJ_ANGLE:\n                        info.angle = 360 - this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_BONE_SCALE_X:\n                    case SpriterBin.ATTR_OBJ_SCALE_X:\n                        info.scaleX = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_BONE_SCALE_Y:\n                    case SpriterBin.ATTR_OBJ_SCALE_Y:\n                        info.scaleY = this.readFixed16_16();\n                        break;\n                    case SpriterBin.ATTR_OBJ_FOLDER:\n                        folder = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_OBJ_FILE:\n                        file = this.readUint8();\n                        break;\n                    case SpriterBin.ATTR_OBJ_PIVOT_X:\n                        pivotX = this.readFixed16_16();\n                        hasPivotX = true;\n                        break;\n                    case SpriterBin.ATTR_OBJ_PIVOT_Y:\n                        pivotY = this.readFixed16_16();\n                        hasPivotY = true;\n                        break;\n                    case SpriterBin.ATTR_OBJ_ALPHA:\n                        info.alpha = this.readFixed1_7();\n                        break;\n                }\n            }\n            if (sprite) {\n                key.setFolderAndFile(folder, file);\n                // set pivot in spatial info different from default (based on pivot in file)\n                var fileObj = spriter.getFolderById(folder).getFileById(file);\n                info.pivotX = hasPivotX ? pivotX : fileObj.pivotX;\n                // 1 - to flip Y, default anchor is already flipped, so it needs to be flipped back to avoid double flipping\n                info.pivotY = 1 - (hasPivotY ? pivotY : 1 - fileObj.pivotY);\n            }\n            return key;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBin.prototype.getTagChange = function (position) {\n            console.error(\"add loading of tag changes\");\n            return null;\n        };\n        // spriter data\n        SpriterBin.ATTR_VERSION = 0;\n        SpriterBin.ATTR_GENERATOR = 1;\n        SpriterBin.ATTR_GENERATOR_VERSION = 2;\n        // folder\n        SpriterBin.ATTR_FOLDER_ID = 0;\n        SpriterBin.ATTR_FOLDER_NAME = 1;\n        // file\n        SpriterBin.ATTR_FILE_ID = 0;\n        SpriterBin.ATTR_FILE_NAME = 1;\n        SpriterBin.ATTR_FILE_WIDTH = 2;\n        SpriterBin.ATTR_FILE_HEIGHT = 3;\n        SpriterBin.ATTR_FILE_PIVOT_X = 4;\n        SpriterBin.ATTR_FILE_PIVOT_Y = 5;\n        // entity\n        SpriterBin.ATTR_ENTITY_ID = 0;\n        SpriterBin.ATTR_ENTITY_NAME = 1;\n        // obj_info\n        SpriterBin.ATTR_OBJ_INFO_NAME = 0;\n        SpriterBin.ATTR_OBJ_INFO_TYPE = 1;\n        SpriterBin.ATTR_OBJ_INFO_WIDTH = 2;\n        SpriterBin.ATTR_OBJ_INFO_HEIGHT = 3;\n        // frames\n        SpriterBin.ATTR_FRAMES_I_FOLDER = 0;\n        SpriterBin.ATTR_FRAMES_I_FILE = 1;\n        // animation\n        SpriterBin.ATTR_ANIMATION_ID = 0;\n        SpriterBin.ATTR_ANIMATION_NAME = 1;\n        SpriterBin.ATTR_ANIMATION_LENGTH = 2;\n        SpriterBin.ATTR_ANIMATION_INTERVAL = 3;\n        SpriterBin.ATTR_ANIMATION_LOOPING = 4;\n        // key\n        SpriterBin.ATTR_MAINLINE_KEY_ID = 0;\n        SpriterBin.ATTR_MAINLINE_KEY_TIME = 1;\n        // bone_ref\n        SpriterBin.ATTR_BONE_REF_ID = 0;\n        SpriterBin.ATTR_BONE_REF_PARENT = 1;\n        SpriterBin.ATTR_BONE_REF_TIMELINE = 2;\n        SpriterBin.ATTR_BONE_REF_KEY = 3;\n        // object_ref\n        SpriterBin.ATTR_OBJ_REF_ID = 4;\n        SpriterBin.ATTR_OBJ_REF_PARENT = 5;\n        SpriterBin.ATTR_OBJ_REF_TIMELINE = 6;\n        SpriterBin.ATTR_OBJ_REF_KEY = 7;\n        SpriterBin.ATTR_OBJ_REF_NAME = 8;\n        SpriterBin.ATTR_OBJ_REF_Z = 9;\n        SpriterBin.ATTR_OBJ_REF_FOLDER = 10;\n        SpriterBin.ATTR_OBJ_REF_FILE = 11;\n        SpriterBin.ATTR_OBJ_REF_ABS_X = 12;\n        SpriterBin.ATTR_OBJ_REF_ABS_Y = 13;\n        SpriterBin.ATTR_OBJ_REF_ABS_PIVOT_X = 14;\n        SpriterBin.ATTR_OBJ_REF_ABS_PIVOT_Y = 15;\n        SpriterBin.ATTR_OBJ_REF_ABS_SCALE_X = 16;\n        SpriterBin.ATTR_OBJ_REF_ABS_SCALE_Y = 17;\n        SpriterBin.ATTR_OBJ_REF_ANGLE = 18;\n        SpriterBin.ATTR_OBJ_REF_ALPHA = 19;\n        // timeline\n        SpriterBin.ATTR_TIMELINE_ID = 0;\n        SpriterBin.ATTR_TIMELINE_NAME = 1;\n        SpriterBin.ATTR_TIMELINE_OBJ = 2;\n        SpriterBin.ATTR_TIMELINE_OBJ_TYPE = 3;\n        // key\n        SpriterBin.ATTR_TIMELINE_KEY_ID = 0;\n        SpriterBin.ATTR_TIMELINE_KEY_TIME = 1;\n        SpriterBin.ATTR_TIMELINE_KEY_SPIN = 2;\n        SpriterBin.ATTR_TIMELINE_KEY_CURVE = 3;\n        SpriterBin.ATTR_TIMELINE_KEY_C1 = 4;\n        SpriterBin.ATTR_TIMELINE_KEY_C2 = 5;\n        // bone\n        SpriterBin.ATTR_BONE_X = 0;\n        SpriterBin.ATTR_BONE_Y = 1;\n        SpriterBin.ATTR_BONE_ANGLE = 2;\n        SpriterBin.ATTR_BONE_SCALE_X = 3;\n        SpriterBin.ATTR_BONE_SCALE_Y = 4;\n        // object\n        SpriterBin.ATTR_OBJ_FOLDER = 5;\n        SpriterBin.ATTR_OBJ_FILE = 6;\n        SpriterBin.ATTR_OBJ_X = 7;\n        SpriterBin.ATTR_OBJ_Y = 8;\n        SpriterBin.ATTR_OBJ_SCALE_X = 9;\n        SpriterBin.ATTR_OBJ_SCALE_Y = 10;\n        SpriterBin.ATTR_OBJ_PIVOT_X = 11;\n        SpriterBin.ATTR_OBJ_PIVOT_Y = 12;\n        SpriterBin.ATTR_OBJ_ANGLE = 13;\n        SpriterBin.ATTR_OBJ_ALPHA = 14;\n        return SpriterBin;\n    }(Spriter.SpriterFile));\n    Spriter.SpriterBin = SpriterBin;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"SpriterFile.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var SpriterJSON = (function (_super) {\n        __extends(SpriterJSON, _super);\n        // -------------------------------------------------------------------------\n        function SpriterJSON(JSONData, options) {\n            _super.call(this, options);\n            this._json = JSONData;\n            var minimized = JSONData[\"min\"] !== undefined;\n            this.setMinimized(minimized);\n        }\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getType = function () {\n            return Spriter.eFileType.JSON;\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.parseInt = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = 0; }\n            var value = element[this.translateAttributeName(attributeName)];\n            if (value === undefined) {\n                return defaultValue;\n            }\n            return typeof (value) === \"number\" ? value : parseInt(value);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.parseFloat = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = 0; }\n            var value = element[this.translateAttributeName(attributeName)];\n            if (value === undefined) {\n                return defaultValue;\n            }\n            return typeof (value) === \"number\" ? value : parseFloat(value);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.parseBoolean = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = false; }\n            var value = element[this.translateAttributeName(attributeName)];\n            if (value === undefined) {\n                return defaultValue;\n            }\n            return typeof (value) === \"boolean\" ? value : (value === \"true\");\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.parseString = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = \"\"; }\n            var value = element[this.translateAttributeName(attributeName)];\n            return value === undefined ? defaultValue : value;\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getNodes = function (nodeName) {\n            this.setMinDefsToElementName(nodeName);\n            var translatedName = this.translateElementName(nodeName);\n            return new Spriter.NodeListJSON(this, (this._json[translatedName] !== undefined) ? this._json[translatedName] : []);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getNodesForElement = function (element, nodeName) {\n            this.setMinDefsToElementName(nodeName);\n            var translatedName = this.translateElementName(nodeName);\n            return new Spriter.NodeListJSON(this, (element[translatedName] !== undefined) ? element[translatedName] : []);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getFolder = function (element) {\n            return new Spriter.Folder(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getFile = function (element) {\n            if (element[\"type\"] !== undefined && element[\"type\"] === \"sound\") {\n                return null;\n            }\n            return new Spriter.File(this.parseInt(element, \"id\"), this.getFileName(this.parseString(element, \"name\")), this.parseFloat(element, \"pivot_x\"), 1 - this.parseFloat(element, \"pivot_y\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTag = function (element) {\n            return new Spriter.Item(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getEntity = function (element) {\n            return new Spriter.Entity(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getObjectInfo = function (element, index) {\n            return new Spriter.ObjectInfo(index, this.parseString(element, \"name\"), Spriter.Types.getObjectTypeForName(this.parseString(element, \"type\")), this.parseFloat(element, \"w\"), this.parseFloat(element, \"h\"), this.parseFloat(element, \"pivot_x\"), this.parseFloat(element, \"pivot_y\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getCharMap = function (element) {\n            return new Spriter.CharMap(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getCharMapEntry = function (element, charMap, spriter) {\n            var sourceName = spriter.getFolderById(this.parseInt(element, \"folder\")).\n                getFileById(this.parseInt(element, \"file\")).name;\n            var target = null;\n            if (element[\"target_folder\"] !== undefined && element[\"target_file\"] !== undefined) {\n                target = spriter.getFolderById(this.parseInt(element, \"target_folder\")).\n                    getFileById(this.parseInt(element, \"target_file\"));\n            }\n            charMap.put(sourceName, target);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getVariable = function (element) {\n            var type = Spriter.Types.getVariableTypeForName(this.parseString(element, \"type\"));\n            return new Spriter.Variable(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), type, (type === 2 /* STRING */) ? this.parseString(element, \"default\") : this.parseFloat(element, \"default\", 0));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getAnimation = function (element) {\n            return new Spriter.Animation(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), this.parseFloat(element, \"length\"), this.parseBoolean(element, \"looping\", true) === true ? Spriter.eAnimationLooping.LOOPING : Spriter.eAnimationLooping.NO_LOOPING);\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getMainlineKey = function (element) {\n            return new Spriter.KeyMainline(this.parseInt(element, \"id\"), this.parseFloat(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getRef = function (element) {\n            return new Spriter.Ref(this.parseInt(element, \"id\"), this.parseInt(element, \"parent\", -1), this.parseInt(element, \"timeline\"), this.parseInt(element, \"key\"), this.parseInt(element, \"z_index\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTimeline = function (element) {\n            return new Spriter.Timeline(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), Spriter.Types.getObjectTypeForName(this.parseString(element, \"object_type\", \"sprite\")), this.parseInt(element, \"obj\", -1));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getBaseline = function (element) {\n            return new Spriter.Baseline(this.parseInt(element, \"id\"), this.parseString(element, \"name\", null));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getVarline = function (element) {\n            return new Spriter.Varline(this.parseInt(element, \"id\"), this.parseInt(element, \"def\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getKey = function (element) {\n            return new Spriter.Key(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTagKey = function (element) {\n            return new Spriter.KeyTag(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getVariableKey = function (element, type) {\n            return new Spriter.KeyVariable(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"), (type === 2 /* STRING */) ? this.parseString(element, \"val\") : this.parseFloat(element, \"val\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTimelineKey = function (element, index, spriter) {\n            var time = this.parseInt(element, \"time\");\n            var spin = this.parseInt(element, \"spin\", 1);\n            // curve and params\n            var curve = this.parseString(element, \"curve_type\", \"linear\");\n            var c1 = this.parseFloat(element, \"c1\", 0);\n            var c2 = this.parseFloat(element, \"c2\", 0);\n            var c3 = this.parseFloat(element, \"c3\", 0);\n            var c4 = this.parseFloat(element, \"c4\", 0);\n            // sprite or bone key?\n            var boneTag = this.translateChildElementName(\"bone\");\n            var objectTag = this.translateChildElementName(\"object\");\n            var key = null;\n            var keyDataElm = null;\n            var sprite = false;\n            if (element[boneTag] !== undefined) {\n                keyDataElm = element[boneTag];\n                key = new Spriter.KeyBone(index, time, spin);\n                this.setMinDefsToElementName(\"bone\");\n            }\n            else if (element[objectTag] !== undefined) {\n                keyDataElm = element[objectTag];\n                key = new Spriter.KeyObject(index, time, spin);\n                this.setMinDefsToElementName(\"object\");\n                sprite = true;\n            }\n            // other curve than linear?\n            if (curve !== \"linear\") {\n                key.setCurve(Spriter.Types.getCurveTypeForName(curve), c1, c2, c3, c4);\n            }\n            // spatial info\n            var info = key.info;\n            info.x = this.parseFloat(keyDataElm, \"x\");\n            info.y = -this.parseFloat(keyDataElm, \"y\");\n            info.scaleX = this.parseFloat(keyDataElm, \"scale_x\", 1);\n            info.scaleY = this.parseFloat(keyDataElm, \"scale_y\", 1);\n            info.angle = 360 - this.parseFloat(keyDataElm, \"angle\");\n            info.alpha = this.parseFloat(keyDataElm, \"a\", 1);\n            if (sprite) {\n                // sprite specific - set file and folder\n                var folderId = this.parseInt(keyDataElm, \"folder\");\n                var fileId = this.parseInt(keyDataElm, \"file\");\n                key.setFolderAndFile(folderId, fileId);\n                // set pivot in spatial info different from default (based on pivot in file)\n                var file = spriter.getFolderById(folderId).getFileById(fileId);\n                info.pivotX = this.parseFloat(keyDataElm, \"pivot_x\", file.pivotX);\n                // 1 - to flip Y, default anchor is already flipped, so it needs to be flipped back to avoid double flipping\n                info.pivotY = 1 - this.parseFloat(keyDataElm, \"pivot_y\", 1 - file.pivotY);\n            }\n            this.popMinDefsStack();\n            return key;\n        };\n        // -------------------------------------------------------------------------\n        SpriterJSON.prototype.getTagChange = function (element) {\n            return this.parseInt(element, \"t\");\n        };\n        return SpriterJSON;\n    }(Spriter.SpriterFile));\n    Spriter.SpriterJSON = SpriterJSON;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"SpriterFile.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var SpriterXml = (function (_super) {\n        __extends(SpriterXml, _super);\n        // -------------------------------------------------------------------------\n        function SpriterXml(xmlData, options) {\n            _super.call(this, options);\n            this._xml = xmlData;\n            var minimized = xmlData.documentElement.hasAttribute(\"min\");\n            this.setMinimized(minimized);\n        }\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getType = function () {\n            return Spriter.eFileType.XML;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.parseInt = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = 0; }\n            var value = element.getAttribute(this.translateAttributeName(attributeName));\n            return value !== null ? parseInt(value) : defaultValue;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.parseFloat = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = 0; }\n            var value = element.getAttribute(this.translateAttributeName(attributeName));\n            return value !== null ? parseFloat(value) : defaultValue;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.parseString = function (element, attributeName, defaultValue) {\n            if (defaultValue === void 0) { defaultValue = \"\"; }\n            var value = element.getAttribute(this.translateAttributeName(attributeName));\n            return value !== null ? value : defaultValue;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getNodes = function (nodeName) {\n            this.setMinDefsToElementName(nodeName);\n            var translatedName = this.translateElementName(nodeName);\n            return new Spriter.NodeListXml(this, this._xml.documentElement.getElementsByTagName(translatedName));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getNodesForElement = function (element, nodeName) {\n            this.setMinDefsToElementName(nodeName);\n            var translatedName = this.translateElementName(nodeName);\n            return new Spriter.NodeListXml(this, element.getElementsByTagName(translatedName));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getFolder = function (element) {\n            return new Spriter.Folder(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getFile = function (element) {\n            if (element.hasAttribute(\"type\") && element.getAttribute(\"type\") === \"sound\") {\n                return null;\n            }\n            return new Spriter.File(this.parseInt(element, \"id\"), this.getFileName(this.parseString(element, \"name\")), this.parseFloat(element, \"pivot_x\"), 1 - this.parseFloat(element, \"pivot_y\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTag = function (element) {\n            return new Spriter.Item(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getEntity = function (element) {\n            return new Spriter.Entity(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getObjectInfo = function (element, index) {\n            return new Spriter.ObjectInfo(index, this.parseString(element, \"name\"), Spriter.Types.getObjectTypeForName(this.parseString(element, \"type\")), this.parseFloat(element, \"w\"), this.parseFloat(element, \"h\"), this.parseFloat(element, \"pivot_x\"), this.parseFloat(element, \"pivot_y\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getCharMap = function (element) {\n            return new Spriter.CharMap(this.parseInt(element, \"id\"), this.parseString(element, \"name\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getCharMapEntry = function (element, charMap, spriter) {\n            var sourceName = spriter.getFolderById(this.parseInt(element, \"folder\")).\n                getFileById(this.parseInt(element, \"file\")).name;\n            var target = null;\n            if (element.hasAttribute(\"target_folder\") && element.hasAttribute(\"target_file\")) {\n                target = spriter.getFolderById(this.parseInt(element, \"target_folder\")).\n                    getFileById(this.parseInt(element, \"target_file\"));\n            }\n            charMap.put(sourceName, target);\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getVariable = function (element) {\n            var type = Spriter.Types.getVariableTypeForName(this.parseString(element, \"type\"));\n            return new Spriter.Variable(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), type, (type === 2 /* STRING */) ? this.parseString(element, \"default\") : this.parseFloat(element, \"default\", 0));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getAnimation = function (element) {\n            return new Spriter.Animation(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), this.parseFloat(element, \"length\"), this.parseString(element, \"looping\", \"true\") === \"true\" ? Spriter.eAnimationLooping.LOOPING : Spriter.eAnimationLooping.NO_LOOPING);\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getMainlineKey = function (element) {\n            return new Spriter.KeyMainline(this.parseInt(element, \"id\"), this.parseFloat(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getRef = function (element) {\n            return new Spriter.Ref(this.parseInt(element, \"id\"), this.parseInt(element, \"parent\", -1), this.parseInt(element, \"timeline\"), this.parseInt(element, \"key\"), this.parseInt(element, \"z_index\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTimeline = function (element) {\n            return new Spriter.Timeline(this.parseInt(element, \"id\"), this.parseString(element, \"name\"), Spriter.Types.getObjectTypeForName(this.parseString(element, \"object_type\", \"sprite\")), this.parseInt(element, \"obj\", -1));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getBaseline = function (element) {\n            return new Spriter.Baseline(this.parseInt(element, \"id\"), this.parseString(element, \"name\", null));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getVarline = function (element) {\n            return new Spriter.Varline(this.parseInt(element, \"id\"), this.parseInt(element, \"def\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getKey = function (element) {\n            return new Spriter.Key(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTagKey = function (element) {\n            return new Spriter.KeyTag(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getVariableKey = function (element, type) {\n            return new Spriter.KeyVariable(this.parseInt(element, \"id\"), this.parseInt(element, \"time\"), (type === 2 /* STRING */) ? this.parseString(element, \"val\") : this.parseFloat(element, \"val\"));\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTimelineKey = function (element, index, spriter) {\n            var time = this.parseInt(element, \"time\");\n            var spin = this.parseInt(element, \"spin\", 1);\n            // curve and params\n            var curve = this.parseString(element, \"curve_type\", \"linear\");\n            var c1 = this.parseFloat(element, \"c1\", 0);\n            var c2 = this.parseFloat(element, \"c2\", 0);\n            var c3 = this.parseFloat(element, \"c3\", 0);\n            var c4 = this.parseFloat(element, \"c4\", 0);\n            // sprite or bone key?\n            var boneTag = this.translateChildElementName(\"bone\");\n            var objectTag = this.translateChildElementName(\"object\");\n            var key = null;\n            var keyDataElm = (element.firstElementChild);\n            var sprite = false;\n            if (keyDataElm.tagName === boneTag) {\n                key = new Spriter.KeyBone(index, time, spin);\n                this.setMinDefsToElementName(\"bone\");\n            }\n            else if (keyDataElm.tagName === objectTag) {\n                this.setMinDefsToElementName(\"object\");\n                key = new Spriter.KeyObject(index, time, spin);\n                sprite = true;\n            }\n            // other curve than linear?\n            if (curve !== \"linear\") {\n                key.setCurve(Spriter.Types.getCurveTypeForName(curve), c1, c2, c3, c4);\n            }\n            // spatial info\n            var info = key.info;\n            info.x = this.parseFloat(keyDataElm, \"x\");\n            info.y = -this.parseFloat(keyDataElm, \"y\");\n            info.scaleX = this.parseFloat(keyDataElm, \"scale_x\", 1);\n            info.scaleY = this.parseFloat(keyDataElm, \"scale_y\", 1);\n            info.angle = 360 - this.parseFloat(keyDataElm, \"angle\");\n            info.alpha = this.parseFloat(keyDataElm, \"a\", 1);\n            if (sprite) {\n                // sprite specific - set file and folder\n                var folderId = this.parseInt(keyDataElm, \"folder\");\n                var fileId = this.parseInt(keyDataElm, \"file\");\n                key.setFolderAndFile(folderId, fileId);\n                // set pivot in spatial info different from default (based on pivot in file)\n                var file = spriter.getFolderById(folderId).getFileById(fileId);\n                info.pivotX = this.parseFloat(keyDataElm, \"pivot_x\", file.pivotX);\n                // 1 - to flip Y, default anchor is already flipped, so it needs to be flipped back to avoid double flipping\n                info.pivotY = 1 - this.parseFloat(keyDataElm, \"pivot_y\", 1 - file.pivotY);\n            }\n            this.popMinDefsStack();\n            return key;\n        };\n        // -------------------------------------------------------------------------\n        SpriterXml.prototype.getTagChange = function (element) {\n            return this.parseInt(element, \"t\");\n        };\n        return SpriterXml;\n    }(Spriter.SpriterFile));\n    Spriter.SpriterXml = SpriterXml;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Item = (function () {\n        // -------------------------------------------------------------------------\n        function Item(id, name) {\n            this._id = id;\n            this._name = name;\n        }\n        Object.defineProperty(Item.prototype, \"id\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._id;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Item.prototype, \"name\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._name;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Item;\n    }());\n    Spriter.Item = Item;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"../IdNameMap.ts\" />\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    (function (eAnimationLooping) {\n        eAnimationLooping[eAnimationLooping[\"NO_LOOPING\"] = 0] = \"NO_LOOPING\";\n        eAnimationLooping[eAnimationLooping[\"LOOPING\"] = 1] = \"LOOPING\";\n    })(Spriter.eAnimationLooping || (Spriter.eAnimationLooping = {}));\n    var eAnimationLooping = Spriter.eAnimationLooping;\n    ;\n    var Animation = (function (_super) {\n        __extends(Animation, _super);\n        // -------------------------------------------------------------------------\n        function Animation(id, name, length, loopType) {\n            _super.call(this, id, name);\n            this._length = length;\n            this._loopType = loopType;\n            this._timelines = new Spriter.IdNameMap();\n            this._lines = new Spriter.IdNameMap();\n        }\n        Object.defineProperty(Animation.prototype, \"mainline\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._mainline;\n            },\n            // -------------------------------------------------------------------------\n            set: function (mainline) {\n                this._mainline = mainline;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        Animation.prototype.addTimeline = function (timeline) {\n            this._timelines.add(timeline, timeline.id, timeline.name);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.getTimelineById = function (id) {\n            return this._timelines.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.getTimelineByName = function (name) {\n            return this._timelines.getByName(name);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.addLine = function (line) {\n            this._lines.add(line, this._lines.length, line.name);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.getLineById = function (id) {\n            return this._lines.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Animation.prototype.getLineByName = function (name) {\n            return this._lines.getByName(name);\n        };\n        Object.defineProperty(Animation.prototype, \"linesLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._lines.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Animation.prototype, \"length\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Animation.prototype, \"loopType\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._loopType;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Animation;\n    }(Spriter.Item));\n    Spriter.Animation = Animation;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"../IdNameMap.ts\" />\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var Entity = (function (_super) {\n        __extends(Entity, _super);\n        // -------------------------------------------------------------------------\n        function Entity(id, name) {\n            _super.call(this, id, name);\n            this._objectInfos = new Spriter.IdNameMap();\n            this._charMaps = new Spriter.IdNameMap();\n            this._variables = new Spriter.IdNameMap();\n            this._animations = new Spriter.IdNameMap();\n        }\n        // -------------------------------------------------------------------------\n        Entity.prototype.addObjectInfo = function (objectInfo) {\n            this._objectInfos.add(objectInfo, objectInfo.id, objectInfo.name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getObjectInfoById = function (id) {\n            return this._objectInfos.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getObjectInfoByName = function (name) {\n            return this._objectInfos.getByName(name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.addCharMap = function (charMap) {\n            this._charMaps.add(charMap, charMap.id, charMap.name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getCharMapById = function (id) {\n            return this._charMaps.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getCharMapByName = function (name) {\n            return this._charMaps.getByName(name);\n        };\n        Object.defineProperty(Entity.prototype, \"charMapsLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._charMaps.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        Entity.prototype.addVariable = function (variable) {\n            this._variables.add(variable, variable.id, variable.name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getVariableById = function (id) {\n            return this._variables.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getVariableByName = function (name) {\n            return this._variables.getByName(name);\n        };\n        Object.defineProperty(Entity.prototype, \"variablesLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._variables.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        Entity.prototype.addAnimation = function (animation) {\n            this._animations.add(animation, animation.id, animation.name);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getAnimationById = function (id) {\n            return this._animations.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Entity.prototype.getAnimationByName = function (name) {\n            return this._animations.getByName(name);\n        };\n        Object.defineProperty(Entity.prototype, \"animationsLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._animations.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Entity;\n    }(Spriter.Item));\n    Spriter.Entity = Entity;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var File = (function (_super) {\n        __extends(File, _super);\n        // -------------------------------------------------------------------------\n        function File(id, name, pivotX, pivotY) {\n            _super.call(this, id, name);\n            this._pivotX = pivotX;\n            this._pivotY = pivotY;\n        }\n        Object.defineProperty(File.prototype, \"pivotX\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._pivotX;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(File.prototype, \"pivotY\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._pivotY;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return File;\n    }(Spriter.Item));\n    Spriter.File = File;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"../IdNameMap.ts\" />\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var Folder = (function (_super) {\n        __extends(Folder, _super);\n        // -------------------------------------------------------------------------\n        function Folder(id, name) {\n            _super.call(this, id, name);\n            this._files = new Spriter.IdNameMap();\n        }\n        // -------------------------------------------------------------------------\n        Folder.prototype.addFile = function (file) {\n            this._files.add(file, file.id, file.name);\n        };\n        // -------------------------------------------------------------------------\n        Folder.prototype.getFileById = function (id) {\n            return this._files.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Folder.prototype.getFileByName = function (name) {\n            return this._files.getByName(name);\n        };\n        return Folder;\n    }(Spriter.Item));\n    Spriter.Folder = Folder;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var CharMap = (function (_super) {\n        __extends(CharMap, _super);\n        function CharMap() {\n            _super.apply(this, arguments);\n        }\n        // -------------------------------------------------------------------------\n        CharMap.prototype.put = function (key, value) {\n            if (this._map === undefined) {\n                this._map = {};\n            }\n            if (this._map[key] !== undefined) {\n                console.error(\"Key with name \" + key + \" already exists\");\n            }\n            this._map[key] = value;\n        };\n        // -------------------------------------------------------------------------\n        CharMap.prototype.value = function (key) {\n            return this._map[key];\n        };\n        return CharMap;\n    }(Spriter.Item));\n    Spriter.CharMap = CharMap;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var CharMapStack = (function () {\n        // -------------------------------------------------------------------------\n        function CharMapStack(entity) {\n            this._stack = [];\n            this._length = 0;\n            this._entity = entity;\n        }\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.reset = function () {\n            this._length = 0;\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.push = function (charMapName) {\n            var charMap = this.getCharMap(charMapName);\n            this._stack[this._length++] = charMap;\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.remove = function (charMapName) {\n            var charMap = this.getCharMap(charMapName);\n            var index = this.findCharMap(charMap);\n            // shift all items down\n            if (index !== -1) {\n                for (var i = index; i < this._length - 2; i++) {\n                    this._stack[i] = this._stack[i + 1];\n                }\n                this._stack[--this._length] = null;\n            }\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.getFile = function (file) {\n            for (var i = this._length - 1; i >= 0; i--) {\n                var value = this._stack[i].value(file.name);\n                if (value !== undefined) {\n                    return value;\n                }\n            }\n            return file;\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.getCharMap = function (charMapName) {\n            var charMap = this._entity.getCharMapByName(charMapName);\n            if (charMapName === null) {\n                console.error(\"charmap with name \" + charMapName + \" does not exist\");\n            }\n            return charMap;\n        };\n        // -------------------------------------------------------------------------\n        CharMapStack.prototype.findCharMap = function (charMap) {\n            for (var i = 0; i < this._length; i++) {\n                if (this._stack[i] === charMap) {\n                    return i;\n                }\n            }\n            return -1;\n        };\n        return CharMapStack;\n    }());\n    Spriter.CharMapStack = CharMapStack;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Key = (function () {\n        // -------------------------------------------------------------------------\n        function Key(id, time) {\n            this._id = id;\n            this._time = time;\n        }\n        Object.defineProperty(Key.prototype, \"id\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._id;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Key.prototype, \"time\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._time;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Key;\n    }());\n    Spriter.Key = Key;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var KeyMainline = (function (_super) {\n        __extends(KeyMainline, _super);\n        function KeyMainline() {\n            _super.apply(this, arguments);\n            this._boneRefs = [];\n            this._objectRefs = [];\n        }\n        Object.defineProperty(KeyMainline.prototype, \"boneRefs\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._boneRefs;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        KeyMainline.prototype.addBoneRef = function (boneRef) {\n            this._boneRefs.push(boneRef);\n        };\n        Object.defineProperty(KeyMainline.prototype, \"objectRefs\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._objectRefs;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        KeyMainline.prototype.addObjectRef = function (objectRef) {\n            this._objectRefs.push(objectRef);\n        };\n        return KeyMainline;\n    }(Spriter.Key));\n    Spriter.KeyMainline = KeyMainline;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var KeyTag = (function (_super) {\n        __extends(KeyTag, _super);\n        function KeyTag() {\n            _super.apply(this, arguments);\n        }\n        Object.defineProperty(KeyTag.prototype, \"tagsOn\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._tagsOn;\n            },\n            // -------------------------------------------------------------------------\n            set: function (tagsOn) {\n                this._tagsOn = tagsOn;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return KeyTag;\n    }(Spriter.Key));\n    Spriter.KeyTag = KeyTag;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var KeyVariable = (function (_super) {\n        __extends(KeyVariable, _super);\n        // -------------------------------------------------------------------------\n        function KeyVariable(id, time, value) {\n            _super.call(this, id, time);\n            this._value = value;\n        }\n        Object.defineProperty(KeyVariable.prototype, \"value\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return KeyVariable;\n    }(Spriter.Key));\n    Spriter.KeyVariable = KeyVariable;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    (function (eTimelineType) {\n        eTimelineType[eTimelineType[\"UNKNOWN\"] = 0] = \"UNKNOWN\";\n        eTimelineType[eTimelineType[\"MAIN_LINE\"] = 1] = \"MAIN_LINE\";\n        eTimelineType[eTimelineType[\"TIME_LINE\"] = 2] = \"TIME_LINE\";\n        eTimelineType[eTimelineType[\"SOUND_LINE\"] = 3] = \"SOUND_LINE\";\n        eTimelineType[eTimelineType[\"EVENT_LINE\"] = 4] = \"EVENT_LINE\";\n        eTimelineType[eTimelineType[\"TAG_LINE\"] = 5] = \"TAG_LINE\";\n        eTimelineType[eTimelineType[\"VAR_LINE\"] = 6] = \"VAR_LINE\";\n    })(Spriter.eTimelineType || (Spriter.eTimelineType = {}));\n    var eTimelineType = Spriter.eTimelineType;\n    var Baseline = (function (_super) {\n        __extends(Baseline, _super);\n        // -------------------------------------------------------------------------\n        function Baseline(id, name) {\n            if (name === void 0) { name = null; }\n            _super.call(this, id, name);\n            this._type = eTimelineType.UNKNOWN;\n        }\n        Object.defineProperty(Baseline.prototype, \"type\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._type;\n            },\n            // -------------------------------------------------------------------------\n            set: function (type) {\n                this._type = type;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Baseline.prototype, \"keys\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._keys;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        Baseline.prototype.add = function (key) {\n            if (this._keys === null || this._keys === undefined) {\n                this._keys = [];\n            }\n            this._keys.push(key);\n        };\n        // -------------------------------------------------------------------------\n        Baseline.prototype.at = function (index, loop) {\n            if (loop === void 0) { loop = true; }\n            if (index < 0) {\n                return null;\n            }\n            var length = this._keys.length;\n            if (index >= length) {\n                if (loop) {\n                    index = index % length;\n                }\n                else {\n                    index = length - 1;\n                }\n            }\n            return this._keys[index];\n        };\n        return Baseline;\n    }(Spriter.Item));\n    Spriter.Baseline = Baseline;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    // -------------------------------------------------------------------------\n    function linear(a, b, t) {\n        return ((b - a) * t) + a;\n    }\n    Spriter.linear = linear;\n    // -------------------------------------------------------------------------\n    function quadratic(a, b, c, t) {\n        return linear(linear(a, b, t), linear(b, c, t), t);\n    }\n    Spriter.quadratic = quadratic;\n    // -------------------------------------------------------------------------\n    function cubic(a, b, c, d, t) {\n        return linear(quadratic(a, b, c, t), quadratic(b, c, d, t), t);\n    }\n    Spriter.cubic = cubic;\n    // -------------------------------------------------------------------------\n    function quartic(a, b, c, d, e, t) {\n        return linear(cubic(a, b, c, d, t), cubic(b, c, d, e, t), t);\n    }\n    Spriter.quartic = quartic;\n    // -------------------------------------------------------------------------\n    function quintic(a, b, c, d, e, f, t) {\n        return linear(quartic(a, b, c, d, e, t), quartic(b, c, d, e, f, t), t);\n    }\n    Spriter.quintic = quintic;\n    // -------------------------------------------------------------------------\n    // B(t) = (1 − t)^3 * P0 + 3(1 − t)^2 * t * P1 + 3(1 − t) *  t^2 * P2 + t^3 * P3  , 0 ≤ t ≤ 1.\n    function bezierCoord(p1, p2, t) {\n        // p0 = 0, p3 = 1\n        var p0 = 0;\n        var p3 = 1;\n        var u = 1 - t;\n        var t2 = t * t;\n        var u2 = u * u;\n        var u3 = u2 * u;\n        var t3 = t2 * t;\n        return 0 + 3 * u2 * t * p1 + 3 * u * t2 * p2 + t3 * p3;\n    }\n    // -------------------------------------------------------------------------\n    function bezier(p1x, p1y, p2x, p2y, t) {\n        var epsilon = 0.001;\n        var maxIterations = 10;\n        // binary search\n        //establish bounds\n        var lower = 0;\n        var upper = 1;\n        var percent = (upper + lower) / 2;\n        //initial x\n        var x = bezierCoord(p1x, p2x, percent);\n        //loop until returned x - t is less than epsilon\n        var iterations = 0;\n        while (Math.abs(t - x) > epsilon && iterations < maxIterations) {\n            if (t > x) {\n                lower = percent;\n            }\n            else {\n                upper = percent;\n            }\n            percent = (upper + lower) / 2;\n            x = bezierCoord(p1x, p2x, percent);\n            ++iterations;\n        }\n        //we're within tolerance of the desired x value. Return the y value.\n        return bezierCoord(p1y, p2y, percent);\n    }\n    Spriter.bezier = bezier;\n    // -------------------------------------------------------------------------\n    function angleLinear(angleA, angleB, spin, t) {\n        // no spin\n        if (spin === 0) {\n            return angleA;\n        }\n        // spin left\n        if (spin > 0) {\n            if (angleB > angleA) {\n                angleB -= 360;\n            }\n        }\n        else {\n            if (angleB < angleA) {\n                angleB += 360;\n            }\n        }\n        return this.linear(angleA, angleB, t);\n    }\n    Spriter.angleLinear = angleLinear;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var Variable = (function (_super) {\n        __extends(Variable, _super);\n        // -------------------------------------------------------------------------\n        function Variable(id, name, type, defaultValue) {\n            _super.call(this, id, name);\n            this._type = type;\n            this._default = defaultValue;\n            this.reset();\n        }\n        // -------------------------------------------------------------------------\n        Variable.prototype.clone = function () {\n            return new Variable(this.id, this.name, this.type, this._default);\n        };\n        // -------------------------------------------------------------------------\n        Variable.prototype.reset = function () {\n            this.value = this._default;\n        };\n        Object.defineProperty(Variable.prototype, \"type\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._type;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Variable.prototype, \"value\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            // -------------------------------------------------------------------------\n            set: function (value) {\n                if (this._type === 0 /* INT */) {\n                    this._value = Math.floor(value);\n                }\n                else {\n                    this._value = value;\n                }\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Variable.prototype, \"int\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Variable.prototype, \"float\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Variable.prototype, \"string\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._value;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Variable;\n    }(Spriter.Item));\n    Spriter.Variable = Variable;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Varline = (function (_super) {\n        __extends(Varline, _super);\n        // -------------------------------------------------------------------------\n        function Varline(id, varDefId) {\n            _super.call(this, id, null);\n            this._varDefId = varDefId;\n            this.type = Spriter.eTimelineType.VAR_LINE;\n        }\n        Object.defineProperty(Varline.prototype, \"varDefId\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._varDefId;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Varline;\n    }(Spriter.Baseline));\n    Spriter.Varline = Varline;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"Item.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var ObjectInfo = (function (_super) {\n        __extends(ObjectInfo, _super);\n        // -------------------------------------------------------------------------\n        function ObjectInfo(id, name, type, width, height, pivotX, pivotY) {\n            _super.call(this, id, name);\n            this._type = type;\n            this._width = width;\n            this._height = height;\n            this._pivotX = pivotX;\n            this._pivotY = pivotY;\n        }\n        Object.defineProperty(ObjectInfo.prototype, \"type\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._type;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(ObjectInfo.prototype, \"width\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._width;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(ObjectInfo.prototype, \"height\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._height;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(ObjectInfo.prototype, \"pivotX\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._pivotX;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(ObjectInfo.prototype, \"pivotY\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._pivotY;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return ObjectInfo;\n    }(Spriter.Item));\n    Spriter.ObjectInfo = ObjectInfo;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Types = (function () {\n        function Types() {\n        }\n        // -------------------------------------------------------------------------\n        Types.getObjectTypeForName = function (typeName) {\n            var type = Types.nameToObjectType[typeName];\n            if (type === undefined) {\n                console.error(\"Unknown type of object: \" + typeName);\n            }\n            return type;\n        };\n        // -------------------------------------------------------------------------\n        Types.getCurveTypeForName = function (typeName) {\n            var type = Types.nameToCurveType[typeName];\n            if (type === undefined) {\n                console.error(\"Unknown type of curve: \" + typeName);\n            }\n            return type;\n        };\n        // -------------------------------------------------------------------------\n        Types.getVariableTypeForName = function (typeName) {\n            var type = Types.nameToVariableType[typeName];\n            if (type === undefined) {\n                console.error(\"Unknown type of variable: \" + typeName);\n            }\n            return type;\n        };\n        Types.nameToObjectType = {\n            \"sprite\": 0 /* SPRITE */,\n            \"bone\": 1 /* BONE */,\n            \"box\": 2 /* BOX */,\n            \"point\": 3 /* POINT */,\n            \"sound\": 4 /* SOUND */\n        };\n        Types.nameToCurveType = {\n            \"instant\": 1 /* INSTANT */,\n            \"linear\": 0 /* LINEAR */,\n            \"quadratic\": 2 /* QUADRATIC */,\n            \"cubic\": 3 /* CUBIC */,\n            \"quartic\": 4 /* QUARTIC */,\n            \"quintic\": 5 /* QUINTIC */,\n            \"bezier\": 6 /* BEZIER */\n        };\n        Types.nameToVariableType = {\n            \"int\": 0 /* INT */,\n            \"float\": 1 /* FLOAT */,\n            \"string\": 2 /* STRING */\n        };\n        return Types;\n    }());\n    Spriter.Types = Types;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Ref = (function () {\n        // -------------------------------------------------------------------------\n        function Ref(id, parent, timeline, key, z) {\n            if (z === void 0) { z = 0; }\n            this.id = id;\n            this.parent = parent;\n            this.timeline = timeline;\n            this.key = key;\n            this.z = z;\n        }\n        return Ref;\n    }());\n    Spriter.Ref = Ref;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Timeline = (function (_super) {\n        __extends(Timeline, _super);\n        // -------------------------------------------------------------------------\n        function Timeline(id, name, type, objectRef) {\n            if (type === void 0) { type = 0 /* SPRITE */; }\n            if (objectRef === void 0) { objectRef = -1; }\n            _super.call(this, id, name);\n            this.type = Spriter.eTimelineType.TIME_LINE;\n            this._objectType = type;\n            this._objectRef = objectRef;\n        }\n        Object.defineProperty(Timeline.prototype, \"objectType\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._objectType;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(Timeline.prototype, \"objectRef\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._objectRef;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Timeline;\n    }(Spriter.Baseline));\n    Spriter.Timeline = Timeline;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var KeyTimeline = (function (_super) {\n        __extends(KeyTimeline, _super);\n        // -------------------------------------------------------------------------\n        function KeyTimeline(id, time, spin) {\n            _super.call(this, id, time);\n            this._info = new Spriter.SpatialInfo();\n            this._spin = spin;\n            this.setCurve(0 /* LINEAR */);\n        }\n        // -------------------------------------------------------------------------\n        KeyTimeline.prototype.setCurve = function (curveType, c1, c2, c3, c4) {\n            if (c1 === void 0) { c1 = 0; }\n            if (c2 === void 0) { c2 = 0; }\n            if (c3 === void 0) { c3 = 0; }\n            if (c4 === void 0) { c4 = 0; }\n            this._curveType = curveType;\n            this._c1 = c1;\n            this._c2 = c2;\n            this._c3 = c3;\n            this._c4 = c4;\n        };\n        Object.defineProperty(KeyTimeline.prototype, \"spin\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._spin;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"curveType\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._curveType;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"c1\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._c1;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"c2\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._c2;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"c3\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._c3;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"c4\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._c4;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyTimeline.prototype, \"info\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._info;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return KeyTimeline;\n    }(Spriter.Key));\n    Spriter.KeyTimeline = KeyTimeline;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var SpatialInfo = (function () {\n        function SpatialInfo() {\n            this.x = 0;\n            this.y = 0;\n            this.scaleX = 1;\n            this.scaleY = 1;\n            this.pivotX = 0;\n            this.pivotY = 0;\n            this.alpha = 1;\n            this.angle = 0;\n        }\n        return SpatialInfo;\n    }());\n    Spriter.SpatialInfo = SpatialInfo;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"KeyTimeline.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var KeyObject = (function (_super) {\n        __extends(KeyObject, _super);\n        function KeyObject() {\n            _super.apply(this, arguments);\n        }\n        // -------------------------------------------------------------------------\n        KeyObject.prototype.setFolderAndFile = function (folder, file) {\n            this._folder = folder;\n            this._file = file;\n        };\n        Object.defineProperty(KeyObject.prototype, \"folder\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._folder;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(KeyObject.prototype, \"file\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._file;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return KeyObject;\n    }(Spriter.KeyTimeline));\n    Spriter.KeyObject = KeyObject;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"KeyTimeline.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var KeyBone = (function (_super) {\n        __extends(KeyBone, _super);\n        function KeyBone() {\n            _super.apply(this, arguments);\n        }\n        return KeyBone;\n    }(Spriter.KeyTimeline));\n    Spriter.KeyBone = KeyBone;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var Loader = (function () {\n        function Loader() {\n        }\n        // -------------------------------------------------------------------------\n        Loader.prototype.load = function (file) {\n            this._spriter = new Spriter.Spriter();\n            this._fileType = file.getType();\n            // folders and files\n            var folders = file.getNodes(\"folder\");\n            this.loadFolders(this._spriter, folders);\n            folders.processed();\n            // tags\n            var tags = file.getNodes(\"tag_list\");\n            this.loadTags(this._spriter, tags);\n            tags.processed();\n            // entity\n            var entities = file.getNodes(\"entity\");\n            this.loadEntities(this._spriter, entities);\n            entities.processed();\n            return this._spriter;\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadFolders = function (spriter, folders) {\n            // through all folders\n            for (var i = 0; i < folders.length(); i++) {\n                var folder = folders.getFolder(i);\n                // images in folder - ignore sounds\n                var files = folders.getChildNodes(i, \"file\");\n                this.loadFiles(folder, files);\n                files.processed();\n                // add folder to spriter object\n                spriter.addFolder(folder);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadFiles = function (folder, files) {\n            for (var f = 0; f < files.length(); f++) {\n                var file = files.getFile(f);\n                // null is returned if file is not image but sound\n                if (file !== null) {\n                    folder.addFile(file);\n                }\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTags = function (spriter, tags) {\n            // no tags\n            if (tags.length() === 0) {\n                return;\n            }\n            // different structure for json than for xml\n            var tagDefs;\n            if (this._fileType !== Spriter.eFileType.JSON) {\n                tagDefs = tags.getChildNodes(0, \"i\");\n            }\n            else {\n                tagDefs = tags;\n            }\n            for (var i = 0; i < tagDefs.length(); i++) {\n                var tag = tagDefs.getTag(i);\n                spriter.addTag(tag);\n            }\n            // different structure for json than for xml\n            if (this._fileType !== Spriter.eFileType.JSON) {\n                tagDefs.processed();\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadEntities = function (spriter, entities) {\n            for (var i = 0; i < entities.length(); i++) {\n                var entity = entities.getEntity(i);\n                // bones, boxes, ...\n                var objInfos = entities.getChildNodes(i, \"obj_info\");\n                this.loadObjInfo(entity, objInfos);\n                objInfos.processed();\n                // character maps\n                var charMaps = entities.getChildNodes(i, \"character_map\");\n                this.loadCharMaps(entity, charMaps);\n                charMaps.processed();\n                // variable definitions\n                var variables = entities.getChildNodes(i, \"var_defs\");\n                this.loadVariables(entity, variables);\n                variables.processed();\n                // animations\n                var animations = entities.getChildNodes(i, \"animation\");\n                this.loadAnimations(entity, animations);\n                animations.processed();\n                spriter.addEntity(entity);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadObjInfo = function (entity, objInfos) {\n            for (var i = 0; i < objInfos.length(); i++) {\n                var objInfo = objInfos.getObjectInfo(i);\n                entity.addObjectInfo(objInfo);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadCharMaps = function (entity, charMaps) {\n            for (var i = 0; i < charMaps.length(); i++) {\n                var charMap = charMaps.getCharMap(i);\n                var charMapEntries = charMaps.getChildNodes(i, \"map\");\n                this.loadCharMapEntries(charMap, charMapEntries);\n                charMapEntries.processed();\n                entity.addCharMap(charMap);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadCharMapEntries = function (charMap, charMapEntries) {\n            for (var i = 0; i < charMapEntries.length(); i++) {\n                charMapEntries.getCharMapEntry(i, charMap, this._spriter);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadVariables = function (entity, variables) {\n            // no variables\n            if (variables.length() === 0) {\n                return;\n            }\n            // different structure for json than for xml\n            var varDefs;\n            if (this._fileType !== Spriter.eFileType.JSON) {\n                varDefs = variables.getChildNodes(0, \"i\");\n            }\n            else {\n                varDefs = variables;\n            }\n            for (var i = 0; i < varDefs.length(); i++) {\n                var varDef = varDefs.getVariable(i);\n                entity.addVariable(varDef);\n            }\n            // different structure for json than for xml\n            if (this._fileType !== Spriter.eFileType.JSON) {\n                varDefs.processed();\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadAnimations = function (entity, animations) {\n            for (var i = 0; i < animations.length(); i++) {\n                var animation = animations.getAnimation(i);\n                // main line keys\n                var mainlines = animations.getChildNodes(i, \"mainline\");\n                this.loadMainline(animation, mainlines);\n                mainlines.processed();\n                // timelines\n                var timelines = animations.getChildNodes(i, \"timeline\");\n                this.loadTimelines(animation, timelines);\n                timelines.processed();\n                // sound lines\n                var soundlines = animations.getChildNodes(i, \"soundline\");\n                this.loadSoundlines(animation, soundlines);\n                soundlines.processed();\n                // event lines\n                var eventlines = animations.getChildNodes(i, \"eventline\");\n                this.loadEventlines(animation, eventlines);\n                eventlines.processed();\n                // get meta tag\n                var meta = animations.getChildNodes(i, \"meta\");\n                if (meta.length() > 0) {\n                    // var lines\n                    // OMG - typo in attribute name in JSOUN export... what the hell! TODO - remove when corrected\n                    var varlines = meta.getChildNodes(0, (this._fileType !== Spriter.eFileType.JSON) ? \"varline\" : \"valline\");\n                    this.loadVarlines(entity, animation, varlines);\n                    varlines.processed();\n                    // tag lines\n                    var taglines = meta.getChildNodes(0, \"tagline\");\n                    this.loadTaglines(animation, taglines);\n                    taglines.processed();\n                }\n                meta.processed();\n                // add completely built animation to entity\n                entity.addAnimation(animation);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadMainline = function (animation, mainlines) {\n            var mainline = mainlines.getMainline(0);\n            mainline.type = Spriter.eTimelineType.MAIN_LINE;\n            var mainlineKeys = mainlines.getChildNodes(0, \"key\");\n            this.loadMainlineKeys(mainline, mainlineKeys);\n            mainlineKeys.processed();\n            animation.mainline = mainline;\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadMainlineKeys = function (mainline, mainlineKeys) {\n            for (var i = 0; i < mainlineKeys.length(); i++) {\n                var mainLineKey = mainlineKeys.getMainlineKey(i);\n                // load bone refs\n                var boneRefs = mainlineKeys.getChildNodes(i, \"bone_ref\");\n                for (var b = 0; b < boneRefs.length(); b++) {\n                    mainLineKey.addBoneRef(boneRefs.getRef(b));\n                }\n                boneRefs.processed();\n                // load sprite refs (object refs)\n                var spriteRefs = mainlineKeys.getChildNodes(i, \"object_ref\");\n                for (var s = 0; s < spriteRefs.length(); s++) {\n                    mainLineKey.addObjectRef(spriteRefs.getRef(s));\n                }\n                spriteRefs.processed();\n                mainline.add(mainLineKey);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTimelines = function (animation, aTimelines) {\n            for (var i = 0; i < aTimelines.length(); i++) {\n                var timeline = aTimelines.getTimeline(i);\n                var keys = aTimelines.getChildNodes(i, \"key\");\n                this.loadTimelineKeys(timeline, keys);\n                keys.processed();\n                animation.addTimeline(timeline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTimelineKeys = function (aTimeline, aKeys) {\n            for (var i = 0; i < aKeys.length(); i++) {\n                var key = aKeys.getTimelineKey(i, this._spriter);\n                aTimeline.add(key);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadSoundlines = function (animation, soundlines) {\n            for (var i = 0; i < soundlines.length(); i++) {\n                var soundline = soundlines.getSoundline(i);\n                soundline.type = Spriter.eTimelineType.SOUND_LINE;\n                var keys = soundlines.getChildNodes(i, \"key\");\n                this.loadKeys(soundline, keys);\n                keys.processed();\n                animation.addLine(soundline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadKeys = function (timeline, keys) {\n            for (var i = 0; i < keys.length(); i++) {\n                var key = keys.getKey(i);\n                timeline.add(key);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadEventlines = function (animation, eventlines) {\n            for (var i = 0; i < eventlines.length(); i++) {\n                var eventline = eventlines.getEventline(i);\n                eventline.type = Spriter.eTimelineType.EVENT_LINE;\n                var keys = eventlines.getChildNodes(i, \"key\");\n                this.loadKeys(eventline, keys);\n                keys.processed();\n                animation.addLine(eventline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTaglines = function (animation, taglines) {\n            for (var i = 0; i < taglines.length(); i++) {\n                var tagline = taglines.getTagline(i);\n                tagline.type = Spriter.eTimelineType.TAG_LINE;\n                var keys = taglines.getChildNodes(i, \"key\");\n                this.loadTagKeys(tagline, keys);\n                keys.processed();\n                animation.addLine(tagline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadTagKeys = function (tagline, keys) {\n            for (var i = 0; i < keys.length(); i++) {\n                var key = keys.getTagKey(i);\n                var tagChangeElements = keys.getChildNodes(i, \"tag\");\n                var tagChanges = tagChangeElements.getTagChanges(this._spriter);\n                tagChangeElements.processed();\n                key.tagsOn = tagChanges;\n                tagline.add(key);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadVarlines = function (entity, animation, varlines) {\n            for (var i = 0; i < varlines.length(); i++) {\n                var varline = varlines.getVarline(i);\n                var type = entity.getVariableById(varline.varDefId).type;\n                var keys = varlines.getChildNodes(i, \"key\");\n                this.loadVariableKeys(varline, keys, type);\n                keys.processed();\n                animation.addLine(varline);\n            }\n        };\n        // -------------------------------------------------------------------------\n        Loader.prototype.loadVariableKeys = function (varline, keys, type) {\n            for (var i = 0; i < keys.length(); i++) {\n                var key = keys.getVariableKey(i, type);\n                varline.add(key);\n            }\n        };\n        return Loader;\n    }());\n    Spriter.Loader = Loader;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter_1) {\n    var Spriter = (function () {\n        // -------------------------------------------------------------------------\n        function Spriter() {\n            this._folders = new Spriter_1.IdNameMap();\n            this._tags = new Spriter_1.IdNameMap();\n            this._entities = new Spriter_1.IdNameMap();\n        }\n        // -------------------------------------------------------------------------\n        Spriter.prototype.addFolder = function (folder) {\n            this._folders.add(folder, folder.id, folder.name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getFolderById = function (id) {\n            return this._folders.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getFolderByName = function (name) {\n            return this._folders.getByName(name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.addEntity = function (entity) {\n            this._entities.add(entity, entity.id, entity.name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getEntityById = function (id) {\n            return this._entities.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getEntityByName = function (name) {\n            return this._entities.getByName(name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.addTag = function (tag) {\n            this._tags.add(tag, tag.id, tag.name);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getTagById = function (id) {\n            return this._tags.getById(id);\n        };\n        // -------------------------------------------------------------------------\n        Spriter.prototype.getTagByName = function (name) {\n            return this._tags.getByName(name);\n        };\n        Object.defineProperty(Spriter.prototype, \"tagsLength\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._tags.length;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        return Spriter;\n    }());\n    Spriter_1.Spriter = Spriter;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var SpriterBone = (function () {\n        // -------------------------------------------------------------------------\n        function SpriterBone() {\n            this.timeline = -1;\n            this.timelineKey = -1;\n            this.transformed = new Spriter.SpatialInfo();\n        }\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.setOn = function (on) {\n            this._on = on;\n        };\n        Object.defineProperty(SpriterBone.prototype, \"on\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._on;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.setKey = function (entity, animation, timelineId, keyId) {\n            this.timeline = timelineId;\n            this.timelineKey = keyId;\n            var timeline = animation.getTimelineById(timelineId);\n            this.name = timeline.name;\n            this.objectInfo = (timeline.objectRef === -1) ? null : entity.getObjectInfoById(timeline.objectRef);\n            var keyFrom = timeline.at(keyId);\n            // in the end loop to first key. If animation is not looping, then repeat last key\n            var keyTo = (timeline.at(keyId + 1, animation.loopType !== Spriter.eAnimationLooping.NO_LOOPING));\n            this.key = keyFrom;\n            this.timeFrom = keyFrom.time;\n            this.timeTo = keyTo.time;\n            // if loop to key 0\n            if (this.timeTo < this.timeFrom) {\n                this.timeTo = animation.length;\n            }\n            this.from = keyFrom.info;\n            this.to = keyTo.info;\n            // create update mask\n            this.updateMask = 0;\n            if (Math.abs(this.from.x - this.to.x) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_X;\n            }\n            if (Math.abs(this.from.y - this.to.y) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_Y;\n            }\n            if (Math.abs(this.from.scaleX - this.to.scaleX) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_SCALE_X;\n            }\n            if (Math.abs(this.from.scaleY - this.to.scaleY) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_SCALE_Y;\n            }\n            if (Math.abs(this.from.pivotX - this.to.pivotX) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_PIVOT_X;\n            }\n            if (Math.abs(this.from.pivotY - this.to.pivotY) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_PIVOT_Y;\n            }\n            if (Math.abs(this.from.alpha - this.to.alpha) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_ALPHA;\n            }\n            if (Math.abs(this.from.angle - this.to.angle) > 0.001) {\n                this.updateMask += SpriterBone.UPDATE_ANGLE;\n            }\n            // init data\n            this.transformed.x = this.from.x;\n            this.transformed.y = this.from.y;\n            this.transformed.scaleX = this.from.scaleX;\n            this.transformed.scaleY = this.from.scaleY;\n            this.transformed.pivotX = this.from.pivotX;\n            this.transformed.pivotY = this.from.pivotY;\n            this.transformed.angle = this.from.angle;\n            this.transformed.alpha = this.from.alpha;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.tween = function (time) {\n            // calculate normalized time\n            //var t = Phaser.Math.clamp((time - this.timeFrom) / (this.timeTo - this.timeFrom), 0, 1);\n            var t = (this.updateMask > 0) ? this.getTweenTime(time) : 0;\n            this.transformed.x = (this.updateMask & SpriterBone.UPDATE_X) > 0 ?\n                Spriter.linear(this.from.x, this.to.x, t) : this.from.x;\n            this.transformed.y = (this.updateMask & SpriterBone.UPDATE_Y) > 0 ?\n                Spriter.linear(this.from.y, this.to.y, t) : this.from.y;\n            this.transformed.scaleX = (this.updateMask & SpriterBone.UPDATE_SCALE_X) > 0 ?\n                Spriter.linear(this.from.scaleX, this.to.scaleX, t) : this.from.scaleX;\n            this.transformed.scaleY = (this.updateMask & SpriterBone.UPDATE_SCALE_Y) > 0 ?\n                Spriter.linear(this.from.scaleY, this.to.scaleY, t) : this.from.scaleY;\n            this.transformed.pivotX = (this.updateMask & SpriterBone.UPDATE_PIVOT_X) > 0 ?\n                Spriter.linear(this.from.pivotX, this.to.pivotX, t) : this.from.pivotX;\n            this.transformed.pivotY = (this.updateMask & SpriterBone.UPDATE_PIVOT_Y) > 0 ?\n                Spriter.linear(this.from.pivotY, this.to.pivotY, t) : this.from.pivotY;\n            this.transformed.alpha = (this.updateMask & SpriterBone.UPDATE_ALPHA) > 0 ?\n                Spriter.linear(this.from.alpha, this.to.alpha, t) : this.from.alpha;\n            this.transformed.angle = (this.updateMask & SpriterBone.UPDATE_ANGLE) > 0 ?\n                Spriter.angleLinear(this.from.angle, this.to.angle, this.key.spin, t) : this.from.angle;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.update = function (parent) {\n            this.transformed.angle *= Phaser.Math.sign(parent.scaleX) * Phaser.Math.sign(parent.scaleY);\n            this.transformed.angle += parent.angle;\n            this.transformed.scaleX *= parent.scaleX;\n            this.transformed.scaleY *= parent.scaleY;\n            this.scalePosition(parent.scaleX, parent.scaleY);\n            this.rotatePosition(parent.angle);\n            this.translatePosition(parent.x, parent.y);\n            this.transformed.alpha *= parent.alpha;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.scalePosition = function (parentScaleX, parentScaleY) {\n            this.transformed.x *= parentScaleX;\n            this.transformed.y *= parentScaleY;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.rotatePosition = function (parentAngle) {\n            var x = this.transformed.x;\n            var y = this.transformed.y;\n            if (x !== 0 || y !== 0) {\n                var rads = parentAngle * (Math.PI / 180);\n                var cos = Math.cos(rads);\n                var sin = Math.sin(rads);\n                this.transformed.x = x * cos - y * sin;\n                this.transformed.y = x * sin + y * cos;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.translatePosition = function (parentX, parentY) {\n            this.transformed.x += parentX;\n            this.transformed.y += parentY;\n        };\n        // -------------------------------------------------------------------------\n        SpriterBone.prototype.getTweenTime = function (time) {\n            if (this.key.curveType === 1 /* INSTANT */) {\n                return 0;\n            }\n            var t = Phaser.Math.clamp((time - this.timeFrom) / (this.timeTo - this.timeFrom), 0, 1);\n            switch (this.key.curveType) {\n                case 0 /* LINEAR */:\n                    return t;\n                case 2 /* QUADRATIC */:\n                    return Spriter.quadratic(0, this.key.c1, 1, t);\n                case 3 /* CUBIC */:\n                    return Spriter.cubic(0, this.key.c1, this.key.c2, 1, t);\n                case 4 /* QUARTIC */:\n                    return Spriter.quartic(0, this.key.c1, this.key.c2, this.key.c3, 1, t);\n                case 5 /* QUINTIC */:\n                    return Spriter.quintic(0, this.key.c1, this.key.c2, this.key.c3, this.key.c4, 1, t);\n                case 6 /* BEZIER */:\n                    return Spriter.bezier(this.key.c1, this.key.c2, this.key.c3, this.key.c4, t);\n            }\n            return 0;\n        };\n        SpriterBone.UPDATE_X = 1;\n        SpriterBone.UPDATE_Y = 2;\n        SpriterBone.UPDATE_SCALE_X = 4;\n        SpriterBone.UPDATE_SCALE_Y = 8;\n        SpriterBone.UPDATE_PIVOT_X = 16;\n        SpriterBone.UPDATE_PIVOT_Y = 32;\n        SpriterBone.UPDATE_ANGLE = 64;\n        SpriterBone.UPDATE_ALPHA = 128;\n        return SpriterBone;\n    }());\n    Spriter.SpriterBone = SpriterBone;\n})(Spriter || (Spriter = {}));\nvar Spriter;\n(function (Spriter) {\n    var SpriterGroup = (function (_super) {\n        __extends(SpriterGroup, _super);\n        // -------------------------------------------------------------------------\n        function SpriterGroup(game, spriter, texutreKey, entityName, animation, animationSpeedPercent) {\n            _super.call(this, game, null);\n            // onLoop(SpriterGroup);\n            this.onLoop = new Phaser.Signal();\n            // onFinish(SpriterGroup);\n            this.onFinish = new Phaser.Signal();\n            // onSound(SpriterGroup, string); // string for line name which equals soud name without extension\n            this.onSound = new Phaser.Signal();\n            // onEvent(SpriterGroup, string); // string for line name which equals event name\n            this.onEvent = new Phaser.Signal();\n            // onTagChange(SpriterGroup, string, boolean); // string for tag name, boolean for change (true = set / false = unset)\n            this.onTagChange = new Phaser.Signal();\n            // onVariableSet(SpriterGroup, Variable); // Variable is Spriter variable def with access to value\n            this.onVariableSet = new Phaser.Signal();\n            // onBoxUpdated(SpriterGroup, SpriterObject);\n            this.onBoxUpdated = new Phaser.Signal();\n            // onPointUpdated(SpriterGroup, SpriterObject);\n            this.onPointUpdated = new Phaser.Signal();\n            this._mainlineStepper = new Spriter.LineStepper();\n            this._lineSteppers = [];\n            this._lineSteppersCount = 0;\n            this._bones = [];\n            this._objects = [];\n            this._tags = 0; // up to 32 tags - 1 per bit\n            this._vars = [];\n            this._paused = false;\n            this._spriter = spriter;\n            this._entityName = entityName;\n            this._entity = spriter.getEntityByName(entityName);\n            this._textureKey = texutreKey;\n            this._root = new Spriter.SpatialInfo();\n            // clone variables\n            for (var i = 0; i < this._entity.variablesLength; i++) {\n                this._vars[i] = this._entity.getVariableById(i).clone();\n            }\n            // create charmap stack\n            this._charMapStack = new Spriter.CharMapStack(this._entity);\n            // set animation speed\n            if (animationSpeedPercent === undefined) {\n                animationSpeedPercent = 100;\n            }\n            this.setAnimationSpeedPercent(animationSpeedPercent);\n            // set animation\n            if (animation === undefined || animation === null) {\n                // set first animation\n                this.playAnimationById(0);\n            }\n            else if (typeof animation === \"number\") {\n                this.playAnimationById(animation);\n            }\n            else {\n                this.playAnimationByName(animation);\n            }\n        }\n        Object.defineProperty(SpriterGroup.prototype, \"spriter\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._spriter;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"entity\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._entity;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"charMapStack\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._charMapStack;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"paused\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._paused;\n            },\n            // -------------------------------------------------------------------------\n            set: function (paused) {\n                this._paused = paused;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"animationsCount\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._entity.animationsLength;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        Object.defineProperty(SpriterGroup.prototype, \"currentAnimationName\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._animationName;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.pushCharMap = function (charMapName) {\n            this._charMapStack.push(charMapName);\n            this.resetSprites();\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.removeCharMap = function (charMapName) {\n            this._charMapStack.remove(charMapName);\n            this.resetSprites();\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.clearCharMaps = function () {\n            this._charMapStack.reset();\n            this.resetSprites();\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.resetSprites = function () {\n            for (var i = 0; i < this._objects.length; i++) {\n                this._objects[i].resetFile();\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.isTagOn = function (tagName) {\n            return this.isTagOnById(this._spriter.getTagByName(tagName).id);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.isTagOnById = function (tagId) {\n            return (this._tags & (1 << tagId)) > 0;\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.getVariable = function (varName) {\n            return this.getVariableById(this._entity.getVariableByName(varName).id);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.getVariableById = function (varId) {\n            return this._vars[varId];\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.getObject = function (objectName) {\n            for (var i = 0; i < this._objects.length; i++) {\n                var object = this._objects[i];\n                if (object.name === objectName) {\n                    return object;\n                }\n            }\n            return null;\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.setAnimationSpeedPercent = function (animationSpeedPercent) {\n            if (animationSpeedPercent === void 0) { animationSpeedPercent = 100; }\n            this._animationSpeed = animationSpeedPercent / 100;\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.playAnimationById = function (animationId) {\n            var animation = this._entity.getAnimationById(animationId);\n            if (animation === undefined || animation === null) {\n                console.warn(\"Animation \" + animationId + \" for entity \" + this._entityName + \" does not exist!\");\n                return;\n            }\n            this.playAnimation(animation);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.playAnimationByName = function (animationName) {\n            var animation = this._entity.getAnimationByName(animationName);\n            if (animation === undefined || animation === null) {\n                console.warn(\"Animation \" + animationName + \" for entity \" + this._entityName + \" does not exist!\");\n                return;\n            }\n            this.playAnimation(animation);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.playAnimation = function (animation) {\n            this._animationName = animation.name;\n            this._animation = animation;\n            this._finished = false;\n            // reset time to beginning of animation and find first from and to keys\n            this._mainlineStepper.reset();\n            this._mainlineStepper.line = this._animation.mainline;\n            this._time = 0;\n            // reset all additional time lines (soundline, varline, tagline, eventline)\n            this.resetLines();\n            // reset tags\n            this._tags = 0;\n            // reset variables to defaults\n            for (var i = 0; i < this._vars.length; i++) {\n                this._vars[i].reset();\n            }\n            // create bones and sprites - based on data in mainLine key 0\n            this.loadKeys(this._animation.mainline.at(0), true);\n            // first update - to set correct positions\n            this.updateCharacter();\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.resetLines = function () {\n            // reset steppers\n            this._lineSteppersCount = 0;\n            // go through all lines (sounds, events, tags, vars)\n            for (var i = 0; i < this._animation.linesLength; i++) {\n                var line = this._animation.getLineById(i);\n                // if not enough line steppers in array, add new one\n                if (this._lineSteppersCount >= this._lineSteppers.length) {\n                    this._lineSteppers[this._lineSteppersCount] = new Spriter.LineStepper();\n                }\n                // get free stepper\n                var stepper = this._lineSteppers[this._lineSteppersCount++];\n                stepper.reset();\n                stepper.line = line;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.setBones = function (bones, force) {\n            if (force === void 0) { force = false; }\n            // switch off all existing bones\n            for (var i = 0; i < this._bones.length; i++) {\n                if (this._bones[i] !== undefined) {\n                    this._bones[i].setOn(false);\n                }\n            }\n            // go through all bones and add new ones if necessary and activate used ones\n            for (var i = 0; i < bones.length; i++) {\n                var ref = bones[i];\n                // if bone does not exist add it and make active, else make it active only\n                if (this._bones[ref.id] === undefined) {\n                    var newBone = new Spriter.SpriterBone();\n                    newBone.type = 1 /* BONE */;\n                    this._bones[ref.id] = newBone;\n                }\n                var bone = this._bones[ref.id];\n                bone.setOn(true);\n                bone.parent = ref.parent;\n                if (bone.timelineKey !== ref.key || bone.timeline !== ref.timeline || force) {\n                    bone.setKey(this._entity, this._animation, ref.timeline, ref.key);\n                }\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.setObjects = function (objects, force) {\n            if (force === void 0) { force = false; }\n            // switch off (kill) all existing sprites\n            for (var i = 0; i < this._objects.length; i++) {\n                if (this._objects[i] !== undefined) {\n                    this._objects[i].setOn(false);\n                }\n            }\n            // go through all objects/sprites and add new ones if necessary and activate used ones\n            var zChange = false;\n            for (var i = 0; i < objects.length; i++) {\n                var ref = objects[i];\n                var object = null;\n                var sprite = null;\n                // if sprite does not exist add it and make active, else make it active only\n                if (this._objects[ref.id] === undefined) {\n                    sprite = new Phaser.Sprite(this.game, 0, 0, this._textureKey);\n                    object = new Spriter.SpriterObject(this, sprite);\n                    this._objects[ref.id] = object;\n                    this.add(sprite);\n                }\n                else {\n                    object = this._objects[ref.id];\n                    sprite = object.sprite;\n                }\n                object.parent = ref.parent;\n                object.type = this._animation.getTimelineById(ref.timeline).objectType;\n                // is it sprite or any other type of object? (box / point)\n                if (object.type === 0 /* SPRITE */) {\n                    object.setOn(true);\n                    if (object.sprite.z !== ref.z) {\n                        object.sprite.z = ref.z;\n                        zChange = true;\n                    }\n                }\n                else {\n                    object.setOn(true, true);\n                }\n                if (object.timelineKey !== ref.key || object.timeline !== ref.timeline || force) {\n                    object.setKey(this._entity, this._animation, ref.timeline, ref.key);\n                }\n            }\n            // need to sort sprites?\n            if (zChange) {\n                this.sort();\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.loadKeys = function (keyMainline, force) {\n            if (force === void 0) { force = false; }\n            this.setBones(keyMainline.boneRefs, force);\n            this.setObjects(keyMainline.objectRefs, force);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.updateAnimation = function () {\n            if (this._paused || this._finished) {\n                return;\n            }\n            var mainlineStepper = this._mainlineStepper;\n            // check if in the end of animation and whether to loop or not\n            if (this._time > this._animation.length) {\n                if (this._animation.loopType === Spriter.eAnimationLooping.NO_LOOPING) {\n                    this._time = this._animation.length;\n                    this._finished = true;\n                }\n                else {\n                    this._time -= this._animation.length;\n                    this.onLoop.dispatch(this);\n                }\n            }\n            // consume all new keys\n            var key;\n            while ((key = mainlineStepper.step(this._time)) !== null) {\n                //console.log(\"got key at: \" + key.time + \" time: \" + this._time);\n                this.loadKeys(key);\n                mainlineStepper.lastTime = key.time;\n            }\n            this.updateCharacter();\n            this.updateLines();\n            if (this._finished) {\n                this.onFinish.dispatch(this);\n            }\n            this._time += (this.game.time.physicsElapsedMS * this._animationSpeed);\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.updateCharacter = function () {\n            for (var i = 0; i < this._bones.length; i++) {\n                var bone = this._bones[i];\n                if (bone.on) {\n                    var parentSpatial = (bone.parent === -1) ? this._root : this._bones[bone.parent].transformed;\n                    bone.tween(this._time);\n                    bone.update(parentSpatial);\n                }\n            }\n            for (var i = 0; i < this._objects.length; i++) {\n                var object = this._objects[i];\n                if (object.on) {\n                    var parentSpatial = (object.parent === -1) ? this._root : this._bones[object.parent].transformed;\n                    object.tween(this._time);\n                    object.update(parentSpatial);\n                    if (object.type === 0 /* SPRITE */) {\n                        object.updateSprite();\n                    }\n                    else if (object.type === 2 /* BOX */) {\n                        this.onBoxUpdated.dispatch(this, object);\n                    }\n                    else if (object.type === 3 /* POINT */) {\n                        this.onPointUpdated.dispatch(this, object);\n                    }\n                }\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterGroup.prototype.updateLines = function () {\n            for (var i = this._lineSteppersCount - 1; i >= 0; i--) {\n                var lineStepper = this._lineSteppers[i];\n                var line = lineStepper.line;\n                var key;\n                while ((key = lineStepper.step(this._time)) !== null) {\n                    switch (line.type) {\n                        case Spriter.eTimelineType.SOUND_LINE:\n                            //console.log(\"sound: \" + line.name + \" - key: \" + key.id + \", time: \" + key.time);\n                            this.onSound.dispatch(this, line.name);\n                            break;\n                        case Spriter.eTimelineType.EVENT_LINE:\n                            //console.log(\"event: \" + line.name + \" - key: \" + key.id + \", time: \" + key.time);\n                            this.onEvent.dispatch(this, line.name);\n                            break;\n                        case Spriter.eTimelineType.TAG_LINE:\n                            var tagsOn = key.tagsOn;\n                            var tagChanges = this._tags ^ tagsOn;\n                            this._tags = tagsOn;\n                            // go through all changes\n                            for (var j = 0; j < this._spriter.tagsLength; j++) {\n                                var mask = 1 << j;\n                                if (tagChanges & mask) {\n                                    //console.log(\"tag change: \" + this._spriter.getTagById(j).name + \" value: \" + ((tagsOn & mask) > 0) + \" - key: \" + key.id + \", time: \" + key.time);\n                                    this.onTagChange.dispatch(this, this._spriter.getTagById(j).name, (tagsOn & mask) > 0);\n                                }\n                            }\n                            break;\n                        case Spriter.eTimelineType.VAR_LINE:\n                            var newVal = key.value;\n                            var variable = this._vars[line.varDefId];\n                            variable.value = newVal;\n                            //console.log(\"var set: \" + variable.name + \" value: \" + variable.value + \" - key: \" + key.id + \", time: \" + key.time);\n                            this.onVariableSet.dispatch(this, variable);\n                            break;\n                    }\n                    lineStepper.lastTime = key.time;\n                }\n            }\n        };\n        return SpriterGroup;\n    }(Phaser.Group));\n    Spriter.SpriterGroup = SpriterGroup;\n})(Spriter || (Spriter = {}));\n/// <reference path=\"SpriterBone.ts\" />\nvar Spriter;\n(function (Spriter) {\n    var SpriterObject = (function (_super) {\n        __extends(SpriterObject, _super);\n        // -------------------------------------------------------------------------\n        function SpriterObject(parent, sprite) {\n            _super.call(this);\n            this._spriter = parent.spriter;\n            this._charMapStack = parent.charMapStack;\n            this._sprite = sprite;\n        }\n        Object.defineProperty(SpriterObject.prototype, \"sprite\", {\n            // -------------------------------------------------------------------------\n            get: function () {\n                return this._sprite;\n            },\n            enumerable: true,\n            configurable: true\n        });\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.setOn = function (on, hideSprite) {\n            if (hideSprite === void 0) { hideSprite = false; }\n            _super.prototype.setOn.call(this, on);\n            // hide sprite for non-sprite objects\n            this._sprite.exists = on && !hideSprite;\n            this._sprite.visible = (on && !this._hide && !hideSprite);\n        };\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.setKey = function (entity, animation, timelineId, keyId) {\n            _super.prototype.setKey.call(this, entity, animation, timelineId, keyId);\n            // set sprite - skip invisible objects - boxes, points\n            if (this.type === 0 /* SPRITE */) {\n                var spriteKey = this.key;\n                var file = this._spriter.getFolderById(spriteKey.folder).getFileById(spriteKey.file);\n                this._file = file;\n                this.setFile(file);\n            }\n            else {\n                this._file = null;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.resetFile = function () {\n            if (this.type === 0 /* SPRITE */) {\n                this.setFile(this._file);\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.setFile = function (file) {\n            file = this._charMapStack.getFile(file);\n            if (file !== null) {\n                this._hide = false;\n                this._sprite.frameName = file.name;\n            }\n            else {\n                this._hide = true;\n                this._sprite.visible = false;\n            }\n        };\n        // -------------------------------------------------------------------------\n        SpriterObject.prototype.updateSprite = function () {\n            var t = this.transformed;\n            var s = this.sprite;\n            s.position.set(t.x, t.y);\n            s.scale.set(t.scaleX, t.scaleY);\n            s.anchor.set(t.pivotX, t.pivotY);\n            s.alpha = t.alpha;\n            s.angle = t.angle;\n        };\n        return SpriterObject;\n    }(Spriter.SpriterBone));\n    Spriter.SpriterObject = SpriterObject;\n})(Spriter || (Spriter = {}));\n//# sourceMappingURL=spriter.js.map"
 
 /***/ }),
-/* 347 */
+/* 350 */
 /*!************************************!*\
   !*** ./src/states/Lobby/Splash.js ***!
   \************************************/
@@ -13438,7 +14191,7 @@ var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-var _utils = __webpack_require__(/*! ../../utils */ 94);
+var _utils = __webpack_require__(/*! ../../utils */ 95);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13482,7 +14235,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 348 */
+/* 351 */
 /*!**********************************!*\
   !*** ./src/states/Lobby/Game.js ***!
   \**********************************/
@@ -13503,11 +14256,11 @@ var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-var _Hud = __webpack_require__(/*! ../../sprites/Hud */ 93);
+var _Hud = __webpack_require__(/*! ../../sprites/Hud */ 94);
 
 var _Hud2 = _interopRequireDefault(_Hud);
 
-var _PlayerActor = __webpack_require__(/*! ../../engine/PlayerActor */ 92);
+var _PlayerActor = __webpack_require__(/*! ../../engine/PlayerActor */ 93);
 
 var _PlayerActor2 = _interopRequireDefault(_PlayerActor);
 
@@ -13634,7 +14387,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 349 */
+/* 352 */
 /*!**************************************!*\
   !*** ./src/states/Selector/Index.js ***!
   \**************************************/
@@ -13650,15 +14403,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Selector = undefined;
 
-var _Boot = __webpack_require__(/*! ./Boot */ 350);
+var _Boot = __webpack_require__(/*! ./Boot */ 353);
 
 var _Boot2 = _interopRequireDefault(_Boot);
 
-var _Splash = __webpack_require__(/*! ./Splash */ 351);
+var _Splash = __webpack_require__(/*! ./Splash */ 354);
 
 var _Splash2 = _interopRequireDefault(_Splash);
 
-var _Game = __webpack_require__(/*! ./Game */ 352);
+var _Game = __webpack_require__(/*! ./Game */ 355);
 
 var _Game2 = _interopRequireDefault(_Game);
 
@@ -13667,7 +14420,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Selector = exports.Selector = { BootState: _Boot2.default, SplashState: _Splash2.default, GameState: _Game2.default };
 
 /***/ }),
-/* 350 */
+/* 353 */
 /*!*************************************!*\
   !*** ./src/states/Selector/Boot.js ***!
   \*************************************/
@@ -13761,7 +14514,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 351 */
+/* 354 */
 /*!***************************************!*\
   !*** ./src/states/Selector/Splash.js ***!
   \***************************************/
@@ -13782,7 +14535,7 @@ var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-var _utils = __webpack_require__(/*! ../../utils */ 94);
+var _utils = __webpack_require__(/*! ../../utils */ 95);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13826,7 +14579,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 352 */
+/* 355 */
 /*!*************************************!*\
   !*** ./src/states/Selector/Game.js ***!
   \*************************************/
@@ -13847,9 +14600,9 @@ var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-__webpack_require__(/*! ../../plugins/slick-ui/src/Core */ 353);
+__webpack_require__(/*! ../../plugins/slick-ui/src/Core */ 356);
 
-var _phaserScrollable = __webpack_require__(/*! ../../plugins/phaser-scrollable */ 372);
+var _phaserScrollable = __webpack_require__(/*! ../../plugins/phaser-scrollable */ 375);
 
 var _phaserScrollable2 = _interopRequireDefault(_phaserScrollable);
 
@@ -13945,7 +14698,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 353 */
+/* 356 */
 /*!******************************************!*\
   !*** ./src/plugins/slick-ui/src/Core.js ***!
   \******************************************/
@@ -13956,44 +14709,44 @@ exports.default = _class;
 "use strict";
 
 
-__webpack_require__(/*! ./Plugin */ 354);
+__webpack_require__(/*! ./Plugin */ 357);
 
-__webpack_require__(/*! ./Container/Container */ 355);
+__webpack_require__(/*! ./Container/Container */ 358);
 
-__webpack_require__(/*! ./Element/Button */ 356);
+__webpack_require__(/*! ./Element/Button */ 359);
 
-__webpack_require__(/*! ./Element/Checkbox */ 357);
+__webpack_require__(/*! ./Element/Checkbox */ 360);
 
-__webpack_require__(/*! ./Element/DisplayObject */ 358);
+__webpack_require__(/*! ./Element/DisplayObject */ 361);
 
-__webpack_require__(/*! ./Element/Panel */ 359);
+__webpack_require__(/*! ./Element/Panel */ 362);
 
-__webpack_require__(/*! ./Element/Slider */ 360);
+__webpack_require__(/*! ./Element/Slider */ 363);
 
-__webpack_require__(/*! ./Element/Text */ 361);
+__webpack_require__(/*! ./Element/Text */ 364);
 
-__webpack_require__(/*! ./Element/TextField */ 362);
+__webpack_require__(/*! ./Element/TextField */ 365);
 
-__webpack_require__(/*! ./Keyboard/Key */ 363);
+__webpack_require__(/*! ./Keyboard/Key */ 366);
 
-__webpack_require__(/*! ./Keyboard/Keyboard */ 364);
+__webpack_require__(/*! ./Keyboard/Keyboard */ 367);
 
-__webpack_require__(/*! ./Element/Renderer/ButtonRenderer */ 365);
+__webpack_require__(/*! ./Element/Renderer/ButtonRenderer */ 368);
 
-__webpack_require__(/*! ./Element/Renderer/CheckboxRenderer */ 366);
+__webpack_require__(/*! ./Element/Renderer/CheckboxRenderer */ 369);
 
-__webpack_require__(/*! ./Element/Renderer/KeyRenderer */ 367);
+__webpack_require__(/*! ./Element/Renderer/KeyRenderer */ 370);
 
-__webpack_require__(/*! ./Element/Renderer/KeyboardRenderer */ 368);
+__webpack_require__(/*! ./Element/Renderer/KeyboardRenderer */ 371);
 
-__webpack_require__(/*! ./Element/Renderer/PanelRenderer */ 369);
+__webpack_require__(/*! ./Element/Renderer/PanelRenderer */ 372);
 
-__webpack_require__(/*! ./Element/Renderer/SliderRenderer */ 370);
+__webpack_require__(/*! ./Element/Renderer/SliderRenderer */ 373);
 
-__webpack_require__(/*! ./Element/Renderer/TextFieldRenderer */ 371);
+__webpack_require__(/*! ./Element/Renderer/TextFieldRenderer */ 374);
 
 /***/ }),
-/* 354 */
+/* 357 */
 /*!********************************************!*\
   !*** ./src/plugins/slick-ui/src/Plugin.js ***!
   \********************************************/
@@ -14111,7 +14864,7 @@ Phaser.Plugin.SlickUI.prototype.getRenderer = function (name) {
 };
 
 /***/ }),
-/* 355 */
+/* 358 */
 /*!*********************************************************!*\
   !*** ./src/plugins/slick-ui/src/Container/Container.js ***!
   \*********************************************************/
@@ -14223,7 +14976,7 @@ SlickUI.Container.Container.prototype.destroy = function () {
 };
 
 /***/ }),
-/* 356 */
+/* 359 */
 /*!****************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Button.js ***!
   \****************************************************/
@@ -14415,7 +15168,7 @@ Object.defineProperty(SlickUI.Element.Button.prototype, 'height', {
 });
 
 /***/ }),
-/* 357 */
+/* 360 */
 /*!******************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Checkbox.js ***!
   \******************************************************/
@@ -14602,7 +15355,7 @@ Object.defineProperty(SlickUI.Element.Checkbox.prototype, 'height', {
 });
 
 /***/ }),
-/* 358 */
+/* 361 */
 /*!***********************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/DisplayObject.js ***!
   \***********************************************************/
@@ -14791,7 +15544,7 @@ Object.defineProperty(SlickUI.Element.DisplayObject.prototype, 'height', {
 });
 
 /***/ }),
-/* 359 */
+/* 362 */
 /*!***************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Panel.js ***!
   \***************************************************/
@@ -14970,7 +15723,7 @@ Object.defineProperty(SlickUI.Element.Panel.prototype, 'height', {
 });
 
 /***/ }),
-/* 360 */
+/* 363 */
 /*!****************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Slider.js ***!
   \****************************************************/
@@ -15146,7 +15899,7 @@ Object.defineProperty(SlickUI.Element.Slider.prototype, 'visible', {
 });
 
 /***/ }),
-/* 361 */
+/* 364 */
 /*!**************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Text.js ***!
   \**************************************************/
@@ -15341,7 +16094,7 @@ Object.defineProperty(SlickUI.Element.Text.prototype, 'value', {
 });
 
 /***/ }),
-/* 362 */
+/* 365 */
 /*!*******************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/TextField.js ***!
   \*******************************************************/
@@ -15575,7 +16328,7 @@ Object.defineProperty(SlickUI.Element.TextField.prototype, 'height', {
 });
 
 /***/ }),
-/* 363 */
+/* 366 */
 /*!**************************************************!*\
   !*** ./src/plugins/slick-ui/src/Keyboard/Key.js ***!
   \**************************************************/
@@ -15648,7 +16401,7 @@ SlickUI.Keyboard.Key.prototype.init = function () {
 };
 
 /***/ }),
-/* 364 */
+/* 367 */
 /*!*******************************************************!*\
   !*** ./src/plugins/slick-ui/src/Keyboard/Keyboard.js ***!
   \*******************************************************/
@@ -15827,7 +16580,7 @@ SlickUI.Keyboard.Keyboard.prototype.toggleMode = function () {
 };
 
 /***/ }),
-/* 365 */
+/* 368 */
 /*!*********************************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Renderer/ButtonRenderer.js ***!
   \*********************************************************************/
@@ -15885,7 +16638,7 @@ SlickUI.Element.Renderer.ButtonRenderer.prototype.render = function (width, heig
 };
 
 /***/ }),
-/* 366 */
+/* 369 */
 /*!***********************************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Renderer/CheckboxRenderer.js ***!
   \***********************************************************************/
@@ -15921,7 +16674,7 @@ SlickUI.Element.Renderer.CheckboxRenderer.prototype.render = function (key) {
 };
 
 /***/ }),
-/* 367 */
+/* 370 */
 /*!******************************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Renderer/KeyRenderer.js ***!
   \******************************************************************/
@@ -15969,7 +16722,7 @@ SlickUI.Element.Renderer.KeyRenderer.prototype.render = function (width, height)
 };
 
 /***/ }),
-/* 368 */
+/* 371 */
 /*!***********************************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Renderer/KeyboardRenderer.js ***!
   \***********************************************************************/
@@ -16012,7 +16765,7 @@ SlickUI.Element.Renderer.KeyboardRenderer.prototype.render = function (height) {
 };
 
 /***/ }),
-/* 369 */
+/* 372 */
 /*!********************************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Renderer/PanelRenderer.js ***!
   \********************************************************************/
@@ -16064,7 +16817,7 @@ SlickUI.Element.Renderer.PanelRenderer.prototype.render = function (width, heigh
 };
 
 /***/ }),
-/* 370 */
+/* 373 */
 /*!*********************************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Renderer/SliderRenderer.js ***!
   \*********************************************************************/
@@ -16116,7 +16869,7 @@ SlickUI.Element.Renderer.SliderRenderer.prototype.render = function (size, verti
 };
 
 /***/ }),
-/* 371 */
+/* 374 */
 /*!************************************************************************!*\
   !*** ./src/plugins/slick-ui/src/Element/Renderer/TextFieldRenderer.js ***!
   \************************************************************************/
@@ -16167,7 +16920,7 @@ SlickUI.Element.Renderer.TextFieldRenderer.prototype.render = function (width, h
 };
 
 /***/ }),
-/* 372 */
+/* 375 */
 /*!******************************************!*\
   !*** ./src/plugins/phaser-scrollable.js ***!
   \******************************************/
@@ -16600,7 +17353,7 @@ var ScrollableArea = function (_Phaser$Group) {
 exports.default = ScrollableArea;
 
 /***/ }),
-/* 373 */
+/* 376 */
 /*!***************************************!*\
   !*** ./src/states/TestStage/Index.js ***!
   \***************************************/
@@ -16616,15 +17369,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.TestStage = undefined;
 
-var _Boot = __webpack_require__(/*! ./Boot */ 374);
+var _Boot = __webpack_require__(/*! ./Boot */ 377);
 
 var _Boot2 = _interopRequireDefault(_Boot);
 
-var _Splash = __webpack_require__(/*! ./Splash */ 375);
+var _Splash = __webpack_require__(/*! ./Splash */ 378);
 
 var _Splash2 = _interopRequireDefault(_Splash);
 
-var _Game = __webpack_require__(/*! ./Game */ 376);
+var _Game = __webpack_require__(/*! ./Game */ 379);
 
 var _Game2 = _interopRequireDefault(_Game);
 
@@ -16633,7 +17386,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var TestStage = exports.TestStage = { BootState: _Boot2.default, SplashState: _Splash2.default, GameState: _Game2.default };
 
 /***/ }),
-/* 374 */
+/* 377 */
 /*!**************************************!*\
   !*** ./src/states/TestStage/Boot.js ***!
   \**************************************/
@@ -16730,7 +17483,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 375 */
+/* 378 */
 /*!****************************************!*\
   !*** ./src/states/TestStage/Splash.js ***!
   \****************************************/
@@ -16751,7 +17504,7 @@ var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-var _utils = __webpack_require__(/*! ../../utils */ 94);
+var _utils = __webpack_require__(/*! ../../utils */ 95);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -16795,7 +17548,7 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 376 */
+/* 379 */
 /*!**************************************!*\
   !*** ./src/states/TestStage/Game.js ***!
   \**************************************/
@@ -16816,15 +17569,15 @@ var _phaser = __webpack_require__(/*! phaser */ 18);
 
 var _phaser2 = _interopRequireDefault(_phaser);
 
-var _PlayerActor = __webpack_require__(/*! ../../engine/PlayerActor */ 92);
+var _PlayerActor = __webpack_require__(/*! ../../engine/PlayerActor */ 93);
 
 var _PlayerActor2 = _interopRequireDefault(_PlayerActor);
 
-var _Actor = __webpack_require__(/*! ../../engine/Actor */ 382);
+var _Actor = __webpack_require__(/*! ../../engine/Actor */ 131);
 
 var _Actor2 = _interopRequireDefault(_Actor);
 
-var _Hud = __webpack_require__(/*! ../../sprites/Hud */ 93);
+var _Hud = __webpack_require__(/*! ../../sprites/Hud */ 94);
 
 var _Hud2 = _interopRequireDefault(_Hud);
 
@@ -16922,15 +17675,6 @@ var _class = function (_Phaser$State) {
         spawnX: 200,
         spawnY: 600
       });
-
-      this.game.pncPlugin.addActor(room, {
-        spriterData: spriterData,
-        textureKey: "playerAtlas",
-        isSmall: true,
-        spawnX: 200,
-        spawnY: 600,
-        type: _Actor2.default
-      });
     }
   }, {
     key: "update",
@@ -16952,7 +17696,20 @@ var _class = function (_Phaser$State) {
 exports.default = _class;
 
 /***/ }),
-/* 377 */
+/* 380 */
+/*!****************************************************!*\
+  !*** ./node_modules/pubnub/dist/web/pubnub.min.js ***!
+  \****************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,t){ true?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.PubNub=t():e.PubNub=t()}(this,function(){return function(e){function t(r){if(n[r])return n[r].exports;var i=n[r]={exports:{},id:r,loaded:!1};return e[r].call(i.exports,i,i.exports,t),i.loaded=!0,i.exports}var n={};return t.m=e,t.c=n,t.p="",t(0)}([function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function s(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function o(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}function a(e){if(!navigator||!navigator.sendBeacon)return!1;navigator.sendBeacon(e)}Object.defineProperty(t,"__esModule",{value:!0});var u=n(1),c=r(u),l=n(39),h=r(l),f=n(40),d=r(f),p=n(41),g=(n(5),function(e){function t(e){i(this,t);var n=e.listenToBrowserNetworkEvents,r=void 0===n||n;e.db=d.default,e.sdkFamily="Web",e.networking=new h.default({del:p.del,get:p.get,post:p.post,sendBeacon:a});var o=s(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e));return r&&(window.addEventListener("offline",function(){o.networkDownDetected()}),window.addEventListener("online",function(){o.networkUpDetected()})),o}return o(t,e),t}(c.default));t.default=g,e.exports=t.default},function(e,t,n){"use strict";function r(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&(t[n]=e[n]);return t.default=e,t}function i(e){return e&&e.__esModule?e:{default:e}}function s(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(t,"__esModule",{value:!0});var o=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),a=n(2),u=i(a),c=n(6),l=i(c),h=n(8),f=i(h),d=n(9),p=i(d),g=n(16),y=i(g),b=n(17),v=r(b),_=n(18),m=r(_),k=n(19),P=r(k),S=n(20),O=r(S),w=n(21),T=r(w),M=n(22),C=r(M),E=n(23),N=r(E),x=n(24),R=r(x),A=n(25),K=r(A),D=n(26),j=r(D),U=n(27),G=r(U),I=n(28),B=r(I),H=n(29),L=r(H),F=n(30),q=r(F),z=n(31),X=r(z),W=n(32),J=r(W),V=n(33),$=r(V),Q=n(34),Y=r(Q),Z=n(35),ee=r(Z),te=n(36),ne=r(te),re=n(37),ie=r(re),se=n(12),oe=r(se),ae=n(38),ue=r(ae),ce=n(13),le=i(ce),he=n(10),fe=i(he),de=(n(5),n(3)),pe=i(de),ge=function(){function e(t){var n=this;s(this,e);var r=t.db,i=t.networking,o=this._config=new u.default({setup:t,db:r}),a=new l.default({config:o});i.init(o);var c={config:o,networking:i,crypto:a},h=y.default.bind(this,c,oe),d=y.default.bind(this,c,j),g=y.default.bind(this,c,B),b=y.default.bind(this,c,q),_=y.default.bind(this,c,ue),k=this._listenerManager=new p.default,S=new f.default({timeEndpoint:h,leaveEndpoint:d,heartbeatEndpoint:g,setStateEndpoint:b,subscribeEndpoint:_,crypto:c.crypto,config:c.config,listenerManager:k});this.addListener=k.addListener.bind(k),this.removeListener=k.removeListener.bind(k),this.removeAllListeners=k.removeAllListeners.bind(k),this.channelGroups={listGroups:y.default.bind(this,c,O),listChannels:y.default.bind(this,c,T),addChannels:y.default.bind(this,c,v),removeChannels:y.default.bind(this,c,m),deleteGroup:y.default.bind(this,c,P)},this.push={addChannels:y.default.bind(this,c,C),removeChannels:y.default.bind(this,c,N),deleteDevice:y.default.bind(this,c,K),listChannels:y.default.bind(this,c,R)},this.hereNow=y.default.bind(this,c,X),this.whereNow=y.default.bind(this,c,G),this.getState=y.default.bind(this,c,L),this.setState=S.adaptStateChange.bind(S),this.grant=y.default.bind(this,c,$),this.audit=y.default.bind(this,c,J),this.publish=y.default.bind(this,c,Y),this.fire=function(e,t){return e.replicate=!1,e.storeInHistory=!1,n.publish(e,t)},this.history=y.default.bind(this,c,ee),this.deleteMessages=y.default.bind(this,c,ne),this.fetchMessages=y.default.bind(this,c,ie),this.time=h,this.subscribe=S.adaptSubscribeChange.bind(S),this.unsubscribe=S.adaptUnsubscribeChange.bind(S),this.disconnect=S.disconnect.bind(S),this.reconnect=S.reconnect.bind(S),this.destroy=function(e){S.unsubscribeAll(e),S.disconnect()},this.stop=this.destroy,this.unsubscribeAll=S.unsubscribeAll.bind(S),this.getSubscribedChannels=S.getSubscribedChannels.bind(S),this.getSubscribedChannelGroups=S.getSubscribedChannelGroups.bind(S),this.encrypt=a.encrypt.bind(a),this.decrypt=a.decrypt.bind(a),this.getAuthKey=c.config.getAuthKey.bind(c.config),this.setAuthKey=c.config.setAuthKey.bind(c.config),this.setCipherKey=c.config.setCipherKey.bind(c.config),this.getUUID=c.config.getUUID.bind(c.config),this.setUUID=c.config.setUUID.bind(c.config),this.getFilterExpression=c.config.getFilterExpression.bind(c.config),this.setFilterExpression=c.config.setFilterExpression.bind(c.config),this.setHeartbeatInterval=c.config.setHeartbeatInterval.bind(c.config)}return o(e,[{key:"getVersion",value:function(){return this._config.getVersion()}},{key:"networkDownDetected",value:function(){this._listenerManager.announceNetworkDown(),this._config.restore?this.disconnect():this.destroy(!0)}},{key:"networkUpDetected",value:function(){this._listenerManager.announceNetworkUp(),this.reconnect()}}],[{key:"generateUUID",value:function(){return pe.default.createUUID()}}]),e}();ge.OPERATIONS=le.default,ge.CATEGORIES=fe.default,t.default=ge,e.exports=t.default},function(e,t,n){"use strict";function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(t,"__esModule",{value:!0});var i=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),s=n(3),o=function(e){return e&&e.__esModule?e:{default:e}}(s),a=(n(5),function(){function e(t){var n=t.setup,i=t.db;r(this,e),this._db=i,this.instanceId="pn-"+o.default.createUUID(),this.secretKey=n.secretKey||n.secret_key,this.subscribeKey=n.subscribeKey||n.subscribe_key,this.publishKey=n.publishKey||n.publish_key,this.sdkName=n.sdkName,this.sdkFamily=n.sdkFamily,this.partnerId=n.partnerId,this.setAuthKey(n.authKey),this.setCipherKey(n.cipherKey),this.setFilterExpression(n.filterExpression),this.origin=n.origin||"pubsub.pndsn.com",this.secure=n.ssl||!1,this.restore=n.restore||!1,this.proxy=n.proxy,this.keepAlive=n.keepAlive,this.keepAliveSettings=n.keepAliveSettings,this.autoNetworkDetection=n.autoNetworkDetection||!1,this.dedupeOnSubscribe=n.dedupeOnSubscribe||!1,this.maximumCacheSize=n.maximumCacheSize||100,this.customEncrypt=n.customEncrypt,this.customDecrypt=n.customDecrypt,"undefined"!=typeof location&&"https:"===location.protocol&&(this.secure=!0),this.logVerbosity=n.logVerbosity||!1,this.suppressLeaveEvents=n.suppressLeaveEvents||!1,this.announceFailedHeartbeats=n.announceFailedHeartbeats||!0,this.announceSuccessfulHeartbeats=n.announceSuccessfulHeartbeats||!1,this.useInstanceId=n.useInstanceId||!1,this.useRequestId=n.useRequestId||!1,this.requestMessageCountThreshold=n.requestMessageCountThreshold,this.setTransactionTimeout(n.transactionalRequestTimeout||15e3),this.setSubscribeTimeout(n.subscribeRequestTimeout||31e4),this.setSendBeaconConfig(n.useSendBeacon||!0),this.setPresenceTimeout(n.presenceTimeout||300),null!=n.heartbeatInterval&&this.setHeartbeatInterval(n.heartbeatInterval),this.setUUID(this._decideUUID(n.uuid))}return i(e,[{key:"getAuthKey",value:function(){return this.authKey}},{key:"setAuthKey",value:function(e){return this.authKey=e,this}},{key:"setCipherKey",value:function(e){return this.cipherKey=e,this}},{key:"getUUID",value:function(){return this.UUID}},{key:"setUUID",value:function(e){return this._db&&this._db.set&&this._db.set(this.subscribeKey+"uuid",e),this.UUID=e,this}},{key:"getFilterExpression",value:function(){return this.filterExpression}},{key:"setFilterExpression",value:function(e){return this.filterExpression=e,this}},{key:"getPresenceTimeout",value:function(){return this._presenceTimeout}},{key:"setPresenceTimeout",value:function(e){return this._presenceTimeout=e,this.setHeartbeatInterval(this._presenceTimeout/2-1),this}},{key:"getHeartbeatInterval",value:function(){return this._heartbeatInterval}},{key:"setHeartbeatInterval",value:function(e){return this._heartbeatInterval=e,this}},{key:"getSubscribeTimeout",value:function(){return this._subscribeRequestTimeout}},{key:"setSubscribeTimeout",value:function(e){return this._subscribeRequestTimeout=e,this}},{key:"getTransactionTimeout",value:function(){return this._transactionalRequestTimeout}},{key:"setTransactionTimeout",value:function(e){return this._transactionalRequestTimeout=e,this}},{key:"isSendBeaconEnabled",value:function(){return this._useSendBeacon}},{key:"setSendBeaconConfig",value:function(e){return this._useSendBeacon=e,this}},{key:"getVersion",value:function(){return"4.19.0"}},{key:"_decideUUID",value:function(e){return e||(this._db&&this._db.get&&this._db.get(this.subscribeKey+"uuid")?this._db.get(this.subscribeKey+"uuid"):"pn-"+o.default.createUUID())}}]),e}());t.default=a,e.exports=t.default},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n(4),i=function(e){return e&&e.__esModule?e:{default:e}}(r);t.default={createUUID:function(){return i.default.uuid?i.default.uuid():(0,i.default)()}},e.exports=t.default},function(e,t,n){var r,i,s;!function(n,o){i=[t],r=o,void 0!==(s="function"==typeof r?r.apply(t,i):r)&&(e.exports=s)}(0,function(e){function t(){var e,t,n="";for(e=0;e<32;e++)t=16*Math.random()|0,8!==e&&12!==e&&16!==e&&20!==e||(n+="-"),n+=(12===e?4:16===e?3&t|8:t).toString(16);return n}function n(e,t){var n=r[t||"all"];return n&&n.test(e)||!1}var r={3:/^[0-9A-F]{8}-[0-9A-F]{4}-3[0-9A-F]{3}-[0-9A-F]{4}-[0-9A-F]{12}$/i,4:/^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i,5:/^[0-9A-F]{8}-[0-9A-F]{4}-5[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i,all:/^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$/i};t.isUUID=n,t.VERSION="0.1.0",e.uuid=t,e.isUUID=n})},function(e,t){"use strict";e.exports={}},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(t,"__esModule",{value:!0});var s=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),o=n(2),a=(r(o),n(7)),u=r(a),c=function(){function e(t){var n=t.config;i(this,e),this._config=n,this._iv="0123456789012345",this._allowedKeyEncodings=["hex","utf8","base64","binary"],this._allowedKeyLengths=[128,256],this._allowedModes=["ecb","cbc"],this._defaultOptions={encryptKey:!0,keyEncoding:"utf8",keyLength:256,mode:"cbc"}}return s(e,[{key:"HMACSHA256",value:function(e){return u.default.HmacSHA256(e,this._config.secretKey).toString(u.default.enc.Base64)}},{key:"SHA256",value:function(e){return u.default.SHA256(e).toString(u.default.enc.Hex)}},{key:"_parseOptions",value:function(e){var t=e||{};return t.hasOwnProperty("encryptKey")||(t.encryptKey=this._defaultOptions.encryptKey),t.hasOwnProperty("keyEncoding")||(t.keyEncoding=this._defaultOptions.keyEncoding),t.hasOwnProperty("keyLength")||(t.keyLength=this._defaultOptions.keyLength),t.hasOwnProperty("mode")||(t.mode=this._defaultOptions.mode),-1===this._allowedKeyEncodings.indexOf(t.keyEncoding.toLowerCase())&&(t.keyEncoding=this._defaultOptions.keyEncoding),-1===this._allowedKeyLengths.indexOf(parseInt(t.keyLength,10))&&(t.keyLength=this._defaultOptions.keyLength),-1===this._allowedModes.indexOf(t.mode.toLowerCase())&&(t.mode=this._defaultOptions.mode),t}},{key:"_decodeKey",value:function(e,t){return"base64"===t.keyEncoding?u.default.enc.Base64.parse(e):"hex"===t.keyEncoding?u.default.enc.Hex.parse(e):e}},{key:"_getPaddedKey",value:function(e,t){return e=this._decodeKey(e,t),t.encryptKey?u.default.enc.Utf8.parse(this.SHA256(e).slice(0,32)):e}},{key:"_getMode",value:function(e){return"ecb"===e.mode?u.default.mode.ECB:u.default.mode.CBC}},{key:"_getIV",value:function(e){return"cbc"===e.mode?u.default.enc.Utf8.parse(this._iv):null}},{key:"encrypt",value:function(e,t,n){return this._config.customEncrypt?this._config.customEncrypt(e):this.pnEncrypt(e,t,n)}},{key:"decrypt",value:function(e,t,n){return this._config.customDecrypt?this._config.customDecrypt(e):this.pnDecrypt(e,t,n)}},{key:"pnEncrypt",value:function(e,t,n){if(!t&&!this._config.cipherKey)return e;n=this._parseOptions(n);var r=this._getIV(n),i=this._getMode(n),s=this._getPaddedKey(t||this._config.cipherKey,n);return u.default.AES.encrypt(e,s,{iv:r,mode:i}).ciphertext.toString(u.default.enc.Base64)||e}},{key:"pnDecrypt",value:function(e,t,n){if(!t&&!this._config.cipherKey)return e;n=this._parseOptions(n);var r=this._getIV(n),i=this._getMode(n),s=this._getPaddedKey(t||this._config.cipherKey,n);try{var o=u.default.enc.Base64.parse(e),a=u.default.AES.decrypt({ciphertext:o},s,{iv:r,mode:i}).toString(u.default.enc.Utf8);return JSON.parse(a)}catch(e){return null}}}]),e}();t.default=c,e.exports=t.default},function(e,t){"use strict";var n=n||function(e,t){var n={},r=n.lib={},i=function(){},s=r.Base={extend:function(e){i.prototype=this;var t=new i;return e&&t.mixIn(e),t.hasOwnProperty("init")||(t.init=function(){t.$super.init.apply(this,arguments)}),t.init.prototype=t,t.$super=this,t},create:function(){var e=this.extend();return e.init.apply(e,arguments),e},init:function(){},mixIn:function(e){for(var t in e)e.hasOwnProperty(t)&&(this[t]=e[t]);e.hasOwnProperty("toString")&&(this.toString=e.toString)},clone:function(){return this.init.prototype.extend(this)}},o=r.WordArray=s.extend({init:function(e,t){e=this.words=e||[],this.sigBytes=void 0!=t?t:4*e.length},toString:function(e){return(e||u).stringify(this)},concat:function(e){var t=this.words,n=e.words,r=this.sigBytes;if(e=e.sigBytes,this.clamp(),r%4)for(var i=0;i<e;i++)t[r+i>>>2]|=(n[i>>>2]>>>24-i%4*8&255)<<24-(r+i)%4*8;else if(65535<n.length)for(i=0;i<e;i+=4)t[r+i>>>2]=n[i>>>2];else t.push.apply(t,n);return this.sigBytes+=e,this},clamp:function(){var t=this.words,n=this.sigBytes;t[n>>>2]&=4294967295<<32-n%4*8,t.length=e.ceil(n/4)},clone:function(){var e=s.clone.call(this);return e.words=this.words.slice(0),e},random:function(t){for(var n=[],r=0;r<t;r+=4)n.push(4294967296*e.random()|0);return new o.init(n,t)}}),a=n.enc={},u=a.Hex={stringify:function(e){var t=e.words;e=e.sigBytes;for(var n=[],r=0;r<e;r++){var i=t[r>>>2]>>>24-r%4*8&255;n.push((i>>>4).toString(16)),n.push((15&i).toString(16))}return n.join("")},parse:function(e){for(var t=e.length,n=[],r=0;r<t;r+=2)n[r>>>3]|=parseInt(e.substr(r,2),16)<<24-r%8*4;return new o.init(n,t/2)}},c=a.Latin1={stringify:function(e){var t=e.words;e=e.sigBytes;for(var n=[],r=0;r<e;r++)n.push(String.fromCharCode(t[r>>>2]>>>24-r%4*8&255));return n.join("")},parse:function(e){for(var t=e.length,n=[],r=0;r<t;r++)n[r>>>2]|=(255&e.charCodeAt(r))<<24-r%4*8;return new o.init(n,t)}},l=a.Utf8={stringify:function(e){try{return decodeURIComponent(escape(c.stringify(e)))}catch(e){throw Error("Malformed UTF-8 data")}},parse:function(e){return c.parse(unescape(encodeURIComponent(e)))}},h=r.BufferedBlockAlgorithm=s.extend({reset:function(){this._data=new o.init,this._nDataBytes=0},_append:function(e){"string"==typeof e&&(e=l.parse(e)),this._data.concat(e),this._nDataBytes+=e.sigBytes},_process:function(t){var n=this._data,r=n.words,i=n.sigBytes,s=this.blockSize,a=i/(4*s),a=t?e.ceil(a):e.max((0|a)-this._minBufferSize,0);if(t=a*s,i=e.min(4*t,i),t){for(var u=0;u<t;u+=s)this._doProcessBlock(r,u);u=r.splice(0,t),n.sigBytes-=i}return new o.init(u,i)},clone:function(){var e=s.clone.call(this);return e._data=this._data.clone(),e},_minBufferSize:0});r.Hasher=h.extend({cfg:s.extend(),init:function(e){this.cfg=this.cfg.extend(e),this.reset()},reset:function(){h.reset.call(this),this._doReset()},update:function(e){return this._append(e),this._process(),this},finalize:function(e){return e&&this._append(e),this._doFinalize()},blockSize:16,_createHelper:function(e){return function(t,n){return new e.init(n).finalize(t)}},_createHmacHelper:function(e){return function(t,n){return new f.HMAC.init(e,n).finalize(t)}}});var f=n.algo={};return n}(Math);!function(e){for(var t=n,r=t.lib,i=r.WordArray,s=r.Hasher,r=t.algo,o=[],a=[],u=function(e){return 4294967296*(e-(0|e))|0},c=2,l=0;64>l;){var h;e:{h=c;for(var f=e.sqrt(h),d=2;d<=f;d++)if(!(h%d)){h=!1;break e}h=!0}h&&(8>l&&(o[l]=u(e.pow(c,.5))),a[l]=u(e.pow(c,1/3)),l++),c++}var p=[],r=r.SHA256=s.extend({_doReset:function(){this._hash=new i.init(o.slice(0))},_doProcessBlock:function(e,t){for(var n=this._hash.words,r=n[0],i=n[1],s=n[2],o=n[3],u=n[4],c=n[5],l=n[6],h=n[7],f=0;64>f;f++){if(16>f)p[f]=0|e[t+f];else{var d=p[f-15],g=p[f-2];p[f]=((d<<25|d>>>7)^(d<<14|d>>>18)^d>>>3)+p[f-7]+((g<<15|g>>>17)^(g<<13|g>>>19)^g>>>10)+p[f-16]}d=h+((u<<26|u>>>6)^(u<<21|u>>>11)^(u<<7|u>>>25))+(u&c^~u&l)+a[f]+p[f],g=((r<<30|r>>>2)^(r<<19|r>>>13)^(r<<10|r>>>22))+(r&i^r&s^i&s),h=l,l=c,c=u,u=o+d|0,o=s,s=i,i=r,r=d+g|0}n[0]=n[0]+r|0,n[1]=n[1]+i|0,n[2]=n[2]+s|0,n[3]=n[3]+o|0,n[4]=n[4]+u|0,n[5]=n[5]+c|0,n[6]=n[6]+l|0,n[7]=n[7]+h|0},_doFinalize:function(){var t=this._data,n=t.words,r=8*this._nDataBytes,i=8*t.sigBytes;return n[i>>>5]|=128<<24-i%32,n[14+(i+64>>>9<<4)]=e.floor(r/4294967296),n[15+(i+64>>>9<<4)]=r,t.sigBytes=4*n.length,this._process(),this._hash},clone:function(){var e=s.clone.call(this);return e._hash=this._hash.clone(),e}});t.SHA256=s._createHelper(r),t.HmacSHA256=s._createHmacHelper(r)}(Math),function(){var e=n,t=e.enc.Utf8;e.algo.HMAC=e.lib.Base.extend({init:function(e,n){e=this._hasher=new e.init,"string"==typeof n&&(n=t.parse(n));var r=e.blockSize,i=4*r;n.sigBytes>i&&(n=e.finalize(n)),n.clamp();for(var s=this._oKey=n.clone(),o=this._iKey=n.clone(),a=s.words,u=o.words,c=0;c<r;c++)a[c]^=1549556828,u[c]^=909522486;s.sigBytes=o.sigBytes=i,this.reset()},reset:function(){var e=this._hasher;e.reset(),e.update(this._iKey)},update:function(e){return this._hasher.update(e),this},finalize:function(e){var t=this._hasher;return e=t.finalize(e),t.reset(),t.finalize(this._oKey.clone().concat(e))}})}(),function(){var e=n,t=e.lib.WordArray;e.enc.Base64={stringify:function(e){var t=e.words,n=e.sigBytes,r=this._map;e.clamp(),e=[];for(var i=0;i<n;i+=3)for(var s=(t[i>>>2]>>>24-i%4*8&255)<<16|(t[i+1>>>2]>>>24-(i+1)%4*8&255)<<8|t[i+2>>>2]>>>24-(i+2)%4*8&255,o=0;4>o&&i+.75*o<n;o++)e.push(r.charAt(s>>>6*(3-o)&63));if(t=r.charAt(64))for(;e.length%4;)e.push(t);return e.join("")},parse:function(e){var n=e.length,r=this._map,i=r.charAt(64);i&&-1!=(i=e.indexOf(i))&&(n=i);for(var i=[],s=0,o=0;o<n;o++)if(o%4){var a=r.indexOf(e.charAt(o-1))<<o%4*2,u=r.indexOf(e.charAt(o))>>>6-o%4*2;i[s>>>2]|=(a|u)<<24-s%4*8,s++}return t.create(i,s)},_map:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="}}(),function(e){function t(e,t,n,r,i,s,o){return((e=e+(t&n|~t&r)+i+o)<<s|e>>>32-s)+t}function r(e,t,n,r,i,s,o){return((e=e+(t&r|n&~r)+i+o)<<s|e>>>32-s)+t}function i(e,t,n,r,i,s,o){return((e=e+(t^n^r)+i+o)<<s|e>>>32-s)+t}function s(e,t,n,r,i,s,o){return((e=e+(n^(t|~r))+i+o)<<s|e>>>32-s)+t}for(var o=n,a=o.lib,u=a.WordArray,c=a.Hasher,a=o.algo,l=[],h=0;64>h;h++)l[h]=4294967296*e.abs(e.sin(h+1))|0;a=a.MD5=c.extend({_doReset:function(){this._hash=new u.init([1732584193,4023233417,2562383102,271733878])},_doProcessBlock:function(e,n){for(var o=0;16>o;o++){var a=n+o,u=e[a];e[a]=16711935&(u<<8|u>>>24)|4278255360&(u<<24|u>>>8)}var o=this._hash.words,a=e[n+0],u=e[n+1],c=e[n+2],h=e[n+3],f=e[n+4],d=e[n+5],p=e[n+6],g=e[n+7],y=e[n+8],b=e[n+9],v=e[n+10],_=e[n+11],m=e[n+12],k=e[n+13],P=e[n+14],S=e[n+15],O=o[0],w=o[1],T=o[2],M=o[3],O=t(O,w,T,M,a,7,l[0]),M=t(M,O,w,T,u,12,l[1]),T=t(T,M,O,w,c,17,l[2]),w=t(w,T,M,O,h,22,l[3]),O=t(O,w,T,M,f,7,l[4]),M=t(M,O,w,T,d,12,l[5]),T=t(T,M,O,w,p,17,l[6]),w=t(w,T,M,O,g,22,l[7]),O=t(O,w,T,M,y,7,l[8]),M=t(M,O,w,T,b,12,l[9]),T=t(T,M,O,w,v,17,l[10]),w=t(w,T,M,O,_,22,l[11]),O=t(O,w,T,M,m,7,l[12]),M=t(M,O,w,T,k,12,l[13]),T=t(T,M,O,w,P,17,l[14]),w=t(w,T,M,O,S,22,l[15]),O=r(O,w,T,M,u,5,l[16]),M=r(M,O,w,T,p,9,l[17]),T=r(T,M,O,w,_,14,l[18]),w=r(w,T,M,O,a,20,l[19]),O=r(O,w,T,M,d,5,l[20]),M=r(M,O,w,T,v,9,l[21]),T=r(T,M,O,w,S,14,l[22]),w=r(w,T,M,O,f,20,l[23]),O=r(O,w,T,M,b,5,l[24]),M=r(M,O,w,T,P,9,l[25]),T=r(T,M,O,w,h,14,l[26]),w=r(w,T,M,O,y,20,l[27]),O=r(O,w,T,M,k,5,l[28]),M=r(M,O,w,T,c,9,l[29]),T=r(T,M,O,w,g,14,l[30]),w=r(w,T,M,O,m,20,l[31]),O=i(O,w,T,M,d,4,l[32]),M=i(M,O,w,T,y,11,l[33]),T=i(T,M,O,w,_,16,l[34]),w=i(w,T,M,O,P,23,l[35]),O=i(O,w,T,M,u,4,l[36]),M=i(M,O,w,T,f,11,l[37]),T=i(T,M,O,w,g,16,l[38]),w=i(w,T,M,O,v,23,l[39]),O=i(O,w,T,M,k,4,l[40]),M=i(M,O,w,T,a,11,l[41]),T=i(T,M,O,w,h,16,l[42]),w=i(w,T,M,O,p,23,l[43]),O=i(O,w,T,M,b,4,l[44]),M=i(M,O,w,T,m,11,l[45]),T=i(T,M,O,w,S,16,l[46]),w=i(w,T,M,O,c,23,l[47]),O=s(O,w,T,M,a,6,l[48]),M=s(M,O,w,T,g,10,l[49]),T=s(T,M,O,w,P,15,l[50]),w=s(w,T,M,O,d,21,l[51]),O=s(O,w,T,M,m,6,l[52]),M=s(M,O,w,T,h,10,l[53]),T=s(T,M,O,w,v,15,l[54]),w=s(w,T,M,O,u,21,l[55]),O=s(O,w,T,M,y,6,l[56]),M=s(M,O,w,T,S,10,l[57]),T=s(T,M,O,w,p,15,l[58]),w=s(w,T,M,O,k,21,l[59]),O=s(O,w,T,M,f,6,l[60]),M=s(M,O,w,T,_,10,l[61]),T=s(T,M,O,w,c,15,l[62]),w=s(w,T,M,O,b,21,l[63]);o[0]=o[0]+O|0,o[1]=o[1]+w|0,o[2]=o[2]+T|0,o[3]=o[3]+M|0},_doFinalize:function(){var t=this._data,n=t.words,r=8*this._nDataBytes,i=8*t.sigBytes;n[i>>>5]|=128<<24-i%32;var s=e.floor(r/4294967296);for(n[15+(i+64>>>9<<4)]=16711935&(s<<8|s>>>24)|4278255360&(s<<24|s>>>8),n[14+(i+64>>>9<<4)]=16711935&(r<<8|r>>>24)|4278255360&(r<<24|r>>>8),t.sigBytes=4*(n.length+1),this._process(),t=this._hash,n=t.words,r=0;4>r;r++)i=n[r],n[r]=16711935&(i<<8|i>>>24)|4278255360&(i<<24|i>>>8);return t},clone:function(){var e=c.clone.call(this);return e._hash=this._hash.clone(),e}}),o.MD5=c._createHelper(a),o.HmacMD5=c._createHmacHelper(a)}(Math),function(){var e=n,t=e.lib,r=t.Base,i=t.WordArray,t=e.algo,s=t.EvpKDF=r.extend({cfg:r.extend({keySize:4,hasher:t.MD5,iterations:1}),init:function(e){this.cfg=this.cfg.extend(e)},compute:function(e,t){for(var n=this.cfg,r=n.hasher.create(),s=i.create(),o=s.words,a=n.keySize,n=n.iterations;o.length<a;){u&&r.update(u);var u=r.update(e).finalize(t);r.reset();for(var c=1;c<n;c++)u=r.finalize(u),r.reset();s.concat(u)}return s.sigBytes=4*a,s}});e.EvpKDF=function(e,t,n){return s.create(n).compute(e,t)}}(),n.lib.Cipher||function(e){var t=n,r=t.lib,i=r.Base,s=r.WordArray,o=r.BufferedBlockAlgorithm,a=t.enc.Base64,u=t.algo.EvpKDF,c=r.Cipher=o.extend({cfg:i.extend(),createEncryptor:function(e,t){return this.create(this._ENC_XFORM_MODE,e,t)},createDecryptor:function(e,t){return this.create(this._DEC_XFORM_MODE,e,t)},init:function(e,t,n){this.cfg=this.cfg.extend(n),this._xformMode=e,this._key=t,this.reset()},reset:function(){o.reset.call(this),this._doReset()},process:function(e){return this._append(e),this._process()},finalize:function(e){return e&&this._append(e),this._doFinalize()},keySize:4,ivSize:4,_ENC_XFORM_MODE:1,_DEC_XFORM_MODE:2,_createHelper:function(e){return{encrypt:function(t,n,r){return("string"==typeof n?g:p).encrypt(e,t,n,r)},decrypt:function(t,n,r){return("string"==typeof n?g:p).decrypt(e,t,n,r)}}}});r.StreamCipher=c.extend({_doFinalize:function(){return this._process(!0)},blockSize:1});var l=t.mode={},h=function(e,t,n){var r=this._iv;r?this._iv=void 0:r=this._prevBlock;for(var i=0;i<n;i++)e[t+i]^=r[i]},f=(r.BlockCipherMode=i.extend({createEncryptor:function(e,t){return this.Encryptor.create(e,t)},createDecryptor:function(e,t){return this.Decryptor.create(e,t)},init:function(e,t){this._cipher=e,this._iv=t}})).extend();f.Encryptor=f.extend({processBlock:function(e,t){var n=this._cipher,r=n.blockSize;h.call(this,e,t,r),n.encryptBlock(e,t),this._prevBlock=e.slice(t,t+r)}}),f.Decryptor=f.extend({processBlock:function(e,t){var n=this._cipher,r=n.blockSize,i=e.slice(t,t+r);n.decryptBlock(e,t),h.call(this,e,t,r),this._prevBlock=i}}),l=l.CBC=f,f=(t.pad={}).Pkcs7={pad:function(e,t){for(var n=4*t,n=n-e.sigBytes%n,r=n<<24|n<<16|n<<8|n,i=[],o=0;o<n;o+=4)i.push(r);n=s.create(i,n),e.concat(n)},unpad:function(e){e.sigBytes-=255&e.words[e.sigBytes-1>>>2]}},r.BlockCipher=c.extend({cfg:c.cfg.extend({mode:l,padding:f}),reset:function(){c.reset.call(this);var e=this.cfg,t=e.iv,e=e.mode;if(this._xformMode==this._ENC_XFORM_MODE)var n=e.createEncryptor;else n=e.createDecryptor,this._minBufferSize=1;this._mode=n.call(e,this,t&&t.words)},_doProcessBlock:function(e,t){this._mode.processBlock(e,t)},_doFinalize:function(){var e=this.cfg.padding;if(this._xformMode==this._ENC_XFORM_MODE){e.pad(this._data,this.blockSize);var t=this._process(!0)}else t=this._process(!0),e.unpad(t);return t},blockSize:4});var d=r.CipherParams=i.extend({init:function(e){this.mixIn(e)},toString:function(e){return(e||this.formatter).stringify(this)}}),l=(t.format={}).OpenSSL={stringify:function(e){var t=e.ciphertext;return e=e.salt,(e?s.create([1398893684,1701076831]).concat(e).concat(t):t).toString(a)},parse:function(e){e=a.parse(e);var t=e.words;if(1398893684==t[0]&&1701076831==t[1]){var n=s.create(t.slice(2,4));t.splice(0,4),e.sigBytes-=16}return d.create({ciphertext:e,salt:n})}},p=r.SerializableCipher=i.extend({cfg:i.extend({format:l}),encrypt:function(e,t,n,r){r=this.cfg.extend(r);var i=e.createEncryptor(n,r);return t=i.finalize(t),i=i.cfg,d.create({ciphertext:t,key:n,iv:i.iv,algorithm:e,mode:i.mode,padding:i.padding,blockSize:e.blockSize,formatter:r.format})},decrypt:function(e,t,n,r){return r=this.cfg.extend(r),t=this._parse(t,r.format),e.createDecryptor(n,r).finalize(t.ciphertext)},_parse:function(e,t){return"string"==typeof e?t.parse(e,this):e}}),t=(t.kdf={}).OpenSSL={execute:function(e,t,n,r){return r||(r=s.random(8)),e=u.create({keySize:t+n}).compute(e,r),n=s.create(e.words.slice(t),4*n),e.sigBytes=4*t,d.create({key:e,iv:n,salt:r})}},g=r.PasswordBasedCipher=p.extend({cfg:p.cfg.extend({kdf:t}),encrypt:function(e,t,n,r){return r=this.cfg.extend(r),n=r.kdf.execute(n,e.keySize,e.ivSize),r.iv=n.iv,e=p.encrypt.call(this,e,t,n.key,r),e.mixIn(n),e},decrypt:function(e,t,n,r){return r=this.cfg.extend(r),t=this._parse(t,r.format),n=r.kdf.execute(n,e.keySize,e.ivSize,t.salt),r.iv=n.iv,p.decrypt.call(this,e,t,n.key,r)}})}(),function(){for(var e=n,t=e.lib.BlockCipher,r=e.algo,i=[],s=[],o=[],a=[],u=[],c=[],l=[],h=[],f=[],d=[],p=[],g=0;256>g;g++)p[g]=128>g?g<<1:g<<1^283;for(var y=0,b=0,g=0;256>g;g++){var v=b^b<<1^b<<2^b<<3^b<<4,v=v>>>8^255&v^99;i[y]=v,s[v]=y;var _=p[y],m=p[_],k=p[m],P=257*p[v]^16843008*v;o[y]=P<<24|P>>>8,a[y]=P<<16|P>>>16,u[y]=P<<8|P>>>24,c[y]=P,P=16843009*k^65537*m^257*_^16843008*y,l[v]=P<<24|P>>>8,h[v]=P<<16|P>>>16,f[v]=P<<8|P>>>24,d[v]=P,y?(y=_^p[p[p[k^_]]],b^=p[p[b]]):y=b=1}var S=[0,1,2,4,8,16,32,64,128,27,54],r=r.AES=t.extend({_doReset:function(){for(var e=this._key,t=e.words,n=e.sigBytes/4,e=4*((this._nRounds=n+6)+1),r=this._keySchedule=[],s=0;s<e;s++)if(s<n)r[s]=t[s];else{var o=r[s-1];s%n?6<n&&4==s%n&&(o=i[o>>>24]<<24|i[o>>>16&255]<<16|i[o>>>8&255]<<8|i[255&o]):(o=o<<8|o>>>24,o=i[o>>>24]<<24|i[o>>>16&255]<<16|i[o>>>8&255]<<8|i[255&o],o^=S[s/n|0]<<24),r[s]=r[s-n]^o}for(t=this._invKeySchedule=[],n=0;n<e;n++)s=e-n,o=n%4?r[s]:r[s-4],t[n]=4>n||4>=s?o:l[i[o>>>24]]^h[i[o>>>16&255]]^f[i[o>>>8&255]]^d[i[255&o]]},encryptBlock:function(e,t){this._doCryptBlock(e,t,this._keySchedule,o,a,u,c,i)},decryptBlock:function(e,t){var n=e[t+1];e[t+1]=e[t+3],e[t+3]=n,this._doCryptBlock(e,t,this._invKeySchedule,l,h,f,d,s),n=e[t+1],e[t+1]=e[t+3],e[t+3]=n},_doCryptBlock:function(e,t,n,r,i,s,o,a){for(var u=this._nRounds,c=e[t]^n[0],l=e[t+1]^n[1],h=e[t+2]^n[2],f=e[t+3]^n[3],d=4,p=1;p<u;p++)var g=r[c>>>24]^i[l>>>16&255]^s[h>>>8&255]^o[255&f]^n[d++],y=r[l>>>24]^i[h>>>16&255]^s[f>>>8&255]^o[255&c]^n[d++],b=r[h>>>24]^i[f>>>16&255]^s[c>>>8&255]^o[255&l]^n[d++],f=r[f>>>24]^i[c>>>16&255]^s[l>>>8&255]^o[255&h]^n[d++],c=g,l=y,h=b;g=(a[c>>>24]<<24|a[l>>>16&255]<<16|a[h>>>8&255]<<8|a[255&f])^n[d++],y=(a[l>>>24]<<24|a[h>>>16&255]<<16|a[f>>>8&255]<<8|a[255&c])^n[d++],b=(a[h>>>24]<<24|a[f>>>16&255]<<16|a[c>>>8&255]<<8|a[255&l])^n[d++],f=(a[f>>>24]<<24|a[c>>>16&255]<<16|a[l>>>8&255]<<8|a[255&h])^n[d++],e[t]=g,e[t+1]=y,e[t+2]=b,e[t+3]=f},keySize:8});e.AES=t._createHelper(r)}(),n.mode.ECB=function(){var e=n.lib.BlockCipherMode.extend();return e.Encryptor=e.extend({processBlock:function(e,t){this._cipher.encryptBlock(e,t)}}),e.Decryptor=e.extend({processBlock:function(e,t){this._cipher.decryptBlock(e,t)}}),e}(),e.exports=n},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(t,"__esModule",{value:!0});var s=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),o=n(6),a=(r(o),n(2)),u=(r(a),n(9)),c=(r(u),n(11)),l=r(c),h=n(14),f=r(h),d=n(15),p=r(d),g=(n(5),n(10)),y=r(g),b=function(){function e(t){var n=t.subscribeEndpoint,r=t.leaveEndpoint,s=t.heartbeatEndpoint,o=t.setStateEndpoint,a=t.timeEndpoint,u=t.config,c=t.crypto,h=t.listenerManager;i(this,e),this._listenerManager=h,this._config=u,this._leaveEndpoint=r,this._heartbeatEndpoint=s,this._setStateEndpoint=o,this._subscribeEndpoint=n,this._crypto=c,this._channels={},this._presenceChannels={},this._channelGroups={},this._presenceChannelGroups={},this._pendingChannelSubscriptions=[],this._pendingChannelGroupSubscriptions=[],this._currentTimetoken=0,this._lastTimetoken=0,this._storedTimetoken=null,this._subscriptionStatusAnnounced=!1,this._isOnline=!0,this._reconnectionManager=new l.default({timeEndpoint:a}),this._dedupingManager=new f.default({config:u})}return s(e,[{key:"adaptStateChange",value:function(e,t){var n=this,r=e.state,i=e.channels,s=void 0===i?[]:i,o=e.channelGroups,a=void 0===o?[]:o;return s.forEach(function(e){e in n._channels&&(n._channels[e].state=r)}),a.forEach(function(e){e in n._channelGroups&&(n._channelGroups[e].state=r)}),this._setStateEndpoint({state:r,channels:s,channelGroups:a},t)}},{key:"adaptSubscribeChange",value:function(e){var t=this,n=e.timetoken,r=e.channels,i=void 0===r?[]:r,s=e.channelGroups,o=void 0===s?[]:s,a=e.withPresence,u=void 0!==a&&a;if(!this._config.subscribeKey||""===this._config.subscribeKey)return void(console&&console.log&&console.log("subscribe key missing; aborting subscribe"));n&&(this._lastTimetoken=this._currentTimetoken,this._currentTimetoken=n),"0"!==this._currentTimetoken&&(this._storedTimetoken=this._currentTimetoken,this._currentTimetoken=0),i.forEach(function(e){t._channels[e]={state:{}},u&&(t._presenceChannels[e]={}),t._pendingChannelSubscriptions.push(e)}),o.forEach(function(e){t._channelGroups[e]={state:{}},u&&(t._presenceChannelGroups[e]={}),t._pendingChannelGroupSubscriptions.push(e)}),this._subscriptionStatusAnnounced=!1,this.reconnect()}},{key:"adaptUnsubscribeChange",value:function(e,t){var n=this,r=e.channels,i=void 0===r?[]:r,s=e.channelGroups,o=void 0===s?[]:s,a=[],u=[];i.forEach(function(e){e in n._channels&&(delete n._channels[e],a.push(e)),e in n._presenceChannels&&(delete n._presenceChannels[e],a.push(e))}),o.forEach(function(e){e in n._channelGroups&&(delete n._channelGroups[e],u.push(e)),e in n._presenceChannelGroups&&(delete n._channelGroups[e],u.push(e))}),
+0===a.length&&0===u.length||(!1!==this._config.suppressLeaveEvents||t||this._leaveEndpoint({channels:a,channelGroups:u},function(e){e.affectedChannels=a,e.affectedChannelGroups=u,e.currentTimetoken=n._currentTimetoken,e.lastTimetoken=n._lastTimetoken,n._listenerManager.announceStatus(e)}),0===Object.keys(this._channels).length&&0===Object.keys(this._presenceChannels).length&&0===Object.keys(this._channelGroups).length&&0===Object.keys(this._presenceChannelGroups).length&&(this._lastTimetoken=0,this._currentTimetoken=0,this._storedTimetoken=null,this._region=null,this._reconnectionManager.stopPolling()),this.reconnect())}},{key:"unsubscribeAll",value:function(e){this.adaptUnsubscribeChange({channels:this.getSubscribedChannels(),channelGroups:this.getSubscribedChannelGroups()},e)}},{key:"getSubscribedChannels",value:function(){return Object.keys(this._channels)}},{key:"getSubscribedChannelGroups",value:function(){return Object.keys(this._channelGroups)}},{key:"reconnect",value:function(){this._startSubscribeLoop(),this._registerHeartbeatTimer()}},{key:"disconnect",value:function(){this._stopSubscribeLoop(),this._stopHeartbeatTimer(),this._reconnectionManager.stopPolling()}},{key:"_registerHeartbeatTimer",value:function(){this._stopHeartbeatTimer(),0!==this._config.getHeartbeatInterval()&&(this._performHeartbeatLoop(),this._heartbeatTimer=setInterval(this._performHeartbeatLoop.bind(this),1e3*this._config.getHeartbeatInterval()))}},{key:"_stopHeartbeatTimer",value:function(){this._heartbeatTimer&&(clearInterval(this._heartbeatTimer),this._heartbeatTimer=null)}},{key:"_performHeartbeatLoop",value:function(){var e=this,t=Object.keys(this._channels),n=Object.keys(this._channelGroups),r={};if(0!==t.length||0!==n.length){t.forEach(function(t){var n=e._channels[t].state;Object.keys(n).length&&(r[t]=n)}),n.forEach(function(t){var n=e._channelGroups[t].state;Object.keys(n).length&&(r[t]=n)});var i=function(t){t.error&&e._config.announceFailedHeartbeats&&e._listenerManager.announceStatus(t),t.error&&e._config.autoNetworkDetection&&e._isOnline&&(e._isOnline=!1,e.disconnect(),e._listenerManager.announceNetworkDown(),e.reconnect()),!t.error&&e._config.announceSuccessfulHeartbeats&&e._listenerManager.announceStatus(t)};this._heartbeatEndpoint({channels:t,channelGroups:n,state:r},i.bind(this))}}},{key:"_startSubscribeLoop",value:function(){this._stopSubscribeLoop();var e=[],t=[];if(Object.keys(this._channels).forEach(function(t){return e.push(t)}),Object.keys(this._presenceChannels).forEach(function(t){return e.push(t+"-pnpres")}),Object.keys(this._channelGroups).forEach(function(e){return t.push(e)}),Object.keys(this._presenceChannelGroups).forEach(function(e){return t.push(e+"-pnpres")}),0!==e.length||0!==t.length){var n={channels:e,channelGroups:t,timetoken:this._currentTimetoken,filterExpression:this._config.filterExpression,region:this._region};this._subscribeCall=this._subscribeEndpoint(n,this._processSubscribeResponse.bind(this))}}},{key:"_processSubscribeResponse",value:function(e,t){var n=this;if(e.error)return void(e.category===y.default.PNTimeoutCategory?this._startSubscribeLoop():e.category===y.default.PNNetworkIssuesCategory?(this.disconnect(),e.error&&this._config.autoNetworkDetection&&this._isOnline&&(this._isOnline=!1,this._listenerManager.announceNetworkDown()),this._reconnectionManager.onReconnection(function(){n._config.autoNetworkDetection&&!n._isOnline&&(n._isOnline=!0,n._listenerManager.announceNetworkUp()),n.reconnect(),n._subscriptionStatusAnnounced=!0;var t={category:y.default.PNReconnectedCategory,operation:e.operation,lastTimetoken:n._lastTimetoken,currentTimetoken:n._currentTimetoken};n._listenerManager.announceStatus(t)}),this._reconnectionManager.startPolling(),this._listenerManager.announceStatus(e)):e.category===y.default.PNBadRequestCategory?(this._stopHeartbeatTimer(),this._listenerManager.announceStatus(e)):this._listenerManager.announceStatus(e));if(this._storedTimetoken?(this._currentTimetoken=this._storedTimetoken,this._storedTimetoken=null):(this._lastTimetoken=this._currentTimetoken,this._currentTimetoken=t.metadata.timetoken),!this._subscriptionStatusAnnounced){var r={};r.category=y.default.PNConnectedCategory,r.operation=e.operation,r.affectedChannels=this._pendingChannelSubscriptions,r.subscribedChannels=this.getSubscribedChannels(),r.affectedChannelGroups=this._pendingChannelGroupSubscriptions,r.lastTimetoken=this._lastTimetoken,r.currentTimetoken=this._currentTimetoken,this._subscriptionStatusAnnounced=!0,this._listenerManager.announceStatus(r),this._pendingChannelSubscriptions=[],this._pendingChannelGroupSubscriptions=[]}var i=t.messages||[],s=this._config,o=s.requestMessageCountThreshold,a=s.dedupeOnSubscribe;if(o&&i.length>=o){var u={};u.category=y.default.PNRequestMessageCountExceededCategory,u.operation=e.operation,this._listenerManager.announceStatus(u)}i.forEach(function(e){var t=e.channel,r=e.subscriptionMatch,i=e.publishMetaData;if(t===r&&(r=null),a){if(n._dedupingManager.isDuplicate(e))return;n._dedupingManager.addEntry(e)}if(p.default.endsWith(e.channel,"-pnpres")){var s={};s.channel=null,s.subscription=null,s.actualChannel=null!=r?t:null,s.subscribedChannel=null!=r?r:t,t&&(s.channel=t.substring(0,t.lastIndexOf("-pnpres"))),r&&(s.subscription=r.substring(0,r.lastIndexOf("-pnpres"))),s.action=e.payload.action,s.state=e.payload.data,s.timetoken=i.publishTimetoken,s.occupancy=e.payload.occupancy,s.uuid=e.payload.uuid,s.timestamp=e.payload.timestamp,e.payload.join&&(s.join=e.payload.join),e.payload.leave&&(s.leave=e.payload.leave),e.payload.timeout&&(s.timeout=e.payload.timeout),n._listenerManager.announcePresence(s)}else{var o={};o.channel=null,o.subscription=null,o.actualChannel=null!=r?t:null,o.subscribedChannel=null!=r?r:t,o.channel=t,o.subscription=r,o.timetoken=i.publishTimetoken,o.publisher=e.issuingClientId,e.userMetadata&&(o.userMetadata=e.userMetadata),n._config.cipherKey?o.message=n._crypto.decrypt(e.payload):o.message=e.payload,n._listenerManager.announceMessage(o)}}),this._region=t.metadata.region,this._startSubscribeLoop()}},{key:"_stopSubscribeLoop",value:function(){this._subscribeCall&&("function"==typeof this._subscribeCall.abort&&this._subscribeCall.abort(),this._subscribeCall=null)}}]),e}();t.default=b,e.exports=t.default},function(e,t,n){"use strict";function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(t,"__esModule",{value:!0});var i=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),s=(n(5),n(10)),o=function(e){return e&&e.__esModule?e:{default:e}}(s),a=function(){function e(){r(this,e),this._listeners=[]}return i(e,[{key:"addListener",value:function(e){this._listeners.push(e)}},{key:"removeListener",value:function(e){var t=[];this._listeners.forEach(function(n){n!==e&&t.push(n)}),this._listeners=t}},{key:"removeAllListeners",value:function(){this._listeners=[]}},{key:"announcePresence",value:function(e){this._listeners.forEach(function(t){t.presence&&t.presence(e)})}},{key:"announceStatus",value:function(e){this._listeners.forEach(function(t){t.status&&t.status(e)})}},{key:"announceMessage",value:function(e){this._listeners.forEach(function(t){t.message&&t.message(e)})}},{key:"announceNetworkUp",value:function(){var e={};e.category=o.default.PNNetworkUpCategory,this.announceStatus(e)}},{key:"announceNetworkDown",value:function(){var e={};e.category=o.default.PNNetworkDownCategory,this.announceStatus(e)}}]),e}();t.default=a,e.exports=t.default},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={PNNetworkUpCategory:"PNNetworkUpCategory",PNNetworkDownCategory:"PNNetworkDownCategory",PNNetworkIssuesCategory:"PNNetworkIssuesCategory",PNTimeoutCategory:"PNTimeoutCategory",PNBadRequestCategory:"PNBadRequestCategory",PNAccessDeniedCategory:"PNAccessDeniedCategory",PNUnknownCategory:"PNUnknownCategory",PNReconnectedCategory:"PNReconnectedCategory",PNConnectedCategory:"PNConnectedCategory",PNRequestMessageCountExceededCategory:"PNRequestMessageCountExceededCategory"},e.exports=t.default},function(e,t,n){"use strict";function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(t,"__esModule",{value:!0});var i=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),s=n(12),o=(function(e){e&&e.__esModule}(s),n(5),function(){function e(t){var n=t.timeEndpoint;r(this,e),this._timeEndpoint=n}return i(e,[{key:"onReconnection",value:function(e){this._reconnectionCallback=e}},{key:"startPolling",value:function(){this._timeTimer=setInterval(this._performTimeLoop.bind(this),3e3)}},{key:"stopPolling",value:function(){clearInterval(this._timeTimer)}},{key:"_performTimeLoop",value:function(){var e=this;this._timeEndpoint(function(t){t.error||(clearInterval(e._timeTimer),e._reconnectionCallback())})}}]),e}());t.default=o,e.exports=t.default},function(e,t,n){"use strict";function r(){return h.default.PNTimeOperation}function i(){return"/time/0"}function s(e){return e.config.getTransactionTimeout()}function o(){return{}}function a(){return!1}function u(e,t){return{timetoken:t[0]}}function c(){}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=r,t.getURL=i,t.getRequestTimeout=s,t.prepareParams=o,t.isAuthSupported=a,t.handleResponse=u,t.validateParams=c;var l=(n(5),n(13)),h=function(e){return e&&e.__esModule?e:{default:e}}(l)},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={PNTimeOperation:"PNTimeOperation",PNHistoryOperation:"PNHistoryOperation",PNDeleteMessagesOperation:"PNDeleteMessagesOperation",PNFetchMessagesOperation:"PNFetchMessagesOperation",PNSubscribeOperation:"PNSubscribeOperation",PNUnsubscribeOperation:"PNUnsubscribeOperation",PNPublishOperation:"PNPublishOperation",PNPushNotificationEnabledChannelsOperation:"PNPushNotificationEnabledChannelsOperation",PNRemoveAllPushNotificationsOperation:"PNRemoveAllPushNotificationsOperation",PNWhereNowOperation:"PNWhereNowOperation",PNSetStateOperation:"PNSetStateOperation",PNHereNowOperation:"PNHereNowOperation",PNGetStateOperation:"PNGetStateOperation",PNHeartbeatOperation:"PNHeartbeatOperation",PNChannelGroupsOperation:"PNChannelGroupsOperation",PNRemoveGroupOperation:"PNRemoveGroupOperation",PNChannelsForGroupOperation:"PNChannelsForGroupOperation",PNAddChannelsToGroupOperation:"PNAddChannelsToGroupOperation",PNRemoveChannelsFromGroupOperation:"PNRemoveChannelsFromGroupOperation",PNAccessManagerGrant:"PNAccessManagerGrant",PNAccessManagerAudit:"PNAccessManagerAudit"},e.exports=t.default},function(e,t,n){"use strict";function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(t,"__esModule",{value:!0});var i=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),s=n(2),o=(function(e){e&&e.__esModule}(s),n(5),function(e){var t=0;if(0===e.length)return t;for(var n=0;n<e.length;n+=1){t=(t<<5)-t+e.charCodeAt(n),t&=t}return t}),a=function(){function e(t){var n=t.config;r(this,e),this.hashHistory=[],this._config=n}return i(e,[{key:"getKey",value:function(e){var t=o(JSON.stringify(e.payload)).toString();return e.publishMetaData.publishTimetoken+"-"+t}},{key:"isDuplicate",value:function(e){return this.hashHistory.includes(this.getKey(e))}},{key:"addEntry",value:function(e){this.hashHistory.length>=this._config.maximumCacheSize&&this.hashHistory.shift(),this.hashHistory.push(this.getKey(e))}},{key:"clearHistory",value:function(){this.hashHistory=[]}}]),e}();t.default=a,e.exports=t.default},function(e,t){"use strict";function n(e){var t=[];return Object.keys(e).forEach(function(e){return t.push(e)}),t}function r(e){return encodeURIComponent(e).replace(/[!~*'()]/g,function(e){return"%"+e.charCodeAt(0).toString(16).toUpperCase()})}function i(e){return n(e).sort()}function s(e){return i(e).map(function(t){return t+"="+r(e[t])}).join("&")}function o(e,t){return-1!==e.indexOf(t,this.length-t.length)}function a(){var e=void 0,t=void 0;return{promise:new Promise(function(n,r){e=n,t=r}),reject:t,fulfill:e}}e.exports={signPamFromParams:s,endsWith:o,createPromise:a,encodeString:r}},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function s(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function o(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}function a(e,t){return e.type=t,e.error=!0,e}function u(e){return a({message:e},"validationError")}function c(e,t,n){return e.usePost&&e.usePost(t,n)?e.postURL(t,n):e.getURL(t,n)}function l(e){if(e.sdkName)return e.sdkName;var t="PubNub-JS-"+e.sdkFamily;return e.partnerId&&(t+="-"+e.partnerId),t+="/"+e.getVersion()}function h(e,t,n){var r=e.config,i=e.crypto;n.timestamp=Math.floor((new Date).getTime()/1e3);var s=r.subscribeKey+"\n"+r.publishKey+"\n"+t+"\n";s+=g.default.signPamFromParams(n);var o=i.HMACSHA256(s);o=o.replace(/\+/g,"-"),o=o.replace(/\//g,"_"),n.signature=o}Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e,t){var n=e.networking,r=e.config,i=null,s=null,o={};t.getOperation()===v.default.PNTimeOperation||t.getOperation()===v.default.PNChannelGroupsOperation?i=arguments.length<=2?void 0:arguments[2]:(o=arguments.length<=2?void 0:arguments[2],i=arguments.length<=3?void 0:arguments[3]),"undefined"==typeof Promise||i||(s=g.default.createPromise());var a=t.validateParams(e,o);if(!a){var f=t.prepareParams(e,o),p=c(t,e,o),y=void 0,b={url:p,operation:t.getOperation(),timeout:t.getRequestTimeout(e)};f.uuid=r.UUID,f.pnsdk=l(r),r.useInstanceId&&(f.instanceid=r.instanceId),r.useRequestId&&(f.requestid=d.default.createUUID()),t.isAuthSupported()&&r.getAuthKey()&&(f.auth=r.getAuthKey()),r.secretKey&&h(e,p,f);var m=function(n,r){if(n.error)return void(i?i(n):s&&s.reject(new _("PubNub call failed, check status for details",n)));var a=t.handleResponse(e,r,o);i?i(n,a):s&&s.fulfill(a)};if(t.usePost&&t.usePost(e,o)){var k=t.postPayload(e,o);y=n.POST(f,k,b,m)}else y=t.useDelete&&t.useDelete()?n.DELETE(f,b,m):n.GET(f,b,m);return t.getOperation()===v.default.PNSubscribeOperation?y:s?s.promise:void 0}return i?i(u(a)):s?(s.reject(new _("Validation failed, check status for details",u(a))),s.promise):void 0};var f=n(3),d=r(f),p=(n(5),n(15)),g=r(p),y=n(2),b=(r(y),n(13)),v=r(b),_=function(e){function t(e,n){i(this,t);var r=s(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e));return r.name=r.constructor.name,r.status=n,r.message=e,r}return o(t,e),t}(Error);e.exports=t.default},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(){return f.default.PNAddChannelsToGroupOperation}function s(e,t){var n=t.channels,r=t.channelGroup,i=e.config;return r?n&&0!==n.length?i.subscribeKey?void 0:"Missing Subscribe Key":"Missing Channels":"Missing Channel Group"}function o(e,t){var n=t.channelGroup;return"/v1/channel-registration/sub-key/"+e.config.subscribeKey+"/channel-group/"+p.default.encodeString(n)}function a(e){return e.config.getTransactionTimeout()}function u(){return!0}function c(e,t){var n=t.channels;return{add:(void 0===n?[]:n).join(",")}}function l(){return{}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=i,t.validateParams=s,t.getURL=o,t.getRequestTimeout=a,t.isAuthSupported=u,t.prepareParams=c,t.handleResponse=l;var h=(n(5),n(13)),f=r(h),d=n(15),p=r(d)},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(){return f.default.PNRemoveChannelsFromGroupOperation}function s(e,t){var n=t.channels,r=t.channelGroup,i=e.config;return r?n&&0!==n.length?i.subscribeKey?void 0:"Missing Subscribe Key":"Missing Channels":"Missing Channel Group"}function o(e,t){var n=t.channelGroup;return"/v1/channel-registration/sub-key/"+e.config.subscribeKey+"/channel-group/"+p.default.encodeString(n)}function a(e){return e.config.getTransactionTimeout()}function u(){return!0}function c(e,t){var n=t.channels;return{remove:(void 0===n?[]:n).join(",")}}function l(){return{}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=i,t.validateParams=s,t.getURL=o,t.getRequestTimeout=a,t.isAuthSupported=u,t.prepareParams=c,t.handleResponse=l;var h=(n(5),n(13)),f=r(h),d=n(15),p=r(d)},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(){return f.default.PNRemoveGroupOperation}function s(e,t){var n=t.channelGroup,r=e.config;return n?r.subscribeKey?void 0:"Missing Subscribe Key":"Missing Channel Group"}function o(e,t){var n=t.channelGroup;return"/v1/channel-registration/sub-key/"+e.config.subscribeKey+"/channel-group/"+p.default.encodeString(n)+"/remove"}function a(){return!0}function u(e){return e.config.getTransactionTimeout()}function c(){return{}}function l(){return{}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=i,t.validateParams=s,t.getURL=o,t.isAuthSupported=a,t.getRequestTimeout=u,t.prepareParams=c,t.handleResponse=l;var h=(n(5),n(13)),f=r(h),d=n(15),p=r(d)},function(e,t,n){"use strict";function r(){return h.default.PNChannelGroupsOperation}function i(e){if(!e.config.subscribeKey)return"Missing Subscribe Key"}function s(e){return"/v1/channel-registration/sub-key/"+e.config.subscribeKey+"/channel-group"}function o(e){return e.config.getTransactionTimeout()}function a(){return!0}function u(){return{}}function c(e,t){return{groups:t.payload.groups}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=r,t.validateParams=i,t.getURL=s,t.getRequestTimeout=o,t.isAuthSupported=a,t.prepareParams=u,t.handleResponse=c;var l=(n(5),n(13)),h=function(e){return e&&e.__esModule?e:{default:e}}(l)},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(){return f.default.PNChannelsForGroupOperation}function s(e,t){var n=t.channelGroup,r=e.config;return n?r.subscribeKey?void 0:"Missing Subscribe Key":"Missing Channel Group"}function o(e,t){var n=t.channelGroup;return"/v1/channel-registration/sub-key/"+e.config.subscribeKey+"/channel-group/"+p.default.encodeString(n)}function a(e){return e.config.getTransactionTimeout()}function u(){return!0}function c(){return{}}function l(e,t){return{channels:t.payload.channels}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=i,t.validateParams=s,t.getURL=o,t.getRequestTimeout=a,t.isAuthSupported=u,t.prepareParams=c,t.handleResponse=l;var h=(n(5),n(13)),f=r(h),d=n(15),p=r(d)},function(e,t,n){"use strict";function r(){return h.default.PNPushNotificationEnabledChannelsOperation}function i(e,t){var n=t.device,r=t.pushGateway,i=t.channels,s=e.config;return n?r?i&&0!==i.length?s.subscribeKey?void 0:"Missing Subscribe Key":"Missing Channels":"Missing GW Type (pushGateway: gcm or apns)":"Missing Device ID (device)"}function s(e,t){var n=t.device;return"/v1/push/sub-key/"+e.config.subscribeKey+"/devices/"+n}function o(e){return e.config.getTransactionTimeout()}function a(){return!0}function u(e,t){var n=t.pushGateway,r=t.channels;return{type:n,add:(void 0===r?[]:r).join(",")}}function c(){return{}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=r,t.validateParams=i,t.getURL=s,t.getRequestTimeout=o,t.isAuthSupported=a,t.prepareParams=u,t.handleResponse=c;var l=(n(5),n(13)),h=function(e){return e&&e.__esModule?e:{default:e}}(l)},function(e,t,n){"use strict";function r(){return h.default.PNPushNotificationEnabledChannelsOperation}function i(e,t){var n=t.device,r=t.pushGateway,i=t.channels,s=e.config;return n?r?i&&0!==i.length?s.subscribeKey?void 0:"Missing Subscribe Key":"Missing Channels":"Missing GW Type (pushGateway: gcm or apns)":"Missing Device ID (device)"}function s(e,t){var n=t.device;return"/v1/push/sub-key/"+e.config.subscribeKey+"/devices/"+n}function o(e){return e.config.getTransactionTimeout()}function a(){return!0}function u(e,t){var n=t.pushGateway,r=t.channels;return{type:n,remove:(void 0===r?[]:r).join(",")}}function c(){return{}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=r,t.validateParams=i,t.getURL=s,t.getRequestTimeout=o,t.isAuthSupported=a,t.prepareParams=u,t.handleResponse=c;var l=(n(5),n(13)),h=function(e){return e&&e.__esModule?e:{default:e}}(l)},function(e,t,n){"use strict";function r(){return h.default.PNPushNotificationEnabledChannelsOperation}function i(e,t){var n=t.device,r=t.pushGateway,i=e.config;return n?r?i.subscribeKey?void 0:"Missing Subscribe Key":"Missing GW Type (pushGateway: gcm or apns)":"Missing Device ID (device)"}function s(e,t){var n=t.device;return"/v1/push/sub-key/"+e.config.subscribeKey+"/devices/"+n}function o(e){return e.config.getTransactionTimeout()}function a(){return!0}function u(e,t){return{type:t.pushGateway}}function c(e,t){return{channels:t}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=r,t.validateParams=i,t.getURL=s,t.getRequestTimeout=o,t.isAuthSupported=a,t.prepareParams=u,t.handleResponse=c;var l=(n(5),n(13)),h=function(e){return e&&e.__esModule?e:{default:e}}(l)},function(e,t,n){"use strict";function r(){return h.default.PNRemoveAllPushNotificationsOperation}function i(e,t){var n=t.device,r=t.pushGateway,i=e.config;return n?r?i.subscribeKey?void 0:"Missing Subscribe Key":"Missing GW Type (pushGateway: gcm or apns)":"Missing Device ID (device)"}function s(e,t){var n=t.device;return"/v1/push/sub-key/"+e.config.subscribeKey+"/devices/"+n+"/remove"}function o(e){return e.config.getTransactionTimeout()}function a(){return!0}function u(e,t){return{type:t.pushGateway}}function c(){return{}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=r,t.validateParams=i,t.getURL=s,t.getRequestTimeout=o,t.isAuthSupported=a,t.prepareParams=u,t.handleResponse=c;var l=(n(5),n(13)),h=function(e){return e&&e.__esModule?e:{default:e}}(l)},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(){return f.default.PNUnsubscribeOperation}function s(e){if(!e.config.subscribeKey)return"Missing Subscribe Key"}function o(e,t){var n=e.config,r=t.channels,i=void 0===r?[]:r,s=i.length>0?i.join(","):",";return"/v2/presence/sub-key/"+n.subscribeKey+"/channel/"+p.default.encodeString(s)+"/leave"}function a(e){return e.config.getTransactionTimeout()}function u(){return!0}function c(e,t){var n=t.channelGroups,r=void 0===n?[]:n,i={};return r.length>0&&(i["channel-group"]=r.join(",")),i}function l(){return{}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=i,t.validateParams=s,t.getURL=o,t.getRequestTimeout=a,t.isAuthSupported=u,t.prepareParams=c,t.handleResponse=l;var h=(n(5),n(13)),f=r(h),d=n(15),p=r(d)},function(e,t,n){"use strict";function r(){return h.default.PNWhereNowOperation}function i(e){if(!e.config.subscribeKey)return"Missing Subscribe Key"}function s(e,t){var n=e.config,r=t.uuid,i=void 0===r?n.UUID:r;return"/v2/presence/sub-key/"+n.subscribeKey+"/uuid/"+i}function o(e){return e.config.getTransactionTimeout()}function a(){return!0}function u(){return{}}function c(e,t){return t.payload?{channels:t.payload.channels}:{channels:[]}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=r,t.validateParams=i,t.getURL=s,t.getRequestTimeout=o,t.isAuthSupported=a,t.prepareParams=u,t.handleResponse=c;var l=(n(5),n(13)),h=function(e){return e&&e.__esModule?e:{default:e}}(l)},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(){return f.default.PNHeartbeatOperation}function s(e){if(!e.config.subscribeKey)return"Missing Subscribe Key"}function o(e,t){var n=e.config,r=t.channels,i=void 0===r?[]:r,s=i.length>0?i.join(","):",";return"/v2/presence/sub-key/"+n.subscribeKey+"/channel/"+p.default.encodeString(s)+"/heartbeat"}function a(){return!0}function u(e){return e.config.getTransactionTimeout()}function c(e,t){var n=t.channelGroups,r=void 0===n?[]:n,i=t.state,s=void 0===i?{}:i,o=e.config,a={};return r.length>0&&(a["channel-group"]=r.join(",")),a.state=JSON.stringify(s),a.heartbeat=o.getPresenceTimeout(),a}function l(){return{}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=i,t.validateParams=s,t.getURL=o,t.isAuthSupported=a,t.getRequestTimeout=u,t.prepareParams=c,t.handleResponse=l;var h=(n(5),n(13)),f=r(h),d=n(15),p=r(d)},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(){return f.default.PNGetStateOperation}function s(e){if(!e.config.subscribeKey)return"Missing Subscribe Key"}function o(e,t){var n=e.config,r=t.uuid,i=void 0===r?n.UUID:r,s=t.channels,o=void 0===s?[]:s,a=o.length>0?o.join(","):",";return"/v2/presence/sub-key/"+n.subscribeKey+"/channel/"+p.default.encodeString(a)+"/uuid/"+i}function a(e){return e.config.getTransactionTimeout()}function u(){return!0}function c(e,t){var n=t.channelGroups,r=void 0===n?[]:n,i={};return r.length>0&&(i["channel-group"]=r.join(",")),i}function l(e,t,n){var r=n.channels,i=void 0===r?[]:r,s=n.channelGroups,o=void 0===s?[]:s,a={};return 1===i.length&&0===o.length?a[i[0]]=t.payload:a=t.payload,{channels:a}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=i,t.validateParams=s,t.getURL=o,t.getRequestTimeout=a,t.isAuthSupported=u,t.prepareParams=c,t.handleResponse=l;var h=(n(5),n(13)),f=r(h),d=n(15),p=r(d)},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(){return f.default.PNSetStateOperation}function s(e,t){var n=e.config,r=t.state,i=t.channels,s=void 0===i?[]:i,o=t.channelGroups,a=void 0===o?[]:o;return r?n.subscribeKey?0===s.length&&0===a.length?"Please provide a list of channels and/or channel-groups":void 0:"Missing Subscribe Key":"Missing State"}function o(e,t){var n=e.config,r=t.channels,i=void 0===r?[]:r,s=i.length>0?i.join(","):",";return"/v2/presence/sub-key/"+n.subscribeKey+"/channel/"+p.default.encodeString(s)+"/uuid/"+n.UUID+"/data"}function a(e){return e.config.getTransactionTimeout()}function u(){return!0}function c(e,t){var n=t.state,r=t.channelGroups,i=void 0===r?[]:r,s={};return s.state=JSON.stringify(n),i.length>0&&(s["channel-group"]=i.join(",")),s}function l(e,t){return{state:t.payload}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=i,t.validateParams=s,t.getURL=o,t.getRequestTimeout=a,t.isAuthSupported=u,t.prepareParams=c,t.handleResponse=l;var h=(n(5),n(13)),f=r(h),d=n(15),p=r(d)},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(){return f.default.PNHereNowOperation}function s(e){if(!e.config.subscribeKey)return"Missing Subscribe Key"}function o(e,t){var n=e.config,r=t.channels,i=void 0===r?[]:r,s=t.channelGroups,o=void 0===s?[]:s,a="/v2/presence/sub-key/"+n.subscribeKey;if(i.length>0||o.length>0){var u=i.length>0?i.join(","):",";a+="/channel/"+p.default.encodeString(u)}return a}function a(e){return e.config.getTransactionTimeout()}function u(){return!0}function c(e,t){var n=t.channelGroups,r=void 0===n?[]:n,i=t.includeUUIDs,s=void 0===i||i,o=t.includeState,a=void 0!==o&&o,u={};return s||(u.disable_uuids=1),a&&(u.state=1),r.length>0&&(u["channel-group"]=r.join(",")),u}function l(e,t,n){var r=n.channels,i=void 0===r?[]:r,s=n.channelGroups,o=void 0===s?[]:s,a=n.includeUUIDs,u=void 0===a||a,c=n.includeState,l=void 0!==c&&c;return i.length>1||o.length>0||0===o.length&&0===i.length?function(){var e={};return e.totalChannels=t.payload.total_channels,e.totalOccupancy=t.payload.total_occupancy,e.channels={},Object.keys(t.payload.channels).forEach(function(n){var r=t.payload.channels[n],i=[];return e.channels[n]={occupants:i,name:n,occupancy:r.occupancy},u&&r.uuids.forEach(function(e){l?i.push({state:e.state,uuid:e.uuid}):i.push({state:null,uuid:e})}),e}),e}():function(){var e={},n=[];return e.totalChannels=1,e.totalOccupancy=t.occupancy,e.channels={},e.channels[i[0]]={occupants:n,name:i[0],occupancy:t.occupancy},u&&t.uuids&&t.uuids.forEach(function(e){l?n.push({state:e.state,uuid:e.uuid}):n.push({state:null,uuid:e})}),e}()}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=i,t.validateParams=s,t.getURL=o,t.getRequestTimeout=a,t.isAuthSupported=u,t.prepareParams=c,t.handleResponse=l;var h=(n(5),n(13)),f=r(h),d=n(15),p=r(d)},function(e,t,n){"use strict";function r(){return h.default.PNAccessManagerAudit}function i(e){if(!e.config.subscribeKey)return"Missing Subscribe Key"}function s(e){return"/v2/auth/audit/sub-key/"+e.config.subscribeKey}function o(e){return e.config.getTransactionTimeout()}function a(){return!1}function u(e,t){var n=t.channel,r=t.channelGroup,i=t.authKeys,s=void 0===i?[]:i,o={};return n&&(o.channel=n),r&&(o["channel-group"]=r),s.length>0&&(o.auth=s.join(",")),o}function c(e,t){return t.payload}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=r,t.validateParams=i,t.getURL=s,t.getRequestTimeout=o,t.isAuthSupported=a,t.prepareParams=u,t.handleResponse=c;var l=(n(5),n(13)),h=function(e){return e&&e.__esModule?e:{default:e}}(l)},function(e,t,n){"use strict";function r(){return h.default.PNAccessManagerGrant}function i(e){var t=e.config;return t.subscribeKey?t.publishKey?t.secretKey?void 0:"Missing Secret Key":"Missing Publish Key":"Missing Subscribe Key"}function s(e){return"/v2/auth/grant/sub-key/"+e.config.subscribeKey}function o(e){return e.config.getTransactionTimeout()}function a(){return!1}function u(e,t){var n=t.channels,r=void 0===n?[]:n,i=t.channelGroups,s=void 0===i?[]:i,o=t.ttl,a=t.read,u=void 0!==a&&a,c=t.write,l=void 0!==c&&c,h=t.manage,f=void 0!==h&&h,d=t.authKeys,p=void 0===d?[]:d,g={};return g.r=u?"1":"0",g.w=l?"1":"0",g.m=f?"1":"0",r.length>0&&(g.channel=r.join(",")),s.length>0&&(g["channel-group"]=s.join(",")),p.length>0&&(g.auth=p.join(",")),(o||0===o)&&(g.ttl=o),g}function c(){return{}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=r,t.validateParams=i,t.getURL=s,t.getRequestTimeout=o,t.isAuthSupported=a,t.prepareParams=u,t.handleResponse=c;var l=(n(5),n(13)),h=function(e){return e&&e.__esModule?e:{default:e}}(l)},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(e,t){var n=e.crypto,r=e.config,i=JSON.stringify(t);return r.cipherKey&&(i=n.encrypt(i),i=JSON.stringify(i)),i}function s(){return b.default.PNPublishOperation}function o(e,t){var n=e.config,r=t.message;return t.channel?r?n.subscribeKey?void 0:"Missing Subscribe Key":"Missing Message":"Missing Channel"}function a(e,t){var n=t.sendByPost;return void 0!==n&&n}function u(e,t){var n=e.config,r=t.channel,s=t.message,o=i(e,s);return"/publish/"+n.publishKey+"/"+n.subscribeKey+"/0/"+_.default.encodeString(r)+"/0/"+_.default.encodeString(o)}function c(e,t){var n=e.config,r=t.channel;return"/publish/"+n.publishKey+"/"+n.subscribeKey+"/0/"+_.default.encodeString(r)+"/0"}function l(e){return e.config.getTransactionTimeout()}function h(){return!0}function f(e,t){return i(e,t.message)}function d(e,t){var n=t.meta,r=t.replicate,i=void 0===r||r,s=t.storeInHistory,o=t.ttl,a={};return null!=s&&(a.store=s?"1":"0"),o&&(a.ttl=o),!1===i&&(a.norep="true"),n&&"object"===(void 0===n?"undefined":g(n))&&(a.meta=JSON.stringify(n)),a}function p(e,t){return{timetoken:t[2]}}Object.defineProperty(t,"__esModule",{value:!0})
+;var g="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};t.getOperation=s,t.validateParams=o,t.usePost=a,t.getURL=u,t.postURL=c,t.getRequestTimeout=l,t.isAuthSupported=h,t.postPayload=f,t.prepareParams=d,t.handleResponse=p;var y=(n(5),n(13)),b=r(y),v=n(15),_=r(v)},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(e,t){var n=e.config,r=e.crypto;if(!n.cipherKey)return t;try{return r.decrypt(t)}catch(e){return t}}function s(){return d.default.PNHistoryOperation}function o(e,t){var n=t.channel,r=e.config;return n?r.subscribeKey?void 0:"Missing Subscribe Key":"Missing channel"}function a(e,t){var n=t.channel;return"/v2/history/sub-key/"+e.config.subscribeKey+"/channel/"+g.default.encodeString(n)}function u(e){return e.config.getTransactionTimeout()}function c(){return!0}function l(e,t){var n=t.start,r=t.end,i=t.reverse,s=t.count,o=void 0===s?100:s,a=t.stringifiedTimeToken,u=void 0!==a&&a,c={include_token:"true"};return c.count=o,n&&(c.start=n),r&&(c.end=r),u&&(c.string_message_token="true"),null!=i&&(c.reverse=i.toString()),c}function h(e,t){var n={messages:[],startTimeToken:t[1],endTimeToken:t[2]};return t[0].forEach(function(t){var r={timetoken:t.timetoken,entry:i(e,t.message)};n.messages.push(r)}),n}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=s,t.validateParams=o,t.getURL=a,t.getRequestTimeout=u,t.isAuthSupported=c,t.prepareParams=l,t.handleResponse=h;var f=(n(5),n(13)),d=r(f),p=n(15),g=r(p)},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(){return d.default.PNDeleteMessagesOperation}function s(e,t){var n=t.channel,r=e.config;return n?r.subscribeKey?void 0:"Missing Subscribe Key":"Missing channel"}function o(){return!0}function a(e,t){var n=t.channel,r=t.start,i=t.end,s=e.config,o="";return r&&(o="?start="+r),i&&(o+=(""!==o?"&":"?")+"end="+i),"/v3/history/sub-key/"+s.subscribeKey+"/channel/"+g.default.encodeString(n)+o}function u(e){return e.config.getTransactionTimeout()}function c(){return!0}function l(e,t){var n=t.start,r=t.end,i={};return n&&(i.start=n),r&&(i.end=r),{}}function h(e,t){return t.payload}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=i,t.validateParams=s,t.useDelete=o,t.getURL=a,t.getRequestTimeout=u,t.isAuthSupported=c,t.prepareParams=l,t.handleResponse=h;var f=(n(5),n(13)),d=r(f),p=n(15),g=r(p)},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(e,t){var n=e.config,r=e.crypto;if(!n.cipherKey)return t;try{return r.decrypt(t)}catch(e){return t}}function s(){return d.default.PNFetchMessagesOperation}function o(e,t){var n=t.channels,r=e.config;return n&&0!==n.length?r.subscribeKey?void 0:"Missing Subscribe Key":"Missing channels"}function a(e,t){var n=t.channels,r=void 0===n?[]:n,i=e.config,s=r.length>0?r.join(","):",";return"/v3/history/sub-key/"+i.subscribeKey+"/channel/"+g.default.encodeString(s)}function u(e){return e.config.getTransactionTimeout()}function c(){return!0}function l(e,t){var n=t.start,r=t.end,i=t.count,s={};return i&&(s.max=i),n&&(s.start=n),r&&(s.end=r),s}function h(e,t){var n={channels:{}};return Object.keys(t.channels||{}).forEach(function(r){n.channels[r]=[],(t.channels[r]||[]).forEach(function(t){var s={};s.channel=r,s.subscription=null,s.timetoken=t.timetoken,s.message=i(e,t.message),n.channels[r].push(s)})}),n}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=s,t.validateParams=o,t.getURL=a,t.getRequestTimeout=u,t.isAuthSupported=c,t.prepareParams=l,t.handleResponse=h;var f=(n(5),n(13)),d=r(f),p=n(15),g=r(p)},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(){return f.default.PNSubscribeOperation}function s(e){if(!e.config.subscribeKey)return"Missing Subscribe Key"}function o(e,t){var n=e.config,r=t.channels,i=void 0===r?[]:r,s=i.length>0?i.join(","):",";return"/v2/subscribe/"+n.subscribeKey+"/"+p.default.encodeString(s)+"/0"}function a(e){return e.config.getSubscribeTimeout()}function u(){return!0}function c(e,t){var n=e.config,r=t.channelGroups,i=void 0===r?[]:r,s=t.timetoken,o=t.filterExpression,a=t.region,u={heartbeat:n.getPresenceTimeout()};return i.length>0&&(u["channel-group"]=i.join(",")),o&&o.length>0&&(u["filter-expr"]=o),s&&(u.tt=s),a&&(u.tr=a),u}function l(e,t){var n=[];t.m.forEach(function(e){var t={publishTimetoken:e.p.t,region:e.p.r},r={shard:parseInt(e.a,10),subscriptionMatch:e.b,channel:e.c,payload:e.d,flags:e.f,issuingClientId:e.i,subscribeKey:e.k,originationTimetoken:e.o,userMetadata:e.u,publishMetaData:t};n.push(r)});var r={timetoken:t.t.t,region:t.t.r};return{messages:n,metadata:r}}Object.defineProperty(t,"__esModule",{value:!0}),t.getOperation=i,t.validateParams=s,t.getURL=o,t.getRequestTimeout=a,t.isAuthSupported=u,t.prepareParams=c,t.handleResponse=l;var h=(n(5),n(13)),f=r(h),d=n(15),p=r(d)},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(t,"__esModule",{value:!0});var s=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),o=n(2),a=(r(o),n(10)),u=r(a),c=(n(5),function(){function e(t){var n=this;i(this,e),this._modules={},Object.keys(t).forEach(function(e){n._modules[e]=t[e].bind(n)})}return s(e,[{key:"init",value:function(e){this._config=e,this._maxSubDomain=20,this._currentSubDomain=Math.floor(Math.random()*this._maxSubDomain),this._providedFQDN=(this._config.secure?"https://":"http://")+this._config.origin,this._coreParams={},this.shiftStandardOrigin()}},{key:"nextOrigin",value:function(){if(-1===this._providedFQDN.indexOf("pubsub."))return this._providedFQDN;var e=void 0;return this._currentSubDomain=this._currentSubDomain+1,this._currentSubDomain>=this._maxSubDomain&&(this._currentSubDomain=1),e=this._currentSubDomain.toString(),this._providedFQDN.replace("pubsub","ps"+e)}},{key:"shiftStandardOrigin",value:function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];return this._standardOrigin=this.nextOrigin(e),this._standardOrigin}},{key:"getStandardOrigin",value:function(){return this._standardOrigin}},{key:"POST",value:function(e,t,n,r){return this._modules.post(e,t,n,r)}},{key:"GET",value:function(e,t,n){return this._modules.get(e,t,n)}},{key:"DELETE",value:function(e,t,n){return this._modules.del(e,t,n)}},{key:"_detectErrorCategory",value:function(e){if("ENOTFOUND"===e.code)return u.default.PNNetworkIssuesCategory;if("ECONNREFUSED"===e.code)return u.default.PNNetworkIssuesCategory;if("ECONNRESET"===e.code)return u.default.PNNetworkIssuesCategory;if("EAI_AGAIN"===e.code)return u.default.PNNetworkIssuesCategory;if(0===e.status||e.hasOwnProperty("status")&&void 0===e.status)return u.default.PNNetworkIssuesCategory;if(e.timeout)return u.default.PNTimeoutCategory;if(e.response){if(e.response.badRequest)return u.default.PNBadRequestCategory;if(e.response.forbidden)return u.default.PNAccessDeniedCategory}return u.default.PNUnknownCategory}}]),e}());t.default=c,e.exports=t.default},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={get:function(e){try{return localStorage.getItem(e)}catch(e){return null}},set:function(e,t){try{return localStorage.setItem(e,t)}catch(e){return null}}},e.exports=t.default},function(e,t,n){"use strict";function r(e){var t=(new Date).getTime(),n=(new Date).toISOString(),r=function(){return console&&console.log?console:window&&window.console&&window.console.log?window.console:console}();r.log("<<<<<"),r.log("["+n+"]","\n",e.url,"\n",e.qs),r.log("-----"),e.on("response",function(n){var i=(new Date).getTime(),s=i-t,o=(new Date).toISOString();r.log(">>>>>>"),r.log("["+o+" / "+s+"]","\n",e.url,"\n",e.qs,"\n",n.text),r.log("-----")})}function i(e,t,n){var i=this;return this._config.logVerbosity&&(e=e.use(r)),this._config.proxy&&this._modules.proxy&&(e=this._modules.proxy.call(this,e)),this._config.keepAlive&&this._modules.keepAlive&&(e=this._modules.keepAlive(e)),e.timeout(t.timeout).end(function(e,r){var s={};if(s.error=null!==e,s.operation=t.operation,r&&r.status&&(s.statusCode=r.status),e)return s.errorData=e,s.category=i._detectErrorCategory(e),n(s,null);var o=JSON.parse(r.text);return o.error&&1===o.error&&o.status&&o.message&&o.service?(s.errorData=o,s.statusCode=o.status,s.error=!0,s.category=i._detectErrorCategory(s),n(s,null)):n(s,o)})}function s(e,t,n){var r=c.default.get(this.getStandardOrigin()+t.url).query(e);return i.call(this,r,t,n)}function o(e,t,n,r){var s=c.default.post(this.getStandardOrigin()+n.url).query(e).send(t);return i.call(this,s,n,r)}function a(e,t,n){var r=c.default.delete(this.getStandardOrigin()+t.url).query(e);return i.call(this,r,t,n)}Object.defineProperty(t,"__esModule",{value:!0}),t.get=s,t.post=o,t.del=a;var u=n(42),c=function(e){return e&&e.__esModule?e:{default:e}}(u);n(5)},function(e,t,n){function r(){}function i(e){if(!b(e))return e;var t=[];for(var n in e)s(t,n,e[n]);return t.join("&")}function s(e,t,n){if(null!=n)if(Array.isArray(n))n.forEach(function(n){s(e,t,n)});else if(b(n))for(var r in n)s(e,t+"["+r+"]",n[r]);else e.push(encodeURIComponent(t)+"="+encodeURIComponent(n));else null===n&&e.push(encodeURIComponent(t))}function o(e){for(var t,n,r={},i=e.split("&"),s=0,o=i.length;s<o;++s)t=i[s],n=t.indexOf("="),-1==n?r[decodeURIComponent(t)]="":r[decodeURIComponent(t.slice(0,n))]=decodeURIComponent(t.slice(n+1));return r}function a(e){var t,n,r,i,s=e.split(/\r?\n/),o={};s.pop();for(var a=0,u=s.length;a<u;++a)n=s[a],t=n.indexOf(":"),r=n.slice(0,t).toLowerCase(),i=_(n.slice(t+1)),o[r]=i;return o}function u(e){return/[\/+]json\b/.test(e)}function c(e){return e.split(/ *; */).shift()}function l(e){return e.split(/ *; */).reduce(function(e,t){var n=t.split(/ *= */),r=n.shift(),i=n.shift();return r&&i&&(e[r]=i),e},{})}function h(e,t){t=t||{},this.req=e,this.xhr=this.req.xhr,this.text="HEAD"!=this.req.method&&(""===this.xhr.responseType||"text"===this.xhr.responseType)||void 0===this.xhr.responseType?this.xhr.responseText:null,this.statusText=this.req.xhr.statusText,this._setStatusProperties(this.xhr.status),this.header=this.headers=a(this.xhr.getAllResponseHeaders()),this.header["content-type"]=this.xhr.getResponseHeader("content-type"),this._setHeaderProperties(this.header),this.body="HEAD"!=this.req.method?this._parseBody(this.text?this.text:this.xhr.response):null}function f(e,t){var n=this;this._query=this._query||[],this.method=e,this.url=t,this.header={},this._header={},this.on("end",function(){var e=null,t=null;try{t=new h(n)}catch(t){return e=new Error("Parser is unable to parse the response"),e.parse=!0,e.original=t,e.rawResponse=n.xhr&&n.xhr.responseText?n.xhr.responseText:null,e.statusCode=n.xhr&&n.xhr.status?n.xhr.status:null,n.callback(e)}n.emit("response",t);var r;try{(t.status<200||t.status>=300)&&(r=new Error(t.statusText||"Unsuccessful HTTP response"),r.original=e,r.response=t,r.status=t.status)}catch(e){r=e}r?n.callback(r,t):n.callback(null,t)})}function d(e,t){var n=v("DELETE",e);return t&&n.end(t),n}var p;"undefined"!=typeof window?p=window:"undefined"!=typeof self?p=self:(console.warn("Using browser-only version of superagent in non-browser environment"),p=this);var g=n(43),y=n(44),b=n(45),v=e.exports=n(46).bind(null,f);v.getXHR=function(){if(!(!p.XMLHttpRequest||p.location&&"file:"==p.location.protocol&&p.ActiveXObject))return new XMLHttpRequest;try{return new ActiveXObject("Microsoft.XMLHTTP")}catch(e){}try{return new ActiveXObject("Msxml2.XMLHTTP.6.0")}catch(e){}try{return new ActiveXObject("Msxml2.XMLHTTP.3.0")}catch(e){}try{return new ActiveXObject("Msxml2.XMLHTTP")}catch(e){}throw Error("Browser-only verison of superagent could not find XHR")};var _="".trim?function(e){return e.trim()}:function(e){return e.replace(/(^\s*|\s*$)/g,"")};v.serializeObject=i,v.parseString=o,v.types={html:"text/html",json:"application/json",xml:"application/xml",urlencoded:"application/x-www-form-urlencoded",form:"application/x-www-form-urlencoded","form-data":"application/x-www-form-urlencoded"},v.serialize={"application/x-www-form-urlencoded":i,"application/json":JSON.stringify},v.parse={"application/x-www-form-urlencoded":o,"application/json":JSON.parse},h.prototype.get=function(e){return this.header[e.toLowerCase()]},h.prototype._setHeaderProperties=function(e){var t=this.header["content-type"]||"";this.type=c(t);var n=l(t);for(var r in n)this[r]=n[r]},h.prototype._parseBody=function(e){var t=v.parse[this.type];return!t&&u(this.type)&&(t=v.parse["application/json"]),t&&e&&(e.length||e instanceof Object)?t(e):null},h.prototype._setStatusProperties=function(e){1223===e&&(e=204);var t=e/100|0;this.status=this.statusCode=e,this.statusType=t,this.info=1==t,this.ok=2==t,this.clientError=4==t,this.serverError=5==t,this.error=(4==t||5==t)&&this.toError(),this.accepted=202==e,this.noContent=204==e,this.badRequest=400==e,this.unauthorized=401==e,this.notAcceptable=406==e,this.notFound=404==e,this.forbidden=403==e},h.prototype.toError=function(){var e=this.req,t=e.method,n=e.url,r="cannot "+t+" "+n+" ("+this.status+")",i=new Error(r);return i.status=this.status,i.method=t,i.url=n,i},v.Response=h,g(f.prototype);for(var m in y)f.prototype[m]=y[m];f.prototype.type=function(e){return this.set("Content-Type",v.types[e]||e),this},f.prototype.responseType=function(e){return this._responseType=e,this},f.prototype.accept=function(e){return this.set("Accept",v.types[e]||e),this},f.prototype.auth=function(e,t,n){switch(n||(n={type:"basic"}),n.type){case"basic":var r=btoa(e+":"+t);this.set("Authorization","Basic "+r);break;case"auto":this.username=e,this.password=t}return this},f.prototype.query=function(e){return"string"!=typeof e&&(e=i(e)),e&&this._query.push(e),this},f.prototype.attach=function(e,t,n){return this._getFormData().append(e,t,n||t.name),this},f.prototype._getFormData=function(){return this._formData||(this._formData=new p.FormData),this._formData},f.prototype.callback=function(e,t){var n=this._callback;this.clearTimeout(),n(e,t)},f.prototype.crossDomainError=function(){var e=new Error("Request has been terminated\nPossible causes: the network is offline, Origin is not allowed by Access-Control-Allow-Origin, the page is being unloaded, etc.");e.crossDomain=!0,e.status=this.status,e.method=this.method,e.url=this.url,this.callback(e)},f.prototype._timeoutError=function(){var e=this._timeout,t=new Error("timeout of "+e+"ms exceeded");t.timeout=e,this.callback(t)},f.prototype._appendQueryString=function(){var e=this._query.join("&");e&&(this.url+=~this.url.indexOf("?")?"&"+e:"?"+e)},f.prototype.end=function(e){var t=this,n=this.xhr=v.getXHR(),i=this._timeout,s=this._formData||this._data;this._callback=e||r,n.onreadystatechange=function(){if(4==n.readyState){var e;try{e=n.status}catch(t){e=0}if(0==e){if(t.timedout)return t._timeoutError();if(t._aborted)return;return t.crossDomainError()}t.emit("end")}};var o=function(e,n){n.total>0&&(n.percent=n.loaded/n.total*100),n.direction=e,t.emit("progress",n)};if(this.hasListeners("progress"))try{n.onprogress=o.bind(null,"download"),n.upload&&(n.upload.onprogress=o.bind(null,"upload"))}catch(e){}if(i&&!this._timer&&(this._timer=setTimeout(function(){t.timedout=!0,t.abort()},i)),this._appendQueryString(),this.username&&this.password?n.open(this.method,this.url,!0,this.username,this.password):n.open(this.method,this.url,!0),this._withCredentials&&(n.withCredentials=!0),"GET"!=this.method&&"HEAD"!=this.method&&"string"!=typeof s&&!this._isHost(s)){var a=this._header["content-type"],c=this._serializer||v.serialize[a?a.split(";")[0]:""];!c&&u(a)&&(c=v.serialize["application/json"]),c&&(s=c(s))}for(var l in this.header)null!=this.header[l]&&n.setRequestHeader(l,this.header[l]);return this._responseType&&(n.responseType=this._responseType),this.emit("request",this),n.send(void 0!==s?s:null),this},v.Request=f,v.get=function(e,t,n){var r=v("GET",e);return"function"==typeof t&&(n=t,t=null),t&&r.query(t),n&&r.end(n),r},v.head=function(e,t,n){var r=v("HEAD",e);return"function"==typeof t&&(n=t,t=null),t&&r.send(t),n&&r.end(n),r},v.options=function(e,t,n){var r=v("OPTIONS",e);return"function"==typeof t&&(n=t,t=null),t&&r.send(t),n&&r.end(n),r},v.del=d,v.delete=d,v.patch=function(e,t,n){var r=v("PATCH",e);return"function"==typeof t&&(n=t,t=null),t&&r.send(t),n&&r.end(n),r},v.post=function(e,t,n){var r=v("POST",e);return"function"==typeof t&&(n=t,t=null),t&&r.send(t),n&&r.end(n),r},v.put=function(e,t,n){var r=v("PUT",e);return"function"==typeof t&&(n=t,t=null),t&&r.send(t),n&&r.end(n),r}},function(e,t,n){function r(e){if(e)return i(e)}function i(e){for(var t in r.prototype)e[t]=r.prototype[t];return e}e.exports=r,r.prototype.on=r.prototype.addEventListener=function(e,t){return this._callbacks=this._callbacks||{},(this._callbacks["$"+e]=this._callbacks["$"+e]||[]).push(t),this},r.prototype.once=function(e,t){function n(){this.off(e,n),t.apply(this,arguments)}return n.fn=t,this.on(e,n),this},r.prototype.off=r.prototype.removeListener=r.prototype.removeAllListeners=r.prototype.removeEventListener=function(e,t){if(this._callbacks=this._callbacks||{},0==arguments.length)return this._callbacks={},this;var n=this._callbacks["$"+e];if(!n)return this;if(1==arguments.length)return delete this._callbacks["$"+e],this;for(var r,i=0;i<n.length;i++)if((r=n[i])===t||r.fn===t){n.splice(i,1);break}return this},r.prototype.emit=function(e){this._callbacks=this._callbacks||{};var t=[].slice.call(arguments,1),n=this._callbacks["$"+e];if(n){n=n.slice(0);for(var r=0,i=n.length;r<i;++r)n[r].apply(this,t)}return this},r.prototype.listeners=function(e){return this._callbacks=this._callbacks||{},this._callbacks["$"+e]||[]},r.prototype.hasListeners=function(e){return!!this.listeners(e).length}},function(e,t,n){var r=n(45);t.clearTimeout=function(){return this._timeout=0,clearTimeout(this._timer),this},t.parse=function(e){return this._parser=e,this},t.serialize=function(e){return this._serializer=e,this},t.timeout=function(e){return this._timeout=e,this},t.then=function(e,t){if(!this._fullfilledPromise){var n=this;this._fullfilledPromise=new Promise(function(e,t){n.end(function(n,r){n?t(n):e(r)})})}return this._fullfilledPromise.then(e,t)},t.catch=function(e){return this.then(void 0,e)},t.use=function(e){return e(this),this},t.get=function(e){return this._header[e.toLowerCase()]},t.getHeader=t.get,t.set=function(e,t){if(r(e)){for(var n in e)this.set(n,e[n]);return this}return this._header[e.toLowerCase()]=t,this.header[e]=t,this},t.unset=function(e){return delete this._header[e.toLowerCase()],delete this.header[e],this},t.field=function(e,t){if(null===e||void 0===e)throw new Error(".field(name, val) name can not be empty");if(r(e)){for(var n in e)this.field(n,e[n]);return this}if(null===t||void 0===t)throw new Error(".field(name, val) val can not be empty");return this._getFormData().append(e,t),this},t.abort=function(){return this._aborted?this:(this._aborted=!0,this.xhr&&this.xhr.abort(),this.req&&this.req.abort(),this.clearTimeout(),this.emit("abort"),this)},t.withCredentials=function(){return this._withCredentials=!0,this},t.redirects=function(e){return this._maxRedirects=e,this},t.toJSON=function(){return{method:this.method,url:this.url,data:this._data,headers:this._header}},t._isHost=function(e){switch({}.toString.call(e)){case"[object File]":case"[object Blob]":case"[object FormData]":return!0;default:return!1}},t.send=function(e){var t=r(e),n=this._header["content-type"];if(t&&r(this._data))for(var i in e)this._data[i]=e[i];else"string"==typeof e?(n||this.type("form"),n=this._header["content-type"],this._data="application/x-www-form-urlencoded"==n?this._data?this._data+"&"+e:e:(this._data||"")+e):this._data=e;return!t||this._isHost(e)?this:(n||this.type("json"),this)}},function(e,t){function n(e){return null!==e&&"object"==typeof e}e.exports=n},function(e,t){function n(e,t,n){return"function"==typeof n?new e("GET",t).end(n):2==arguments.length?new e("GET",t):new e(t,n)}e.exports=n}])});
+
+/***/ }),
+/* 381 */
 /*!***********************!*\
   !*** ./src/config.js ***!
   \***********************/
@@ -16972,328 +17729,6 @@ exports.default = {
   localStorageName: 'phaseres6webpack'
 };
 
-/***/ }),
-/* 378 */,
-/* 379 */,
-/* 380 */,
-/* 381 */
-/*!***********************************!*\
-  !*** ./src/engine/ActorConfig.js ***!
-  \***********************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = {
-    FRONT_IDLE_INDEX: 4,
-    BACK_IDLE_INDEX: 0,
-    BACKLEFT_ANIMATION_INDEX: 2,
-    BACKRIGHT_ANIMATION_INDEX: 1,
-    FRONTLEFT_ANIMATION_INDEX: 5,
-    FRONTRIGHT_ANIMATION_INDEX: 3,
-    RIGHT_ANIMATION_INDEX: 6,
-    LEFT_ANIMATION_INDEX: 7,
-    ENTITY: 'Animaciones',
-    START_ANIMATION_INDEX: 4
-};
-
-/***/ }),
-/* 382 */
-/*!*****************************!*\
-  !*** ./src/engine/Actor.js ***!
-  \*****************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-__webpack_require__(/*! script-loader!../../assets/lib/spriter/spriter.js */ 130);
-
-var _ActorConfig = __webpack_require__(/*! ./ActorConfig */ 381);
-
-var _ActorConfig2 = _interopRequireDefault(_ActorConfig);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Actor = function (_Spriter$SpriterGroup) {
-  _inherits(Actor, _Spriter$SpriterGroup);
-
-  function Actor(game, actorDefinition) {
-    _classCallCheck(this, Actor);
-
-    var _this = _possibleConstructorReturn(this, (Actor.__proto__ || Object.getPrototypeOf(Actor)).call(this, game, actorDefinition.spriterData, actorDefinition.textureKey, _ActorConfig2.default.ENTITY, _ActorConfig2.default.START_ANIMATION_INDEX));
-
-    if (actorDefinition.isSmall) {
-      _this.scaleX = 90 / _this.width;
-      _this.scaleY = 120 / _this.height;
-
-      _this.scale.setTo(_this.scaleX, _this.scaleY);
-    }
-
-    console.debug("Actor initialised");
-
-    window.player = _this;
-    _this._animationSpeed = 0.6;
-    _this.id = 1;
-
-    // player bounds - circle
-    _this.drawBounds();
-    return _this;
-  }
-
-  _createClass(Actor, [{
-    key: "drawBounds",
-    value: function drawBounds() {
-      var _this2 = this;
-
-      this.bounds = null;
-      this.boundsGrp = this.game.make.group(null);
-      var bmd = this.game.make.bitmapData(60, 60);
-      var maskBitmap = this.game.make.bitmapData(60, 60);
-
-      bmd.circle(30, 30, 30, "rgba(43, 41, 42, 0.3)");
-      bmd.circle(30, 30, 20, "rgba(43, 41, 42, 0.7)");
-
-      maskBitmap.circle(30, 30, 30, "rgba(224, 119, 44, 0.5)");
-
-      this.maskImg = this.game.make.image(0, 0, maskBitmap);
-      this.maskImg.width = this.maskImg.width + this.maskImg.width;
-      this.maskImg.anchor.set(0.5);
-      this.maskImg.visible = false;
-
-      this.bounds = this.game.make.sprite(0, 0, bmd);
-      this.bounds.width = this.bounds.width + this.bounds.width;
-      this.bounds.anchor.set(0.5);
-
-      this.boundsGrp.add(this.bounds);
-      this.boundsGrp.add(this.maskImg);
-
-      // Add input
-      this.bounds.inputEnabled = true;
-      this.bounds.input.useHandCursor = true;
-
-      this.bounds.events.onInputOver.add(function (sprite) {
-        _this2.maskImg.visible = true;
-      }, this);
-
-      this.bounds.events.onInputOut.add(function (sprite) {
-        _this2.maskImg.visible = false;
-      }, this);
-
-      window.boundsGrp = this.boundsGrp;
-
-      this.addAt(this.boundsGrp, 0);
-    }
-  }, {
-    key: "update",
-    value: function update() {
-      this.updateAnimation();
-
-      if (this.walkTween && this.walkTween.isRunning) {
-        this.calcAngle(this.xyPoint);
-
-        if (this.angleTo != this.walkTween.angleToBegin) {
-          this.lookAt();
-        }
-      }
-    }
-  }, {
-    key: "walkTo",
-    value: function walkTo(point, walkSpeed) {
-      if (!walkSpeed) {
-        walkSpeed = this.walkSpeed;
-      }
-      if (this.walkingTween) {
-        this.walkingTween.stop();
-        this.walkingTween = null;
-      }
-      var distance = Phaser.Math.distance(this.x, this.y, point.x, point.y);
-      this.walkingTween = this.game.add.tween(this).to({
-        x: point.x,
-        y: point.y
-      }, distance * this.averageWalkSpeed * (1 / walkSpeed)).start();
-    }
-  }, {
-    key: "walkPath",
-    value: function walkPath(path, polys, finalPoint, walkSpeed) {
-      if (!walkSpeed) {
-        walkSpeed = this.walkSpeed;
-      }
-      if (this.walkingTween) {
-        this.walkingTween.stop();
-        this.walkingTween = null;
-      }
-      this.walkingTween = this.game.add.tween(this);
-
-      for (var i = 0; i < path.length; i++) {
-        var point = polys[path[i]].centroid;
-        var distance = Phaser.Math.distance(this.x, this.y, point.x, point.y);
-        if (i == path.length - 1 && polys[path[i]].contains(finalPoint.x, finalPoint.y)) {
-          this.walkingTween.to({
-            x: finalPoint.x,
-            y: finalPoint.y
-          }, distance * walkSpeed / 10, Phaser.Easing.Linear.None);
-        } else {
-          if (distance != 0) {
-            this.walkingTween.to({
-              x: point.x,
-              y: point.y
-            }, distance * walkSpeed / 10, Phaser.Easing.Linear.None);
-          }
-        }
-      }
-
-      this.walkingTween.start();
-    }
-  }, {
-    key: "calcAngle",
-    value: function calcAngle(pointer) {
-      if (pointer) {
-        this.angleTo = Phaser.Math.angleBetween(this.x, this.y, pointer.x, pointer.y) * 180 / Math.PI;
-      }
-
-      if (this.angleTo > -100 && this.angleTo < -80) {
-        this.angleTo = "UPPER";
-      } else if (this.angleTo < -10 && this.angleTo > -80) {
-        this.angleTo = "UPPER_RIGHT";
-      } else if (this.angleTo < -110 && this.angleTo > -170) {
-        this.angleTo = "UPPER_LEFT";
-      } else if (this.angleTo > -10 && this.angleTo < 10) {
-        this.angleTo = "RIGHT";
-      } else if (this.angleTo > -180 && this.angleTo < -170 || this.angleTo > 170 && this.angleTo < 180 || this.angleTo === 180) {
-        this.angleTo = "LEFT";
-      } else if (this.angleTo > 80 && this.angleTo < 100) {
-        this.angleTo = "LOWER";
-      } else if (this.angleTo > 10 && this.angleTo < 80) {
-        this.angleTo = "LOWER_RIGHT";
-      } else if (this.angleTo > 100 && this.angleTo < 170) {
-        this.angleTo = "LOWER_LEFT";
-      }
-    }
-  }, {
-    key: "lookAt",
-    value: function lookAt() {
-      if (this.angleTo == "UPPER") {
-        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
-        console.log("ANGULO SUPERIOR");
-      } else if (this.angleTo == "UPPER_RIGHT") {
-        this.playAnimationById(_ActorConfig2.default.BACKRIGHT_ANIMATION_INDEX);
-        console.log("ANGULO SUPERIOR DERECHO");
-      } else if (this.angleTo == "UPPER_LEFT") {
-        this.playAnimationById(_ActorConfig2.default.BACKLEFT_ANIMATION_INDEX);
-        console.log("ANGULO SUPERIOR IZQUIERDO");
-      } else if (this.angleTo == "RIGHT") {
-        this.playAnimationById(_ActorConfig2.default.RIGHT_ANIMATION_INDEX);
-        console.log("ANGULO DERECHO");
-      } else if (this.angleTo == "LEFT") {
-        this.playAnimationById(_ActorConfig2.default.LEFT_ANIMATION_INDEX);
-        console.log("ANGULO IZQUIERDO");
-      } else if (this.angleTo == "LOWER") {
-        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
-        console.log("ANGULO INFERIOR");
-      } else if (this.angleTo == "LOWER_RIGHT") {
-        this.playAnimationById(_ActorConfig2.default.FRONTLEFT_ANIMATION_INDEX);
-        console.log("ANGULO INFERIOR DERECHO");
-      } else if (this.angleTo == "LOWER_LEFT") {
-        this.playAnimationById(_ActorConfig2.default.FRONTLEFT_ANIMATION_INDEX);
-        console.log("ANGULO INFERIOR IZQUIERDO");
-      }
-    }
-  }, {
-    key: "stopAndLookAt",
-    value: function stopAndLookAt(tween) {
-      if (tween.angleToBegin == "UPPER") {
-        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
-        console.log("ANGULO SUPERIOR");
-      } else if (tween.angleToBegin == "UPPER_RIGHT") {
-        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
-        console.log("ANGULO SUPERIOR DERECHO");
-      } else if (tween.angleToBegin == "UPPER_LEFT") {
-        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
-        console.log("ANGULO SUPERIOR IZQUIERDO");
-      } else if (tween.angleToBegin == "RIGHT") {
-        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
-        console.log("ANGULO DERECHO");
-      } else if (tween.angleToBegin == "LEFT") {
-        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
-        console.log("ANGULO IZQUIERDO");
-      } else if (tween.angleToBegin == "LOWER") {
-        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
-        console.log("ANGULO INFERIOR");
-      } else if (tween.angleToBegin == "LOWER_RIGHT") {
-        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
-        console.log("ANGULO INFERIOR DERECHO");
-      } else if (tween.angleToBegin == "LOWER_LEFT") {
-        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
-        console.log("ANGULO INFERIOR IZQUIERDO");
-      }
-    }
-  }, {
-    key: "movementComplete",
-    value: function movementComplete(player, tween) {
-      this.stopAndLookAt(tween);
-    }
-  }, {
-    key: "moveTo",
-    value: function moveTo(goTo, navmesh) {
-      this.xyPoint = goTo;
-
-      console.debug("Other Player movement signal received");
-      if (!navmesh) {
-        return;
-      }
-
-      if (this.walkTween && this.walkTween.isRunning) {
-        this.walkTween.stop();
-      }
-
-      this.walkTween = this.game.add.tween(this);
-      this.walkTween.onComplete.add(this.movementComplete, this);
-
-      this.calcAngle(goTo);
-      this.walkTween.angleToBegin = this.angleTo;
-
-      this.lookAt();
-
-      var path = navmesh.findPath({ player: this, goTo: goTo });
-      console.log(path);
-
-      var pointer;
-      for (var i = 0; i < path.length; i++) {
-        pointer = path[i];
-        var distance = Phaser.Math.distance(path[i - 1] != undefined ? path[i - 1].x : this.x, path[i - 1] != undefined ? path[i - 1].y : this.y, pointer.x, pointer.y);
-        this.walkTween.to({ x: pointer.x, y: pointer.y }, distance * 7);
-      }
-
-      this.walkTween.start();
-    }
-  }]);
-
-  return Actor;
-}(Spriter.SpriterGroup);
-
-exports.default = Actor;
-
 /***/ })
-],[131]);
+],[133]);
 //# sourceMappingURL=bundle.js.map

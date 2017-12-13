@@ -265,7 +265,15 @@ export default class PlayerActor extends Spriter.SpriterGroup {
       this.lookAt();
 
       var path = navmesh.findPath();
-      console.log(path);
+
+      this.game.network.sendKeyMessage({
+        willMove: true,
+        x: pointer.x,
+        y: pointer.y,
+        path: path,
+        clientWidth: game.width,
+        clientHeight: game.height
+      });
 
       var pointer;
       for (var i = 0; i < path.length; i++) {

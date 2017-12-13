@@ -2,7 +2,7 @@
 import 'pixi'
 import Phaser from 'phaser'
 
-import Start from './index' 
+import Network from './Network' 
 import config from './config'
 
 class Game extends Phaser.Game {
@@ -15,7 +15,7 @@ class Game extends Phaser.Game {
 
     // with Cordova with need to wait that the device is ready so we will call the Boot state in another file
     if (!window.cordova) {
-      Start(this)
+      new Network(this);
     }
   }
 }
@@ -38,7 +38,7 @@ if (window.cordova) {
       this.receivedEvent('deviceready')
 
       // When the device is ready, start Phaser Boot state.
-      Start(this)
+      new Network(this);
     },
 
     receivedEvent: function (id) {

@@ -37,3 +37,45 @@
 *:focus {
     outline: none;
 }
+
+#chat-bar {
+	width: 98%;
+	height: 60px;
+	position: fixed;
+	bottom: 0px;
+	text-align: center;
+	padding-left: 1%;
+}
+
+.chat-background {
+	border-radius: 10px;
+	background: rgba(243,226,199,1);
+	background: -moz-linear-gradient(left, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 28%, rgba(182,141,76,1) 64%, rgba(233,212,179,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243,226,199,1)), color-stop(28%, rgba(193,158,103,1)), color-stop(64%, rgba(182,141,76,1)), color-stop(100%, rgba(233,212,179,1)));
+	background: -webkit-linear-gradient(left, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 28%, rgba(182,141,76,1) 64%, rgba(233,212,179,1) 100%);
+	background: -o-linear-gradient(left, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 28%, rgba(182,141,76,1) 64%, rgba(233,212,179,1) 100%);
+	background: -ms-linear-gradient(left, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 28%, rgba(182,141,76,1) 64%, rgba(233,212,179,1) 100%);
+	background: linear-gradient(to right, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 28%, rgba(182,141,76,1) 64%, rgba(233,212,179,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3', GradientType=1 );
+}
+
+#chat-input-bar {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#chat-bar input {
+	width: 50%;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+    padding: 0px;
+    padding-left: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(0,0,0, 0.3);
+    color: #fff;
+    font-weight: 600;
+	height: 40px;
+}
