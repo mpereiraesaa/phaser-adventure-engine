@@ -115,7 +115,6 @@ export default class Network {
       this.occupancyCounter = setInterval(this.checkFlag, 200); // Start timer to run the checkflag function above
     }
 
-    debugger
     if (presenceEvent.action === "join") {
       // If we recieve a presence event that says a player joined the channel from the pubnub servers
       this.checkIfJoined = true;

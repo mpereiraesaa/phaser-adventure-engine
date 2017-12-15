@@ -152,7 +152,7 @@
 /************************************************************************/
 /******/ ({
 
-/***/ 130:
+/***/ 129:
 /*!*****************************************************!*\
   !*** ./node_modules/phaser-ce/build/custom/pixi.js ***!
   \*****************************************************/
@@ -93887,7 +93887,7 @@ process.umask = function() { return 0; };
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! pixi */130);
+__webpack_require__(/*! pixi */129);
 __webpack_require__(/*! p2 */383);
 __webpack_require__(/*! phaser */18);
 module.exports = __webpack_require__(/*! webfontloader */65);

@@ -12,8 +12,6 @@ export default class Scene extends Phaser.State {
     this.objects = [];
     this.player = null;
     this.willMove = null;
-    this.game_width = 0;
-    this.game_height = 0;
 
     this.spriterLoader = new Spriter.Loader();
 
@@ -58,6 +56,15 @@ export default class Scene extends Phaser.State {
     this.createSceneHierarchy();
     this.game.network.scene = this;
 
+    // Chat vars
+    this.chatGroup = this.game.make.group(null);
+    this.chatMessages = this.game.make.group(null);
+    this.messages = [];
+
+    // Trigger chat enter event
+    this.setupChatLog();
+    this.chatEvent();
+
     this.game.network.otherPlayers = new Map();
 
     if (this.sceneDefinition.bg) {
@@ -97,21 +104,23 @@ export default class Scene extends Phaser.State {
   }
 
   chatEvent() {
-    document
-      .getElementById("chat-bar")
-      .addEventListener("keypress", function(e) {
-        let key = e.which || e.keyCode;
-        if (key === 13) {
-          // 13 is enter
-          // code for enter
-          let message = document.getElementById("chat-bar").value;
+    document.getElementById("chat-bar").addEventListener("keypress", e => {
+      let key = e.which || e.keyCode;
+      if (key === 13) {
+        // 13 is enter
+        // code for enter
+        let message = document.getElementById("chat-input-text").value;
 
-          this.game.network.sendKeyMessage({
-            chatbox: true,
-            message: message
-          });
-        }
-      });
+        this.pushMessages({author: this.game.network.uniqueID, text: message});
+
+        document.getElementById("chat-input-text").value = "";
+
+        this.game.network.sendKeyMessage({
+          chatbox: true,
+          message: message
+        });
+      }
+    });
   }
 
   animateActors() {
@@ -215,6 +224,13 @@ export default class Scene extends Phaser.State {
             this.game.network.sendKeyMessage({});
           }
 
+          if (messageEvent.message.keyMessage.chatbox) {
+            this.pushMessages({
+              author: messageEvent.message.uuid,
+              text: messageEvent.message.keyMessage.message
+            });
+          }
+
           if (
             messageEvent.message.position &&
             this.game.network.otherPlayers.has(messageEvent.message.uuid)
@@ -262,7 +278,7 @@ export default class Scene extends Phaser.State {
                   y: messageEvent.message.keyMessage.y,
                   path: messageEvent.message.keyMessage.path,
                   clientWidth: messageEvent.message.keyMessage.clientWidth,
-                  clientHeight: messageEvent.message.keyMessage.clientHeight,
+                  clientHeight: messageEvent.message.keyMessage.clientHeight
                 };
               }
             }
@@ -286,8 +302,8 @@ export default class Scene extends Phaser.State {
     let result = [];
     for (var i = 0; i < path.length; i++) {
       result[i] = {
-        x: (path[i].x / clientRes.clientWidth) * this.game.width,
-        y: (path[i].y / clientRes.clientHeight) * this.game.height
+        x: path[i].x / clientRes.clientWidth * this.game.width,
+        y: path[i].y / clientRes.clientHeight * this.game.height
       };
     }
 
@@ -306,8 +322,11 @@ export default class Scene extends Phaser.State {
             clientHeight: otherplayer.willMove.clientHeight
           };
           let path = this.resetPath(otherplayer.willMove.path, clientRes);
-          
-          otherplayer.moveTo({ x: otherplayer.willMove.x, y: otherplayer.willMove.y }, path);
+
+          otherplayer.moveTo(
+            { x: otherplayer.willMove.x, y: otherplayer.willMove.y },
+            path
+          );
           otherplayer.willMove = null;
         }
       }
@@ -333,12 +352,87 @@ export default class Scene extends Phaser.State {
     }, this);
   }
 
-  drawMessage() {
-    //  You can either set the tab size in the style object:
-    let style = { font: "20px Courier", fill: "#fff" };
-    let text = game.make.text(100, 64, "Aadsasssssssssss", style);
+  setupChatLog() {
+    let box = null;
+    let topY = 0 + 100;
+    let topX = 50;
 
-    this.initObjects(text);
+    box = this.game.make.graphics(topX, topY);
+    box.drawRect(0, 0, this.game.width / 2, this.game.height / 3);
+    box.inputEnabled = false;
+
+    this.chatGroup.add(box);
+
+    this.chatGroup.add(this.chatMessages);
+
+    this.objects.push(this.chatGroup);
+  }
+
+  clearMessages() {
+    while (this.chatMessages.children.length != 0) {
+      this.chatMessages.children[0].destroy();
+    }
+  }
+
+  pushMessages(msg) {
+    if (this.messages.length == 5) {
+      this.messages.shift();
+
+      // Tween out that first old message.
+      let endTween = game.add
+        .tween(this.chatMessages.children[0])
+        .to({ alpha: 0 }, 100, Phaser.Easing.Linear.None, true, 0);
+
+      endTween.start();
+
+      endTween.onComplete.add(() => {
+        this.chatMessages.children[0].destroy();
+
+        this.clearMessages();
+      }, this);
+    }
+
+    this.messages.push(msg);
+    this.clearMessages();
+    this.renderMessages();
+  }
+
+  renderMessages() {
+    let i = 0;
+    let textStyle = {
+      font: "16px Courier",
+      fill: "rgba(0,0,0,0.7)",
+      fontWeight: "600",
+      align: "left",
+      boundsAlignH: "left"
+    };
+
+    for (; i < this.messages.length; i++) {
+      let text = game.make.text(
+        this.chatGroup.children[0].x,
+        this.chatGroup.children[0].y + i * 24,
+        `${this.messages[i].author}: ${this.messages[i].text}`,
+        textStyle
+      );
+
+      text.addColor('blue', 0);
+      text.addColor('blue', this.messages[i].author.length);
+
+      text.addColor('rgba(0,0,0,0.7)', this.messages[i].author.length);
+      text.addColor('rgba(0,0,0,0.7)', this.messages[i].author.length + this.messages[i].text.length);
+
+      text.setTextBounds(16, 16, this.game.width, this.game.height);
+
+      this.chatMessages.add(text);
+    }
+
+    this.chatMessages.children[i - 1].alpha = 0;
+
+    let startTween = game.add
+      .tween(this.chatMessages.children[i - 1])
+      .to({ alpha: 1 }, 100, Phaser.Easing.Linear.None, true, 0);
+
+    startTween.start();
   }
 
   /**
