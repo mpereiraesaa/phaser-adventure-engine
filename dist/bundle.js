@@ -3175,6 +3175,13 @@ var PlayerActor = function (_Spriter$SpriterGroup) {
       _this.scale.setTo(_this.scaleX, _this.scaleY);
     }
 
+    if (actorDefinition.isMediumSize) {
+      _this.scaleX = 270 / _this.width;
+      _this.scaleY = 300 / _this.height;
+
+      _this.scale.setTo(_this.scaleX, _this.scaleY);
+    }
+
     console.debug("PlayerActor initialised");
     _this.initSignalListeners();
 
@@ -3319,7 +3326,7 @@ var PlayerActor = function (_Spriter$SpriterGroup) {
     key: "lookAt",
     value: function lookAt() {
       if (this.angleTo == "UPPER") {
-        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        this.playAnimationById(_ActorConfig2.default.BACK_ANIMATION_INDEX);
         console.log("ANGULO SUPERIOR");
       } else if (this.angleTo == "UPPER_RIGHT") {
         this.playAnimationById(_ActorConfig2.default.BACKRIGHT_ANIMATION_INDEX);
@@ -3334,10 +3341,10 @@ var PlayerActor = function (_Spriter$SpriterGroup) {
         this.playAnimationById(_ActorConfig2.default.LEFT_ANIMATION_INDEX);
         console.log("ANGULO IZQUIERDO");
       } else if (this.angleTo == "LOWER") {
-        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        this.playAnimationById(_ActorConfig2.default.FRONT_ANIMATION_INDEX);
         console.log("ANGULO INFERIOR");
       } else if (this.angleTo == "LOWER_RIGHT") {
-        this.playAnimationById(_ActorConfig2.default.FRONTLEFT_ANIMATION_INDEX);
+        this.playAnimationById(_ActorConfig2.default.FRONTRIGHT_ANIMATION_INDEX);
         console.log("ANGULO INFERIOR DERECHO");
       } else if (this.angleTo == "LOWER_LEFT") {
         this.playAnimationById(_ActorConfig2.default.FRONTLEFT_ANIMATION_INDEX);
@@ -4866,16 +4873,18 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = {
-    FRONT_IDLE_INDEX: 4,
-    BACK_IDLE_INDEX: 0,
+    FRONTRIGHT_ANIMATION_INDEX: 0,
+    FRONT_ANIMATION_INDEX: 1,
+    BACK_ANIMATION_INDEX: 2,
+    BACKRIGHT_ANIMATION_INDEX: 3,
+    RIGHT_ANIMATION_INDEX: 4,
+    LEFT_ANIMATION_INDEX: 5,
+    FRONTLEFT_ANIMATION_INDEX: 6,
     BACKLEFT_ANIMATION_INDEX: 2,
-    BACKRIGHT_ANIMATION_INDEX: 1,
-    FRONTLEFT_ANIMATION_INDEX: 5,
-    FRONTRIGHT_ANIMATION_INDEX: 3,
-    RIGHT_ANIMATION_INDEX: 6,
-    LEFT_ANIMATION_INDEX: 7,
-    ENTITY: 'Animaciones',
-    START_ANIMATION_INDEX: 4
+    FRONT_IDLE_INDEX: 0,
+    BACK_IDLE_INDEX: 0,
+    ENTITY: 'entity_000',
+    START_ANIMATION_INDEX: 0
 };
 
 /***/ }),
@@ -11888,8 +11897,8 @@ var _class = function (_Phaser$State) {
       this.load.image("lobby-bg", "./assets/images/lobby/lobby_bg.png");
 
       // Player Sprites
-      this.load.atlas("playerAtlas", "./assets/images/player/player.png", "./assets/images/player/player.json");
-      this.load.json("playerJson", "./assets/images/player/player.scon");
+      this.load.atlas("playerAtlas", "./assets/images/player/Personaje/Mimi.png", "./assets/images/player/Personaje/Mimi.json");
+      this.load.xml("playerXml", "./assets/images/player/Personaje/Mimi.scml");
     }
   }, {
     key: 'create',
@@ -12093,7 +12102,7 @@ var Scene = function (_Phaser$State) {
 
     _this.spriterLoader = new Spriter.Loader();
 
-    _this.spriterFile = new Spriter.SpriterJSON(game.cache.getJSON("playerJson"),
+    _this.spriterFile = new Spriter.SpriterXml(game.cache.getXML("playerXml"),
     /* optional parameters */{
       imageNameType: Spriter.eImageNameType.NAME_ONLY
     });
@@ -14409,7 +14418,7 @@ var _class = function (_Phaser$State) {
       // Scale background
       this.hud.scale.setTo(this.scaleX, this.scaleY);
 
-      var spriterFile = new Spriter.SpriterJSON(this.cache.getJSON("playerJson"),
+      var spriterFile = new Spriter.SpriterXml(this.cache.getXML("playerXml"),
       /* optional parameters */{
         imageNameType: Spriter.eImageNameType.NAME_ONLY
       });
@@ -14420,10 +14429,10 @@ var _class = function (_Phaser$State) {
       this.player = new _PlayerActor2.default(this.game, {
         spriterData: spriterData,
         textureKey: "playerAtlas",
-        entity: "Animaciones",
-        animation: "Frontidle",
+        entity: "entity_000",
+        animation: 0,
         animationSpeed: 100,
-        isSmall: false
+        isMediumSize: true
       });
 
       this.player.position.setTo(420, 400);
@@ -17543,8 +17552,8 @@ var _class = function (_Phaser$State) {
       this.load.image("loaderBar", "./assets/images/loader-bar.png");
 
       // Player Sprites
-      this.load.atlas("playerAtlas", "./assets/images/player/player.png", "./assets/images/player/player.json");
-      this.load.json("playerJson", "./assets/images/player/player.scon");
+      this.load.atlas("playerAtlas", "./assets/images/player/Personaje/Mimi.png", "./assets/images/player/Personaje/Mimi.json");
+      this.load.xml("playerXml", "./assets/images/player/Personaje/Mimi.scml");
 
       this.load.json("map", "./assets/tilemaps/maps/salt_lake_v1.json");
       this.load.json("salt_lake_shape_1", "./assets/tilemaps/maps/salt_lake/shape1.json");
@@ -17749,7 +17758,7 @@ var _class = function (_Phaser$State) {
       this.game.pncPlugin.addObject(room, banner);
       this.game.pncPlugin.addObject(room, hud);
 
-      spriterFile = new Spriter.SpriterJSON(this.cache.getJSON("playerJson"),
+      spriterFile = new Spriter.SpriterXml(this.cache.getXML("playerXml"),
       /* optional parameters */{
         imageNameType: Spriter.eImageNameType.NAME_ONLY
       });

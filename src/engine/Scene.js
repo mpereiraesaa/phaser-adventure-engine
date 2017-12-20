@@ -15,8 +15,8 @@ export default class Scene extends Phaser.State {
 
     this.spriterLoader = new Spriter.Loader();
 
-    this.spriterFile = new Spriter.SpriterJSON(
-      game.cache.getJSON("playerJson"),
+    this.spriterFile = new Spriter.SpriterXml(
+      game.cache.getXML("playerXml"),
       /* optional parameters */ {
         imageNameType: Spriter.eImageNameType.NAME_ONLY
       }

@@ -18,6 +18,13 @@ export default class PlayerActor extends Spriter.SpriterGroup {
       this.scale.setTo(this.scaleX, this.scaleY);
     }
 
+    if (actorDefinition.isMediumSize) {
+      this.scaleX = 270 / this.width;
+      this.scaleY = 300 / this.height;
+
+      this.scale.setTo(this.scaleX, this.scaleY);
+    }
+
     console.debug("PlayerActor initialised");
     this.initSignalListeners();
 
@@ -176,7 +183,7 @@ export default class PlayerActor extends Spriter.SpriterGroup {
 
   lookAt() {
     if (this.angleTo == "UPPER") {
-      this.playAnimationById(ActorConfig.BACK_IDLE_INDEX);
+      this.playAnimationById(ActorConfig.BACK_ANIMATION_INDEX);
       console.log("ANGULO SUPERIOR");
     } else if (this.angleTo == "UPPER_RIGHT") {
       this.playAnimationById(ActorConfig.BACKRIGHT_ANIMATION_INDEX);
@@ -191,10 +198,10 @@ export default class PlayerActor extends Spriter.SpriterGroup {
       this.playAnimationById(ActorConfig.LEFT_ANIMATION_INDEX);
       console.log("ANGULO IZQUIERDO");
     } else if (this.angleTo == "LOWER") {
-      this.playAnimationById(ActorConfig.FRONT_IDLE_INDEX);
+      this.playAnimationById(ActorConfig.FRONT_ANIMATION_INDEX);
       console.log("ANGULO INFERIOR");
     } else if (this.angleTo == "LOWER_RIGHT") {
-      this.playAnimationById(ActorConfig.FRONTLEFT_ANIMATION_INDEX);
+      this.playAnimationById(ActorConfig.FRONTRIGHT_ANIMATION_INDEX);
       console.log("ANGULO INFERIOR DERECHO");
     } else if (this.angleTo == "LOWER_LEFT") {
       this.playAnimationById(ActorConfig.FRONTLEFT_ANIMATION_INDEX);

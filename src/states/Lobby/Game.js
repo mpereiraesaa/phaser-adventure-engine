@@ -34,8 +34,8 @@ export default class extends Phaser.State {
     // Scale background
     this.hud.scale.setTo(this.scaleX, this.scaleY);
 
-    var spriterFile = new Spriter.SpriterJSON(
-      this.cache.getJSON("playerJson"),
+    var spriterFile = new Spriter.SpriterXml(
+      this.cache.getXML("playerXml"),
       /* optional parameters */ {
         imageNameType: Spriter.eImageNameType.NAME_ONLY
       }
@@ -47,10 +47,10 @@ export default class extends Phaser.State {
     this.player = new PlayerActor(this.game, {
       spriterData: spriterData,
       textureKey: "playerAtlas",
-      entity: "Animaciones",
-      animation: "Frontidle",
+      entity: "entity_000",
+      animation: 0,
       animationSpeed: 100,
-      isSmall: false
+      isMediumSize: true
     });
 
     this.player.position.setTo(420, 400);

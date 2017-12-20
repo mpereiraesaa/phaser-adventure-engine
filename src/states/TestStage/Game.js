@@ -65,8 +65,8 @@ export default class extends Phaser.State {
     this.game.pncPlugin.addObject(room, banner);
     this.game.pncPlugin.addObject(room, hud);
 
-    spriterFile = new Spriter.SpriterJSON(
-      this.cache.getJSON("playerJson"),
+    spriterFile = new Spriter.SpriterXml(
+      this.cache.getXML("playerXml"),
       /* optional parameters */ {
         imageNameType: Spriter.eImageNameType.NAME_ONLY
       }
