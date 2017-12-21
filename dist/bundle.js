@@ -3358,25 +3358,25 @@ var PlayerActor = function (_Spriter$SpriterGroup) {
         this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
         console.log("ANGULO SUPERIOR");
       } else if (tween.angleToBegin == "UPPER_RIGHT") {
-        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        this.playAnimationById(_ActorConfig2.default.BACKRIGHT_IDLE_INDEX);
         console.log("ANGULO SUPERIOR DERECHO");
       } else if (tween.angleToBegin == "UPPER_LEFT") {
-        this.playAnimationById(_ActorConfig2.default.BACK_IDLE_INDEX);
+        this.playAnimationById(_ActorConfig2.default.BACKLEFT_IDLE_INDEX);
         console.log("ANGULO SUPERIOR IZQUIERDO");
       } else if (tween.angleToBegin == "RIGHT") {
-        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        this.playAnimationById(_ActorConfig2.default.RIGHT_IDLE_INDEX);
         console.log("ANGULO DERECHO");
       } else if (tween.angleToBegin == "LEFT") {
-        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        this.playAnimationById(_ActorConfig2.default.LEFT_IDLE_INDEX);
         console.log("ANGULO IZQUIERDO");
       } else if (tween.angleToBegin == "LOWER") {
         this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
         console.log("ANGULO INFERIOR");
       } else if (tween.angleToBegin == "LOWER_RIGHT") {
-        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        this.playAnimationById(_ActorConfig2.default.FRONTRIGHT_IDLE_INDEX);
         console.log("ANGULO INFERIOR DERECHO");
       } else if (tween.angleToBegin == "LOWER_LEFT") {
-        this.playAnimationById(_ActorConfig2.default.FRONT_IDLE_INDEX);
+        this.playAnimationById(_ActorConfig2.default.FRONTLEFT_IDLE_INDEX);
         console.log("ANGULO INFERIOR IZQUIERDO");
       }
     }
@@ -4874,17 +4874,23 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = {
     FRONTRIGHT_ANIMATION_INDEX: 0,
-    FRONT_ANIMATION_INDEX: 1,
-    BACK_ANIMATION_INDEX: 2,
-    BACKRIGHT_ANIMATION_INDEX: 3,
-    RIGHT_ANIMATION_INDEX: 4,
-    LEFT_ANIMATION_INDEX: 5,
-    FRONTLEFT_ANIMATION_INDEX: 6,
-    BACKLEFT_ANIMATION_INDEX: 2,
-    FRONT_IDLE_INDEX: 0,
-    BACK_IDLE_INDEX: 0,
+    FRONTRIGHT_IDLE_INDEX: 1,
+    FRONTLEFT_IDLE_INDEX: 2,
+    FRONTLEFT_ANIMATION_INDEX: 3,
+    FRONT_ANIMATION_INDEX: 4,
+    FRONT_IDLE_INDEX: 5,
+    BACK_ANIMATION_INDEX: 6,
+    BACK_IDLE_INDEX: 7,
+    BACKRIGHT_ANIMATION_INDEX: 8,
+    BACKRIGHT_IDLE_INDEX: 9,
+    BACKLEFT_IDLE_INDEX: 10,
+    BACKLEFT_ANIMATION_INDEX: 11,
+    RIGHT_ANIMATION_INDEX: 12,
+    RIGHT_IDLE_INDEX: 13,
+    LEFT_IDLE_INDEX: 14,
+    LEFT_ANIMATION_INDEX: 15,
     ENTITY: 'entity_000',
-    START_ANIMATION_INDEX: 0
+    START_ANIMATION_INDEX: 1
 };
 
 /***/ }),
@@ -11897,8 +11903,8 @@ var _class = function (_Phaser$State) {
       this.load.image("lobby-bg", "./assets/images/lobby/lobby_bg.png");
 
       // Player Sprites
-      this.load.atlas("playerAtlas", "./assets/images/player/Personaje/Mimi.png", "./assets/images/player/Personaje/Mimi.json");
-      this.load.xml("playerXml", "./assets/images/player/Personaje/Mimi.scml");
+      this.load.atlas("playerAtlas", "./assets/images/player/Girl_1/Mimi.png", "./assets/images/player/Girl_1/Mimi.json");
+      this.load.xml("playerXml", "./assets/images/player/Girl_1/Mimi.scml");
     }
   }, {
     key: 'create',
@@ -17552,8 +17558,8 @@ var _class = function (_Phaser$State) {
       this.load.image("loaderBar", "./assets/images/loader-bar.png");
 
       // Player Sprites
-      this.load.atlas("playerAtlas", "./assets/images/player/Personaje/Mimi.png", "./assets/images/player/Personaje/Mimi.json");
-      this.load.xml("playerXml", "./assets/images/player/Personaje/Mimi.scml");
+      this.load.atlas("playerAtlas", "./assets/images/player/Girl_1/Mimi.png", "./assets/images/player/Girl_1/Mimi.json");
+      this.load.xml("playerXml", "./assets/images/player/Girl_1/Mimi.scml");
 
       this.load.json("map", "./assets/tilemaps/maps/salt_lake_v1.json");
       this.load.json("salt_lake_shape_1", "./assets/tilemaps/maps/salt_lake/shape1.json");

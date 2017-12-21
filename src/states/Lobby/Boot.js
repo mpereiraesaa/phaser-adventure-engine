@@ -37,8 +37,8 @@ export default class extends Phaser.State {
     this.load.image("lobby-bg", "./assets/images/lobby/lobby_bg.png")
 
     // Player Sprites
-    this.load.atlas("playerAtlas", "./assets/images/player/Personaje/Mimi.png", "./assets/images/player/Personaje/Mimi.json");
-    this.load.xml("playerXml", "./assets/images/player/Personaje/Mimi.scml");
+    this.load.atlas("playerAtlas", "./assets/images/player/Girl_1/Mimi.png", "./assets/images/player/Girl_1/Mimi.json");
+    this.load.xml("playerXml", "./assets/images/player/Girl_1/Mimi.scml");
   }
 
   create(){

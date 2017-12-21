@@ -214,25 +214,25 @@ export default class PlayerActor extends Spriter.SpriterGroup {
       this.playAnimationById(ActorConfig.BACK_IDLE_INDEX);
       console.log("ANGULO SUPERIOR");
     } else if (tween.angleToBegin == "UPPER_RIGHT") {
-      this.playAnimationById(ActorConfig.BACK_IDLE_INDEX);
+      this.playAnimationById(ActorConfig.BACKRIGHT_IDLE_INDEX);
       console.log("ANGULO SUPERIOR DERECHO");
     } else if (tween.angleToBegin == "UPPER_LEFT") {
-      this.playAnimationById(ActorConfig.BACK_IDLE_INDEX);
+      this.playAnimationById(ActorConfig.BACKLEFT_IDLE_INDEX);
       console.log("ANGULO SUPERIOR IZQUIERDO");
     } else if (tween.angleToBegin == "RIGHT") {
-      this.playAnimationById(ActorConfig.FRONT_IDLE_INDEX);
+      this.playAnimationById(ActorConfig.RIGHT_IDLE_INDEX);
       console.log("ANGULO DERECHO");
     } else if (tween.angleToBegin == "LEFT") {
-      this.playAnimationById(ActorConfig.FRONT_IDLE_INDEX);
+      this.playAnimationById(ActorConfig.LEFT_IDLE_INDEX);
       console.log("ANGULO IZQUIERDO");
     } else if (tween.angleToBegin == "LOWER") {
       this.playAnimationById(ActorConfig.FRONT_IDLE_INDEX);
       console.log("ANGULO INFERIOR");
     } else if (tween.angleToBegin == "LOWER_RIGHT") {
-      this.playAnimationById(ActorConfig.FRONT_IDLE_INDEX);
+      this.playAnimationById(ActorConfig.FRONTRIGHT_IDLE_INDEX);
       console.log("ANGULO INFERIOR DERECHO");
     } else if (tween.angleToBegin == "LOWER_LEFT") {
-      this.playAnimationById(ActorConfig.FRONT_IDLE_INDEX);
+      this.playAnimationById(ActorConfig.FRONTLEFT_IDLE_INDEX);
       console.log("ANGULO INFERIOR IZQUIERDO");
     }
   }
