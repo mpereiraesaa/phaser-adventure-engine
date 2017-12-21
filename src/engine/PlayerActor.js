@@ -19,8 +19,8 @@ export default class PlayerActor extends Spriter.SpriterGroup {
     }
 
     if (actorDefinition.isMediumSize) {
-      this.scaleX = 270 / this.width;
-      this.scaleY = 300 / this.height;
+      this.scaleX = 220 / this.width;
+      this.scaleY = 250 / this.height;
 
       this.scale.setTo(this.scaleX, this.scaleY);
     }
@@ -47,12 +47,12 @@ export default class PlayerActor extends Spriter.SpriterGroup {
     maskBitmap.circle(30, 30, 30, "rgba(224, 119, 44, 0.5)");
 
     this.maskImg = this.game.make.image(0, 0, maskBitmap);
-    this.maskImg.width = this.maskImg.width + this.maskImg.width;
+    this.maskImg.width = this.maskImg.width * 3;
     this.maskImg.anchor.set(0.5);
     this.maskImg.visible = false;
 
     this.bounds = this.game.make.sprite(0, 0, bmd);
-    this.bounds.width = this.bounds.width + this.bounds.width;
+    this.bounds.width = this.bounds.width * 3;
     this.bounds.anchor.set(0.5);
 
     this.boundsGrp.add(this.bounds);
@@ -79,10 +79,9 @@ export default class PlayerActor extends Spriter.SpriterGroup {
     this.updateAnimation();
 
     if (this.walkTween && this.walkTween.isRunning) {
-      this.calcAngle(this.xyPoint);
-
-      if (this.angleTo != this.walkTween.angleToBegin) {
-        this.lookAt()
+      if (this.angleTo != this.walkTween.animations[this.walkTween.current].angle) {
+        this.angleTo = this.walkTween.animations[this.walkTween.current].angle;
+        this.lookAt();
       }
     }
   }
@@ -150,62 +149,66 @@ export default class PlayerActor extends Spriter.SpriterGroup {
     this.walkingTween.start();
   }
 
-  calcAngle(pointer) {
-    if (pointer) {
-      this.angleTo =
-        Phaser.Math.angleBetween(this.x, this.y, pointer.x, pointer.y) *
+  calcAngle(x1, y1, x2, y2) {
+    let angleTo = null;
+
+    if (x1 && y1 && x2 && y2) {
+      angleTo =
+        Phaser.Math.angleBetween(x1, y1, x2, y2) *
         180 /
         Math.PI;
     }
 
-    if (this.angleTo > -100 && this.angleTo < -80) {
-      this.angleTo = "UPPER";
-    } else if (this.angleTo < -10 && this.angleTo > -80) {
-      this.angleTo = "UPPER_RIGHT";
-    } else if (this.angleTo < -110 && this.angleTo > -170) {
-      this.angleTo = "UPPER_LEFT";
-    } else if (this.angleTo > -10 && this.angleTo < 10) {
-      this.angleTo = "RIGHT";
+    if (angleTo > -100 && angleTo < -80) {
+      angleTo = "UPPER";
+    } else if (angleTo < -10 && angleTo > -80) {
+      angleTo = "UPPER_RIGHT";
+    } else if (angleTo < -110 && angleTo > -170) {
+      angleTo = "UPPER_LEFT";
+    } else if (angleTo > -10 && angleTo < 10) {
+      angleTo = "RIGHT";
     } else if (
-      (this.angleTo > -180 && this.angleTo < -170) ||
-      (this.angleTo > 170 && this.angleTo < 180) ||
-      this.angleTo === 180
+      (angleTo > -180 && angleTo < -170) ||
+      (angleTo > 170 && angleTo < 180) ||
+      angleTo === 180
     ) {
-      this.angleTo = "LEFT";
-    } else if (this.angleTo > 80 && this.angleTo < 100) {
-      this.angleTo = "LOWER";
-    } else if (this.angleTo > 10 && this.angleTo < 80) {
-      this.angleTo = "LOWER_RIGHT";
-    } else if (this.angleTo > 100 && this.angleTo < 170) {
-      this.angleTo = "LOWER_LEFT";
+      angleTo = "LEFT";
+    } else if (angleTo > 80 && angleTo < 100) {
+      angleTo = "LOWER";
+    } else if (angleTo > 10 && angleTo < 80) {
+      angleTo = "LOWER_RIGHT";
+    } else if (angleTo > 100 && angleTo < 170) {
+      angleTo = "LOWER_LEFT";
     }
+
+    return angleTo;
   }
 
   lookAt() {
     if (this.angleTo == "UPPER") {
       this.playAnimationById(ActorConfig.BACK_ANIMATION_INDEX);
-      console.log("ANGULO SUPERIOR");
+      console.log("ANGULO SUPERIOR" + " Animation player: " + ActorConfig.BACK_ANIMATION_INDEX);
     } else if (this.angleTo == "UPPER_RIGHT") {
       this.playAnimationById(ActorConfig.BACKRIGHT_ANIMATION_INDEX);
-      console.log("ANGULO SUPERIOR DERECHO");
+      console.log("ANGULO SUPERIOR DERECHO" + " Animation player: " + ActorConfig.BACKRIGHT_ANIMATION_INDEX);
     } else if (this.angleTo == "UPPER_LEFT") {
       this.playAnimationById(ActorConfig.BACKLEFT_ANIMATION_INDEX);
-      console.log("ANGULO SUPERIOR IZQUIERDO");
+      console.log("ANGULO SUPERIOR IZQUIERDO" + " Animation player: " + ActorConfig.BACKLEFT_ANIMATION_INDEX);
     } else if (this.angleTo == "RIGHT") {
       this.playAnimationById(ActorConfig.RIGHT_ANIMATION_INDEX);
-      console.log("ANGULO DERECHO");
+      console.log("ANGULO DERECHO" + " Animation player: " + ActorConfig.RIGHT_ANIMATION_INDEX);
     } else if (this.angleTo == "LEFT") {
       this.playAnimationById(ActorConfig.LEFT_ANIMATION_INDEX);
-      console.log("ANGULO IZQUIERDO");
+      console.log("ANGULO IZQUIERDO" + " Animation player: " + ActorConfig.LEFT_ANIMATION_INDEX);
     } else if (this.angleTo == "LOWER") {
       this.playAnimationById(ActorConfig.FRONT_ANIMATION_INDEX);
-      console.log("ANGULO INFERIOR");
+      console.log("ANGULO INFERIOR" + " Animation player: " + ActorConfig.FRONT_ANIMATION_INDEX);
     } else if (this.angleTo == "LOWER_RIGHT") {
       this.playAnimationById(ActorConfig.FRONTRIGHT_ANIMATION_INDEX);
-      console.log("ANGULO INFERIOR DERECHO");
+      console.log("ANGULO INFERIOR DERECHO" + " Animation player: " + ActorConfig.FRONTRIGHT_ANIMATION_INDEX);
     } else if (this.angleTo == "LOWER_LEFT") {
       this.playAnimationById(ActorConfig.FRONTLEFT_ANIMATION_INDEX);
-      console.log("ANGULO INFERIOR IZQUIERDO");
+      console.log("ANGULO INFERIOR IZQUIERDO" + " Animation player: " + ActorConfig.FRONTLEFT_ANIMATION_INDEX);
     }
   }
 
@@ -266,13 +269,8 @@ export default class PlayerActor extends Spriter.SpriterGroup {
       this.walkTween = this.game.add.tween(this);
       this.walkTween.onComplete.add(this.movementComplete, this);
 
-      this.calcAngle(pointer);
-      this.walkTween.angleToBegin = this.angleTo;
-
-      this.lookAt();
-
       var path = navmesh.findPath();
-
+      
       this.game.network.sendKeyMessage({
         willMove: true,
         x: pointer.x,
@@ -282,16 +280,33 @@ export default class PlayerActor extends Spriter.SpriterGroup {
         clientHeight: game.height
       });
 
+      this.walkTween.animations = [];
+
       var pointer;
       for (var i = 0; i < path.length; i++) {
         pointer = path[i];
+
+        var angle = this.calcAngle(
+          path[i - 1] != undefined ? path[i - 1].x : this.x,
+          path[i - 1] != undefined ? path[i - 1].y : this.y,
+          pointer.x,
+          pointer.y
+        );
+
         var distance = Phaser.Math.distance(
           path[i - 1] != undefined ? path[i - 1].x : this.x,
           path[i - 1] != undefined ? path[i - 1].y : this.y,
           pointer.x,
           pointer.y
         );
-        this.walkTween.to({ x: pointer.x, y: pointer.y }, distance * 7);
+        this.walkTween.to({ x: pointer.x, y: pointer.y }, distance * 10);
+        this.walkTween.animations.push({ timeline: i, angle: angle });
+
+        if (i === 0) {
+          this.angleTo = angle;
+          this.walkTween.angleToBegin = angle;
+          this.lookAt();
+        }
       }
 
       this.walkTween.start();

@@ -72,7 +72,7 @@
 	"spriteSourceSize": {"x":3,"y":0,"w":117,"h":87},
 	"sourceSize": {"w":124,"h":111}
 },
-"BellyLateral":
+"Bellylateral":
 {
 	"frame": {"x":119,"y":146,"w":94,"h":83},
 	"rotated": false,

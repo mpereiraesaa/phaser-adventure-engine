@@ -16,5 +16,5 @@ export default {
     LEFT_IDLE_INDEX: 14,
     LEFT_ANIMATION_INDEX: 15,
     ENTITY: 'entity_000',
-    START_ANIMATION_INDEX: 1
+    START_ANIMATION_INDEX: 5
 }
