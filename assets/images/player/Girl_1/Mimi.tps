@@ -175,6 +175,7 @@
         <key>fileList</key>
         <array>
             <filename>Main_P</filename>
+            <filename>Maid_Serious</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
