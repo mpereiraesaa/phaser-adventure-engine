@@ -11,55 +11,85 @@ export default class extends Phaser.State {
 
   preload() {}
 
-  func(el) {
-    this.scroller.stop()
-    game.state.start(el.data.state)
+  func(scroller, el) {
+    scroller.stop();
+    game.state.start(el.data.state);
   }
 
-  create() {
-    /* Scroll box group */
-    this.scrollGroup = this.game.add.group();
-    this.menuX = 55
-    this.menuY = 45
+  drawSelectorBox(menuX, menuY) {
+    let scrollGroup = this.game.add.group();
+    let group = this.game.make.group(null);
+    let g = this.game.add.graphics(0, 0, group);
+    let box = this.add.sprite(menuX, menuY, "selector-box");
+    let boxWOffset = box.width - 70;
+    let boxHOffset = menuY - 5;
+    let i = 0;
+    let style = { font: "14px Arial", fill: "#fff" };
+    let data = [{ text: "Stage Test 00", action: "TestStageBoot" },
+                { text: "Stage Test 01", action: "TestStageBoot" },
+                { text: "Stage Test 02", action: "TestStageBoot" },
+                { text: "Stage Test 03", action: "TestStageBoot" },
+                { text: "Stage Test 04", action: "TestStageBoot" },
+                { text: "Stage Test 05", action: "TestStageBoot" },
+                { text: "Stage Test 06", action: "TestStageBoot" },
+                { text: "Stage Test 07", action: "TestStageBoot" },
+                { text: "Stage Test 08", action: "TestStageBoot" },
+                { text: "Stage Test 09", action: "TestStageBoot" },
+                { text: "Stage Test 10", action: "TestStageBoot" },
+                { text: "Stage Test 11", action: "TestStageBoot" },
+                { text: "Stage Test 12", action: "TestStageBoot" },
+                { text: "Stage Test 13", action: "TestStageBoot" },
+                { text: "Stage Test 14", action: "TestStageBoot" },
+                { text: "Stage Test 15", action: "TestStageBoot" },
+                { text: "Stage Test 16", action: "TestStageBoot" },
+                { text: "Stage Test 17", action: "TestStageBoot" },
+                { text: "Stage Test 18", action: "TestStageBoot" },
+                { text: "Stage Test 19", action: "TestStageBoot" },
+                { text: "Stage Test 20", action: "TestStageBoot" },
+                { text: "Stage Test 21", action: "TestStageBoot" }];
 
-    this.box = this.add.sprite(this.menuX, this.menuY, 'selector-box')
-    var boxW = this.box.width - 80;
-    var boxH = 40;
-
-    this.scroller = game.add.existing(
-      new ScrollableArea(this.menuX + 25, this.menuY + 25, this.box.width, this.box.height, {
+    let scroller = game.add.existing(
+      new ScrollableArea(menuX + 25, menuY + 25, box.width, box.height -60, {
         horizontalScroll: false,
         horizontalWheel: false,
+        kineticMovement: false,
         verticalWheel: true
       })
     );
 
-    var group = this.game.make.group(null);
-    var g = this.game.add.graphics(0, 0, group);
-    g.beginFill(Phaser.Color.hexToRGB("#8c1be2")).drawRect(0, 0, boxW, boxH / 2);
+    for (; i < data.length; i++) {
+      g
+        .beginFill(Phaser.Color.hexToRGB("#8c1be2"))
+        .drawRect(0, 0, boxWOffset, boxHOffset / 2 + (i * 20));
 
-    var txt = this.game.add.text(
-      boxW / 4,
-      (boxH / 3),
-      "Stage Test",
-      { font: "14px Arial", fill: "#fff" },
-      group
-    );
+      let txt = this.game.add.text(
+        boxWOffset / 3,
+        boxHOffset / 3 + (i * 20),
+        data[i].text,
+        style,
+        group
+      );
 
-    txt.anchor.set(0.5);
-    var img = this.game.add.image(0, 0, group.generateTexture());
-    img.data = { id: 1, state: "TestStageBoot" };
+      txt.anchor.set(0.5);
 
-    img.inputEnabled = true;
-    img.input.useHandCursor = true;
-    img.events.onInputDown.add(this.func, this);
+      let img = this.game.add.image(0, 0, group.generateTexture());
+      img.data = { id: 1, state: "TestStageBoot" };
 
-    this.scroller.addChildren(img);
+      img.inputEnabled = true;
+      img.input.useHandCursor = true;
+      img.events.onInputDown.add(el => this.func(scroller, el), this);
 
-    this.scroller.start();
+      scroller.addChildren(img);
+    }
 
-    this.scrollGroup.add(this.box);
-    this.scrollGroup.add(this.scroller);
+    scroller.start();
+
+    scrollGroup.add(box);
+    scrollGroup.add(scroller);
+  }
+
+  create() {
+    this.drawSelectorBox(55, 45);
   }
 
   update() {}

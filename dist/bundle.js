@@ -11913,8 +11913,8 @@ var _class = function (_Phaser$State) {
       this.load.image("lobby-bg", "./assets/images/lobby/lobby_bg.png");
 
       // Player Sprites
-      this.load.atlas("playerAtlas", "./assets/images/player/Girl_1/Mimi.png", "./assets/images/player/Girl_1/Mimi.json");
-      this.load.xml("playerXml", "./assets/images/player/Girl_1/Mimi.scml");
+      this.load.atlas("playerAtlas", "./assets/images/player/Mimi/Mimi.png", "./assets/images/player/Mimi/Mimi.json");
+      this.load.xml("playerXml", "./assets/images/player/Mimi/Mimi.scml");
     }
   }, {
     key: 'create',
@@ -14750,48 +14750,60 @@ var _class = function (_Phaser$State) {
     value: function preload() {}
   }, {
     key: "func",
-    value: function func(el) {
-      this.scroller.stop();
+    value: function func(scroller, el) {
+      scroller.stop();
       game.state.start(el.data.state);
+    }
+  }, {
+    key: "drawSelectorBox",
+    value: function drawSelectorBox(menuX, menuY) {
+      var _this2 = this;
+
+      var scrollGroup = this.game.add.group();
+      var group = this.game.make.group(null);
+      var g = this.game.add.graphics(0, 0, group);
+      var box = this.add.sprite(menuX, menuY, "selector-box");
+      var boxWOffset = box.width - 70;
+      var boxHOffset = menuY - 5;
+      var i = 0;
+      var style = { font: "14px Arial", fill: "#fff" };
+      var data = [{ text: "Stage Test 00", action: "TestStageBoot" }, { text: "Stage Test 01", action: "TestStageBoot" }, { text: "Stage Test 02", action: "TestStageBoot" }, { text: "Stage Test 03", action: "TestStageBoot" }, { text: "Stage Test 04", action: "TestStageBoot" }, { text: "Stage Test 05", action: "TestStageBoot" }, { text: "Stage Test 06", action: "TestStageBoot" }, { text: "Stage Test 07", action: "TestStageBoot" }, { text: "Stage Test 08", action: "TestStageBoot" }, { text: "Stage Test 09", action: "TestStageBoot" }, { text: "Stage Test 10", action: "TestStageBoot" }, { text: "Stage Test 11", action: "TestStageBoot" }, { text: "Stage Test 12", action: "TestStageBoot" }, { text: "Stage Test 13", action: "TestStageBoot" }, { text: "Stage Test 14", action: "TestStageBoot" }, { text: "Stage Test 15", action: "TestStageBoot" }, { text: "Stage Test 16", action: "TestStageBoot" }, { text: "Stage Test 17", action: "TestStageBoot" }, { text: "Stage Test 18", action: "TestStageBoot" }, { text: "Stage Test 19", action: "TestStageBoot" }, { text: "Stage Test 20", action: "TestStageBoot" }, { text: "Stage Test 21", action: "TestStageBoot" }];
+
+      var scroller = game.add.existing(new _phaserScrollable2.default(menuX + 25, menuY + 25, box.width, box.height - 60, {
+        horizontalScroll: false,
+        horizontalWheel: false,
+        kineticMovement: false,
+        verticalWheel: true
+      }));
+
+      for (; i < data.length; i++) {
+        g.beginFill(_phaser2.default.Color.hexToRGB("#8c1be2")).drawRect(0, 0, boxWOffset, boxHOffset / 2 + i * 20);
+
+        var txt = this.game.add.text(boxWOffset / 3, boxHOffset / 3 + i * 20, data[i].text, style, group);
+
+        txt.anchor.set(0.5);
+
+        var img = this.game.add.image(0, 0, group.generateTexture());
+        img.data = { id: 1, state: "TestStageBoot" };
+
+        img.inputEnabled = true;
+        img.input.useHandCursor = true;
+        img.events.onInputDown.add(function (el) {
+          return _this2.func(scroller, el);
+        }, this);
+
+        scroller.addChildren(img);
+      }
+
+      scroller.start();
+
+      scrollGroup.add(box);
+      scrollGroup.add(scroller);
     }
   }, {
     key: "create",
     value: function create() {
-      /* Scroll box group */
-      this.scrollGroup = this.game.add.group();
-      this.menuX = 55;
-      this.menuY = 45;
-
-      this.box = this.add.sprite(this.menuX, this.menuY, 'selector-box');
-      var boxW = this.box.width - 80;
-      var boxH = 40;
-
-      this.scroller = game.add.existing(new _phaserScrollable2.default(this.menuX + 25, this.menuY + 25, this.box.width, this.box.height, {
-        horizontalScroll: false,
-        horizontalWheel: false,
-        verticalWheel: true
-      }));
-
-      var group = this.game.make.group(null);
-      var g = this.game.add.graphics(0, 0, group);
-      g.beginFill(_phaser2.default.Color.hexToRGB("#8c1be2")).drawRect(0, 0, boxW, boxH / 2);
-
-      var txt = this.game.add.text(boxW / 4, boxH / 3, "Stage Test", { font: "14px Arial", fill: "#fff" }, group);
-
-      txt.anchor.set(0.5);
-      var img = this.game.add.image(0, 0, group.generateTexture());
-      img.data = { id: 1, state: "TestStageBoot" };
-
-      img.inputEnabled = true;
-      img.input.useHandCursor = true;
-      img.events.onInputDown.add(this.func, this);
-
-      this.scroller.addChildren(img);
-
-      this.scroller.start();
-
-      this.scrollGroup.add(this.box);
-      this.scrollGroup.add(this.scroller);
+      this.drawSelectorBox(55, 45);
     }
   }, {
     key: "update",
@@ -17081,7 +17093,8 @@ var ScrollableArea = function (_Phaser$Group) {
     _this.mask = _this.maskGraphics;
 
     // Draw a bar
-    _this.bar = game.add.sprite(x + w - 70, y, 'vertical-bar');
+    _this.bar = game.add.sprite(x + w - 60, y, 'vertical-bar');
+    _this.bar.width = _this.bar.width - 10;
     _this.bar.inputEnabled = true;
 
     _this.dragging = false;
@@ -17123,6 +17136,9 @@ var ScrollableArea = function (_Phaser$Group) {
       verticalWheel: true,
       deltaWheel: 40
     };
+
+    window.scroller = _this;
+    window.bar = _this.bar;
 
     _this.configure(params);
     return _this;
@@ -17295,9 +17311,9 @@ var ScrollableArea = function (_Phaser$Group) {
   }, {
     key: 'moveBar',
     value: function moveBar() {
-      var y = Math.round(this.percentMovement / 100 * this.barHeightMax);
+      var y = this._y + Math.round(this.percentMovement / 100 * this.barHeightMax);
 
-      this.barTween = this.game.add.tween(this.bar).to({ x: 0, y: y }, 40, Phaser.Easing.Linear.None, true);
+      this.barTween = this.game.add.tween(this.bar).to({ y: y }, 50, Phaser.Easing.Linear.None, true);
     }
 
     /**
@@ -17308,7 +17324,7 @@ var ScrollableArea = function (_Phaser$Group) {
   }, {
     key: 'update',
     value: function update() {
-      if (this.height > this.h) {
+      if (this.height > this._h) {
         this.elapsed = Date.now() - this.timestamp;
         this.velocityWheelXAbs = Math.abs(this.velocityWheelX);
         this.velocityWheelYAbs = Math.abs(this.velocityWheelY);
@@ -17354,7 +17370,7 @@ var ScrollableArea = function (_Phaser$Group) {
           this.moveBar();
         }
 
-        this.percentMovement = Math.abs(this.y / this.height * 100);
+        this.percentMovement = Math.abs((this._y - this.y) / (this.height - this._h) * 100);
 
         this.limitMovement();
       }
@@ -17568,8 +17584,8 @@ var _class = function (_Phaser$State) {
       this.load.image("loaderBar", "./assets/images/loader-bar.png");
 
       // Player Sprites
-      this.load.atlas("playerAtlas", "./assets/images/player/Girl_1/Mimi.png", "./assets/images/player/Girl_1/Mimi.json");
-      this.load.xml("playerXml", "./assets/images/player/Girl_1/Mimi.scml");
+      this.load.atlas("playerAtlas", "./assets/images/player/Mimi/Mimi.png", "./assets/images/player/Mimi/Mimi.json");
+      this.load.xml("playerXml", "./assets/images/player/Mimi/Mimi.scml");
 
       this.load.json("map", "./assets/tilemaps/maps/salt_lake_v1.json");
       this.load.json("salt_lake_shape_1", "./assets/tilemaps/maps/salt_lake/shape1.json");

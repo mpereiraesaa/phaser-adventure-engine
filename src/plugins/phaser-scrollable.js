@@ -17,7 +17,8 @@ export default class ScrollableArea extends Phaser.Group {
     this.mask = this.maskGraphics;
 
     // Draw a bar
-    this.bar = game.add.sprite(x + w - 70, y, 'vertical-bar')
+    this.bar = game.add.sprite(x + w - 60, y, 'vertical-bar');
+    this.bar.width = this.bar.width - 10;
     this.bar.inputEnabled = true;
 
     this.dragging = false;
@@ -59,6 +60,9 @@ export default class ScrollableArea extends Phaser.Group {
       verticalWheel: true,
       deltaWheel: 40
     };
+
+    window.scroller = this;
+    window.bar = this.bar;
 
     this.configure(params);
   }
@@ -221,13 +225,13 @@ export default class ScrollableArea extends Phaser.Group {
   }
 
   moveBar() {
-    let y = Math.round((this.percentMovement / 100) * this.barHeightMax)
+    let y = this._y + Math.round((this.percentMovement / 100) * this.barHeightMax)
 
     this.barTween = this.game.add
       .tween(this.bar)
       .to(
-        { x: 0, y: y },
-        40,
+        { y: y },
+        50,
         Phaser.Easing.Linear.None,
         true
       );
@@ -238,7 +242,7 @@ export default class ScrollableArea extends Phaser.Group {
    * Create the deceleration effect.
    */
   update() {
-    if(this.height > this.h){
+    if(this.height > this._h){
       this.elapsed = Date.now() - this.timestamp;
       this.velocityWheelXAbs = Math.abs(this.velocityWheelX);
       this.velocityWheelYAbs = Math.abs(this.velocityWheelY);
@@ -287,13 +291,11 @@ export default class ScrollableArea extends Phaser.Group {
 
         this.moveBar()
       }
-
-      this.percentMovement = Math.abs((this.y / this.height) * 100)
+  
+      this.percentMovement = Math.abs((this._y - this.y) / (this.height - this._h) * 100);
 
       this.limitMovement();
-      
     }
-
   }
 
   /**
