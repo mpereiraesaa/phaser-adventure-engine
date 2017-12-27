@@ -21,32 +21,32 @@ export default class extends Phaser.State {
     let group = this.game.make.group(null);
     let g = this.game.add.graphics(0, 0, group);
     let box = this.add.sprite(menuX, menuY, "selector-box");
-    let boxWOffset = box.width - 70;
+    let boxWOffset = box.width - 65;
     let boxHOffset = menuY - 5;
     let i = 0;
     let style = { font: "14px Arial", fill: "#fff" };
-    let data = [{ text: "Stage Test 00", action: "TestStageBoot" },
-                { text: "Stage Test 01", action: "TestStageBoot" },
-                { text: "Stage Test 02", action: "TestStageBoot" },
-                { text: "Stage Test 03", action: "TestStageBoot" },
-                { text: "Stage Test 04", action: "TestStageBoot" },
-                { text: "Stage Test 05", action: "TestStageBoot" },
-                { text: "Stage Test 06", action: "TestStageBoot" },
-                { text: "Stage Test 07", action: "TestStageBoot" },
-                { text: "Stage Test 08", action: "TestStageBoot" },
-                { text: "Stage Test 09", action: "TestStageBoot" },
-                { text: "Stage Test 10", action: "TestStageBoot" },
-                { text: "Stage Test 11", action: "TestStageBoot" },
-                { text: "Stage Test 12", action: "TestStageBoot" },
-                { text: "Stage Test 13", action: "TestStageBoot" },
-                { text: "Stage Test 14", action: "TestStageBoot" },
-                { text: "Stage Test 15", action: "TestStageBoot" },
-                { text: "Stage Test 16", action: "TestStageBoot" },
-                { text: "Stage Test 17", action: "TestStageBoot" },
-                { text: "Stage Test 18", action: "TestStageBoot" },
-                { text: "Stage Test 19", action: "TestStageBoot" },
-                { text: "Stage Test 20", action: "TestStageBoot" },
-                { text: "Stage Test 21", action: "TestStageBoot" }];
+    let data = [{ text: "Stage Test 00", state: "TestStageBoot" },
+                { text: "Stage Test 01", state: "TestStageBoot" },
+                { text: "Stage Test 02", state: "TestStageBoot" },
+                { text: "Stage Test 03", state: "TestStageBoot" },
+                { text: "Stage Test 04", state: "TestStageBoot" },
+                { text: "Stage Test 05", state: "TestStageBoot" },
+                { text: "Stage Test 06", state: "TestStageBoot" },
+                { text: "Stage Test 07", state: "TestStageBoot" },
+                { text: "Stage Test 08", state: "TestStageBoot" },
+                { text: "Stage Test 09", state: "TestStageBoot" },
+                { text: "Stage Test 10", state: "TestStageBoot" },
+                { text: "Stage Test 11", state: "TestStageBoot" },
+                { text: "Stage Test 12", state: "TestStageBoot" },
+                { text: "Stage Test 13", state: "TestStageBoot" },
+                { text: "Stage Test 14", state: "TestStageBoot" },
+                { text: "Stage Test 15", state: "TestStageBoot" },
+                { text: "Stage Test 16", state: "TestStageBoot" },
+                { text: "Stage Test 17", state: "TestStageBoot" },
+                { text: "Stage Test 18", state: "TestStageBoot" },
+                { text: "Stage Test 19", state: "TestStageBoot" },
+                { text: "Stage Test 20", state: "TestStageBoot" },
+                { text: "Stage Test 21", state: "TestStageBoot" }];
 
     let scroller = game.add.existing(
       new ScrollableArea(menuX + 25, menuY + 25, box.width, box.height -60, {
@@ -73,7 +73,7 @@ export default class extends Phaser.State {
       txt.anchor.set(0.5);
 
       let img = this.game.add.image(0, 0, group.generateTexture());
-      img.data = { id: 1, state: "TestStageBoot" };
+      img.data = { id: 1, state: data[i].state };
 
       img.inputEnabled = true;
       img.input.useHandCursor = true;

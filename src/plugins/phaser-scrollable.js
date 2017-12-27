@@ -18,7 +18,7 @@ export default class ScrollableArea extends Phaser.Group {
 
     // Draw a bar
     this.bar = game.add.sprite(x + w - 60, y, 'vertical-bar');
-    this.bar.width = this.bar.width - 10;
+    this.bar.width = this.bar.width - 5;
     this.bar.inputEnabled = true;
 
     this.dragging = false;
