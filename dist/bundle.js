@@ -11893,28 +11893,15 @@ var _class = function (_Phaser$State) {
         active: this.fontsLoaded
       });
 
-      var text = this.add.text(this.world.centerX, this.world.centerY, 'Loading Main Level', { font: '16px Arial', fill: '#000000', align: 'center' });
+      var text = this.add.text(this.world.centerX, this.world.centerY, 'Loading Main Level', { font: '16px Arial', fill: '#fff', align: 'center' });
       text.anchor.setTo(0.5, 0.5);
 
-      // load your assets
+      // load initial assets
       this.load.image('loaderBg', './assets/images/loader-bg.png');
       this.load.image('loaderBar', './assets/images/loader-bar.png');
 
-      // Hud stuff
-      this.load.image("chat-rooms-icon", "./assets/images/lobby/chat_rooms.png");
-      this.load.image("friends-icon", "./assets/images/lobby/friends-logo.png");
-      this.load.image("grass-tex", "./assets/images/lobby/grass.jpg");
-      this.load.image("my-house-btn", "./assets/images/lobby/house_btn.png");
-      this.load.image("view-houses-icon", "./assets/images/lobby/houses_rooms.png");
-      this.load.image("settings-icon", "./assets/images/lobby/settings-logo.png");
-      this.load.image("store-icon", "./assets/images/lobby/store.png");
-      this.load.image("video-room-icon", "./assets/images/lobby/video_rooms.png");
-
-      this.load.image("lobby-bg", "./assets/images/lobby/lobby_bg.png");
-
-      // Player Sprites
-      this.load.atlas("playerAtlas", "./assets/images/player/Mimi/Mimi.png", "./assets/images/player/Mimi/Mimi.json");
-      this.load.xml("playerXml", "./assets/images/player/Mimi/Mimi.scml");
+      // Load base skins
+      this.load.text('skins', './assets/skins/skins.txt');
     }
   }, {
     key: 'create',
@@ -12118,7 +12105,7 @@ var Scene = function (_Phaser$State) {
 
     _this.spriterLoader = new Spriter.Loader();
 
-    _this.spriterFile = new Spriter.SpriterXml(game.cache.getXML("playerXml"),
+    _this.spriterFile = new Spriter.SpriterXml(game.cache.getXML(game.skins.getXml('Mimi')),
     /* optional parameters */{
       imageNameType: Spriter.eImageNameType.NAME_ONLY
     });
@@ -12134,9 +12121,6 @@ var Scene = function (_Phaser$State) {
       /*
       Hacky implementation for now - need to standardise scenedef and process this separately
        */
-      // Default player
-      // this.game.load.atlas("playerAtlas", "./assets/images/player/player.png", "./assets/images/player/player.json");
-      // this.game.load.json("playerJson", "./assets/images/player/player.scon");
 
       if (this.sceneDefinition.bg) {
         this.game.load.image(this.key + "bg", this.sceneDefinition.bg);
@@ -12576,7 +12560,7 @@ var Scene = function (_Phaser$State) {
 
       var actorDefinition = {
         spriterData: this.spriterData,
-        textureKey: "playerAtlas",
+        textureKey: game.skins.getAtlas('Mimi'),
         isSmall: true,
         spawnX: 200,
         spawnY: 600,
@@ -14336,6 +14320,65 @@ var _class = function (_Phaser$State) {
       (0, _utils.centerGameObjects)([this.loaderBg, this.loaderBar]);
 
       this.load.setPreloadSprite(this.loaderBar);
+
+      // Hud
+      this.load.image('chat-rooms-icon', './assets/images/lobby/chat_rooms.png');
+      this.load.image('friends-icon', './assets/images/lobby/friends-logo.png');
+      this.load.image('grass-tex', './assets/images/lobby/grass.jpg');
+      this.load.image('my-house-btn', './assets/images/lobby/house_btn.png');
+      this.load.image('view-houses-icon', './assets/images/lobby/houses_rooms.png');
+      this.load.image('settings-icon', './assets/images/lobby/settings-logo.png');
+      this.load.image('store-icon', './assets/images/lobby/store.png');
+      this.load.image('video-room-icon', './assets/images/lobby/video_rooms.png');
+
+      // Background
+      this.load.image('lobby-bg', './assets/images/lobby/lobby_bg.png');
+
+      this.loadSkins();
+    }
+  }, {
+    key: 'loadSkins',
+    value: function loadSkins() {
+      var skinsTxt = this.cache.getText('skins');
+      var names = skinsTxt.split('\n');
+      var i = 0;
+      var skins = Object.create(Array.prototype);
+
+      skins.getXml = function (name) {
+        var skin = this.filter(function (skin) {
+          return skin.name === name;
+        })[0];
+
+        return skin.xml;
+      };
+
+      skins.getAtlas = function (name) {
+        var skin = this.filter(function (skin) {
+          return skin.name === name;
+        })[0];
+
+        return skin.atlas;
+      };
+
+      for (; i < names.length; i++) {
+        var atlasName = names[i] + 'Atlas';
+        var xmlName = names[i] + 'Xml';
+        var skinPath = './assets/skins/';
+        var skin = {};
+
+        this.load.atlas(atlasName, '' + skinPath + names[i] + '/' + names[i] + '.png', '' + skinPath + names[i] + '/' + names[i] + '.json');
+
+        this.load.xml(xmlName, '' + skinPath + names[i] + '/' + names[i] + '.scml');
+
+        skin['name'] = names[i];
+        skin['atlas'] = atlasName;
+        skin['xml'] = xmlName;
+
+        skins.push(skin);
+      }
+
+      // Assign to game
+      this.game.skins = skins;
     }
   }, {
     key: 'create',
@@ -14434,7 +14477,7 @@ var _class = function (_Phaser$State) {
       // Scale background
       this.hud.scale.setTo(this.scaleX, this.scaleY);
 
-      var spriterFile = new Spriter.SpriterXml(this.cache.getXML("playerXml"),
+      var spriterFile = new Spriter.SpriterXml(this.cache.getXML(this.game.skins.getXml('Mimi')),
       /* optional parameters */{
         imageNameType: Spriter.eImageNameType.NAME_ONLY
       });
@@ -14444,7 +14487,7 @@ var _class = function (_Phaser$State) {
       // create actual renderable object - it is extension of Phaser.Group
       this.player = new _PlayerActor2.default(this.game, {
         spriterData: spriterData,
-        textureKey: "playerAtlas",
+        textureKey: this.game.skins.getAtlas('Mimi'),
         entity: "entity_000",
         animation: 0,
         animationSpeed: 100,
@@ -17579,14 +17622,6 @@ var _class = function (_Phaser$State) {
       var text = this.add.text(this.world.centerX, this.world.centerY, "loading test stage", { font: "16px Arial", fill: "#000000", align: "center" });
       text.anchor.setTo(0.5, 0.5);
 
-      // load your assets
-      this.load.image("loaderBg", "./assets/images/loader-bg.png");
-      this.load.image("loaderBar", "./assets/images/loader-bar.png");
-
-      // Player Sprites
-      this.load.atlas("playerAtlas", "./assets/images/player/Mimi/Mimi.png", "./assets/images/player/Mimi/Mimi.json");
-      this.load.xml("playerXml", "./assets/images/player/Mimi/Mimi.scml");
-
       this.load.json("map", "./assets/tilemaps/maps/salt_lake_v1.json");
       this.load.json("salt_lake_shape_1", "./assets/tilemaps/maps/salt_lake/shape1.json");
       this.load.json("map_points", "./assets/tilemaps/maps/salt_lake/points.json");
@@ -17790,7 +17825,7 @@ var _class = function (_Phaser$State) {
       this.game.pncPlugin.addObject(room, banner);
       this.game.pncPlugin.addObject(room, hud);
 
-      spriterFile = new Spriter.SpriterXml(this.cache.getXML("playerXml"),
+      spriterFile = new Spriter.SpriterXml(this.cache.getXML(this.game.skins.getXml('Mimi')),
       /* optional parameters */{
         imageNameType: Spriter.eImageNameType.NAME_ONLY
       });
@@ -17801,7 +17836,7 @@ var _class = function (_Phaser$State) {
       // adds actor using PlayerActor prototype which adds listeners for movement input
       this.game.pncPlugin.addActor(room, {
         spriterData: spriterData,
-        textureKey: "playerAtlas",
+        textureKey: this.game.skins.getAtlas('Mimi'),
         isSmall: true,
         spawnX: 200,
         spawnY: 600

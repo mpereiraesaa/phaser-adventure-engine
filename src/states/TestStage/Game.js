@@ -66,7 +66,7 @@ export default class extends Phaser.State {
     this.game.pncPlugin.addObject(room, hud);
 
     spriterFile = new Spriter.SpriterXml(
-      this.cache.getXML("playerXml"),
+      this.cache.getXML(this.game.skins.getXml('Mimi')),
       /* optional parameters */ {
         imageNameType: Spriter.eImageNameType.NAME_ONLY
       }
@@ -78,7 +78,7 @@ export default class extends Phaser.State {
     // adds actor using PlayerActor prototype which adds listeners for movement input
     this.game.pncPlugin.addActor(room, {
       spriterData: spriterData,
-      textureKey: "playerAtlas",
+      textureKey: this.game.skins.getAtlas('Mimi'),
       isSmall: true,
       spawnX: 200,
       spawnY: 600

@@ -24,14 +24,6 @@ export default class extends Phaser.State {
     );
     text.anchor.setTo(0.5, 0.5);
 
-    // load your assets
-    this.load.image("loaderBg", "./assets/images/loader-bg.png");
-    this.load.image("loaderBar", "./assets/images/loader-bar.png");
-
-    // Player Sprites
-    this.load.atlas("playerAtlas", "./assets/images/player/Mimi/Mimi.png", "./assets/images/player/Mimi/Mimi.json");
-    this.load.xml("playerXml", "./assets/images/player/Mimi/Mimi.scml");
-
     this.load.json("map", "./assets/tilemaps/maps/salt_lake_v1.json");
     this.load.json(
       "salt_lake_shape_1",

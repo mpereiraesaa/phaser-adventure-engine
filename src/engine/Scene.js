@@ -16,7 +16,7 @@ export default class Scene extends Phaser.State {
     this.spriterLoader = new Spriter.Loader();
 
     this.spriterFile = new Spriter.SpriterXml(
-      game.cache.getXML("playerXml"),
+      game.cache.getXML(game.skins.getXml('Mimi')),
       /* optional parameters */ {
         imageNameType: Spriter.eImageNameType.NAME_ONLY
       }
@@ -30,9 +30,6 @@ export default class Scene extends Phaser.State {
     /*
     Hacky implementation for now - need to standardise scenedef and process this separately
      */
-    // Default player
-    // this.game.load.atlas("playerAtlas", "./assets/images/player/player.png", "./assets/images/player/player.json");
-    // this.game.load.json("playerJson", "./assets/images/player/player.scon");
 
     if (this.sceneDefinition.bg) {
       this.game.load.image(this.key + "bg", this.sceneDefinition.bg);
@@ -457,7 +454,7 @@ export default class Scene extends Phaser.State {
 
     let actorDefinition = {
       spriterData: this.spriterData,
-      textureKey: "playerAtlas",
+      textureKey: game.skins.getAtlas('Mimi'),
       isSmall: true,
       spawnX: 200,
       spawnY: 600,

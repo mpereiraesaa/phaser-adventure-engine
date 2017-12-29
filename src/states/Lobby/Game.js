@@ -35,7 +35,7 @@ export default class extends Phaser.State {
     this.hud.scale.setTo(this.scaleX, this.scaleY);
 
     var spriterFile = new Spriter.SpriterXml(
-      this.cache.getXML("playerXml"),
+      this.cache.getXML(this.game.skins.getXml('Mimi')),
       /* optional parameters */ {
         imageNameType: Spriter.eImageNameType.NAME_ONLY
       }
@@ -46,7 +46,7 @@ export default class extends Phaser.State {
     // create actual renderable object - it is extension of Phaser.Group
     this.player = new PlayerActor(this.game, {
       spriterData: spriterData,
-      textureKey: "playerAtlas",
+      textureKey: this.game.skins.getAtlas('Mimi'),
       entity: "entity_000",
       animation: 0,
       animationSpeed: 100,
