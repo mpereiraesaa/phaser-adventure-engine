@@ -4628,7 +4628,6 @@ var Actor = function (_Spriter$SpriterGroup) {
 
     console.debug("Actor initialised");
 
-    window.player = _this;
     _this._animationSpeed = 0.6;
     _this.id = 1;
 
@@ -12629,6 +12628,22 @@ var Scene = function (_Phaser$State) {
 
       this.layers.actors.add(actor);
 
+      // Sample hair customization through CHARMAPS!
+      var charMaps = ["Peliazul"];
+      var charmapID = 0;
+
+      var key = this.game.input.keyboard.addKey(Phaser.Keyboard.C);
+
+      key.onDown.add(function () {
+        if (charmapID >= this.player.entity.charMapsLength) {
+          this.player.clearCharMaps();
+          charmapID = 0;
+        } else {
+          this.player.pushCharMap(charMaps[charmapID]);
+          ++charmapID;
+        }
+      }, this);
+
       this.game.network.sendKeyMessage({});
 
       return actor;
@@ -14467,9 +14482,7 @@ var _class = function (_Phaser$State) {
       // create Spriter loader - class that can change Spriter file into internal structure
       var spriterLoader = new Spriter.Loader();
       var spriterData = 0,
-          charmapID = 0,
           animation = 0;
-      var charMaps = ["Green", "Brush"];
 
       this.hud.add(this.background);
       this.hud.add(new _Hud2.default(game));
@@ -14504,30 +14517,21 @@ var _class = function (_Phaser$State) {
         _this2._text = variable.string;
       }, this);
 
-      // // cycle animations
-      // var key = this.game.input.keyboard.addKey(Phaser.Keyboard.A);
-      // key.onDown.add(()=> {
-      //   animation = (animation + 1) % this._spriterGroup.animationsCount;
-      //   this._spriterGroup.playAnimationById(animation);
-      // }, this);
+      // Sample hair customization through CHARMAPS!
+      var charMaps = ["Peliazul"];
+      var charmapID = 0;
 
-      // // on C key cycle through all charmaps
-      // key = this.game.input.keyboard.addKey(Phaser.Keyboard.C);
-      // key.onDown.add(()=> {
-      //   if (charmapID >= this._spriterGroup.entity.charMapsLength) {
-      //     this._spriterGroup.clearCharMaps();
-      //     charmapID = 0;
-      //   } else {
-      //     this._spriterGroup.pushCharMap(charMaps[charmapID]);
-      //     ++charmapID;
-      //   }
-      // }, this);
+      var key = this.game.input.keyboard.addKey(_phaser2.default.Keyboard.C);
 
-      // // on I key show / hide item attached to point
-      // key = this.game.input.keyboard.addKey(Phaser.Keyboard.I);
-      // key.onDown.add(()=> {
-      //   this._item.exists = !this._item.exists;
-      // }, this);
+      key.onDown.add(function () {
+        if (charmapID >= this.player.entity.charMapsLength) {
+          this.player.clearCharMaps();
+          charmapID = 0;
+        } else {
+          this.player.pushCharMap(charMaps[charmapID]);
+          ++charmapID;
+        }
+      }, this);
     }
   }, {
     key: "update",
@@ -17792,7 +17796,7 @@ var _class = function (_Phaser$State) {
       var spriterFile = null;
       this.actor = null;
       this.key = "test-bg";
-      var bannerText = "Press W to enter debug background mode.";
+      var bannerText = "Press W to enter debug background mode.\nPress C to cycle between charmaps.";
 
       shape.layers[1].objects.map(function (point) {
         for (var i = 0; i < point.polyline.length; i++) {
@@ -17813,8 +17817,8 @@ var _class = function (_Phaser$State) {
       // creates a scene and immediately switches to it
       room = this.game.pncPlugin.addScene(this.key, sceneDefinition, true);
 
-      var banner = new _phaser2.default.Text(game, this.world.centerX, this.game.height - 30, bannerText);
-      banner.padding.set(10, 16);
+      var banner = new _phaser2.default.Text(game, this.world.centerX + 100, this.game.height / 4, bannerText);
+
       banner.fontSize = 20;
       banner.fill = "#000";
       banner.smoothed = false;

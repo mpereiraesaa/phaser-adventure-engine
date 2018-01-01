@@ -516,6 +516,23 @@ export default class Scene extends Phaser.State {
 
     this.layers.actors.add(actor);
 
+    // Sample hair customization through CHARMAPS!
+    let charMaps = ["Peliazul"];
+    let charmapID = 0;
+
+    let key = this.game.input.keyboard.addKey(Phaser.Keyboard.C);
+
+    key.onDown.add(function () {
+      if (charmapID >= this.player.entity.charMapsLength) {
+          this.player.clearCharMaps();
+          charmapID = 0;
+      }
+      else {
+        this.player.pushCharMap(charMaps[charmapID]);
+        ++charmapID;
+      }
+    }, this);
+
     this.game.network.sendKeyMessage({});
 
     return actor;

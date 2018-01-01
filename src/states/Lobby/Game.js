@@ -24,9 +24,7 @@ export default class extends Phaser.State {
     // create Spriter loader - class that can change Spriter file into internal structure
     var spriterLoader = new Spriter.Loader();
     let spriterData = 0,
-      charmapID = 0,
       animation = 0;
-    let charMaps = ["Green", "Brush"];
 
     this.hud.add(this.background);
     this.hud.add(new Hud(game));
@@ -63,30 +61,23 @@ export default class extends Phaser.State {
       this._text = variable.string;
     }, this);
 
-    // // cycle animations
-    // var key = this.game.input.keyboard.addKey(Phaser.Keyboard.A);
-    // key.onDown.add(()=> {
-    //   animation = (animation + 1) % this._spriterGroup.animationsCount;
-    //   this._spriterGroup.playAnimationById(animation);
-    // }, this);
+    // Sample hair customization through CHARMAPS!
+    let charMaps = ["Peliazul"];
+    let charmapID = 0;
 
-    // // on C key cycle through all charmaps
-    // key = this.game.input.keyboard.addKey(Phaser.Keyboard.C);
-    // key.onDown.add(()=> {
-    //   if (charmapID >= this._spriterGroup.entity.charMapsLength) {
-    //     this._spriterGroup.clearCharMaps();
-    //     charmapID = 0;
-    //   } else {
-    //     this._spriterGroup.pushCharMap(charMaps[charmapID]);
-    //     ++charmapID;
-    //   }
-    // }, this);
+    let key = this.game.input.keyboard.addKey(Phaser.Keyboard.C);
 
-    // // on I key show / hide item attached to point
-    // key = this.game.input.keyboard.addKey(Phaser.Keyboard.I);
-    // key.onDown.add(()=> {
-    //   this._item.exists = !this._item.exists;
-    // }, this);
+    key.onDown.add(function () {
+      if (charmapID >= this.player.entity.charMapsLength) {
+          this.player.clearCharMaps();
+          charmapID = 0;
+      }
+      else {
+        this.player.pushCharMap(charMaps[charmapID]);
+        ++charmapID;
+      }
+    }, this);
+
   }
 
   update() {

@@ -20,7 +20,6 @@ export default class Actor extends Spriter.SpriterGroup {
 
     console.debug("Actor initialised");
 
-    window.player = this;
     this._animationSpeed = 0.6;
     this.id = 1;
 

@@ -74,11 +74,6 @@
         <file id="70" name="Main_P/caradiagback.png" width="296" height="256" pivot_x="0.5" pivot_y="0.5"/>
         <file id="71" name="Main_P/movpiel.png" width="34" height="36" pivot_x="0.5" pivot_y="0.5"/>
         <file id="72" name="Main_P/Bellylateral.png" width="124" height="119" pivot_x="0.5" pivot_y="0.5"/>
-        <file id="73" name="Main_P/cabelloazulback.png" width="354" height="319" pivot_x="0.5" pivot_y="0.5"/>
-        <file id="74" name="Main_P/cabelloazuldiagback.png" width="354" height="314" pivot_x="0.5" pivot_y="0.5"/>
-        <file id="75" name="Main_P/cabelloazuldiagfront.png" width="354" height="319" pivot_x="0.5" pivot_y="0.5"/>
-        <file id="76" name="Main_P/cabelloazulfront.png" width="354" height="319" pivot_x="0.5" pivot_y="0.5"/>
-        <file id="77" name="Main_P/cabelloazulperfil.png" width="354" height="319" pivot_x="0.5" pivot_y="0.5"/>
     </folder>
     <folder id="1" name="Maid_Serious">
         <file id="0" name="Maid_Serious/1boca.png" width="49" height="32" pivot_x="0" pivot_y="1"/>
@@ -100,13 +95,6 @@
         <obj_info name="bone_003" type="bone" w="69.6656" h="10"/>
         <obj_info name="bone_004" type="bone" w="38.3164" h="10"/>
         <obj_info name="bone_005" type="bone" w="21.1731" h="10"/>
-        <character_map id="0" name="Peliazul">
-            <map folder="0" file="15" target_folder="0" target_file="73"/>
-            <map folder="0" file="16" target_folder="0" target_file="74"/>
-            <map folder="0" file="17" target_folder="0" target_file="75"/>
-            <map folder="0" file="18" target_folder="0" target_file="76"/>
-            <map folder="0" file="19" target_folder="0" target_file="77"/>
-        </character_map>
         <animation id="0" name="WalkDfront" length="1000" interval="100">
             <gline pos="-176"/>
             <gline pos="-38"/>

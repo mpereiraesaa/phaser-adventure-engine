@@ -27,7 +27,7 @@ export default class extends Phaser.State {
     let spriterFile = null;
     this.actor = null;
     this.key = "test-bg";
-    const bannerText = "Press W to enter debug background mode.";
+    const bannerText = "Press W to enter debug background mode.\nPress C to cycle between charmaps.";
 
     shape.layers[1].objects.map(point => {
       for (let i = 0; i < point.polyline.length; i++) {
@@ -50,11 +50,11 @@ export default class extends Phaser.State {
 
     let banner = new Phaser.Text(
       game,
-      this.world.centerX,
-      this.game.height - 30,
+      this.world.centerX + 100,
+      this.game.height / 4,
       bannerText
     );
-    banner.padding.set(10, 16);
+
     banner.fontSize = 20;
     banner.fill = "#000";
     banner.smoothed = false;
